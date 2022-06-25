@@ -102,7 +102,7 @@ const chart = (svgEl: d3.Selection<SVGSVGElement, any, any, any>, data: any, wid
   function zoom(event: any, d: any) {
     focus = d;
 
-    const transition: d3.Transition<SVGSVGElement, any, any, any> = svg
+    const transition: any = svg
       .transition()
       .duration(event.altKey ? 7500 : 750)
       .tween('zoom', (_) => {
