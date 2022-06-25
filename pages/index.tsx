@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { PartnersGraph } from '../components/partners-graph';
+import * as data from '../utils/data.json';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +16,7 @@ const Home: NextPage = () => {
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <PartnersGraph data={data} width={500} height={500} margin={{ top: 0, bottom: 0, left: 0, right: 0 }} />
       </main>
 
       <footer>
