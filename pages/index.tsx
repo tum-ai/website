@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <PartnersGraph data={data} width={500} height={500} margin={{ top: 0, bottom: 0, left: 0, right: 0 }} />
+        <PartnersGraph data={data} />
       </main>
 
       <footer></footer>
