@@ -112,15 +112,23 @@ const chart = (svgEl: d3.Selection<SVGSVGElement, any, any, any>, data: any, wid
 
     label
       .filter(function (d) {
-        return d.parent === focus || this.style.display === 'inline';
+        if (d.parent === focus) {
+            return true;
+        } else {
+            return this?.style.display === 'inline';
+        }
       })
       .transition(transition)
       .style('fill-opacity', (d) => (d.parent === focus ? 1 : 0))
       .on('start', function (d) {
-        if (d.parent === focus) this.style.display = 'inline';
+        if (d.parent === focus && this !== null) {
+            this.style.display = 'inline';
+        }
       })
       .on('end', function (d) {
-        if (d.parent !== focus) this.style.display = 'none';
+        if (d.parent !== focus && this !== null) {
+            this.style.display = 'none';
+        }
       });
   }
 
