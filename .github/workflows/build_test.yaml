@@ -15,14 +15,24 @@ jobs:
     env:
       NEXT_TELEMETRY_DISABLED: 1
     steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          check-latest: true
+
       - uses: actions/checkout@v2
-      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - run: yarn install --frozen-lockfile --check-files
-      - uses: actions/cache@v1
+
+      - run: npm i -g pnpm@${PNPM_VERSION}
+
+      - run: pnpm install
+      - run: pnpm run build
+
+      - uses: actions/cache@v3
         id: cache-build
         with:
-          path: '.'
-          key: ${{ github.sha }}
+          path: ./*
+          key: ${{ github.sha }}-${{ github.run_number }}
 
   lint:
     runs-on: ubuntu-latest
@@ -34,14 +44,13 @@ jobs:
           node-version: 16
           check-latest: true
 
-      - run: npm i -g pnpm@${PNPM_VERSION}
-
       - uses: actions/cache@v3
         id: restore-build
         with:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
-      - run: pnpm lint
+
+      - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -53,23 +62,10 @@ jobs:
           node-version: 16
           check-latest: true
 
-      - run: npm i -g pnpm@${PNPM_VERSION}
-
       - uses: actions/cache@v3
-        id: cache-pnpm-store
-        with:
-          path: ${{ steps.get-store-path.outputs.STORE_PATH }}
-          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-store-
-            pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
-
-      - run: pnpm install
-      - run: pnpm run build
-      - run: node run-tests.js --timings --write-timings -g 1/1
-
-      - uses: actions/cache@v3
-        id: cache-build
+        id: restore-build
         with:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
+
+      - run: npm run test

@@ -102,7 +102,7 @@ const chart = (svgEl: d3.Selection<SVGSVGElement, any, any, any>, data: any, wid
   function zoom(event: any, d: any) {
     focus = d;
 
-    const transition: d3.Transition<SVGSVGElement, any, any, any> = svg
+    const transition: any = svg
       .transition()
       .duration(event.altKey ? 7500 : 750)
       .tween('zoom', (_) => {
@@ -112,15 +112,27 @@ const chart = (svgEl: d3.Selection<SVGSVGElement, any, any, any>, data: any, wid
 
     label
       .filter(function (d) {
-        return d.parent === focus || this.style.display === 'inline';
+        const labelWrapper = this as HTMLElement | null;
+        if (d.parent === focus) {
+            return true;
+        } else if (labelWrapper !== null) {
+            return labelWrapper.style.display === 'inline';
+        }
+        return false;
       })
       .transition(transition)
       .style('fill-opacity', (d) => (d.parent === focus ? 1 : 0))
       .on('start', function (d) {
-        if (d.parent === focus) this.style.display = 'inline';
+        const labelWrapper = this as HTMLElement | null;
+        if (d.parent === focus && labelWrapper !== null) {
+            labelWrapper.style.display = 'inline';
+        }
       })
       .on('end', function (d) {
-        if (d.parent !== focus) this.style.display = 'none';
+        const labelWrapper = this as HTMLElement | null;
+        if (d.parent !== focus && labelWrapper !== null) {
+            labelWrapper.style.display = 'none';
+        }
       });
   }
 
