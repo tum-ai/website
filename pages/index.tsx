@@ -114,8 +114,13 @@ const Home: NextPage = () => {
         </section>
 
         {/* PARTNERS */}
-        <section className="container">
+        <section className="container mt-5">
           <div className="row">
+            <div className="col text-center">
+              <h1>OUR PARTNERS</h1>
+            </div>
+          </div>
+          <div className="row mt-3">
             <div className="col text-center">
               <h1>HIGH</h1>
             </div>
@@ -126,7 +131,7 @@ const Home: NextPage = () => {
             <PartnerCol name="Microsoft" closeness={PartnerCloseness.HIGH} />
           </div>
 
-          <div className="row">
+          <div className="row mt-3">
             <div className="col text-center">
               <h2>MEDIUM</h2>
             </div>
@@ -140,7 +145,7 @@ const Home: NextPage = () => {
             <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
           </div>
 
-          <div className="row">
+          <div className="row mt-3">
             <div className="col text-center">
               <h3>LOW</h3>
             </div>

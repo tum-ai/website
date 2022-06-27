@@ -22,7 +22,7 @@ export const PartnerCol: React.FC<Props> = ({ name, closeness }) => {
     placeholderSize = '130x50'
   }
   return <div className={`col-${colSize} text-center`}>
-    {name}
+    <p>{name}</p>
     <img className="w-auto h-auto" src={`https://via.placeholder.com/${placeholderSize}.png`} />
   </div>;
 };
