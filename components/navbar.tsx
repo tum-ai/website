@@ -3,6 +3,7 @@ import Logo from '@images/logo.png';
 import Slack from '@images/slack.png';
 import Instagram from '@images/instagram.png';
 import LinkedIn from '@images/linkedin.png';
+import Link from 'next/link';
 
 type SocialButtonProps = {
   link: string;
@@ -20,7 +21,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   border = false
 }) => {
   return (
-    <a
+    <Link
       className="btn"
       role="button"
       data-bss-hover-animate="pulse"
@@ -40,7 +41,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
         borderWidth: '2px',
         borderColor: border ? '#000' : ''
       }}
-    ></a>
+    ></Link>
   );
 };
 
@@ -77,7 +78,7 @@ const Menu: React.FC = () => {
   };
   const Item: React.FC<ItemProps> = ({ children, href }) => (
     <li className="nav-item">
-      <a
+      <Link
         className="nav-link"
         style={{
           color: '#eeeeee',
@@ -88,7 +89,7 @@ const Menu: React.FC = () => {
         href={href}
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 
@@ -119,9 +120,9 @@ export const NavBar: React.FC<NavBarProps> = () => {
       }}
     >
       <div className="container-xxl" style={{ maxWidth: '1140px' }}>
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           <img className="my-1" src={Logo.src} style={{ width: '132.828px' }} />
-        </a>
+        </Link>
         <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1">
           <span className="sr-only">Toggle navigation</span>
           <span
