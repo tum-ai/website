@@ -1,16 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { PartnerCol } from '../components/partner-col';
-import * as data from '../lib/data.json';
-import { PartnerCloseness } from '../lib/types';
-import PartnersBg from '@images/partners.jpg';
-import NotebookPartnersBg from '@images/notebook.png';
-import { FeatureBox } from '../components/feature-box';
-import { Widget } from '@typeform/embed-react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'line-awesome/dist/line-awesome/css/line-awesome.min.css';
 import { NavBar } from '../components/navbar';
+import { HomeParticles } from 'components/home-particles';
+import Image from 'next/image';
+import Logo from '@images/logo.png';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -22,161 +19,32 @@ const Home: NextPage = () => {
       </Head>
       <NavBar />
 
-      <main>
-        <header
-          className="align-items-end d-flex min-vh-100"
-          style={{ backgroundImage: `url(${PartnersBg.src})`, backgroundSize: 'cover' }}
-        >
-          <div
-            className="container d-flex justify-content-center align-items-center p-0"
-            style={{ marginBottom: '30px' }}
-          >
-            <div className="col">
-              <div className="row m-0 bg-white p-2">
-                <div className="col d-flex align-items-center">
-                  <h1 className="m-0 fw-bold">Become a partner of TUM.ai</h1>
-                </div>
-              </div>
-              <div className="row m-0 bg-white mt-3 p-2">
-                <div className="col d-flex align-items-center">
-                  <span className="m-0">Get in touch with the largest student AI initiative in Munich!</span>
-                </div>
+      <header
+        className="d-flex align-items-center"
+        style={{ height: '50vh', background: '-webkit-linear-gradient(180deg, #151e35 0%, #211b44 100%)', zIndex: 3 }}
+      >
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-auto align-self-center">
+              <HomeParticles />
+              <div style={{ height: '120px', width: '350px', position: 'relative' }}>
+                <Image src={Logo.src} layout="fill" />
               </div>
             </div>
-          </div>
-        </header>
-
-        <section className="container bg-white text-center min-vh-50">
-          <div className="col p-5">
-            <h1>GET IN TOUCH WITH OUR NETWORK</h1>
-          </div>
-        </section>
-
-        <section
-          className="container-fluid p-5"
-          style={{ background: 'linear-gradient(-174deg, #151e35 60%, #3e0f8b 100%)' }}
-        >
-          <div className="row">
-            <div className="col-md-6"></div>
-            <div className="col-md-6">
-              <div className="row">
-                <div className="col">
-                  <h4 className="fw-bold text-white">Become a Partner of TUM.ai ?</h4>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col text-white-50">
-                  Join us as a Makeathon challenge-setter and get access to our network of highly ambitious AI & Data
-                  Analytics experts! We are excited about engaging with your company via workshops or speaker events.
-                  Alternatively, we partner with selected companies to form symbiotic relationships, where our talented
-                  students work on your projects and provide consulting to push AI solutions into new domains.
-                </div>
-              </div>
+            <div className="col-12 text-center mt-3">
+              <Link href="https://join-us.tum-ai.com" passHref={true}>
+                <a className="btn btn-primary">Learn more about TUM.ai</a>
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
 
-        {/* TODO: extend utilities API to include a higher border size (e.g. border-10) */}
-        <section
-          className="border-bottom border-5"
-          style={{ backgroundImage: `url(${NotebookPartnersBg.src})`, backgroundSize: 'cover' }}
-        >
-          {/* Changing max-width to stretch out FeatureBox elements */}
-          <div className="container" style={{ maxWidth: '940px' }}>
-            <div className="row mx-2 d-flex justify-content-center">
-              <FeatureBox icon="la la-group-icon" title="TALENT">
-                Get access to our network of highly motivated students with a specialization in aritifical intelligence
-                technologies. Many of our members are interested in internships and working student positions.
-              </FeatureBox>
-              <FeatureBox icon="la la-group-icon" title="AWARENESS">
-                As a partner, you will be present and linked on our website. Plus, we will name your company as a
-                supporter of TUM.ai in all of our marketing campaigns. This will help improve the perception of your
-                brand among students across the whole university.
-              </FeatureBox>
-              <FeatureBox icon="la la-group-icon" title="COLLABORATION">
-                Partner companies are really important to us since we rely on their support. Being a partner opens the
-                door for many sorts of collaboration, like event organization, networking and learning opportunities. We
-                are only limited by your creativity!
-              </FeatureBox>
-            </div>
-          </div>
-        </section>
-        <section className="container-fluid text-center bg-black p-5">
-          <div className="col">
-            <h2 className="fs-1 text-uppercase text-white">Interested?</h2>
-          </div>
-        </section>
-
-        {/* Typeform widget */}
-        {/* TODO: extend utilities API to include a higher border size (e.g. border-10) */}
-        <section className="bg-black pb-5 border-primary border-bottom border-5">
-          <div className="container">
-            <Widget style={{ height: '500px' }} id="xceYAALX" />
-          </div>
-        </section>
-
-        {/* PARTNERS */}
-        <section className="container mt-5">
-          <div className="row">
-            <div className="col text-center">
-              <h1>OUR PARTNERS</h1>
-            </div>
-          </div>
-          <div className="row mt-3">
-            <div className="col text-center">
-              <h1>HIGH</h1>
-            </div>
-          </div>
-          <div className="row justify-content-around">
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.HIGH} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.HIGH} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.HIGH} />
-          </div>
-
-          <div className="row mt-3">
-            <div className="col text-center">
-              <h2>MEDIUM</h2>
-            </div>
-          </div>
-          <div className="row justify-content-around">
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.MEDIUM} />
-          </div>
-
-          <div className="row mt-3">
-            <div className="col text-center">
-              <h3>LOW</h3>
-            </div>
-          </div>
-          <div className="row justify-content-around">
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-            <PartnerCol name="Microsoft" closeness={PartnerCloseness.LOW} />
-          </div>
-        </section>
-      </main>
-
-      {/* TODO: */}
-      <footer style={{ height: '300px' }}></footer>
+      <section className="container bg-white text-center">
+        <div className="col p-5">
+          <h1 className="display-2 fw-bold">WELCOME to TUM.ai</h1>
+        </div>
+      </section>
     </div>
   );
 };

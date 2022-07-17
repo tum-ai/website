@@ -1,0 +1,8 @@
+#tsparticles {
+  height: 50px;
+}
+
+#tsparticles > canvas {
+  max-height: 25vh;
+  margin-top: 100px;
+}

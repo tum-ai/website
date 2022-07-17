@@ -4,6 +4,7 @@ import Slack from '@images/slack.png';
 import Instagram from '@images/instagram.png';
 import LinkedIn from '@images/linkedin.png';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type SocialButtonProps = {
   link: string;
@@ -21,27 +22,29 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   border = false
 }) => {
   return (
-    <Link
-      className="btn"
-      role="button"
-      data-bss-hover-animate="pulse"
-      href={link}
-      style={{
-        margin: '5px 5px',
-        fontSize: '5px',
-        background: `url(${backgroundImage}) right / cover no-repeat ${backgroundColor}`,
-        paddingLeft: '0.25px',
-        paddingRight: '13.25px',
-        borderRadius: '21px',
-        marginRight: '1px',
-        width: '37.25px',
-        height: '36.25px',
-        paddingTop: '4.625px',
-        filter: filter ? 'brightness(99%) contrast(101%) grayscale(96%) invert(100%) saturate(119%)' : '',
-        borderWidth: '2px',
-        borderColor: border ? '#000' : ''
-      }}
-    ></Link>
+    <Link href={link}>
+      <a
+        data-bss-hover-animate="pulse"
+        role="button"
+        className="btn"
+        style={{
+          margin: '5px 5px',
+          fontSize: '5px',
+          background: `url(${backgroundImage}) right / cover no-repeat ${backgroundColor}`,
+          paddingRight: '13.25px',
+          borderRadius: '21px',
+          marginRight: '1px',
+          width: '37.25px',
+          height: '36.25px',
+          paddingTop: '4.625px',
+          borderWidth: '2px',
+          ...(filter && { filter: 'brightness(99%) contrast(101%) grayscale(96%) invert(100%) saturate(119%)' }),
+          ...(border && { borderColor: '#000' })
+        }}
+      >
+        &nbsp;
+      </a>
+    </Link>
   );
 };
 
@@ -78,17 +81,18 @@ const Menu: React.FC = () => {
   };
   const Item: React.FC<ItemProps> = ({ children, href }) => (
     <li className="nav-item">
-      <Link
-        className="nav-link"
-        style={{
-          color: '#eeeeee',
-          padding: '12px 12px',
-          paddingRight: '10px',
-          paddingLeft: '10px'
-        }}
-        href={href}
-      >
-        {children}
+      <Link href={href}>
+        <a
+          className="nav-link"
+          style={{
+            color: '#eeeeee',
+            padding: '12px 12px',
+            paddingRight: '10px',
+            paddingLeft: '10px'
+          }}
+        >
+          {children}
+        </a>
       </Link>
     </li>
   );
@@ -121,7 +125,9 @@ export const NavBar: React.FC<NavBarProps> = () => {
     >
       <div className="container-xxl" style={{ maxWidth: '1140px' }}>
         <Link className="navbar-brand" href="/">
-          <img className="my-1" src={Logo.src} style={{ width: '132.828px' }} />
+          <a style={{ width: '150px', height: '35px', position: 'relative' }}>
+            <Image className="my-1" src={Logo.src} layout="fill" priority={true} />
+          </a>
         </Link>
         <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1">
           <span className="sr-only">Toggle navigation</span>
