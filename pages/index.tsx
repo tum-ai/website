@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <div className="row justify-content-center">
             <div className="col-auto align-self-center">
               <HomeParticles />
-              <div style={{ height: '120px', width: '350px', position: 'relative' }}>
+              <div className="home-logo">
                 <Image src={Logo.src} layout="fill" />
               </div>
             </div>

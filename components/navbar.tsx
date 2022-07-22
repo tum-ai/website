@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '@images/logo.png';
 import Slack from '@images/slack.png';
 import Instagram from '@images/instagram.png';
@@ -112,9 +112,13 @@ const Menu: React.FC = () => {
 type NavBarProps = {};
 
 export const NavBar: React.FC<NavBarProps> = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <nav
-      className="navbar navbar-expand-lg bd-navbar shadow position-sticky top-0"
+      className="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar shadow position-sticky top-0"
       style={{
         height: '65px',
         paddingLeft: '12px',
@@ -129,23 +133,27 @@ export const NavBar: React.FC<NavBarProps> = () => {
             <Image className="my-1" src={Logo.src} layout="fill" priority={true} />
           </a>
         </Link>
-        <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1">
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={toggle}
+        >
+          <span className="navbar-toggler-icon"></span>
           <span className="sr-only">Toggle navigation</span>
-          <span
-            className="navbar-toggler-icon text-white"
-            style={{ filter: 'brightness(200%) contrast(200%) invert(100%)' }}
-          ></span>
         </button>
         <div
-          className="collapse navbar-collapse text-center"
-          id="navcol-1"
+          className={`collapse navbar-collapse text-center ${isOpen && 'show'}`}
+          id="navbarToggler"
           style={{
             opacity: '0.98',
             width: '109%',
-            background: 'linear-gradient(90deg, #201c42, #151e36), rgb(11,11,11)',
-            borderRadius: '10px',
-            marginTop: '-7px',
-            paddingTop: '6px'
+            background: 'linear-gradient(90deg, #201c42, #151e36), rgb(11,11,11)'
           }}
         >
           <Menu />

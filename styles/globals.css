@@ -1,8 +1,23 @@
-#tsparticles {
-  height: 50px;
-}
-
 #tsparticles > canvas {
   max-height: 25vh;
   margin-top: 100px;
 }
+
+.home-logo {
+  position: relative;
+}
+
+@media (max-width: 576px) {
+    .home-logo {
+        height: 75px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 576px) {
+    .home-logo {
+        height: 120px;
+        width: 450px;
+    }
+}
+
