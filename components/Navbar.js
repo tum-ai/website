@@ -1,29 +1,31 @@
+import Link from 'next/link';
+
 export default function Navbar() {
 	return (
 		<>
 			<nav>
 				<div class='navbar'>
-					<a href='#' class='logo'>
+					<Link href='#' class='logo'>
 						Logo
-					</a>
+					</Link>
 					<ul class='nav-links'>
 						<li>
-							<a href='/'>Home</a>
+							<Link href='/'>Home</Link>
 						</li>
 						<li>
-							<a href='industry'>Industry</a>
+							<Link href='industry'>Industry</Link>
 						</li>
 						<li>
-							<a href='partners'>Partners</a>
+							<Link href='partners'>Partners</Link>
 						</li>
 						<li>
-							<a href='members'>Members</a>
+							<Link href='members'>Members</Link>
 						</li>
 						<li>
-							<a href='workshops'>Workshops & Events</a>
+							<Link href='workshops'>Workshops & Events</Link>
 						</li>
 						<li>
-							<a href='blog'>Blog</a>
+							<Link href='blog'>Blog</Link>
 						</li>
 					</ul>
 				</div>
