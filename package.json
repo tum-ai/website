@@ -1,39 +1,20 @@
 {
-  "name": "website-tumai-nextjs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@types/d3": "^7.4.0",
-    "d3": "^7.4.5",
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@jest/types": "^28.1.1",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@types/jest": "^28.1.3",
-    "@types/node": "18.0.0",
-    "@types/react": "18.0.14",
-    "@types/react-dom": "18.0.5",
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
-    "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1",
-    "postcss": "^8.4.14",
-    "react-test-renderer": "^18.2.0",
-    "tailwindcss": "^3.1.4",
-    "ts-jest": "^28.0.5",
-    "ts-node": "^10.8.1",
-    "typescript": "4.7.4"
-  }
+	"name": "tum-ai-website",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@next/font": "13.0.7",
+		"eslint": "8.30.0",
+		"eslint-config-next": "13.0.7",
+		"next": "13.0.7",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"typescript": "^4.9.4"
+	}
 }
