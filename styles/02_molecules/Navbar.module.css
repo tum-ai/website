@@ -6,42 +6,24 @@
   gap: 2rem;
   background-color: #171E36;
   color: white;
-  font-size: 1rem;
-  padding: .7rem;
+  padding: .8rem;
 }
 
-.dropbtn {
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact {
+    display: flex;
+    gap: 1rem;
+}
+.contact button {
+  font-size: large;
+  border-radius: 1000px;
+  border: none;
   cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown_content {
-  top: 19px;
-  display: none;
-  border-radius: 10px;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  overflow: hidden;
-}
-
-.dropdown_content a {
-  color: black;
-  padding: .7rem;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown_content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown_content {display: block;}
-
-.dropdown:hover .dropbtn {
-  text-decoration: underline;
+  background-color: #5B2CE5;
+  padding: 5px 20px;
+  color: inherit;
 }
