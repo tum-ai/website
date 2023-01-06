@@ -1,34 +1,42 @@
+import Image from 'next/image';
+import styles from '../styles/02_molecules/Navbar.module.css';
+
 export default function Navbar() {
 	return (
 		<>
-			<nav
-				style={{
-					display: 'flex',
-					justifyContent: 'center',
-					alignContent: 'center',
-					gap: 75,
-					backgroundColor: '#171E36',
-					color: 'white',
-					padding: 20,
-					fontSize: 15,
-				}}
-			>
-				<a href='#' class='logo'>
-					Logo
+			<nav className={styles.navbar}>
+				<a className={styles.Logo} href='.'>
+					<Image
+						src={'/assets/logo_new_white_standard.png'}
+						className={styles.LogoImage}
+						alt='Logo'
+						layout={'intrinsic'}
+						objectFit='contain'
+						width={150}
+						height={40}
+					/>
 				</a>
 				<div
 					style={{
 						display: 'flex',
 						alignContent: 'center',
 						gap: '20px',
+						color: 'white',
 					}}
 				>
-					<a href='/'>Home</a>
-					<a href='industry'>Industry</a>
+					<a href='https://aielab.tum-ai.com/'>AI E-Lab</a>
+					<a href='https://makeathon.tum-ai.com/'>Makeathon</a>
+					<a href='industry'>Industry Projects</a>
 					<a href='partners'>Partners</a>
 					<a href='members'>Members</a>
-					<a href='workshops'>Workshops & Events</a>
-					<a href='blog'>Blog</a>
+					<a href='https://join-us.tum-ai.com/'>join us</a>
+					<div className={styles.dropdown}>
+						<div className={styles.dropbtn}>More TUM.ai</div>
+						<div className={styles.dropdown_content}>
+							<a href='workshops'>Workshops Newsroom</a>
+							<a href='blog'>TUM.ai Blog Articles</a>
+						</div>
+					</div>
 				</div>
 				<div
 					style={{
