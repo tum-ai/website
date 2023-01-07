@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 2rem;
+  gap: 4rem;
   background-color: #171E36;
   color: white;
   padding: .8rem;
@@ -11,13 +11,20 @@
 
 .links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+}
+
+.links_logo {
+  position: relative;
+  width: 10%;
+  height: 3rem;
 }
 
 .contact {
     display: flex;
     gap: 1rem;
 }
+
 .contact button {
   font-size: large;
   border-radius: 1000px;
@@ -26,4 +33,107 @@
   background-color: #5B2CE5;
   padding: 5px 20px;
   color: inherit;
+}
+
+.popup_wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.5;
+  background-color: black;
+  z-index: 2;
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  left: 0; 
+  right: 0; 
+  margin-right: auto; 
+  margin-left: auto; 
+  width: 50rem;
+  max-width: 90%;
+  z-index: 3;
+  border-radius: 5px;
+  animation-name: slide-down;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+  0% {
+      top: -100px;
+      opacity: 0;
+  }
+  100% {
+      top: 3rem;
+      opacity: 1;
+  }
+}
+
+.popup_hr {
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid rgb(215, 215, 215);
+  margin: 1em 0; padding: 0;
+}
+
+.popup_close {
+  all: unset;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.popup_title {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  padding-left: 2rem;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.popup_title span {
+  color: #5B2CE5;
+}
+
+.popup_body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.popup_body_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.popup_body_left_image {  
+  background-color: black;
+  filter: invert(100%);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 70%;
+  height: 100%;
+}
+
+.popup_body_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.popup_body_right_email {
+  font-size: larger;
+  color: #5B2CE5;
+  font-weight: normal;
 }

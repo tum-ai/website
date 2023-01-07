@@ -5,8 +5,10 @@ export default function DropdownLinks({ title, links }) {
 		<div className={styles.dropdown}>
 			<div className={styles.dropbtn}>{title}</div>
 			<div className={styles.dropdown_content}>
-				{links.map((link) => (
-					<a href={link.href}>{link.name}</a>
+				{links.map((link, i) => (
+					<a key={i} href={link.href}>
+						{link.name}
+					</a>
 				))}
 			</div>
 		</div>
