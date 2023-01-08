@@ -16,6 +16,7 @@
 
 .links_logo {
   position: relative;
+  min-width: 100px;
   width: 10%;
   height: 3rem;
 }
