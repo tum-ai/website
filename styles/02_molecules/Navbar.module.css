@@ -20,6 +20,8 @@
   gap: 2rem;
   color: white;
   padding: .8rem;
+  padding-right: .3rem;
+  padding-left: .3rem;
   max-width: 1500px;
 }
 
@@ -36,7 +38,7 @@
   border-radius: 5px;
   border: 1px solid white;
   cursor: pointer;
-  padding: 5px 20px;
+  padding: 10px;
   background-color: transparent;
   color: white;
 }
@@ -44,6 +46,10 @@
 .links {
     display: flex;
     gap: 1rem;
+}
+
+.arrow{
+  filter: invert(100%)
 }
 
 .links_logo {
@@ -55,7 +61,8 @@
 
 .contact {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: .5rem;
 }
 
 .contact button {

@@ -113,7 +113,26 @@ export default function Navbar() {
 									Join us
 								</a>
 								<DropdownLinks
-									title='More TUM.ai'
+									title={
+										<div
+											style={{
+												display: 'flex',
+												position: 'relative',
+												alignItems: 'center',
+												gap: '.3rem',
+											}}
+										>
+											<div>More TUM.ai</div>
+											<div className={styles.arrow}>
+												<Image
+													src={'/assets/arrow.svg'}
+													alt='icon'
+													width={20}
+													height={20}
+												/>
+											</div>
+										</div>
+									}
 									links={[
 										{
 											name: 'Workshops Newsroom',
@@ -127,6 +146,30 @@ export default function Navbar() {
 								/>
 							</div>
 							<div className={styles.contact}>
+								<a href='https://www.linkedin.com/company/tum-ai/'>
+									<Image
+										src={'/assets/linkedin.svg'}
+										alt='icon'
+										width={20}
+										height={20}
+									/>
+								</a>
+								<a href='https://www.instagram.com/tum.ai_official/?hl=de'>
+									<Image
+										src={'/assets/insta.svg'}
+										alt='icon'
+										width={20}
+										height={20}
+									/>
+								</a>
+								<a href='https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw'>
+									<Image
+										src={'/assets/slack.svg'}
+										alt='icon'
+										width={40}
+										height={40}
+									/>
+								</a>
 								<button
 									onClick={() => {
 										setContactActive(true);
@@ -145,7 +188,14 @@ export default function Navbar() {
 							}}
 							className={styles.menu_button}
 						>
-							menu
+							<div className={styles.arrow}>
+								<Image
+									src={'/assets/burger_menu.svg'}
+									alt='icon'
+									width={20}
+									height={20}
+								/>
+							</div>
 						</button>
 					</div>
 				</div>

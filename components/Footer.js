@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '../styles/02_molecules/Footer.module.css';
 
 export default function Footer() {
@@ -8,11 +9,22 @@ export default function Footer() {
 				<div className={styles.body_left}>
 					<div
 						style={{
-							alignText: 'center',
-							display: 'inline',
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							gap: '.3rem',
 						}}
 					>
-						<div>insta</div>
+						<div>
+							<a href='https://www.instagram.com/tum.ai_official/?hl=de'>
+								<Image
+									src={'/assets/insta.svg'}
+									alt='icon'
+									width={20}
+									height={20}
+								/>
+							</a>
+						</div>
 						<div>Follow us on Instagram</div>
 						<div className={styles.small_text}>
 							An exlusive look behind the scenes!
@@ -22,11 +34,22 @@ export default function Footer() {
 				<div className={styles.body_right}>
 					<div
 						style={{
-							alignText: 'center',
-							display: 'inline',
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							gap: '.3rem',
 						}}
 					>
-						<div>linkedin</div>
+						<div>
+							<a href='https://www.linkedin.com/company/tum-ai/'>
+								<Image
+									src={'/assets/linkedin.svg'}
+									alt='icon'
+									width={20}
+									height={20}
+								/>
+							</a>
+						</div>
 						<div>Follow us on LinkedIn</div>
 						<div className={styles.small_text}>
 							Stay up to date with our events!
