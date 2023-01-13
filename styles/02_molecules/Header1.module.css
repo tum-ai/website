@@ -23,7 +23,7 @@
     margin-left: auto; 
     margin: auto;
     height: 80%;
-    z-index: 3;
+    z-index: 1;
     display: flex;
     max-width: 80%;
     flex-direction: column;
