@@ -47,9 +47,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
     padding-top: 0;
-    font-size: small;
+    font-size: x-small;
 }
 
 .body_info_links {
