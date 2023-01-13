@@ -2,6 +2,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 0;
 }
 
 .hr {
@@ -76,4 +77,4 @@
         padding-top: 0;
         align-items: center;
     }
-  }
+}

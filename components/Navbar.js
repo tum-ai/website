@@ -1,24 +1,44 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../styles/02_molecules/Navbar.module.css';
 import DropdownLinks from './DropdownLinks';
 
 export default function Navbar() {
-	const [active, setActive] = useState(false);
+	const [contactActive, setContactActive] = useState(false);
+	const [mobileMenuActive, setMobileMenuActive] = useState(false);
+
+	useEffect(() => {
+		function handleResize() {
+			const menu_button = document.querySelector(
+				`.${styles.menu_button}`
+			);
+			const menu_button_display =
+				getComputedStyle(menu_button).getPropertyValue('display');
+			if (menu_button_display == 'none') {
+				setMobileMenuActive(true);
+			} else {
+				setMobileMenuActive(false);
+			}
+		}
+
+		window.addEventListener('resize', handleResize);
+		handleResize();
+	}, []);
+
 	return (
 		<>
-			{active && (
+			{contactActive && (
 				<>
 					<div
 						onClick={() => {
-							setActive(false);
+							setContactActive(false);
 						}}
 						className={styles.popup_wrapper}
 					></div>
 					<div className={styles.popup}>
 						<button
 							onClick={() => {
-								setActive(false);
+								setContactActive(false);
 							}}
 							className={styles.popup_close}
 						>
@@ -68,43 +88,66 @@ export default function Navbar() {
 				</>
 			)}
 			<nav className={styles.navbar}>
-				<a href='/' className={styles.links_logo}>
-					<Image
-						src={'/assets/logo_new_white_standard.png'}
-						alt='Logo'
-						fill
-						objectFit='contain'
-					/>
-				</a>
-				<div className={styles.links}>
-					<a href='https://aielab.tum-ai.com/'>AI E-Lab</a>
-					<a href='https://makeathon.tum-ai.com/'>Makeathon</a>
-					<a href='industry'>Industry Projects</a>
-					<a href='partners'>Partners</a>
-					<a href='members'>Members</a>
-					<a href='https://join-us.tum-ai.com/'>Join us</a>
-					<DropdownLinks
-						title='More TUM.ai'
-						links={[
-							{
-								name: 'Workshops Newsroom',
-								href: 'workshops',
-							},
-							{
-								name: 'TUM.ai Blog Articles',
-								href: 'blog',
-							},
-						]}
-					/>
-				</div>
-				<div className={styles.contact}>
-					<button
-						onClick={() => {
-							setActive(true);
-						}}
-					>
-						Contact
-					</button>
+				<div className={styles.navbar_container}>
+					<a href='/' className={styles.links_logo}>
+						<Image
+							src={'/assets/logo_new_white_standard.png'}
+							alt='Logo'
+							fill
+							objectFit='contain'
+						/>
+					</a>
+					{mobileMenuActive && (
+						<div className={styles.navbar_responsive}>
+							<div className={styles.links}>
+								<a href='https://aielab.tum-ai.com/'>
+									AI E-Lab
+								</a>
+								<a href='https://makeathon.tum-ai.com/'>
+									Makeathon
+								</a>
+								<a href='industry'>Industry Projects</a>
+								<a href='partners'>Partners</a>
+								<a href='members'>Members</a>
+								<a href='https://join-us.tum-ai.com/'>
+									Join us
+								</a>
+								<DropdownLinks
+									title='More TUM.ai'
+									links={[
+										{
+											name: 'Workshops Newsroom',
+											href: 'workshops',
+										},
+										{
+											name: 'TUM.ai Blog Articles',
+											href: 'blog',
+										},
+									]}
+								/>
+							</div>
+							<div className={styles.contact}>
+								<button
+									onClick={() => {
+										setContactActive(true);
+									}}
+								>
+									Contact
+								</button>
+							</div>
+						</div>
+					)}
+					<div>
+						<button
+							id='menu_button'
+							onClick={() => {
+								setMobileMenuActive(!mobileMenuActive);
+							}}
+							className={styles.menu_button}
+						>
+							menu
+						</button>
+					</div>
 				</div>
 			</nav>
 		</>
