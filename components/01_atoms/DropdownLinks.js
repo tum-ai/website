@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/01_atoms/DropdownLinks.module.css';
+import styles from '../../styles/01_atoms/DropdownLinks.module.css';
 
 export default function DropdownLinks({ title, links }) {
 	const [active, setActive] = useState(false);

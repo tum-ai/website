@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../styles/02_molecules/Header1.module.css';
+import styles from '../../styles/02_molecules/Header1.module.css';
 
 export default function Header1({ imageSrc, title, subtitle }) {
 	return (

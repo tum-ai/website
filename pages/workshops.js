@@ -1,4 +1,4 @@
-import Header1 from '../components/Header1';
+import Header1 from '../components/02_molecules/Header1';
 
 export default function Workshops() {
 	return (

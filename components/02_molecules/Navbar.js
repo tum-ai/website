@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import styles from '../styles/02_molecules/Navbar.module.css';
-import DropdownLinks from './DropdownLinks';
+import styles from '../../styles/02_molecules/Navbar.module.css';
+import DropdownLinks from '../01_atoms/DropdownLinks';
 
 export default function Navbar() {
 	const [contactActive, setContactActive] = useState(false);
@@ -106,9 +106,9 @@ export default function Navbar() {
 								<a href='https://makeathon.tum-ai.com/'>
 									Makeathon
 								</a>
-								<a href='industry'>Industry Projects</a>
-								<a href='partners'>Partners</a>
-								<a href='members'>Members</a>
+								<a href='/industry'>Industry Projects</a>
+								<a href='/partners'>Partners</a>
+								<a href='/members'>Members</a>
 								<a href='https://join-us.tum-ai.com/'>
 									Join us
 								</a>
@@ -136,11 +136,11 @@ export default function Navbar() {
 									links={[
 										{
 											name: 'Workshops Newsroom',
-											href: 'workshops',
+											href: '/workshops',
 										},
 										{
 											name: 'TUM.ai Blog Articles',
-											href: 'blog',
+											href: '/blog',
 										},
 									]}
 								/>
