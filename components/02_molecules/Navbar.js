@@ -46,7 +46,7 @@ export default function Navbar() {
 							x
 						</button>
 						<div className={styles.popup_title}>
-							Let's <span>connect</span>!
+							Let&apos;s <span>connect</span>!
 						</div>
 						<hr className={styles.popup_hr} />
 						<div className={styles.popup_body}>
@@ -80,8 +80,8 @@ export default function Navbar() {
 										Makeathon challenge-setter, Industry
 										project partner, Workshop host
 									</b>
-									, etc. please reach out to our "Partners &
-									Sponsors" department.{' '}
+									, etc. please reach out to our
+									&quot;Partners & Sponsors&quot; department.{' '}
 								</div>
 							</div>
 						</div>

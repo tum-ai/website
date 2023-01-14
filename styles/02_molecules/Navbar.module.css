@@ -114,6 +114,8 @@
   right: 10px;
   top: 5px;
   cursor: pointer;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 .popup_title {
