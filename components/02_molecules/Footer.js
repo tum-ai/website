@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../../styles/02_molecules/Footer.module.css';
 
 export default function Footer() {
@@ -16,14 +17,14 @@ export default function Footer() {
 						}}
 					>
 						<div>
-							<a href='https://www.instagram.com/tum.ai_official/?hl=de'>
+							<Link href='https://www.instagram.com/tum.ai_official/?hl=de'>
 								<Image
 									src={'/assets/insta.svg'}
 									alt='icon'
 									width={20}
 									height={20}
 								/>
-							</a>
+							</Link>
 						</div>
 						<div>Follow us on Instagram</div>
 						<div className={styles.small_text}>
@@ -41,14 +42,14 @@ export default function Footer() {
 						}}
 					>
 						<div>
-							<a href='https://www.linkedin.com/company/tum-ai/'>
+							<Link href='https://www.linkedin.com/company/tum-ai/'>
 								<Image
 									src={'/assets/linkedin.svg'}
 									alt='icon'
 									width={20}
 									height={20}
 								/>
-							</a>
+							</Link>
 						</div>
 						<div>Follow us on LinkedIn</div>
 						<div className={styles.small_text}>
@@ -73,9 +74,9 @@ export default function Footer() {
 						>
 							Website by
 						</span>{' '}
-						<a href='https://www.linkedin.com/in/stefanrmmr/'>
+						<Link href='https://www.linkedin.com/in/stefanrmmr/'>
 							Stefan Rummer
-						</a>{' '}
+						</Link>{' '}
 						🤙🏼
 					</div>
 					<div className={styles.body_info_text}>
@@ -87,13 +88,13 @@ export default function Footer() {
 							Design & UX
 						</span>{' '}
 						by{' '}
-						<a href='https://www.linkedin.com/in/stefanrmmr/'>
+						<Link href='https://www.linkedin.com/in/stefanrmmr/'>
 							Nils Jacobsen
-						</a>{' '}
+						</Link>{' '}
 						&{' '}
-						<a href='https://www.linkedin.com/in/stefanrmmr/'>
+						<Link href='https://www.linkedin.com/in/stefanrmmr/'>
 							Ramona Dombetzki
-						</a>{' '}
+						</Link>{' '}
 					</div>
 				</div>
 			</div>

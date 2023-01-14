@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '../../styles/02_molecules/Navbar.module.css';
 import DropdownLinks from '../01_atoms/DropdownLinks';
@@ -89,29 +90,29 @@ export default function Navbar() {
 			)}
 			<nav className={styles.navbar}>
 				<div className={styles.navbar_container}>
-					<a href='/' className={styles.links_logo}>
+					<Link href='/' className={styles.links_logo}>
 						<Image
 							src={'/assets/logo_new_white_standard.png'}
 							alt='Logo'
 							fill
 							objectFit='contain'
 						/>
-					</a>
+					</Link>
 					{mobileMenuActive && (
 						<div className={styles.navbar_responsive}>
 							<div className={styles.links}>
-								<a href='https://aielab.tum-ai.com/'>
+								<Link href='https://aielab.tum-ai.com/'>
 									AI E-Lab
-								</a>
-								<a href='https://makeathon.tum-ai.com/'>
+								</Link>
+								<Link href='https://makeathon.tum-ai.com/'>
 									Makeathon
-								</a>
-								<a href='/industry'>Industry Projects</a>
-								<a href='/partners'>Partners</a>
-								<a href='/members'>Members</a>
-								<a href='https://join-us.tum-ai.com/'>
+								</Link>
+								<Link href='/industry'>Industry Projects</Link>
+								<Link href='/partners'>Partners</Link>
+								<Link href='/members'>Members</Link>
+								<Link href='https://join-us.tum-ai.com/'>
 									Join us
-								</a>
+								</Link>
 								<DropdownLinks
 									title={
 										<div
@@ -146,30 +147,30 @@ export default function Navbar() {
 								/>
 							</div>
 							<div className={styles.contact}>
-								<a href='https://www.linkedin.com/company/tum-ai/'>
+								<Link href='https://www.linkedin.com/company/tum-ai/'>
 									<Image
 										src={'/assets/linkedin.svg'}
 										alt='icon'
 										width={20}
 										height={20}
 									/>
-								</a>
-								<a href='https://www.instagram.com/tum.ai_official/?hl=de'>
+								</Link>
+								<Link href='https://www.instagram.com/tum.ai_official/?hl=de'>
 									<Image
 										src={'/assets/insta.svg'}
 										alt='icon'
 										width={20}
 										height={20}
 									/>
-								</a>
-								<a href='https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw'>
+								</Link>
+								<Link href='https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw'>
 									<Image
 										src={'/assets/slack.svg'}
 										alt='icon'
 										width={40}
 										height={40}
 									/>
-								</a>
+								</Link>
 								<button
 									onClick={() => {
 										setContactActive(true);

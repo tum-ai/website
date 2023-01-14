@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from '../../styles/01_atoms/DropdownLinks.module.css';
 
@@ -16,9 +17,9 @@ export default function DropdownLinks({ title, links }) {
 			{active && (
 				<div className={styles.dropdown_content}>
 					{links.map((link, i) => (
-						<a key={i} href={link.href}>
+						<Link key={i} href={link.href}>
 							{link.name}
-						</a>
+						</Link>
 					))}
 				</div>
 			)}
