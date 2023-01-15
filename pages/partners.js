@@ -1,5 +1,5 @@
 import Header1 from '../components/02_molecules/Header1';
-import PartnersRow from '../components/01_atoms/PartnersRow'
+// import PartnersRow from '../components/01_atoms/PartnersRow'
 
 const purpleStyle = { color: "rgb(90, 45, 229)" }
 
