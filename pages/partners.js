@@ -1,5 +1,5 @@
 import Header1 from '../components/02_molecules/Header1';
-// import PartnersRow from '../components/01_atoms/PartnersRow'
+import Image from 'next/image';
 
 const purpleStyle = { color: "rgb(90, 45, 229)" }
 
@@ -11,17 +11,19 @@ export default function Partners() {
 				title='Become a partner of TUM.ai'
 				subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
 			/>
-			<div className="text-uppercase text-center"
-				 style={{margin: '0px', padding: '30px', color: '#000000',
-					 height: '97px', marginTop: '27px', fontSize: '32px', marginBottom: '-8px',
-					 fontWeight: 'bold', paddingTop: '37px', textAlign: 'center',}}>
-				Partners <span style={purpleStyle}>we have collaborated</span> with
-			</div>
-			{/*<PartnersRow imageSrc={'/assets/partners_sponsors/Microsoft_Logo.png'} companyName={'Microsoft'} companyLink={'https://www.microsoft.com'}/>*/}
-			{/*<PartnersRow imageSrc={'/assets/partners_sponsors/google_logo.png'} companyName={'Google'} />*/}
-			{/*<PartnersRow imageSrc={'/assets/partners_sponsors/applied-ai.svg'} companyName={'appliedAI'} />*/}
-			{/*<PartnersRow imageSrc={'/assets/partners_sponsors/UnternehmerTUM.webp'} companyName={'UnternehmerTUM'} />*/}
 
+      <section className="py-8 flex flex-col items-center">
+        <h2 className="text-uppercase text-text text-2xl font-bold mb-8">
+          Partners <span style={purpleStyle}>we have collaborated</span> with
+        </h2>
+        <Image alt="Partners image"/>
+      </section>
+
+      <section className="py-8 bg-background">
+        <h2 className="text-uppercase text-white text-2xl font-bold mb-8">
+          Building the AI ecosystem in Munich, Germany, and worldwide by connecting students, industry and academia.
+        </h2>
+      </section>
 		</>
 	);
 }
