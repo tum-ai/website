@@ -11,7 +11,7 @@ export default function Header() {
 					width={450}
 					height={100}
 				/>
-				<div className='w-fit m-auto flex flex-col justify-center lg:space-x-4 lg:space-y-0 space-y-4 lg:flex-row'>
+				<div className='w-fit m-auto flex flex-col items-center justify-center lg:space-x-4 lg:space-y-0 space-y-4 lg:flex-row'>
 					<Button
 						href={'https://www.tum-ai.com/forPartners.html'}
 						className='bg-primary-500'

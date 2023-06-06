@@ -5,7 +5,7 @@ function Button({ className, link, href, children, ...props }) {
 		return (
 			<Link
 				href={href}
-				className={`rounded-full px-6 py-1 text-white ${className}`}
+				className={`rounded-full px-6 py-1 text-white w-fit ${className}`}
 			>
 				{children}
 			</Link>
@@ -13,7 +13,7 @@ function Button({ className, link, href, children, ...props }) {
 	} else {
 		return (
 			<button
-				className={`rounded-full px-6 py-1 text-white ${className}`}
+				className={`rounded-full px-6 py-1 text-white w-fit ${className}`}
 				{...props}
 			>
 				{children}

@@ -17,14 +17,16 @@ export default function Home() {
 						subText:
 							'sponsored online course certificates and company visits are exclusive to TUM.ai members',
 						body: (
-							<div className='flex flex-col space-y-2 w-fit m-auto'>
+							<div className='flex flex-col items-center space-y-2 w-fit m-auto'>
 								<Button
+									link
 									href={'https://education.tum-ai.com/'}
 									className='bg-gray-200 text-black'
 								>
 									Learn more
 								</Button>
 								<Button
+									link
 									href={
 										'https://www.eventbrite.de/o/tumai-31793295023'
 									}
@@ -41,14 +43,16 @@ export default function Home() {
 						text: 'AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid',
 						subText: 'applications closed, finished',
 						body: (
-							<div className='flex flex-col space-y-2 w-fit m-auto'>
+							<div className='flex flex-col items-center space-y-2 w-fit m-auto'>
 								<Button
+									link
 									href={'https://makeathon.tum-ai.com/'}
 									className='bg-gray-200 text-black'
 								>
 									Learn more
 								</Button>
 								<Button
+									link
 									href={
 										'https://makeathon23.tum-ai.com/apply'
 									}
@@ -66,8 +70,9 @@ export default function Home() {
 						text: 'Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame',
 						subText: 'applications closed, currently ongoing',
 						body: (
-							<div className='flex flex-col space-y-2 w-fit m-auto'>
+							<div className='flex flex-col items-center space-y-2 w-fit m-auto'>
 								<Button
+									link
 									href={
 										'https://www.tum-ai.com/industry-projects.html'
 									}
@@ -76,6 +81,7 @@ export default function Home() {
 									Learn more
 								</Button>
 								<Button
+									link
 									href={'https://industry.tum-ai.com/apply'}
 									className='bg-gray-500'
 									disabled
@@ -91,14 +97,16 @@ export default function Home() {
 						text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
 						subText: 'applications closed, currently ongoing',
 						body: (
-							<div className='flex flex-col space-y-2 w-fit m-auto'>
+							<div className='flex flex-col items-center space-y-2 w-fit m-auto'>
 								<Button
+									link
 									href={'https://aielab.tum-ai.com/'}
 									className='bg-gray-200 text-black'
 								>
 									Learn more
 								</Button>
 								<Button
+									link
 									href={'https://aielab.tum-ai.com/'}
 									className='bg-gray-500'
 									disabled
@@ -128,14 +136,16 @@ export default function Home() {
 							Visit our Transparency Page to learn more!
 							(application phase ended for this semester)
 						</div>
-						<div className='flex flex-col lg:flex-row space-x-0 lg:space-x-2 space-y-2 lg:space-y-0 w-fit m-auto'>
+						<div className='flex items-center flex-col lg:flex-row space-x-0 lg:space-x-2 space-y-2 lg:space-y-0 w-fit m-auto'>
 							<Button
+								link
 								href={'https://www.tum-ai.com/members.html'}
 								className='bg-gray-500'
 							>
 								Meet our Members
 							</Button>
 							<Button
+								link
 								href={'https://join-us.tum-ai.com/'}
 								className='bg-primary-500'
 							>
