@@ -32,93 +32,98 @@ export default function Partners() {
         subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
       />
 
-      <section className="py-8 flex flex-col items-center px-8">
-        <h2 className="text-uppercase text-text text-2xl font-bold mb-8">
+      <section className="flex flex-col items-center py-8 container mx-auto">
+        <h2 className="text-uppercase text-text text-4xl font-bold mb-8">
           Partners <span className="text-[#5a2de5]">we have collaborated</span>{" "}
           with
         </h2>
-        <img src="https://www.tum-ai.com/assets/img/partners_sponsors/PnS_Partners_2023_2.png" />
+        <img
+          src="https://www.tum-ai.com/assets/img/partners_sponsors/PnS_Partners_2023_2.png"
+          className="w-full rounded"
+        />
       </section>
 
-      <section className="px-8 py-8 bg-gradient-to-b from-[#151e35] to-[#211b44] text-white">
-        <h2 className="text-uppercase text-white text-2xl font-bold text-center">
-          Building the AI ecosystem in Munich, Germany, and worldwide by
-          connecting students, industry and academia.
-        </h2>
+      <section className="py-8 md:py-16 bg-gradient-to-b from-[#151e35] to-[#211b44] text-white">
+        <div className="container mx-auto">
+          <h2 className="text-uppercase text-white text-4xl font-bold text-center">
+            Building the AI ecosystem in Munich, Germany, and worldwide by
+            connecting students, industry and academia.
+          </h2>
 
-        <hr className="my-8" />
+          <hr className="my-8" />
 
-        <div className="sm:columns-1 lg:columns-2">
-          <div className="space-y-4 mb-4">
-            <p className="font-bold">
-              Get access to our exclusive{" "}
-              <span className="text-[#a450e6]">
-                pre-selected talent pool of AI enthusiasts.
-              </span>
-              Our members are experienced in software development, data science,
-              data engineering and AI business strategy.
-            </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-4 mb-4">
+              <p className="font-bold text-xl">
+                Get access to our exclusive{" "}
+                <span className="text-[#a450e6]">
+                  pre-selected talent pool of AI enthusiasts.
+                </span>
+                Our members are experienced in software development, data
+                science, data engineering and AI business strategy.
+              </p>
 
-            <p>
-              Joining TUM.ai as a partner or sponsor can support our non-profit
-              organization in many ways. Interact with us in our signature
-              projects and formats like:
-            </p>
+              <p>
+                Joining TUM.ai as a partner or sponsor can support our
+                non-profit organization in many ways. Interact with us in our
+                signature projects and formats like:
+              </p>
 
-            <ul className="list-disc">
-              <li>
-                <b>Challenge setter</b> for the Makeathon
-              </li>
-              <li>
-                <b>Project partner</b> for an Industry phase
-              </li>
-              <li>
-                <b>Lecturer</b> at the AI academy
-              </li>
-              <li>
-                <b>Workshops</b> at your offices
-              </li>
-              <li>
-                <b>Participant</b> or <b>speaker</b> at our events, e.g. the AI
-                summit
-              </li>
-              <li>
-                <b>Sponsorships</b> with logo recognition for other events
-              </li>
-              <li>
-                <b>Mentor</b> for our members
-              </li>
-              <li>
-                <b>Judge</b> or <b>mentor</b> in our in-house AI E-lab incubator
-                for startups
-              </li>
-              <li>
-                Post <b>open positions</b> or a master thesis inside our talent
-                network
-              </li>
-            </ul>
-            <p>
-              We would be more than happy to discuss a long-term collaboration
-              with you!
-            </p>
-            <button className="bg-[#5b2be5] rounded-full px-4 py-2 font-bold">
-              Become a partner
-            </button>
+              <ul className="list-disc">
+                <li>
+                  <b>Challenge setter</b> for the Makeathon
+                </li>
+                <li>
+                  <b>Project partner</b> for an Industry phase
+                </li>
+                <li>
+                  <b>Lecturer</b> at the AI academy
+                </li>
+                <li>
+                  <b>Workshops</b> at your offices
+                </li>
+                <li>
+                  <b>Participant</b> or <b>speaker</b> at our events, e.g. the
+                  AI summit
+                </li>
+                <li>
+                  <b>Sponsorships</b> with logo recognition for other events
+                </li>
+                <li>
+                  <b>Mentor</b> for our members
+                </li>
+                <li>
+                  <b>Judge</b> or <b>mentor</b> in our in-house AI E-lab
+                  incubator for startups
+                </li>
+                <li>
+                  Post <b>open positions</b> or a master thesis inside our
+                  talent network
+                </li>
+              </ul>
+              <p>
+                We would be more than happy to discuss a long-term collaboration
+                with you!
+              </p>
+              <button className="bg-[#5b2be5] rounded-full px-8 py-2 font-bold text-2xl">
+                Become a partner
+              </button>
+            </div>
+
+            <img src="https://www.tum-ai.com/assets/img/mainpage_slideshow/martin_talk.jpg" />
           </div>
-
-          <img src="https://www.tum-ai.com/assets/img/mainpage_slideshow/martin_talk.jpg" />
         </div>
       </section>
 
       <section className="bg-[url('https://www.tum-ai.com/assets/img/mainpage_slideshow/alephalpha_workshop.jpg')]">
-        <div className="p-8  md:columns-2 space-y-4">
+        <div className="py-8 md:py-16 grid md:grid-cols-2 gap-4 container mx-auto">
           {cards.map((card) => (
             <article
               key={card.title}
               className="bg-[#223358] text-white text-center h-full p-4"
             >
               <img src={card.img} />
-              <h2 className="font-bold my-4">{card.title}</h2>
+              <h2 className="font-bold my-4 text-2xl">{card.title}</h2>
               <hr className="my-4" />
               <p>{card.text}</p>
             </article>
