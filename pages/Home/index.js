@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Button from '../../components/Button';
 import Content1 from '../../components/Content1';
+import Content2 from '../../components/Content2';
 import VerticalCards from '../../components/VerticalCards';
 import Header from './components/Header';
 
@@ -192,6 +194,144 @@ export default function Home() {
 					</div>
 				}
 			/>
+			<div className='w-full h-[450px] relative bg-blend-overlay'>
+				<div className='absolute z-10 h-full w-full bg-primary-500 opacity-20'></div>
+				<Image
+					src={'/assets/aibootcamp.jpg'}
+					alt=''
+					fill
+					className='object-cover'
+				/>
+			</div>
+			<Content2
+				img={'/assets/martin_talk.jpg'}
+				title={
+					<h2 className='text-uppercase text-white text-4xl font-bold text-center'>
+						We connect{' '}
+						<span className='text-[#a450e6]'>stellar</span> Students
+						and Companies
+					</h2>
+				}
+				subtitle={
+					<p className='font-bold text-xl text-center lg:text-left'>
+						Get access to our{' '}
+						<span className='text-[#a450e6]'>
+							exclusive pre-selected talent pool
+						</span>{' '}
+						of highly qualified Software/Data Engineers and AI
+						Strategists.
+					</p>
+				}
+				body={
+					<p>
+						Join TUM.ai as a sponsor or cooperation partner of our
+						non-profit student initiative. We are excited about
+						engaging with your company via workshops, speaker events
+						or as a challenge setter for our Makeathon competitions.
+						If you are looking for a high-quality, but affordable
+						team of Data Scientists and AI Strategists to solve
+						problems for your firm, consider becoming a cooperation
+						partner for TUM.ai's industry project format. (Student
+						Data Consultancy)
+					</p>
+				}
+				bottom={
+					<div className='flex flex-col items-start space-y-4 lg:items-center lg:flex-row lg:space-x-2 lg:space-y-0 w-fit'>
+						<Button
+							link
+							href={'https://www.tum-ai.com/forPartners.html'}
+							className='bg-gray-500'
+						>
+							Partner's of TUM.ai
+						</Button>
+						<Button
+							link
+							href={'https://join-us.tum-ai.com/'}
+							className='bg-primary-500'
+						>
+							Apply as a partner
+						</Button>
+					</div>
+				}
+			/>
+			{/* <section className='py-16 md:py-16 bg-gradient-to-b from-[#151e35] to-[#211b44] text-white'>
+				<div
+					style={{
+						maxWidth: '1600px',
+					}}
+					className='container space-y-16 mx-auto px-8 lg:px-16'
+				>
+					<h2 className='text-uppercase text-white text-4xl font-bold text-center'>
+						We connect{' '}
+						<span className='text-[#a450e6]'>stellar</span> Students
+						and Companies
+					</h2>
+
+					<div className='h-full lg:px-16'>
+						<hr className='px-4 bg-gray-700 h-[1px] border-none' />
+					</div>
+
+					<div className='grid md:grid-cols-2 gap-4 items-center'>
+						<div className='space-y-4 mb-4'>
+							<p className='font-bold text-xl text-center lg:text-left'>
+								Get access to our{' '}
+								<span className='text-[#a450e6]'>
+									exclusive pre-selected talent pool
+								</span>{' '}
+								of highly qualified Software/Data Engineers and
+								AI Strategists.
+							</p>
+
+							<p>
+								Join TUM.ai as a sponsor or cooperation partner
+								of our non-profit student initiative. We are
+								excited about engaging with your company via
+								workshops, speaker events or as a challenge
+								setter for our Makeathon competitions. If you
+								are looking for a high-quality, but affordable
+								team of Data Scientists and AI Strategists to
+								solve problems for your firm, consider becoming
+								a cooperation partner for TUM.ai's industry
+								project format. (Student Data Consultancy)
+							</p>
+
+							<div className='flex flex-col items-start space-y-4 lg:items-center lg:flex-row lg:space-x-2 lg:space-y-0 w-fit'>
+								<Button
+									link
+									href={
+										'https://www.tum-ai.com/forPartners.html'
+									}
+									className='bg-gray-500'
+								>
+									Partner's of TUM.ai
+								</Button>
+								<Button
+									link
+									href={'https://join-us.tum-ai.com/'}
+									className='bg-primary-500'
+								>
+									Apply as a partner
+								</Button>
+							</div>
+						</div>
+
+						<div className='relative w-full h-[300px]'>
+							<Image
+								src='/assets/martin_talk.jpg'
+								fill
+								className='object-cover'
+							/>
+						</div>
+					</div>
+				</div>
+			</section> */}
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		</>
 	);
 }
