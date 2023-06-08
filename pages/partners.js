@@ -1,24 +1,31 @@
 import Header1 from "../components/02_molecules/Header1";
+import Image from "next/image";
+import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
+import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+import AlelphalphAworkshopGroup from "../public/assets/partners/alelphalpha_workshop_group.jpg";
+import RichardTalk from "../public/assets/partners/richard_talk.jpg";
+import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
+import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
 
 export default function Partners() {
   const cards = [
     {
-      img: "https://www.tum-ai.com/assets/img/mainpage_slideshow/alelphalpha_workshop_group.jpg",
+      img: AlelphalphAworkshopGroup,
       title: "AI Talent Pool",
       text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
     },
     {
-      img: "https://www.tum-ai.com/assets/img/mainpage_slideshow/richard_talk.jpg",
+      img: RichardTalk,
       title: "Marketing & Awareness",
       text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (3.5k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
     },
     {
-      img: "https://www.tum-ai.com/assets/img/mainpage_slideshow/leopold_infineon.jpeg",
+      img: LeopoldInfineon,
       title: "Project Collaborations",
       text: "Being a partner opens the door for many sorts of collaboration, like becoming a challenge setter for our Makeathons, joining for an industry project or hosting networking workshops with our members. We are only limited by your creativity!",
     },
     {
-      img: "https://www.tum-ai.com/assets/img/mainpage_slideshow/PnS_map_2023.jpg",
+      img: PnSMap,
       title: "Network & Ecosystem",
       text: "We invite you to benefit from our entrepreneurial ecosystem, our own AI startup founders, as well as insights from our own R&D projects. We invite you to leverage our connections to other top university AI clubs, as well as the association to the TUM brand to drive AI in your company.",
     },
@@ -37,9 +44,10 @@ export default function Partners() {
           Partners <span className="text-[#5a2de5]">we have collaborated</span>{" "}
           with
         </h2>
-        <img
-          src="https://www.tum-ai.com/assets/img/partners_sponsors/PnS_Partners_2023_2.png"
+        <Image
+          src={PnSPartners}
           className="w-full rounded"
+          alt="PnS partners"
         />
       </section>
 
@@ -110,7 +118,7 @@ export default function Partners() {
               </button>
             </div>
 
-            <img src="https://www.tum-ai.com/assets/img/mainpage_slideshow/martin_talk.jpg" />
+            <Image src={MartinTalk} alt="Martin talk" />
           </div>
         </div>
       </section>
@@ -122,7 +130,7 @@ export default function Partners() {
               key={card.title}
               className="bg-[#223358] text-white text-center h-full p-4"
             >
-              <img src={card.img} />
+              <Image src={card.img} alt={card.title} />
               <h2 className="font-bold my-4 text-2xl">{card.title}</h2>
               <hr className="my-4" />
               <p>{card.text}</p>
