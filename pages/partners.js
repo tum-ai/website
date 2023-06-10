@@ -41,17 +41,17 @@ export default function Partners() {
 
       <section className="flex flex-col items-center py-8 container mx-auto">
         <h2 className="text-uppercase text-text text-4xl font-bold mb-8">
-          Partners <span className="text-[#5a2de5]">we have collaborated</span>{" "}
-          with
+          Partners{" "}
+          <span className="text-primary-500">we have collaborated</span> with
         </h2>
         <Image
           src={PnSPartners}
-          className="w-full rounded"
+          className="w-full rounded pb-16"
           alt="PnS partners"
         />
       </section>
 
-      <section className="py-8 md:py-16 bg-gradient-to-b from-[#151e35] to-[#211b44] text-white">
+      <section className="py-8 md:py-16 bg-gradient-to-b from-primary-900 to-primary-950 text-white">
         <div className="container mx-auto">
           <h2 className="text-uppercase text-white text-4xl font-bold text-center">
             Building the AI ecosystem in Munich, Germany, and worldwide by
@@ -64,7 +64,7 @@ export default function Partners() {
             <div className="space-y-4 mb-4">
               <p className="font-bold text-xl">
                 Get access to our exclusive{" "}
-                <span className="text-[#a450e6]">
+                <span className="text-primary-300">
                   pre-selected talent pool of AI enthusiasts.
                 </span>
                 Our members are experienced in software development, data
@@ -113,7 +113,7 @@ export default function Partners() {
                 We would be more than happy to discuss a long-term collaboration
                 with you!
               </p>
-              <button className="bg-[#5b2be5] rounded-full px-8 py-2 font-bold text-2xl">
+              <button className="bg-primary-500 rounded-full px-8 py-2 font-bold text-2xl hover:bg-primary-400 duration-500">
                 Become a partner
               </button>
             </div>
@@ -123,12 +123,12 @@ export default function Partners() {
         </div>
       </section>
 
-      <section className="bg-[url('https://www.tum-ai.com/assets/img/mainpage_slideshow/alephalpha_workshop.jpg')]">
+      <section className="bg-[url('../public/assets/partners/alephalpha_workshop.jpg')]">
         <div className="py-8 md:py-16 grid md:grid-cols-2 gap-4 container mx-auto">
           {cards.map((card) => (
             <article
               key={card.title}
-              className="bg-[#223358] text-white text-center h-full p-4"
+              className="bg-primary-900 text-white text-center h-full p-4"
             >
               <Image src={card.img} alt={card.title} />
               <h2 className="font-bold my-4 text-2xl">{card.title}</h2>
