@@ -39,19 +39,19 @@ export default function Partners() {
         subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
       />
 
-      <section className="flex flex-col items-center py-8 container mx-auto">
+      <section className="flex flex-col items-center p-8 container mx-auto">
         <h2 className="text-uppercase text-text text-4xl font-bold mb-8">
           Partners{" "}
           <span className="text-primary-500">we have collaborated</span> with
         </h2>
         <Image
           src={PnSPartners}
-          className="w-full rounded pb-16"
+          className="w-full rounded"
           alt="PnS partners"
         />
       </section>
 
-      <section className="py-8 md:py-16 bg-gradient-to-b from-primary-900 to-primary-950 text-white">
+      <section className="p-8 bg-gradient-to-b from-primary-900 to-primary-950 text-white">
         <div className="container mx-auto">
           <h2 className="text-uppercase text-white text-4xl font-bold text-center">
             Building the AI ecosystem in Munich, Germany, and worldwide by
