@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Header1({ imageSrc, title, subtitle }) {
+export default function Hero({ imageSrc, title, subtitle }) {
   return (
     <div className="relative h-96 flex flex-col-reverse">
       <Image
