@@ -15,14 +15,14 @@
   position: absolute;
   background-color: white;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   overflow: hidden;
 }
 
 .dropdown_content a {
   color: black;
-  padding: .7rem;
+  padding: 0.7rem;
   text-decoration: none;
   display: block;
   text-align: center;
