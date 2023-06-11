@@ -113,7 +113,7 @@ export default function Partners() {
                 We would be more than happy to discuss a long-term collaboration
                 with you!
               </p>
-              <button className="bg-primary-500 rounded-full px-8 py-2 font-bold text-2xl hover:bg-primary-400 duration-500">
+              <button className="bg-primary-500 rounded-full px-8 py-2 font-bold hover:bg-primary-400 duration-500">
                 Become a partner
               </button>
             </div>
@@ -124,7 +124,7 @@ export default function Partners() {
       </section>
 
       <section className="bg-[url('../public/assets/partners/alephalpha_workshop.jpg')]">
-        <div className="py-8 md:py-16 grid md:grid-cols-2 gap-4 container mx-auto">
+        <div className="p-8 lg:p-16 lg:px-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 m-auto">
           {cards.map((card) => (
             <article
               key={card.title}
