@@ -51,8 +51,8 @@ export default function Partners() {
         />
       </section>
 
-      <section className="bg-gradient-to-b from-primary-900 to-primary-950 p-8 text-white">
-        <div className="container mx-auto">
+      <section className="bg-gradient-to-b from-primary-900 to-primary-950 text-white">
+        <div className="container mx-auto p-8">
           <h2 className="text-uppercase text-center text-4xl font-bold text-white">
             Building the AI ecosystem in Munich, Germany, and worldwide by
             connecting students, industry and academia.
@@ -118,17 +118,17 @@ export default function Partners() {
               </button>
             </div>
 
-            <Image src={MartinTalk} alt="Martin talk" />
+            <Image src={MartinTalk} alt="Martin talk" className="rounded" />
           </div>
         </div>
       </section>
 
       <section className="bg-[url('../public/assets/partners/alephalpha_workshop.jpg')]">
-        <div className="container m-auto grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:p-16 lg:px-60 xl:grid-cols-4">
+        <div className="container m-auto grid grid-cols-1 gap-8 p-8 md:grid-cols-2 xl:grid-cols-4">
           {cards.map((card) => (
             <article
               key={card.title}
-              className="h-full bg-primary-900 p-4 text-center text-white"
+              className="h-full rounded bg-primary-900 p-4 text-center text-white"
             >
               <Image src={card.img} alt={card.title} />
               <h2 className="my-4 text-2xl font-bold">{card.title}</h2>
