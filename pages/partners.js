@@ -39,8 +39,8 @@ export default function Partners() {
         subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
       />
 
-      <section className="flex flex-col items-center p-8 container mx-auto">
-        <h2 className="text-uppercase text-text text-4xl font-bold mb-8">
+      <section className="container mx-auto flex flex-col items-center p-8">
+        <h2 className="text-uppercase text-text mb-8 text-4xl font-bold">
           Partners{" "}
           <span className="text-primary-500">we have collaborated</span> with
         </h2>
@@ -51,18 +51,18 @@ export default function Partners() {
         />
       </section>
 
-      <section className="p-8 bg-gradient-to-b from-primary-900 to-primary-950 text-white">
+      <section className="bg-gradient-to-b from-primary-900 to-primary-950 p-8 text-white">
         <div className="container mx-auto">
-          <h2 className="text-uppercase text-white text-4xl font-bold text-center">
+          <h2 className="text-uppercase text-center text-4xl font-bold text-white">
             Building the AI ecosystem in Munich, Germany, and worldwide by
             connecting students, industry and academia.
           </h2>
 
           <hr className="my-8" />
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-4 mb-4">
-              <p className="font-bold text-xl">
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="mb-4 space-y-4">
+              <p className="text-xl font-bold">
                 Get access to our exclusive{" "}
                 <span className="text-primary-300">
                   pre-selected talent pool of AI enthusiasts.
@@ -113,7 +113,7 @@ export default function Partners() {
                 We would be more than happy to discuss a long-term collaboration
                 with you!
               </p>
-              <button className="bg-primary-500 rounded-full px-8 py-2 font-bold hover:bg-primary-400 duration-500">
+              <button className="rounded-full bg-primary-500 px-8 py-2 font-bold duration-500 hover:bg-primary-400">
                 Become a partner
               </button>
             </div>
@@ -124,14 +124,14 @@ export default function Partners() {
       </section>
 
       <section className="bg-[url('../public/assets/partners/alephalpha_workshop.jpg')]">
-        <div className="p-8 lg:p-16 lg:px-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 m-auto">
+        <div className="container m-auto grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:p-16 lg:px-60 xl:grid-cols-4">
           {cards.map((card) => (
             <article
               key={card.title}
-              className="bg-primary-900 text-white text-center h-full p-4"
+              className="h-full bg-primary-900 p-4 text-center text-white"
             >
               <Image src={card.img} alt={card.title} />
-              <h2 className="font-bold my-4 text-2xl">{card.title}</h2>
+              <h2 className="my-4 text-2xl font-bold">{card.title}</h2>
               <hr className="my-4" />
               <p>{card.text}</p>
             </article>
