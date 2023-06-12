@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="flex bg-primary px-8 py-20">
+      <div className="bg-primary flex px-8 py-20">
         <div className="m-auto inline-block space-y-8">
           <Image
             src={"/assets/logo_new_white_standard.png"}
