@@ -124,7 +124,7 @@ export default function Partners() {
       </section>
 
       <section className="bg-[url('../public/assets/partners/alephalpha_workshop.jpg')]">
-        <div className="m-auto grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-4 lg:p-16 lg:px-60">
+        <div className="container m-auto grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:p-16 lg:px-60 xl:grid-cols-4">
           {cards.map((card) => (
             <article
               key={card.title}
