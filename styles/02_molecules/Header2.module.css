@@ -1,0 +1,48 @@
+.wrapper {
+	position: relative;
+	width: 80%; 
+	height: 350px; 
+	margin: auto;
+  }
+  
+  .image_container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .text_container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-right: auto;
+	margin-left: auto;
+	height: 80%;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 0.5rem;
+  }
+  
+  .title {
+	padding: 0.5rem;
+	font-weight: bold;
+	background-color: white;
+	width: fit-content;
+  }
+  
+  .subtitle {
+	padding: 0.5rem;
+	background-color: white;
+	width: fit-content;
+  }
+  

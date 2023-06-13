@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="44.46159mm"
+   height="8.1715927mm"
+   viewBox="0 0 44.46159 8.1715927"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0857965"
+     inkscape:cx="48.662465"
+     inkscape:cy="21.814209"
+     inkscape:window-width="1401"
+     inkscape:window-height="769"
+     inkscape:window-x="-57"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g15" />
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath27">
+      <path
+         d="m 54,786.62 h 127 v 24.151 H 54 Z"
+         id="path25" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath41">
+      <path
+         d="M 346.74,10.68 H 540.96 V 70.319 H 346.74 Z"
+         id="path39" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath53">
+      <path
+         d="M 346.74,10.68 H 540.96 V 70.319 H 346.74 Z"
+         id="path51" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.648263,-33.599343)">
+    <g
+       id="g15"
+       inkscape:label="TURTLE_TUM AI project_description_extended_14.02.2022"
+       transform="matrix(0.35277777,0,0,-0.35277777,5.450683,301.70471)"
+       style="display:inline">
+      <path
+         d="m 0,0.976 h 595.32 v 87.5 H 0 Z"
+         style="fill:#0d5c75;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path17" />
+      <path
+         d="M 2.788859,765.58101 H 598.10886 v 86.1 H 2.788859 Z"
+         style="fill:#0d5c75;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path19" />
+      <g
+         id="g21"
+         style="fill:#0d5c75;fill-opacity:1"
+         transform="translate(-1.3944295,-55.079965)">
+        <g
+           id="g23"
+           clip-path="url(#clipPath27)"
+           transform="translate(12.549866,4.8805033)"
+           style="fill:#0d5c75;fill-opacity:1">
+          <g
+             id="g29"
+             transform="matrix(0.6014797,0,0,-0.5867909,0,6.1e-5)"
+             style="fill:#0d5c75;fill-opacity:1">
+            <g
+               id="g31"
+               transform="translate(105.3656,-1375.2026)"
+               style="fill:#0d5c75;fill-opacity:1">
+              <path
+                 d="M 0,0 V 33.273 H -5.78 V 0 h -8.807 V -5.499 H 8.782 V 0 Z m 28.754,-5.499 v 23.353 c 0,3.332 0.538,5.768 1.613,7.308 1.604,2.226 3.862,3.34 6.772,3.34 2.928,0 5.194,-1.114 6.798,-3.34 1.075,-1.49 1.612,-3.926 1.612,-7.308 V -5.499 h 5.781 v 24.961 c 0,4.084 -1.257,7.449 -3.771,10.094 -2.828,2.947 -6.301,4.42 -10.42,4.42 -4.118,0 -7.582,-1.473 -10.394,-4.42 -2.514,-2.645 -3.771,-6.01 -3.771,-10.094 V -5.499 Z M 82.515,16.75 94.373,33.273 h -7.07 L 76.363,17.402 h -1.042 v 15.871 h -5.78 V -5.499 h 6.772 c 5.061,0 8.716,0.962 10.965,2.887 C 89.759,-0.469 91,2.36 91,5.876 c 0,2.746 -0.778,5.106 -2.332,7.082 -1.555,1.975 -3.606,3.239 -6.153,3.792 m -7.194,-4.445 h 1.836 c 5.474,0 8.211,-2.118 8.211,-6.353 C 85.368,1.984 82.706,0 77.38,0 H 75.321 Z M 119.283,0 v 33.273 h -5.781 V 0 h -8.806 v -5.499 h 23.369 V 0 Z m 28.754,-5.499 V 27.774 H 159.3 v 5.499 H 142.257 V -5.499 Z M 194.951,0 h -15.356 v 9.316 h 14.909 v 5.5 h -14.909 v 12.958 h 15.356 v 5.499 H 173.815 V -5.499 h 21.136 z"
+                 style="fill:#0d5c75;fill-opacity:1;fill-rule:evenodd;stroke:none"
+                 id="path33" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         id="g35">
+        <g
+           id="g37"
+           clip-path="url(#clipPath41)">
+          <text
+             transform="matrix(1,0,0,-1,475.92,60.6)"
+             style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text45"><tspan
+               x="0 4.7403002 10.9197 16.320601 21.059999 25.2603 29.820601 32.277599 38.457901 46.197899 51.4809"
+               y="0"
+               sodipodi:role="line"
+               id="tspan43">TURTLE GmbH</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g47">
+        <g
+           id="g49"
+           clip-path="url(#clipPath53)" />
+      </g>
+      <text
+         transform="matrix(1,0,0,-1,468.36,47.7)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text61"><tspan
+           x="0 4.7996998 8.9397001 14.0427 19.325701 24.606001 29.285999 34.389 38.229301 41.289299 45.969299 51.0723 53.2323 55.689301 60.549301 65.409302"
+           y="0"
+           sodipodi:role="line"
+           id="tspan55">Schopenstehl 15</tspan><tspan
+           x="1.143 6.0029998 10.863 15.723 20.583 25.443001 27.9 34.319698 38.880001 46.619999 51.899399 57.002399 60.121799 65.403"
+           y="12.96"
+           sodipodi:role="line"
+           id="tspan57">20095 Hamburg</tspan><tspan
+           x="29.646 35.826302 40.506302 43.629299 51.369301 55.928699 61.028999 65.403"
+           y="25.857"
+           sodipodi:role="line"
+           id="tspan59">Germany</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,54,697.26)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text67"><tspan
+           x="0 14.04594 26.45352 38.873089 44.567387 50.261688 59.80014 70.541389 78.333588 84.027885 96.267639 108.32756 113.84204 126.08179 133.7541 139.26859 153.30853 159.66217 165.17665 172.79503 185.03477 193.00681 198.52129 204.21558 222.45532 234.87489 242.84691 255.08665 265.88583 271.58014 283.64008 295.99969 301.51419 319.81586 330.55511 338.41525 348.00565 360.06558 365.58005 377.94766 390.06754 402.30728 410.10748 420.85672 426.37122 434.05151 446.23132 454.21133"
+           y="0"
+           sodipodi:role="line"
+           id="tspan63">Application of AI for improving match quota for</tspan><tspan
+           x="0 8.8191719 19.628351 30.367601 42.735222 54.976967 60.675262 72.735191 85.102814 90.617294 103.03886 113.83805 121.878 130.69717 142.93692 154.99884 167.05878 177.91791 183.61819 189.13268 194.82698 206.87292 212.38741 220.18759 232.19557 242.98477 248.49925 267.64011 278.37933 286.35135 292.04565 299.83786 305.53217 323.83185 334.63104 340.14551 346.49915 358.5571 370.97665 383.03857 391.84976 399.64197 407.61398 418.44113"
+           y="28.671301"
+           sodipodi:role="line"
+           id="tspan65">seagoing personnel in the Maritime Industry</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,54,620.64)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text71"><tspan
+           x="0 8.3404083 15.17985 18.29817 24.23835 29.517534 33.777775 36.896095 42.835175 48.839039"
+           y="0"
+           sodipodi:role="line"
+           id="tspan69">Objective</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,54,596.87928)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text77"><tspan
+           x="0 7.6750202 13.43952 18.7209 24.485399 27.124992 33.544998 40.023197 43.019642 48.599674 54.836315 57.896442 64.976349 67.918983 70.916527 74.636551 80.873192 86.453224 90.173248 93.170792 99.648987 105.41349 110.99352 114.77394 119.45142 122.44896 126.16898 132.40562 138.17012 141.16766 150.6434 156.22343 162.46008 168.69672 174.27567 176.9427 181.20294 186.29765 192.5343 196.3773 200.22031 205.9848 212.22144 215.94366 218.94119 228.41695 233.99698 237.717 242.81172 249.04836 251.68796 257.92459 264.405 267.40253 273.88293 280.11957 286.53958 290.25958 295.83963 298.24426 301.24179 303.88138 307.60141 310.59894 314.07852 316.71811 322.95474 329.43405 334.11151 337.10907 340.82907 347.06573 352.83023 355.82776 362.30597 368.07047 372.74796 376.46796 379.46552 384.56021 390.14026 396.37689 402.8573 405.49689 411.97729 417.55731 421.27734 427.04184 430.34134 435.02213 438.36551 441.36307 445.68259"
+           y="0"
+           sodipodi:role="line"
+           id="tspan73">Develop an AI that beats the manual/current matching quota: it finds the best candidate(s) /</tspan><tspan
+           x="0 9.4801321 15.057972 18.777996 23.878206 30.118139 33.417629 39.182129 43.859612 47.1591 50.156639 53.576908 60.05621 63.899208 66.896751 72.476784 78.713425 81.71096 88.130966 94.609169 100.37367 106.61031 109.60785 114.88923 120.46927 125.56399 131.14403 137.38066 142.47539 147.81166 150.8092 153.44989 159.68654 162.71262 168.29266 171.29019 180.76593 183.40663 189.64326 192.28285 201.75859 207.99524 217.47098 220.46852 226.04855 235.52429 242.00468 248.24133 254.47797 258.198 261.19553 267.61554 271.0358 274.03336 277.75339 280.39407 289.86981 295.63431 298.12897"
+           y="15.77826"
+           sodipodi:role="line"
+           id="tspan75">match(es) for an open vacancy in a minimum amount of time.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,53.98902,557.2854)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text81"><tspan
+           x="0 7.9198742 12.784014 18.724194 21.787615 27.067896 33.008076 37.872215 43.74432"
+           y="0"
+           sodipodi:role="line"
+           id="tspan79">Use case</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,53.98902,533.52468)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text85"><tspan
+           x="0 9.8402758 15.420312 19.140335 24.235056 30.471697 33.111286 39.347927 45.828323 48.825863 55.306259 58.785824 61.783363 66.460838 72.225342 77.805382 81.224548 86.804588 90.647583 96.412086 100.25509 103.25262 109.73083 113.57383 119.99384 123.4141 126.0537 128.69438 134.45888 139.13637 142.13391 147.71394 153.95058 160.43097 163.42851 168.52324 175.00363 184.47937 190.95757 196.53761 202.77425 208.11053 211.10806 216.38945 221.96948 227.06421 232.64424 238.88087 243.9756 246.61079 252.37091 257.04181"
+           y="0"
+           sodipodi:role="line"
+           id="tspan83">Matching of seafarer profiles and company vacancies</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,71.99622,510.1263)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:Symbol;-inkscape-font-specification:SymbolMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text89"><tspan
+           x="0"
+           y="0"
+           id="tspan87">•</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.99244,510.1263)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text93"><tspan
+           x="0 10.259712 16.496351 22.076387 25.796412 28.793953 31.433544 36.111023 39.108562 42.828587 49.065228 54.829727 57.889854 64.368057 68.211052 74.631058 81.109261 86.689293 93.167496 95.807091 98.446678 101.08737 104.8074 110.14368 113.14121 116.92053 123.15717 128.73721 132.45723 135.45477 141.93297 145.77597 152.19707 155.61624 158.25694 160.89653 166.71703 169.71457 176.25426 179.2518 181.89139 186.56886 189.56641 195.14754 200.24226 205.33698 211.10149 217.57968 221.2997 227.06421 233.5435 236.54105 239.96022 246.38022 250.22322 253.22076 255.92075 262.34076 268.81894 271.8165 278.29468 284.71469 289.39218 293.11221 295.81219 302.04883 308.52921 311.52676 317.58661 322.55945"
+           y="0"
+           sodipodi:role="line"
+           id="tspan91">What is the probability that profile X is accepted for job posting Y?</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,71.99622,494.76528)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:Symbol;-inkscape-font-specification:SymbolMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text97"><tspan
+           x="0"
+           y="0"
+           id="tspan95">•</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.99244,494.76528)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text103"><tspan
+           x="0 10.259712 16.496351 22.076387 25.796412 28.793953 32.213123 37.793159 42.887878 46.607903 53.027908 56.928005 61.605488 64.603027 70.18306 76.419701 82.899002 85.896538 89.315712 94.895744 99.990471 103.71049 110.1305 113.9735 117.03252 122.12724 128.54726 138.02299 144.50119 147.14078 153.37743 158.95746 162.67749 165.31818 171.73817 178.0374 181.03494 183.67455 189.91118 192.90872 199.38692 203.22992 209.64992 213.07019 215.77017 218.41087 224.17537 227.17291 232.75294 239.05327 245.53256 248.53011 253.81148 259.39151 264.48624 270.06628 276.30292 281.39764 286.73392 289.73145 295.31149 299.15448 304.91901 307.91653 317.39227 322.97232 325.61191 331.84854 334.48923 339.8255 342.82306 345.46265 351.69928 355.17883 357.87881 364.11548 369.87448 376.11111 381.20584 383.84653 390.08316 396.56247 399.56 403.28003 409.51666 415.28116"
+           y="0"
+           sodipodi:role="line"
+           id="tspan99">What factors and factor combination in profile and vacancy are mainly influencing the</tspan><tspan
+           x="0 6.4782 10.3212 16.741205 23.219406 28.799442 35.277641 37.918331 40.557922 43.197517 46.917542 52.253819 55.313946 61.733952 65.154221 68.151764 73.791092 76.788628 81.46611 87.702751 92.79747 97.892189 103.65669 108.33417 113.01165 116.37153 122.60817 125.24886 128.2464 137.72214 143.30217 147.0222 152.11691 158.35356 161.3511 164.65169 171.13098 176.89549 180.31575 182.95535 189.19199 194.95648 201.43689 204.43442 210.01447 214.69194 217.68948 222.36696 225.00764 231.48695 237.78728 240.42686 246.6635 253.14281 256.14035 262.56033 265.98062 268.97815 274.73718 284.21292 290.6911 293.39108 299.8111 305.14737 314.62311 320.3876 326.62427 330.34427 333.34183 338.43655 344.85654 351.0932 354.8132 358.65622 364.23624 369.33096 373.0499 376.35049 381.35736"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan101">probability of a successful match (defined as signing of employment contract)?</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,71.98524,464.04324)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:Symbol;-inkscape-font-specification:SymbolMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text107"><tspan
+           x="0"
+           y="0"
+           id="tspan105">•</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.98146,464.04324)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text113"><tspan
+           x="0 10.259712 16.496351 22.076387 25.796412 28.793953 33.888672 39.468708 45.705349 48.702888 53.380367 59.144867 64.724907 68.145172 73.725212 77.568207 83.33271 87.175713 91.853188 94.850731 100.43076 106.6674 113.1478 117.46733 123.88734 127.73034 130.72787 135.8226 142.2426 151.71835 158.19655 163.77658 170.01323 172.65282 178.41731 183.09479 186.09233 192.57272 198.99164 203.25188 208.3466 214.58324 220.16327 226.39992 232.88031 238.64481 241.64235 245.36238 251.78238 254.77992 257.41953 263.65616 268.75089 272.59387 278.35837 283.93842 288.61588 294.3804 297.44052 301.16055 307.39719 313.16168 316.15921 322.63742 326.48041 332.90042 339.37863 344.95865 351.43686 354.07645 356.77643 359.41602 363.13605 368.47232 371.46988 377.88986 381.31015 384.37027 389.95032 392.94785 397.62534 403.86197 408.9567 414.05142 419.81592 424.49338 429.17087 432.59003 438.82669 441.46738"
+           y="0"
+           sodipodi:role="line"
+           id="tspan109">What can seafarers and/or companies do/change to increase the probability of a successful</tspan><tspan
+           x="0 9.4757404 15.055776 18.775801 23.87052 30.107161 35.037182"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan111">match?</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,53.97804,417.96018)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text117"><tspan
+           x="0 6.7197599 11.099682 17.819443 20.937761 26.877941 32.158222 36.417366 39.480785 47.58073 53.520912 56.639233 59.819038 65.759216 71.699402 76.079323 82.018402 88.858948 91.977264 97.917442 102.78378"
+           y="0"
+           sodipodi:role="line"
+           id="tspan115">Project Deliverables</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,71.98524,394.19946)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text121"><tspan
+           x="0 5.9401798"
+           y="0"
+           sodipodi:role="line"
+           id="tspan119">1.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.98146,394.19946)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text127"><tspan
+           x="0 7.68051 13.44501 16.864182 19.504871 25.741512 31.506012 34.565041 43.325981 46.323521 52.801723 56.644722 63.064728 69.542931 75.962936 80.640411 86.404915 89.402451 95.882851 101.46288 105.18291 110.76295 113.82307 118.50055 122.22057 126.06358 132.30022 137.39494 141.11496 147.35159 151.1946 156.95361 159.95116 165.53119 171.71072 178.19113 181.18866 187.66907 193.2491 196.96912 202.54916 205.54669 212.0249 218.5042 221.14488 227.38153 231.10155 234.09909 239.86359 246.10023 252.33687 257.9169 264.15353 269.24826 275.01276 284.48849 290.18823 296.42487 300.1449 303.14243 308.72247 313.39993 316.39749 322.87567 328.45572 333.13321 335.7728 340.45029 343.44781 346.92737 353.34738 357.19037 360.18793 367.26782 370.21045 373.20801 379.44464 384.12213 389.88663 392.88416 397.97888 403.55893 408.23639 414.00089"
+           y="0"
+           sodipodi:role="line"
+           id="tspan123">Define &amp; propose data structure and data point enhancement as basis for AI use case</tspan><tspan
+           x="17.99622 23.57406"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan125">a.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,125.98488,378.83844)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text133"><tspan
+           x="0 7.68051 13.259448 16.98057 22.559507 25.619635 31.199671 37.43631 43.015247 45.655937 50.992218 55.669697 58.369678 63.047161 65.451782 68.449318 76.369194 82.605835 88.185867 91.905891 94.903435 101.38383 106.96387 110.68389 116.26392 119.32405 121.96365 126.64112 129.63866 139.11441 141.754 146.43147 151.10896 153.74855 159.98518 166.46559 169.46312 173.18315 179.66354 182.66109 185.30177 194.77751 201.25571 205.09871 211.51762 216.799 222.56351 225.56104 229.27997 235.5166 241.27562 244.27316 251.35306 254.2957"
+           y="0"
+           sodipodi:role="line"
+           id="tspan129">Data analysis: what data is missing to improve the AI</tspan><tspan
+           x="-17.99622 -11.51802"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan131">b.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,125.99586,363.47742)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text139"><tspan
+           x="0 7.8001919 14.220198 22.140072 25.137611 28.918026 35.338032 38.335571 43.013054 46.733074 50.576077 56.812717 61.907436 65.627457 71.864098 75.7071 81.471603 84.469139 90.233643 95.27346 97.914146 102.59163 106.31165 108.95125 115.18789 121.66828 124.66582 133.42676 136.4243 139.84457 146.08121 149.80124 156.03787 159.88087 165.64537 168.64291 175.1837 180.76373 184.48376 190.0638 193.06134 196.78136 203.26176 206.25929 215.73505 221.31508 226.35489 229.05487 238.53062 241.17021 246.15514 251.91963 254.91718 261.15381 265.8313 271.41132 277.88953 280.52911 283.1698 285.80939 289.58981 294.92609 297.92365 301.3439 307.76721 311.608 314.60556 321.68546 324.72253"
+           y="0"
+           sodipodi:role="line"
+           id="tspan135">How to structure existing &amp; future data to maximize usability for AI</tspan><tspan
+           x="-17.99622 -12.89601"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan137">c.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,126.00684,348.1164)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text145"><tspan
+           x="0 7.7958002 14.215806 22.135679 25.133221 28.913633 35.333641 38.331181 42.053398 45.893105 51.533531 54.173122 60.413059 63.410599 67.13282 73.372749 79.132858 82.130402 89.212502 92.155144"
+           y="0"
+           sodipodi:role="line"
+           id="tspan141">How to train the AI</tspan><tspan
+           x="-53.999641 -48.05946"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan143">2.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,90.00342,332.75538)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text151"><tspan
+           x="0 6.179544 10.022544 16.442551 22.92075 29.340755 34.018234 39.782738 42.780277 49.260674 55.025173 61.204716 66.969215 70.812218 73.452904 78.547623 81.545166 88.625069 91.567711 94.565247 100.14529 103.98829 109.08301 115.31965 117.95924 121.67926 127.44376 132.53848 136.2585 142.49515 146.33815 152.10265"
+           y="0"
+           sodipodi:role="line"
+           id="tspan147">Propose generic AI architecture</tspan><tspan
+           x="-18.0072 -12.06702"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan149">3.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.99244,317.39436)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text157"><tspan
+           x="0 2.9426401 12.41838 18.89658 21.53727 27.301769 36.777512 42.542011 48.778648 52.498672 55.496216 61.975513 67.740013 73.976654 79.74115 83.584152 86.224838 91.319565 94.317101 101.397 104.33965 107.33719 112.91722 116.76022 121.85494 128.09158 130.73227 134.4512 140.2157 145.31042 149.03044 155.26707 159.11008 164.82079"
+           y="0"
+           sodipodi:role="line"
+           id="tspan153">Implement generic AI architecture</tspan><tspan
+           x="-17.99622 -12.05604"
+           y="15.36102"
+           sodipodi:role="line"
+           id="tspan155">4.</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,89.99244,302.03334)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text161"><tspan
+           x="0 7.68051 13.44501 16.864182 19.504871 25.741512 31.506012 34.503551 38.346554 44.76656 50.346596 56.886284 66.362022 71.942055 78.420258 81.417801 84.058487 90.295128 95.389847 98.029442 100.43406 103.4316 107.15163 112.73166 116.57466 123.05505 128.81955 132.53958 137.21706 140.2146 146.63461 152.87125 155.86879 162.94868 165.89133 168.88887 173.9836 179.56363 184.2411 190.0056 193.00314 199.23979 203.91727 209.4973 215.97659 221.7411"
+           y="0"
+           sodipodi:role="line"
+           id="tspan159">Define roadmap incl. targets on AI case usage</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,53.98902,262.8567)"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text165"><tspan
+           x="0 7.7398019 14.580342 21.300102 27.960569 32.22081 35.284229 41.707531 49.627403 56.826988 63.25029 68.890717 74.762817"
+           y="0"
+           sodipodi:role="line"
+           id="tspan163">About TURTLE</tspan></text>
+      <text
+         transform="matrix(1,0,0,-1,53.98902,239.09598)"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.98px;font-family:'Segoe UI';-inkscape-font-specification:SegoeUI;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text181"><tspan
+           x="0 5.760108 11.996748 17.761248 20.703888 27.182089 29.82168 36.241688 42.661694 49.14209 53.819569 57.598885 61.441883 67.206383 72.786423 82.262161 85.204803 91.624809 95.043976 97.986618 101.70664 107.94328 113.70778 116.70752 123.18791 125.82751 132.24751 138.72571 144.30576 146.94534 149.88799 155.65248 160.74719 167.16721 173.46643 179.88644 189.36218 194.69846 197.0976 200.04022 206.46024 211.55495 217.31946 222.89949 229.13612 232.07877 236.75626 242.99289 245.63248 252.11069 258.58887 261.22958 267.46622 273.94659 276.34573 279.28839 281.92798 286.60544 289.5481 293.39108 299.62772 305.86438 308.80701 315.28522 320.62149 323.56412 329.80078 335.56528 341.14529 344.98831 347.6279 352.90817 355.85083 361.79099 364.73364 374.20938 376.84897 379.48965 382.18964 384.82922 391.24924 397.48587 400.42853 405.10599 410.92651 416.50653 419.92572 425.50574 429.34875 435.10776 438.95074 443.62823 446.57855 453.05896 455.69415 462.11417 468.65384 474.23389 476.86908 479.50427 484.85483 487.31436"
+           y="0"
+           sodipodi:role="line"
+           id="tspan167">The bloodstream of the global economy, ocean shipping, is run by nearly 2 million seafarers globally.</tspan><tspan
+           x="0 7.8001919 14.220198 22.140072 27.904572 33.185951 38.950451 42.793453 45.198071 48.382271 52.102295 58.401524 64.166023 67.406219 70.045815 75.625847 82.10405 88.524055 92.367058 95.551254 105.02699 110.60703 114.50713 119.96748 125.73198 129.45201 132.6922 136.11137 142.53139 146.37437 149.55858 154.23605 160.00056 165.5806 169.06017 174.70058 178.54358 184.30809 188.15108 192.82857 196.06876 198.70836 203.38583 206.62604 210.0463 213.8893 219.46935 225.94974 235.36948 241.13397 247.37062 251.09064 256.85513 263.33554 265.73468 268.91885 271.55957 277.7962 282.12012 285.84015 289.68314 295.32358 301.56021 306.2377 312.71588 318.29593 322.13892 327.90341 334.14008 337.86008 341.09918 346.67923 352.85876 359.33917 362.51898 367.19644 370.91647 374.75949 380.99612 387.4765 393.95581 396.5965 402.3555 407.03299 410.27209 418.19196 420.83154 424.55157 430.78821 434.02731 439.12204 445.54205 449.38504 453.22806 459.46469 465.9429 469.6629 472.30249 478.7236 484.96024 487.30008"
+           y="15.84414"
+           sodipodi:role="line"
+           id="tspan169">However, the labor market for seafarers is fragmented, in-transparent and struggles with corruption.</tspan><tspan
+           x="0 5.760108 13.319838 19.859526 25.619635 30.780233 36.358074 39.058056 46.977928 52.557964 58.858292 62.578316 67.255791 69.895386 73.61541 80.095802 82.736496 88.495506 97.971245 104.44945 110.86945 118.84972 124.61422 128.45721 131.0968 134.81683 141.05347 146.81798 149.45866 154.13614 159.90063 165.48068 168.90096 174.48099 178.38107 184.14009 187.98309 190.62268 196.20271 202.43936 208.91975 211.55934 217.32385 223.56049 229.14052 235.61873 238.31871 244.08321 246.72279 252.30283 254.94463 261.48431 264.11951 270.60211 273.2373 276.95734 282.59775 285.23294 287.63757 290.27826 296.03726 299.51794 302.9371 305.57779 310.67252 313.3121 319.0766 325.31323 329.03326 331.4379 334.07748 339.6575 345.89417 352.43384 355.07452 360.16925 366.58817 376.0639 382.54211 385.1817 387.82239 393.4024 399.63907 403.43814 406.07333 415.54907 421.18951 425.0325 430.49286 436.25735 439.97629 442.61697 446.03723 449.88025 455.64474 461.40924 464.04883 467.46912 471.3121 477.79251 487.33194"
+           y="31.6224"
+           sodipodi:role="line"
+           id="tspan171">TURTLE wants to empower the seafarer and enable a digital, efficient, and compliant market free from</tspan><tspan
+           x="-0.01098 5.0837402 11.503746 15.346746 19.189747 25.426386 31.904587 35.624611 38.265301 44.684208 50.920849 53.918388 59.498425 65.735062 72.215462 75.212997 81.633003 85.353027 91.589668 97.354172 101.19717 104.19471 106.8354 109.47499 112.11568 117.93508 124.41548 129.99551 132.6351 135.63264 141.21158 147.44823 153.92862 156.92616 159.56575 169.04149 178.58092 185.00092 188.84392 194.42505 197.06465 200.06219 205.64223 210.73694 214.51736 217.15695 222.43832 225.07793 228.79794 231.43753 237.25804 241.93552 244.34013"
+           y="47.400661"
+           sodipodi:role="line"
+           id="tspan173">corruption and other illegal and immoral activities.</tspan><tspan
+           x="-0.01098 7.068924 11.746404 15.644304 21.22434 25.12224 28.842264 34.606766 40.186798 49.66254 53.56044 59.980446 63.400715 67.298615 69.93821 76.17485 82.655243 88.891884 93.569366 97.289391 101.13239 106.46867 110.36657 116.84476 120.62408 127.04409 130.46436 136.22887 140.90634 145.58382 148.2245 154.64452 160.88115 166.4612 169.10078 173.77826 176.1774 180.13788 188.05775 193.82225 197.72015 203.30019 207.14319 212.90768 216.80559 223.28378 229.52043 232.16002 234.8007 241.28001 243.9207 250.15733 256.63773 260.53564 266.11566 270.01358 276.49396 279.13354 285.55356 292.03177 297.61182 300.3118 304.20969 310.6297 316.86633 319.50592 322.14661 328.38324 334.14777 338.04565 340.68524 347.10526 353.58344 357.54395 367.01968 372.5997 376.44272 381.90198 387.66647 391.38651 397.86469 400.50427 406.08432 411.17905 416.94354 420.84143 424.56146 430.7981 436.37814 440.09818 443.99606 449.09079 455.5108 461.74744 467.98407 473.68378 478.7785 482.49854 487.23859"
+           y="71.161377"
+           sodipodi:role="line"
+           id="tspan175">As a team of industry professionals, we are building a global online job marketplace that connects</tspan><tspan
+           x="-0.01098 4.6665001 10.90314 13.54383 20.02203 24.457951 30.877956 38.797829 45.03447 50.798969 54.641972 59.31945 63.755371 69.335403 75.572044 82.052444 86.488365 91.16584 96.930344 102.51038 105.93065 111.51068 115.41078 121.17528 125.01828 129.69576 134.13168 140.61208 143.25166 147.09467 152.85916 157.95389 161.6739 164.31351 169.64978 172.06758 176.50349 182.32291 184.96359 191.20023 196.29495 202.05945 206.49538 210.21539 216.45204 222.21654 226.65245 229.29205 234.93246 241.16911 247.40575 252.50047 258.73712 263.17303 265.81262 272.04926 276.52032 281.85989 287.62439 294.1026 297.94559 304.18222 309.76227 313.60526 318.94156 323.37747 329.31766 335.25784 341.198 347.13818 351.5181 360.99387 367.41385 371.25687 377.02136 381.45728 385.17731 391.41394 396.99399 403.23062 407.66653 413.60672 419.54691 421.95151 427.89169 433.83188 439.77206 444.20798 448.88547 454.64447 460.22562 463.58548 469.16553 473.00851 478.77301 482.61603 487.29349"
+           y="87.005524"
+           sodipodi:role="line"
+           id="tspan177">ship owners and seafarers directly. Since the launch in February 2021 more than 21.000 seafarers</tspan><tspan
+           x="-0.02196 3.8210399 9.5855398 16.065935 18.705528 23.383007 27.101934 32.866432 36.709435 42.473934 48.953232 51.950771 57.530807 63.767448 70.246742 73.244286 77.921768 83.686264 88.967644 94.726654 98.569656 104.14969 106.78928 109.78683 116.20683 119.6271 122.62464 126.34467 132.5813 138.34581 141.34334 150.81908 156.39912 160.24213 165.70247 171.46698 175.24629 178.24384 180.88342 186.64792 192.22795 198.70726 201.34795 207.58458 214.06389 217.06142 221.73891 227.97554 230.67552 237.15373 243.63193 246.27151 252.50816 258.98856 261.98608 267.08081 273.50082 282.97656 289.45477 295.03479 301.27142 303.91214 309.67664 314.3541 317.35165 322.93167 326.77469 332.53369 335.53122 343.45111 349.93149 353.77451 359.23486 361.87445 368.11108 374.59149 377.58902 385.50891 388.1485 391.8685 398.10516 401.10269 406.92209 414.48181 421.02261 426.78271 431.94223 437.52005 439.92468"
+           y="102.78378"
+           sodipodi:role="line"
+           id="tspan179">registered and several of the market leading shipping companies are working with TURTLE.</tspan></text>
+    </g>
+  </g>
+</svg>

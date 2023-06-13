@@ -1,7 +1,11 @@
+import Header2 from "../components/02_molecules/Header2.js"
+
 export default function Industry() {
   return (
     <>
-      <div>TUM.ai Industry</div>
+      <Header2
+        imageSrc={"/assets/industry/industryspring2023.png"}
+      />
     </>
   );
 }
