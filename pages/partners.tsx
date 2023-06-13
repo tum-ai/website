@@ -1,4 +1,5 @@
 import Header1 from "../components/02_molecules/Header1";
+import Button from "../components/ui/Button"
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
@@ -113,9 +114,10 @@ export default function Partners() {
                 We would be more than happy to discuss a long-term collaboration
                 with you!
               </p>
-              <button className="rounded-full bg-primary-500 px-8 py-2 font-bold duration-500 hover:bg-primary-400">
+
+              <Button intent="primary">
                 Become a partner
-              </button>
+              </Button>
             </div>
 
             <Image src={MartinTalk} alt="Martin talk" />
