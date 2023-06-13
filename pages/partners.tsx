@@ -1,5 +1,5 @@
 import Header1 from "../components/02_molecules/Header1";
-import Button from "../components/ui/Button"
+import Button from "@ui/Button"
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
@@ -7,7 +7,7 @@ import AlelphalphAworkshopGroup from "../public/assets/partners/alelphalpha_work
 import RichardTalk from "../public/assets/partners/richard_talk.jpg";
 import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
 import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
-import Section from "components/ui/Section";
+import Section from "@ui/Section";
 
 export default function Partners() {
   const cards = [
