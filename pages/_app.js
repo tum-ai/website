@@ -1,13 +1,10 @@
-import Footer from "../components/02_molecules/Footer";
-import Navbar from "../components/02_molecules/Navbar";
+import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </Layout>
   );
 }
