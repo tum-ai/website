@@ -1,22 +1,27 @@
 import Image from "next/image";
-import styles from "../../styles/02_molecules/Header2.module.css";
+
 
 export default function Header2({ imageSrc, title, subtitle }) {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.image_container}>
-        <Image 
-          className={styles.image} 
-          src={imageSrc} 
-          alt="icon" 
-		  width={350}
-		  height={350}
-        />
-      </div>
-      <div className={styles.text_container}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.subtitle}>{subtitle}</div>
+    <div className="relative w-4/5 m-auto">
+      <div className="flex flex-col justify-center items-center h-[350px]">
+        <div className="max-w-2xl w-full h-full relative">
+          <Image 
+            className="object-contain w-full h-full flex justify-center items-center relative"
+            src={imageSrc} 
+            alt="icon" 
+            fill={true}
+          />
+        <div className=" absolute bottom-8">
+        {(title != undefined) &&
+          <div className="p-2 font-bold bg-white w-fit">{title}</div>
+        }
+        {(subtitle != undefined) && 
+          <div className="p-2 bg-white w-fit">{subtitle}</div>
+        }
+        </div>
       </div>
     </div>
+  </div>
   );
 }
