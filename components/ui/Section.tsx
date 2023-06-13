@@ -27,7 +27,6 @@ export default function Section({ background, children, backgroundImage, classNa
     return (
         <section className={styles({ background, className: className })} >
             {backgroundImage &&
-
                 <Image
                     src={backgroundImage}
                     style={{
