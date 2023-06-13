@@ -8,6 +8,9 @@ const styles = cva(
             intent: {
                 primary: 'bg-primary-500 hover:bg-primary-400'
             }
+        },
+        defaultVariants: {
+            intent: 'primary'
         }
     }
 )
