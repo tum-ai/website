@@ -24,6 +24,9 @@
       "@ui/*": [
         "./components/ui/*"
       ],
+      "@styles/*": [
+        "./styles/*"
+      ],
       "~/*": [
         "./src/*"
       ]
