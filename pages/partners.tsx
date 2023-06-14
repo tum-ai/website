@@ -1,5 +1,5 @@
 import Header1 from "../components/02_molecules/Header1";
-import Button from "@ui/Button"
+import Button from "@ui/Button";
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
@@ -42,7 +42,7 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2 className="mb-8 text-4xl font-bold text-center">
+        <h2 className="mb-8 text-center text-4xl font-bold md:mb-16">
           Partners{" "}
           <span className="text-primary-500">we have collaborated</span> with
         </h2>
@@ -54,7 +54,7 @@ export default function Partners() {
       </Section>
 
       <Section background="inverted">
-        <h2 className="text-uppercase text-center text-4xl font-bold text-white w-full">
+        <h2 className="text-uppercase w-full text-center text-4xl font-bold text-white">
           Building the AI ecosystem in Munich, Germany, and worldwide by
           connecting students, industry and academia.
         </h2>
@@ -68,14 +68,14 @@ export default function Partners() {
               <span className="text-primary-300">
                 pre-selected talent pool of AI enthusiasts.
               </span>
-              Our members are experienced in software development, data
-              science, data engineering and AI business strategy.
+              Our members are experienced in software development, data science,
+              data engineering and AI business strategy.
             </p>
 
             <p>
-              Joining TUM.ai as a partner or sponsor can support our
-              non-profit organization in many ways. Interact with us in our
-              signature projects and formats like:
+              Joining TUM.ai as a partner or sponsor can support our non-profit
+              organization in many ways. Interact with us in our signature
+              projects and formats like:
             </p>
 
             <ul className="list-disc">
@@ -92,8 +92,8 @@ export default function Partners() {
                 <b>Workshops</b> at your offices
               </li>
               <li>
-                <b>Participant</b> or <b>speaker</b> at our events, e.g. the
-                AI summit
+                <b>Participant</b> or <b>speaker</b> at our events, e.g. the AI
+                summit
               </li>
               <li>
                 <b>Sponsorships</b> with logo recognition for other events
@@ -102,12 +102,12 @@ export default function Partners() {
                 <b>Mentor</b> for our members
               </li>
               <li>
-                <b>Judge</b> or <b>mentor</b> in our in-house AI E-lab
-                incubator for startups
+                <b>Judge</b> or <b>mentor</b> in our in-house AI E-lab incubator
+                for startups
               </li>
               <li>
-                Post <b>open positions</b> or a master thesis inside our
-                talent network
+                Post <b>open positions</b> or a master thesis inside our talent
+                network
               </li>
             </ul>
             <p>
@@ -115,17 +115,17 @@ export default function Partners() {
               with you!
             </p>
 
-            <Button intent="primary">
-              Become a partner
-            </Button>
+            <Button intent="primary">Become a partner</Button>
           </div>
 
           <Image src={MartinTalk} alt="Martin talk" className="rounded" />
         </div>
-
       </Section>
 
-      <Section background="white" backgroundImage="/assets/partners/alephalpha_workshop.jpg">
+      <Section
+        background="white"
+        backgroundImage="/assets/partners/alephalpha_workshop.jpg"
+      >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
           {cards.map((card) => (
             <article
@@ -139,7 +139,6 @@ export default function Partners() {
             </article>
           ))}
         </div>
-
       </Section>
     </>
   );
