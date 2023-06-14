@@ -37,7 +37,7 @@ export default function Partners() {
     <>
       <Hero
         imageSrc={"/assets/partners.jpg"}
-        title="Become a partner of TUM.ai"
+        title="Become a partner"
         subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
       />
 
