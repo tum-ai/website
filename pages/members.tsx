@@ -2,18 +2,28 @@ import Section from "@ui/Section";
 import Header1 from "../components/02_molecules/Header1";
 import Image from "next/image";
 import Button from "@ui/Button";
+import { useState } from "react";
 
 const MemberCard = ({ member }) => {
+  const [collapsed, setCollapsed] = useState(false);
+
   return (
     <article>
-      <div className="relative h-80">
+      <div
+        className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
+        onClick={() => setCollapsed(!collapsed)}
+      >
         <Image
           src={member.image}
           alt={`image of ${member.name}`}
           fill
           style={{ objectFit: "cover" }}
-          className="-z-10 rounded-xl"
         />
+        {collapsed && (
+          <div className="absolute h-full w-full p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
+            <p>{member.description}</p>
+          </div>
+        )}
       </div>
 
       <div className="p-4 text-center">
