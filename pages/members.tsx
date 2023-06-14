@@ -1,7 +1,76 @@
 import Section from "@ui/Section";
 import Header1 from "../components/02_molecules/Header1";
+import Image from "next/image";
+import Button from "@ui/Button";
+
+const MemberCard = ({ member }) => {
+  return (
+    <article>
+      <div className="relative h-80">
+        <Image
+          src={member.image}
+          alt={`image of ${member.name}`}
+          fill
+          style={{ objectFit: "cover" }}
+          className="-z-10 rounded-xl"
+        />
+      </div>
+
+      <div className="p-4 text-center">
+        <h3 className="text-xl font-bold">{member.name}</h3>
+        <p>{member.role}</p>
+      </div>
+    </article>
+  );
+};
 
 export default function Members() {
+  const members = [
+    {
+      name: "David Podolskyi",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/david_podolskyi.webp",
+      description:
+        "ML & Entrepreneurship enthusiast with focus on IoT and Recommender Systems",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Hamze Al-Zamkan",
+      role: "President",
+      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
+      description: "lorem ipsum dolor sit amet",
+    },
+  ];
+
   return (
     <>
       <Header1
@@ -11,13 +80,28 @@ export default function Members() {
       />
 
       <Section>
-        <h2 className="mb-2 text-center text-4xl font-bold">
-          Our team members
-        </h2>
-        <p className="text-center">
-          Meet our team of <strong>170+</strong> AI Enthusiasts.
-        </p>
-        <div>TODO: MEMBERS</div>
+        <div className="mb-16">
+          <h2 className="mb-2 text-center text-4xl font-bold">
+            Our team members
+          </h2>
+          <p className="text-center">
+            Meet our team of <strong>170+</strong> AI Enthusiasts.
+          </p>
+        </div>
+
+        <div className="mb-8 flex justify-center space-x-2">
+          <Button className="text-white">Management Team</Button>
+
+          <Button className="text-white">Board of advisors</Button>
+
+          <Button className="text-white">Department selection</Button>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {members.map((member) => (
+            <MemberCard member={member} />
+          ))}
+        </div>
       </Section>
 
       <Section>
