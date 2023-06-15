@@ -25,6 +25,10 @@ module.exports = {
           950: "#080317",
         },
       },
+      boxShadow: {
+        'inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+        'xl-inner': 'inset 0 1px 2px 0 rgba(0, 0, 0, 0.06), inset 0 2px 10px 0 rgba(0, 0, 0, 0.06)',
+      },
     },
   },
   plugins: [],
