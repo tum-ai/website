@@ -8,8 +8,6 @@ import { useMembers } from "hooks/useMembers";
 const MemberCard = ({ member }) => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const { members } = useMembers();
-
   return (
     <article>
       <div
@@ -37,53 +35,19 @@ const MemberCard = ({ member }) => {
   );
 };
 
-export default function Members() {
-  const members = [
-    {
-      name: "David Podolskyi",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/david_podolskyi.webp",
-      description:
-        "ML & Entrepreneurship enthusiast with focus on IoT and Recommender Systems",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      name: "Hamze Al-Zamkan",
-      role: "President",
-      image: "https://www.tum-ai.com/assets/img/members/hamze_alzamkan.webp",
-      description: "lorem ipsum dolor sit amet",
-    },
-  ];
+const MembersCardList = () => {
+  const { data: members } = useMembers();
 
+  return (
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {members?.map((member) => (
+        <MemberCard member={member} />
+      ))}
+    </div>
+  );
+};
+
+export default function Members() {
   return (
     <>
       <Header1
@@ -110,11 +74,7 @@ export default function Members() {
           <Button className="text-white">Department selection</Button>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {members.map((member) => (
-            <MemberCard member={member} />
-          ))}
-        </div>
+        <MembersCardList />
       </Section>
 
       <Section>
