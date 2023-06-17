@@ -3,9 +3,12 @@ import Header1 from "../components/02_molecules/Header1";
 import Image from "next/image";
 import Button from "@ui/Button";
 import { useState } from "react";
+import { useMembers } from "hooks/useMembers";
 
 const MemberCard = ({ member }) => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const { members } = useMembers();
 
   return (
     <article>
