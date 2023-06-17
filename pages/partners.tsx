@@ -1,4 +1,3 @@
-import Header1 from "../components/02_molecules/Header1";
 import Button from "@ui/Button";
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
@@ -8,6 +7,7 @@ import RichardTalk from "../public/assets/partners/richard_talk.jpg";
 import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
 import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
 import Section from "@ui/Section";
+import Hero from "components/Hero";
 
 export default function Partners() {
   const cards = [
@@ -35,9 +35,9 @@ export default function Partners() {
 
   return (
     <>
-      <Header1
+      <Hero
         imageSrc={"/assets/partners.jpg"}
-        title="Become a partner of TUM.ai"
+        title="Become a partner"
         subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
       />
 

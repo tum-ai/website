@@ -1,9 +1,9 @@
-import Header1 from "../components/02_molecules/Header1";
+import Hero from "../components/Hero";
 
 export default function Members() {
   return (
     <>
-      <Header1
+      <Hero
         imageSrc={"/assets/tu_cropped.jpg"}
         title="Innovative & Passionate"
         subtitle="Who is behind the success of our initiative?"
