@@ -41,7 +41,55 @@ const MembersCardList = () => {
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       {members?.map((member) => (
-        <MemberCard member={member} />
+        <MemberCard key={member.name} member={member} />
+      ))}
+    </div>
+  );
+};
+
+const DepartmentCard = ({ department }) => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  return (
+    <article>
+      <div
+        className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
+        onClick={() => setCollapsed(!collapsed)}
+      >
+        <Image
+          src={department.image}
+          alt={`image of ${department.name}`}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div className="absolute flex h-full w-full items-center justify-center text-white backdrop-brightness-90">
+          <h2 className="text-4xl font-bold">{department.name}</h2>
+        </div>
+
+        {collapsed && (
+          <div className="absolute h-full w-full p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
+            <p>{department.description}</p>
+          </div>
+        )}
+      </div>
+    </article>
+  );
+};
+
+const DepartmentList = () => {
+  const departments = [
+    {
+      name: "Makeathon",
+      description:
+        "Organizing the largest Makeathon in Munich, a virtual 48-hour challenge where you develop a real-world business case involving AI. We will provide helpful workshops and insightful business talks, as well as assistance from mentors and industry experts.",
+      image: "https://www.tum-ai.com/assets/img/other/team_work.png",
+    },
+  ];
+
+  return (
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {departments?.map((department) => (
+        <DepartmentCard key={department.name} department={department} />
       ))}
     </div>
   );
@@ -111,6 +159,8 @@ export default function Members() {
           All of our active members contribute to one or more of the following
           organizational departments.
         </p>
+
+        <DepartmentList />
       </Section>
 
       <Section>
