@@ -22,7 +22,13 @@ const MemberCard = ({ member, open, setOpen, index }) => {
     <article>
       <div
         className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
-        onClick={() => setOpen(index)}
+        onClick={() => {
+          if (open === index) {
+            setOpen(undefined);
+          } else {
+            setOpen(index);
+          }
+        }}
       >
         <Image
           src={member.image}
@@ -31,7 +37,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
           style={{ objectFit: "cover" }}
         />
         {open === index && (
-          <div className="absolute h-full w-full p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
+          <div className="absolute h-full w-full rounded-xl p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
             <p>{member.description}</p>
           </div>
         )}
@@ -69,7 +75,13 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
     <article>
       <div
         className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
-        onClick={() => setOpen(index)}
+        onClick={() => {
+          if (open === index) {
+            setOpen(undefined);
+          } else {
+            setOpen(index);
+          }
+        }}
       >
         <Image
           src={department.image}
@@ -77,7 +89,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
           fill
           style={{ objectFit: "cover" }}
         />
-        <div className="absolute flex h-full w-full flex-col items-center justify-center text-white backdrop-brightness-50">
+        <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-xl text-white backdrop-brightness-50">
           <FontAwesomeIcon icon={department.icon} size="4x" className="mb-4" />
           <h2 className="text-4xl font-bold">{department.name}</h2>
         </div>
