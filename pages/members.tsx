@@ -196,24 +196,6 @@ export default function Members() {
 
         <DepartmentList />
       </Section>
-
-      <Section>
-        <h2 className="mb-2 text-center text-4xl font-bold">
-          Talent breeds talent
-        </h2>
-
-        <p className="mb-2 text-center">
-          TUM.ai of students from various disciplines. On one hand, a lot of
-          students come from technical disciplines like computer science, data
-          engineering and other areas of technology. On the other hand, we also
-          welcome students from non-technical backgrounds which can help us
-          apply AI in their field with application knowledge.
-        </p>
-
-        <p className="text-center">
-          <strong>Currently we count over 170 active members!</strong>
-        </p>
-      </Section>
     </>
   );
 }
