@@ -17,14 +17,12 @@ import {
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 
-const MemberCard = ({ member }) => {
-  const [collapsed, setCollapsed] = useState(false);
-
+const MemberCard = ({ member, open, setOpen, index }) => {
   return (
     <article>
       <div
         className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
-        onClick={() => setCollapsed(!collapsed)}
+        onClick={() => setOpen(index)}
       >
         <Image
           src={member.image}
@@ -32,7 +30,7 @@ const MemberCard = ({ member }) => {
           fill
           style={{ objectFit: "cover" }}
         />
-        {collapsed && (
+        {open === index && (
           <div className="absolute h-full w-full p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
             <p>{member.description}</p>
           </div>
@@ -49,24 +47,29 @@ const MemberCard = ({ member }) => {
 
 const MembersCardList = () => {
   const { data: members } = useMembers();
+  const [open, setOpen] = useState<number>();
 
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      {members?.map((member) => (
-        <MemberCard key={member.name} member={member} />
+      {members?.map((member, i) => (
+        <MemberCard
+          key={member.name}
+          open={open}
+          setOpen={setOpen}
+          member={member}
+          index={i}
+        />
       ))}
     </div>
   );
 };
 
-const DepartmentCard = ({ department }) => {
-  const [collapsed, setCollapsed] = useState(false);
-
+const DepartmentCard = ({ department, open, setOpen, index }) => {
   return (
     <article>
       <div
         className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
-        onClick={() => setCollapsed(!collapsed)}
+        onClick={() => setOpen(index)}
       >
         <Image
           src={department.image}
@@ -79,7 +82,7 @@ const DepartmentCard = ({ department }) => {
           <h2 className="text-4xl font-bold">{department.name}</h2>
         </div>
 
-        {collapsed && (
+        {open === index && (
           <div className="absolute flex h-full w-full items-center justify-center p-8 text-center text-white backdrop-blur-md backdrop-brightness-50">
             <p className="text-lg">{department.description}</p>
           </div>
@@ -90,6 +93,8 @@ const DepartmentCard = ({ department }) => {
 };
 
 const DepartmentList = () => {
+  const [open, setOpen] = useState<number>();
+
   const departments = [
     {
       name: "Makeathon",
@@ -161,8 +166,14 @@ const DepartmentList = () => {
 
   return (
     <div className="grid gap-8 lg:grid-cols-3">
-      {departments?.map((department) => (
-        <DepartmentCard key={department.name} department={department} />
+      {departments?.map((department, index) => (
+        <DepartmentCard
+          key={department.name}
+          department={department}
+          index={index}
+          open={open}
+          setOpen={setOpen}
+        />
       ))}
     </div>
   );
