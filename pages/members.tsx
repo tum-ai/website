@@ -3,20 +3,12 @@ import Hero from "../components/Hero";
 import Image from "next/image";
 import Button from "@ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { useMembers } from "hooks/useMembers";
 import { AnimatePresence, motion } from "framer-motion";
 import { departments } from "data/departments";
-import { Member } from "model/member";
 
-type MemberCardProps = {
-  member: Member;
-  open: number;
-  setOpen: Dispatch<SetStateAction<Number>>;
-  index: number;
-};
-
-const MemberCard = ({ member, open, setOpen, index }: MemberCardProps) => {
+const MemberCard = ({ member, open, setOpen, index }) => {
   return (
     <article>
       <div
@@ -52,8 +44,8 @@ const MemberCard = ({ member, open, setOpen, index }: MemberCardProps) => {
       <div className="p-4 text-center">
         <h3 className="text-xl font-bold">{member.name}</h3>
         <div>
-          {member.roles.map((role) => (
-            <p>{role.name}</p>
+          {member.roles.map((role: any) => (
+            <p key={role.name}>{role.name}</p>
           ))}
         </div>
       </div>

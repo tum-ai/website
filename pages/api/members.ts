@@ -1,6 +1,14 @@
 import { Client } from "@notionhq/client";
-import { Member, isMember } from "model/member";
 import { NotionMember } from "model/notionMember";
+
+export const isMember = (data: unknown): boolean => {
+  const member: any = data;
+  return (
+    typeof member.image === "string" &&
+    typeof member.description === "string" &&
+    typeof member.name === "string"
+  );
+};
 
 export default async function handler(req, res) {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -12,7 +20,7 @@ export default async function handler(req, res) {
     (user: any) => user?.properties as NotionMember
   );
 
-  const members: Member[] = notionMembers
+  const members = notionMembers
     .map((member) => ({
       name: member?.name?.title?.at(0)?.plain_text,
       image: "",
