@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import { Member, isMember } from "model/member";
 import { NotionMember } from "model/notionMember";
 
 export default async function handler(req, res) {
@@ -11,15 +12,17 @@ export default async function handler(req, res) {
     (user: any) => user?.properties as NotionMember
   );
 
-  console.log(notionMembers);
-
-  const members = notionMembers
+  const members: Member[] = notionMembers
     .map((member) => ({
       name: member?.name?.title?.at(0)?.plain_text,
+      image: "",
+      roles: member.Role.multi_select.map((role) => ({
+        name: role.name,
+        color: role.color,
+      })),
+      description: "",
     }))
-    .filter((member) => {
-      return typeof member.name === "string";
-    });
+    .filter((member) => isMember(member));
 
   res.status(200).json(members);
 }
