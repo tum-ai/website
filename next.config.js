@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: "www.tum-ai.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "**.amazonaws.com",
+        port: "",
+      }
     ],
   },
 };

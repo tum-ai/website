@@ -44,8 +44,11 @@ const MemberCard = ({ member, open, setOpen, index }) => {
       <div className="p-4 text-center">
         <h3 className="text-xl font-bold">{member.name}</h3>
         <div>
-          {member.roles.map((role: any) => (
-            <p key={role.name}>{role.name}</p>
+          {member.roles.map((role: string) => (
+            <p key={role}>{role}</p>
+          ))}
+          {member.departments.map((department: string) => (
+            <p key={department}>{department}</p>
           ))}
         </div>
       </div>
