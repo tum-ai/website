@@ -57,21 +57,56 @@ const MemberCard = ({ member, open, setOpen, index }) => {
 };
 
 const MembersCardList = () => {
-  const { data: members } = useMembers();
+  const { data: members, status } = useMembers();
+
+  const amountTruncatedMembers = 12;
   const [open, setOpen] = useState<number>();
+  const [showAll, setShowAll] = useState(false);
+
+  if (status === "loading") {
+    return (
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {Array.from({ length: amountTruncatedMembers }).map(() => (
+          <div className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded-xl bg-gray-300 shadow-md"></div>
+        ))}
+      </div>
+    );
+  }
 
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      {members?.map((member, i) => (
-        <MemberCard
-          key={member.name}
-          open={open}
-          setOpen={setOpen}
-          member={member}
-          index={i}
-        />
-      ))}
-    </div>
+    <>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {members?.slice(0, amountTruncatedMembers)?.map((member, i) => (
+          <MemberCard
+            key={member.name}
+            open={open}
+            setOpen={setOpen}
+            member={member}
+            index={i}
+          />
+        ))}
+        {showAll &&
+          members
+            ?.slice(amountTruncatedMembers)
+            ?.map((member, i) => (
+              <MemberCard
+                key={member.name}
+                open={open}
+                setOpen={setOpen}
+                member={member}
+                index={i + amountTruncatedMembers}
+              />
+            ))}
+      </div>
+
+      {!showAll && (
+        <div className="flex justify-center">
+          <Button className="text-white" onClick={() => setShowAll(true)}>
+            Show all members
+          </Button>
+        </div>
+      )}
+    </>
   );
 };
 
