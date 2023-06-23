@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { departments } from "data/departments";
 
 const MemberCard = ({ member, open, setOpen, index }) => {
+  // TODO: Add more detailed information in overview. e.g. university, socials, etc
   return (
     <article>
       <div
@@ -113,6 +114,8 @@ const MembersCardList = ({ members, status }) => {
 
 const MemberListSection = () => {
   const { data: members, status } = useMembers();
+  // TODO: Add filtering and sorting
+  // TODO: Add dropdown component for department selection
 
   return (
     <Section>
