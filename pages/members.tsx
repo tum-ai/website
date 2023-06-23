@@ -56,9 +56,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
   );
 };
 
-const MembersCardList = () => {
-  const { data: members, status } = useMembers();
-
+const MembersCardList = ({ members, status }) => {
   const amountTruncatedMembers = 12;
   const [open, setOpen] = useState<number>();
   const [showAll, setShowAll] = useState(false);
@@ -66,8 +64,11 @@ const MembersCardList = () => {
   if (status === "loading") {
     return (
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {Array.from({ length: amountTruncatedMembers }).map(() => (
-          <div className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded-xl bg-gray-300 shadow-md"></div>
+        {Array.from<number>({ length: amountTruncatedMembers }).map((index) => (
+          <div
+            key={index}
+            className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded-xl bg-gray-300 shadow-md"
+          ></div>
         ))}
       </div>
     );
@@ -107,6 +108,34 @@ const MembersCardList = () => {
         </div>
       )}
     </>
+  );
+};
+
+const MemberListSection = () => {
+  const { data: members, status } = useMembers();
+
+  return (
+    <Section>
+      <div className="mb-16">
+        <h2 className="mb-2 text-center text-4xl font-bold">
+          Our team members
+        </h2>
+        <p className="text-center">
+          Meet our team of <strong>{members?.length ?? "170"}+</strong> AI
+          Enthusiasts.
+        </p>
+      </div>
+
+      <div className="mb-8 flex justify-center space-x-2">
+        <Button className="text-white">Management Team</Button>
+
+        <Button className="text-white">Board of advisors</Button>
+
+        <Button className="text-white">Department selection</Button>
+      </div>
+
+      <MembersCardList members={members} status={status} />
+    </Section>
   );
 };
 
@@ -178,26 +207,7 @@ export default function Members() {
         subtitle="Who is behind the success of our initiative?"
       />
 
-      <Section>
-        <div className="mb-16">
-          <h2 className="mb-2 text-center text-4xl font-bold">
-            Our team members
-          </h2>
-          <p className="text-center">
-            Meet our team of <strong>170+</strong> AI Enthusiasts.
-          </p>
-        </div>
-
-        <div className="mb-8 flex justify-center space-x-2">
-          <Button className="text-white">Management Team</Button>
-
-          <Button className="text-white">Board of advisors</Button>
-
-          <Button className="text-white">Department selection</Button>
-        </div>
-
-        <MembersCardList />
-      </Section>
+      <MemberListSection />
 
       <Section>
         <h2 className="mb-8 text-center text-4xl font-bold">
