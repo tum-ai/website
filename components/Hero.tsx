@@ -7,7 +7,7 @@ export default function Hero({ imageSrc, title, subtitle }) {
       <Image
         src={imageSrc}
         style={{
-          objectFit: "cover",
+          objectFit: "cover", 
         }}
         alt="Hero background image"
         fill
