@@ -1,0 +1,56 @@
+@layer utilities {
+  .clip {
+    &-point {
+      &-right {
+        clip-path: polygon(
+          0% 0%,
+          calc(100% - 2rem) 0%,
+          100% 50%,
+          calc(100% - 2rem) 100%,
+          0% 100%
+        );
+      }
+      &-down {
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% calc(100% - 2rem),
+          50% 100%,
+          0 calc(100% - 2rem)
+        );
+      }
+    }
+
+    &-chev {
+      &-right {
+        clip-path: polygon(
+          calc(100% - 2rem) 0%,
+          100% 50%,
+          calc(100% - 2rem) 100%,
+          0% 100%,
+          2rem 50%,
+          0% 0%
+        );
+      }
+      &-down {
+        clip-path: polygon(
+          0 0,
+          50% 2rem,
+          100% 0,
+          100% calc(100% - 2rem),
+          50% 100%,
+          0 calc(100% - 2rem)
+        );
+      }
+    }
+
+    &-enter {
+      &-right {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 2rem 50%);
+      }
+      &-down {
+        clip-path: polygon(50% 2rem, 100% 0, 100% 100%, 0 100%, 0 0);
+      }
+    }
+  }
+}
