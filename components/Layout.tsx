@@ -1,11 +1,11 @@
 import { inter } from "@styles/fonts";
 import Footer from "./02_molecules/Footer";
-import Navbar from "./02_molecules/Navbar";
+import { Header } from "./Header";
 
 export default function Layout({ children }) {
   return (
     <div className={inter.className}>
-      <Navbar />
+      <Header />
       <main>{children}</main>
       <Footer />
     </div>
