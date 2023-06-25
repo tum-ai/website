@@ -13,6 +13,16 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navigation = ({ open, setOpen }) => {
+  const links = [
+    { href: "https://aielab.tum-ai.com/", text: "AI E-Lab" },
+    { href: "https://makeathon.tum-ai.com/", text: "Makeathon" },
+    { href: "/industry", text: "Industry Projects" },
+    { href: "/partners", text: "Partners" },
+    { href: "/members", text: "Members" },
+    { href: "https://join-us.tum-ai.com/", text: "Join us" },
+    { href: "/workshops", text: "Workshops" },
+    { href: "/blog", text: "TUM.ai Blog" },
+  ];
   return (
     <Dialog.Root open={open} onOpenChange={(open) => setOpen(open)}>
       {!open && (
@@ -48,67 +58,17 @@ const Navigation = ({ open, setOpen }) => {
               </div>
             </div>
 
-            <nav className="container mx-auto flex flex-col space-y-2 text-white  ">
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="https://aielab.tum-ai.com/"
-                onClick={() => setOpen(false)}
-              >
-                AI E-Lab
-              </Link>
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="https://makeathon.tum-ai.com/"
-                onClick={() => setOpen(false)}
-              >
-                Makeathon
-              </Link>
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="/industry"
-                onClick={() => setOpen(false)}
-              >
-                Industry Projects
-              </Link>
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="/partners"
-                onClick={() => setOpen(false)}
-              >
-                Partners
-              </Link>
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="/members"
-                onClick={() => setOpen(false)}
-              >
-                Members
-              </Link>
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="https://join-us.tum-ai.com/"
-                onClick={() => setOpen(false)}
-              >
-                Join us
-              </Link>
-
-              <hr />
-
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="/workshops"
-                onClick={() => setOpen(false)}
-              >
-                Workshops
-              </Link>
-
-              <Link
-                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                href="/blog"
-                onClick={() => setOpen(false)}
-              >
-                TUM.ai Blog
-              </Link>
+            <nav className="container mx-auto flex flex-col space-y-2 text-white">
+              {links.map(({ href, text }) => (
+                <Link
+                  key={text}
+                  className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                  href={href}
+                  onClick={() => setOpen(false)}
+                >
+                  {text}
+                </Link>
+              ))}
             </nav>
           </Dialog.Content>
         </Dialog.Portal>
