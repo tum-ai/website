@@ -1,9 +1,8 @@
-import Header2 from "../components/02_molecules/Header2.js";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import PictureHero from "../components/PictureHero";
-import Button from "@ui/Button.jsx";
+import PictureHero from "../components/BannerHero";
+import Button from "@ui/Button";
 import Section from "@ui/Section";
 
 export default function Industry() {
@@ -118,7 +117,7 @@ export default function Industry() {
           // Update with links and moreText when more details available
         },
       ],
-      organization: "TUM MRI Radiology",
+      organization: "TUM MRI",
       organizationLink: "https://www.mri.tum.de/", // Update if there's an actual link
       time: "fall 2022", // Update if there's an actual date
     },
@@ -206,7 +205,7 @@ export default function Industry() {
         subtitle="Your stepping stone to a career in AI"
       />
       <div>
-        <Section className="flex flex-row justify-start text-2xl -mb-16 -mt-4">
+        <Section className="-mb-16 -mt-4 flex flex-row justify-start text-2xl">
           <h2 className="mr-8 inline-block font-semibold text-gray-700">For</h2>
           <button
             className={`relative z-10 border-b-2 px-5 py-4 text-left transition-all duration-500 ease-in-out ${
@@ -234,41 +233,42 @@ export default function Industry() {
           {activeTab === "tab1" && (
             <>
               <Section className="flex animate-fadeIn justify-center lg:flex-col">
-                <div className="rounded-3xl bg-gray-50 p-14">
-                  <div className="grid grid-cols-1 gap-6 xl:gap-16 xl:grid-cols-2">
+                <div className="rounded-3xl bg-gray-50 p-14 shadow-lg shadow-primary-800/10">
+                  <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
                     <div>
-                      <h2 className="mb-6 text-2xl font-semibold">
+                      <h2 className="mb-6 text-3xl font-semibold">
                         Applications for Industry Phase 5.0 will open in summer
                       </h2>
+                      <hr className="border-b-1 my-6 border-gray-300"/>
                       <p className="mb-8 text-xl">
                         Push ML boundaries and progress your career with our AI
                         projects!{" "}
-                        <strong className="font-medium text-primary-500">
+                        <span className="text-primary-500">
                           Leverage your skills
-                        </strong>{" "}
+                        </span>{" "}
                         and take on real AI projects to test your abilities.
                         Join us now!
                         <br />
                         <br />
                         Work in a{" "}
-                        <strong className="font-medium text-primary-500">
+                        <span className="text-primary-500">
                           team of 4x students for 12 weeks, earn 2700€
-                        </strong>{" "}
+                        </span>{" "}
                         and gain valuable contacts. With a project lead guiding
                         you, demonstrate your agile project management skills in
                         a professional setting.
                         <br />
                         <br />
                         Collaborate with pre-selected partners, including{" "}
-                        <strong className="font-medium text-primary-500">
+                        <span className="text-primary-500">
                           for-profit companies, startups, and non-profits,
-                        </strong>{" "}
+                        </span>{" "}
                         in our upcoming Industry Phase 5.0 starting September
                         2023.
                       </p>
                     </div>
-                    <div className="relative flex flex-col items-center space-y-4 text-center">
-                      <div className="relative mb-3 w-full">
+                    <div className="relative flex flex-col items-center space-y-8 text-center">
+                      <div className="relative mb-3 w-full rounded-lg shadow-md shadow-primary-800/20">
                         <Image
                           src="/assets/industry/zoom_industry.png"
                           className="rounded-lg grayscale"
@@ -278,7 +278,7 @@ export default function Industry() {
                           alt={"Zoom Industry"}
                         />
                       </div>
-                      <div className="my-3 rounded-lg bg-white p-8">
+                      <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-primary-500/10">
                         <h1 className="text-xl font-semibold text-gray-900">
                           <span className="text-primary-500">"</span>
                           <span>Visit our official </span>
@@ -303,40 +303,113 @@ export default function Industry() {
                   </div>
                 </div>
               </Section>
-              <Section>
-                <h1 className="mb-3 text-4xl font-bold">
-                  Our partners from{" "}
-                  <strong className="font-bold text-primary-500">
-                    Industry Phase 4.0
-                  </strong>
-                </h1>
-                <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
-                <div className="flex flex-wrap items-center justify-center">
-                  {partners.map((partner, index) => (
-                    <div
-                      className="px-4 py-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-                      key={index}
-                    >
-                      <Link href={partner.href} passHref>
-                        <div className="min-w-160 flex h-full items-center justify-center p-8 grayscale hover:grayscale-0">
-                          <Image
-                            src={partner.src}
-                            alt={partner.alt || ""}
-                            width={160}
-                            height={50}
-                            objectFit="contain"
-                          />
-                        </div>
-                      </Link>
+            </>
+          )}
+          {activeTab === "tab2" && (
+            <>
+              <Section className="flex animate-fadeIn justify-center lg:flex-col">
+                <div className="rounded-3xl bg-gray-50 p-14 shadow-lg shadow-primary-800/10">
+                  <h2 className="text-3xl font-semibold">
+                    Industry Phase 5.0 starting in Fall 2023
+                  </h2>
+                  <hr className="border-b-1 my-4 border-gray-300"/>
+                  <div className="mt-6 grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
+                    <div className="px-12">
+                      <h2 className="text-center text-xl px-2">
+                        We manage Munich's top pool of{" "}
+                        <span className="font-bold text-primary-500">
+                          AI talent
+                        </span>{" "}
+                        and offer affordable, high-quality solutions without any
+                        long-term liabilities!
+                      </h2>
+                      <div className="flex flex-row items-center justify-center space-x-6 p-6">
+                        <Button className="text-white">Get Access!</Button>
+                        <h3 className="text-xl font-semibold text-primary-950">
+                          industry@tum-ai.de
+                        </h3>
+                      </div>
                     </div>
-                  ))}
+                    <div className="flex flex-col items-center justify-center space-y-6 py-4">
+                      <h2 className="text-center text-3xl font-semibold">
+                        For{" "}
+                        <span className="text-primary-500">future partner</span>{" "}
+                        companies
+                      </h2>
+                      <Image
+                        src={"/assets/industry/freearifiat.png"}
+                        className="rounded-xl shadow-lg shadow-primary-800/20"
+                        layout="respinsive"
+                        alt="Ferrari for Fiat"
+                        width={500}
+                        height={100}
+                      />
+                    </div>
+                  </div>
+                  <h2 className="mt-16 text-3xl font-semibold">
+                    What is an{" "}
+                    <span className="text-primary-500">AI Project</span>?
+                  </h2>
+                  <hr className="border-b-1 my-4 border-gray-300"/>
+                  <div className="mt-6 grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16 py-6">
+                    <div className="px-12">
+                      <h2 className="text-2xl font-semibold text-primary-500">Project Statement</h2>
+                      <p>Present your AI-related problem – we'll help define the ideal project:</p>
+                      <ol className="text-lg list-inside list-disc space-y-2 font-medium text-gray-700 py-4 px-6">
+                        <li className="pl-2">Building proof of concept</li>
+                        <li className="pl-2">Conducting research topics</li>
+                        <li className="pl-2">Developing prototypes</li>
+                        <li className="pl-2">Improving products/processes</li>
+                      </ol>
+                    </div>
+                    <div className="px-12">
+                      <h2 className="text-2xl font-semibold text-primary-500">Outstanding Solutions</h2>
+                      <p className="py-2 max-w-lg">
+                        We’ll advertise your project to a wide pool of talented students and
+                        present you with the most outstanding candidates.
+                      </p>
+                      <p className="py-2 max-w-lg">
+                        A team of multi-disciplinary students will work exclusively for your company
+                        as working students.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </Section>
             </>
           )}
-          {activeTab === "tab2" && <p>Content for tab 2.</p>}
           {activeTab === "tab3" && <p>Content for tab 3.</p>}
         </div>
+        <Section>
+          <h1 className="mb-3 text-3xl font-semibold">
+            Our partners from{" "}
+            <span className="text-primary-500">Industry Phase 4.0</span>
+          </h1>
+          <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
+          <div className="flex flex-wrap items-center justify-center">
+            {partners.map((partner, index) => (
+              <div
+                className="px-4 py-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+                key={index}
+              >
+                <Link href={partner.href} passHref>
+                  <div
+                    className="min-w-160 flex h-full items-center justify-center p-8 grayscale 
+                        transition-all duration-200 ease-out hover:shadow-md hover:grayscale-0"
+                  >
+                    <Image
+                      src={partner.src}
+                      alt={partner.alt || ""}
+                      width={160}
+                      height={50}
+                      objectFit="contain"
+                    />
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Section>
         <Section className="my-12 bg-gradient-to-br from-primary-800 to-primary-950 pt-4 shadow-lg shadow-primary-900/40">
           <div className="mx-auto flex justify-center sm:py-6 md:py-8 lg:py-14">
             <Image
@@ -350,10 +423,10 @@ export default function Industry() {
         </Section>
         <Section className="mb-12 mt-20">
           <div className="justify-center px-4">
-            <h1 className="mb-3 text-4xl font-bold">
+            <h1 className="mb-3 text-3xl font-bold">
               Examples of previous AI Projects
             </h1>
-            <h2 className="my-3 text-2xl">
+            <h2 className="my-3 text-xl">
               Explore how our AI enthusiasts have created{" "}
               <span className="font-semibold text-primary-500">
                 measurable impact
@@ -361,9 +434,12 @@ export default function Industry() {
               in the past.
             </h2>
             <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
-            <div className="grid grid-cols-1 gap-14 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className="3xl:grid-cols-4 grid grid-cols-1 gap-14 lg:grid-cols-2 2xl:grid-cols-3">
               {projects.map((project, index) => (
-                <div className="rounded-lg bg-white shadow-xl" key={index}>
+                <div
+                  className="rounded-lg bg-white shadow-lg shadow-primary-800/10"
+                  key={index}
+                >
                   <div className="flex h-full flex-col">
                     <div className="relative h-48 w-full grayscale">
                       <Image
