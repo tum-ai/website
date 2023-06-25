@@ -28,14 +28,6 @@ const Navigation = ({ open, setOpen }) => {
   ];
   return (
     <Dialog.Root open={open} onOpenChange={(open) => setOpen(open)}>
-      {!open && (
-        <Dialog.Trigger asChild>
-          <button>
-            <FontAwesomeIcon icon={faBars} color="white" size="xl" />
-          </button>
-        </Dialog.Trigger>
-      )}
-
       <AnimatePresence>
         <Dialog.Portal>
           <Dialog.Overlay asChild>
@@ -47,33 +39,22 @@ const Navigation = ({ open, setOpen }) => {
             />
           </Dialog.Overlay>
 
-          <Dialog.Content className="mt-30 fixed inset-0 flex items-center">
-            <div className="bg-green absolute top-0 w-full">
-              <div className="container mx-auto flex flex-row-reverse py-12">
-                <Dialog.Close
-                  asChild
-                  className="w-10 rounded-2xl p-2 text-center duration-500 hover:bg-primary-500/80"
-                >
-                  <button>
-                    <FontAwesomeIcon icon={faXmark} color="white" size="xl" />
-                  </button>
-                </Dialog.Close>
-              </div>
-            </div>
+          <Dialog.Content className="container fixed left-[50%] top-[50%]  mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] text-white">
+            <nav className="p-4">
+              <ul className="flex flex-col space-y-2">
+                {links.map(({ href, text }) => (
+                  <Link
+                    key={text}
+                    className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                    href={href}
+                    onClick={() => setOpen(false)}
+                  >
+                    {text}
+                  </Link>
+                ))}
+              </ul>
 
-            <nav className="container mx-auto flex max-w-lg flex-col space-y-2 text-white">
-              {links.map(({ href, text }) => (
-                <Link
-                  key={text}
-                  className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
-                  href={href}
-                  onClick={() => setOpen(false)}
-                >
-                  {text}
-                </Link>
-              ))}
-
-              <hr />
+              <hr className="border-b-2 my-8" />
 
               <div className="flex justify-between p-4">
                 <div className="space-x-4">
@@ -108,6 +89,21 @@ const Navigation = ({ open, setOpen }) => {
           </Dialog.Content>
         </Dialog.Portal>
       </AnimatePresence>
+
+      {!open && (
+        <Dialog.Trigger asChild>
+          <button className="absolute right-0">
+            <FontAwesomeIcon icon={faBars} color="white" size="xl" />
+          </button>
+        </Dialog.Trigger>
+      )}
+      {!!open && (
+        <Dialog.Close asChild>
+          <button className="absolute right-0">
+            <FontAwesomeIcon icon={faXmark} color="white" size="xl" />
+          </button>
+        </Dialog.Close>
+      )}
     </Dialog.Root>
   );
 };
