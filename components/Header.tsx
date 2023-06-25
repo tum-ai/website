@@ -1,31 +1,139 @@
 import { cx } from "class-variance-authority";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import Link from "next/link";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavToggle = () => {
+const Navigation = ({ open, setOpen }) => {
   return (
-    <button>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="#ffffff"
-        viewBox="0 0 448 512"
-      >
-        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-      </svg>
-    </button>
+    <Dialog.Root open={open} onOpenChange={(open) => setOpen(open)}>
+      {!open && (
+        <Dialog.Trigger asChild>
+          <button>
+            <FontAwesomeIcon icon={faBars} color="white" size="xl" />
+          </button>
+        </Dialog.Trigger>
+      )}
+
+      <AnimatePresence>
+        <Dialog.Portal>
+          <Dialog.Overlay asChild>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 flex items-center bg-primary-950/80 backdrop-blur-lg"
+            />
+          </Dialog.Overlay>
+
+          <Dialog.Content className="mt-30 fixed inset-0 flex items-center">
+            <div className="bg-green absolute top-0 w-full">
+              <div className="container mx-auto flex flex-row-reverse py-12">
+                <Dialog.Close
+                  asChild
+                  className="w-10 rounded-2xl p-2 text-center duration-500 hover:bg-primary-500/80"
+                >
+                  <button>
+                    <FontAwesomeIcon icon={faXmark} color="white" size="xl" />
+                  </button>
+                </Dialog.Close>
+              </div>
+            </div>
+
+            <nav className="container mx-auto flex flex-col space-y-2 text-white  ">
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="https://aielab.tum-ai.com/"
+                onClick={() => setOpen(false)}
+              >
+                AI E-Lab
+              </Link>
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="https://makeathon.tum-ai.com/"
+                onClick={() => setOpen(false)}
+              >
+                Makeathon
+              </Link>
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="/industry"
+                onClick={() => setOpen(false)}
+              >
+                Industry Projects
+              </Link>
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="/partners"
+                onClick={() => setOpen(false)}
+              >
+                Partners
+              </Link>
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="/members"
+                onClick={() => setOpen(false)}
+              >
+                Members
+              </Link>
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="https://join-us.tum-ai.com/"
+                onClick={() => setOpen(false)}
+              >
+                Join us
+              </Link>
+
+              <hr />
+
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="/workshops"
+                onClick={() => setOpen(false)}
+              >
+                Workshops
+              </Link>
+
+              <Link
+                className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                href="/blog"
+                onClick={() => setOpen(false)}
+              >
+                TUM.ai Blog
+              </Link>
+            </nav>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </AnimatePresence>
+    </Dialog.Root>
   );
 };
 
 export const Header = () => {
+  const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
-  useMotionValueEvent(scrollYProgress, "change", (latest) => setScrolled(latest > 0))
+  useMotionValueEvent(scrollYProgress, "change", (latest) =>
+    setScrolled(latest > 0)
+  );
 
   return (
-    <motion.header className={cx("duration-500 fixed z-10 w-full px-8 md:px-16", scrolled && 'backdrop-blur-lg bg-primary-950/80 py-8', !scrolled && "py-12")}>
-      <div className="container relative mx-auto  flex flex-row justify-between">
+    <motion.header
+      className={cx(
+        "fixed z-10 w-full px-8 duration-500 md:px-16",
+        scrolled && !navOpen && "bg-primary-950/80 py-8 backdrop-blur-lg",
+        (!scrolled || navOpen) && "py-12"
+      )}
+    >
+      <div className="container relative mx-auto flex flex-row justify-between">
         <Image
           src={"/assets/logo_new_white_standard.png"}
           alt="Logo"
@@ -33,7 +141,7 @@ export const Header = () => {
           height="32"
         />
 
-        <NavToggle />
+        <Navigation open={navOpen} setOpen={setNavOpen} />
       </div>
     </motion.header>
   );
