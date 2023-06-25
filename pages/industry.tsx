@@ -2,15 +2,22 @@ import Header2 from "../components/02_molecules/Header2.js";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import PictureHero from "../components/PictureHero";
+import Button from "@ui/Button.jsx";
+import Section from "@ui/Section";
 
 export default function Industry() {
   const [activeTab, setActiveTab] = useState("tab1");
   const partners = [
-    { href: "https://www.atoss.com/de", src: "/assets/industry/ATOSS.png" },
+    {
+      href: "https://www.atoss.com/de",
+      src: "/assets/industry/partners/ATOSS.png",
+      alt: "atoss",
+    },
     {
       href: "https://www.hypovereinsbank.de",
       src: "/assets/industry/partners/HVB_2.png",
-      alt: "atoss",
+      alt: "hypovereinsbank",
     },
     {
       href: "https://www.infineon.com/cms/de/",
@@ -25,20 +32,27 @@ export default function Industry() {
     {
       href: "https://www.sportortho.mri.tum.de",
       src: "/assets/industry/partners/MRI.png",
-      alt: "",
+      alt: "MRI",
     },
     {
       href: "https://neuralprophet.com",
       src: "/assets/industry/partners/neuralprophet_logo.png",
+      alt: "neuralprophet",
     },
-    { href: "https://eyeo.com", src: "/assets/industry/partners/eyeo.png" },
+    {
+      href: "https://eyeo.com",
+      src: "/assets/industry/partners/eyeo.png",
+      alt: "eyeo",
+    },
     {
       href: "https://gruppe.schwarz",
-      src: "/assets/industry/partners/schwarzgroup_edit.png",
+      src: "/assets/industry/partners/schwarzgroup_edit_cropped.png",
+      alt: "Schwarz Gruppe",
     },
     {
       href: "https://www.rohde-schwarz.com/de",
       src: "/assets/industry/partners/RandS.png",
+      alt: "Rhode-Schwarz",
     },
   ];
 
@@ -100,7 +114,7 @@ export default function Industry() {
       image: "/assets/industry/project_cards/radiologie.png",
       description: [
         {
-          text: "The Institute for Diagnostic and Interventional Radiology performs and evaluates examinations using ultrasound, conventional X-ray technology, CT and MRI.&nbsp;Project participants collaborated with radiologists to learn about the specifics of medical imaging formats (such as DICOM) and the basics of medical knowledge required for the task.&nbsp;",
+          text: "The Institute for Diagnostic and Interventional Radiology performs and evaluates examinations using ultrasound, conventional X-ray technology, CT and MRI.&nbsp;Project participants collaborated with radiologists to learn about the specifics of medical imaging formats (such as DICOM) and the basics of medical knowledge required for the task.",
           // Update with links and moreText when more details available
         },
       ],
@@ -186,66 +200,50 @@ export default function Industry() {
 
   return (
     <>
-      <Header2
-        imageSrc={"/assets/industry/header/industry_header_no_date.svg"}
-        title={undefined}
-        subtitle={undefined}
+      <PictureHero
+        imageSrc="/assets/industry/header/infineon_industry.jpeg"
+        titleImageSrc="/assets/industry/header/industry_header_no_date.svg"
+        subtitle="Your stepping stone to a career in AI"
       />
       <div>
-        <ul className="flex overflow-hidden">
-          <li
-            className={`${
-              activeTab === "tab1" ? "w-3/5" : "w-2/5"
-            } transform transition-all duration-200 ease-in-out`}
+        <Section className="flex flex-row justify-start text-2xl -mb-16 -mt-4">
+          <h2 className="mr-8 inline-block font-semibold text-gray-700">For</h2>
+          <button
+            className={`relative z-10 border-b-2 px-5 py-4 text-left transition-all duration-500 ease-in-out ${
+              activeTab === "tab1"
+                ? "border-primary-700 text-primary-700"
+                : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
+            }`}
+            onClick={() => setActiveTab("tab1")}
           >
-            <button
-              className={`w-full rounded px-4 py-2 text-center text-lg font-bold ${
-                activeTab === "tab1"
-                  ? "border border-b-2 border-transparent bg-gradient-to-r from-primary-800 from-10% to-primary-500 to-80% text-white"
-                  : "border border-b-2 border-transparent border-b-primary-500 bg-white text-primary-900 hover:border-gray-300 hover:border-b-primary-500"
-              } transition-all duration-500`}
-              onClick={() => setActiveTab("tab1")}
-            >
-              For Students
-            </button>
-          </li>
-          <li
-            className={`${
-              activeTab === "tab2" ? "w-3/5" : "w-2/5"
-            } transform transition-all duration-200 ease-in-out`}
+            Students
+          </button>
+          <button
+            className={`relative z-10 border-b-2 px-5 py-4 text-left transition-all duration-500 ease-in-out ${
+              activeTab === "tab2"
+                ? "border-primary-700 text-primary-700"
+                : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
+            }`}
+            onClick={() => setActiveTab("tab2")}
           >
-            <button
-              className={`w-full rounded px-4 py-2 text-center text-lg font-bold ${
-                activeTab === "tab2"
-                  ? "border border-b-2 border-transparent bg-gradient-to-l from-primary-800 from-10% to-primary-500 to-80% text-white"
-                  : "border border-b-2 border-transparent border-b-primary-500 bg-white text-primary-900 hover:border-gray-300 hover:border-b-primary-500"
-              } transition-all duration-500`}
-              onClick={() => setActiveTab("tab2")}
-            >
-              For Industry
-            </button>
-          </li>
-        </ul>
-        <div className="mt-8">
+            Industry
+          </button>
+          <hr className="-mt-[2px] w-full border-b-[1px] border-gray-200" />
+        </Section>
+        <div>
           {activeTab === "tab1" && (
             <>
-              <section
-                id="recordings"
-                className="mx-16 my-14 flex animate-fadeIn justify-center rounded-3xl bg-gray-50 py-14"
-              >
-                <div className="mx-2 px-2 sm:px-4 lg:px-8 xl:px-16">
-                  <h1 className="mb-14 bg-gradient-to-r from-primary-950 to-primary-800 to-40% bg-clip-text text-center text-4xl font-bold uppercase text-transparent">
-                    Your stepping stone to a career in AI
-                  </h1>
-                  <div className="grid grid-cols-1 gap-0 px-8 md:grid-cols-2 lg:px-16">
-                    <div className="px-12">
-                      <h2 className="mb-6 text-2xl font-bold">
+              <Section className="flex animate-fadeIn justify-center lg:flex-col">
+                <div className="rounded-3xl bg-gray-50 p-14">
+                  <div className="grid grid-cols-1 gap-6 xl:gap-16 xl:grid-cols-2">
+                    <div>
+                      <h2 className="mb-6 text-2xl font-semibold">
                         Applications for Industry Phase 5.0 will open in summer
                       </h2>
                       <p className="mb-8 text-xl">
                         Push ML boundaries and progress your career with our AI
                         projects!{" "}
-                        <strong className="font-semibold text-primary-700">
+                        <strong className="font-medium text-primary-500">
                           Leverage your skills
                         </strong>{" "}
                         and take on real AI projects to test your abilities.
@@ -253,7 +251,7 @@ export default function Industry() {
                         <br />
                         <br />
                         Work in a{" "}
-                        <strong className="font-semibold text-primary-700">
+                        <strong className="font-medium text-primary-500">
                           team of 4x students for 12 weeks, earn 2700€
                         </strong>{" "}
                         and gain valuable contacts. With a project lead guiding
@@ -262,24 +260,26 @@ export default function Industry() {
                         <br />
                         <br />
                         Collaborate with pre-selected partners, including{" "}
-                        <strong className="font-semibold text-primary-700">
+                        <strong className="font-medium text-primary-500">
                           for-profit companies, startups, and non-profits,
                         </strong>{" "}
                         in our upcoming Industry Phase 5.0 starting September
                         2023.
                       </p>
                     </div>
-                    <div className="relative flex flex-col items-center px-12 text-center">
-                      <div className="relative mb-3 h-64 w-full">
+                    <div className="relative flex flex-col items-center space-y-4 text-center">
+                      <div className="relative mb-3 w-full">
                         <Image
                           src="/assets/industry/zoom_industry.png"
                           className="rounded-lg grayscale"
-                          fill={true}
+                          layout="responsive"
+                          width={100}
+                          height={50}
                           alt={"Zoom Industry"}
                         />
                       </div>
                       <div className="my-3 rounded-lg bg-white p-8">
-                        <h1 className="text-2xl font-bold text-gray-900">
+                        <h1 className="text-xl font-semibold text-gray-900">
                           <span className="text-primary-500">"</span>
                           <span>Visit our official </span>
                           <span className="text-primary-500">
@@ -288,13 +288,13 @@ export default function Industry() {
                           <span> to learn more about the individual </span>
                           projects and partner companies{" "}
                           <span>of industry phase 5.0</span>
-                          <span className="text-primary-600">" 🤙🏼</span>
+                          <span className="text-primary-400">" 🤙🏼</span>
                         </h1>
                         <div className="text-white">
-                          <button className="mx-4 mt-5 w-56 rounded-full bg-primary-800 px-8 py-2 font-bold text-white duration-500 hover:bg-primary-600">
+                          <button className="w-46 mx-4 mt-5 rounded-full bg-primary-800 px-6 py-1 text-white duration-200 hover:bg-primary-600">
                             view project page
                           </button>
-                          <button className="mx-4 mt-5 w-44 rounded-full bg-primary-500 px-8 py-2 font-bold text-white duration-500 hover:bg-primary-400">
+                          <button className="mx-4 mt-5 w-36 rounded-full bg-primary-500 px-6 py-1 text-white duration-200 hover:bg-primary-400">
                             sign up now
                           </button>
                         </div>
@@ -302,39 +302,42 @@ export default function Industry() {
                     </div>
                   </div>
                 </div>
-              </section>
-              <section className="mx-16 my-14 px-5 py-6" id="partners_industry">
-                <h1 className="mb-14 text-center text-4xl font-bold">
-                  Our partners from&nbsp;
-                  <span className="text-primary-500">Industry Phase 4.0</span>
+              </Section>
+              <Section>
+                <h1 className="mb-3 text-4xl font-bold">
+                  Our partners from{" "}
+                  <strong className="font-bold text-primary-500">
+                    Industry Phase 4.0
+                  </strong>
                 </h1>
                 <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
-                <div className="grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                <div className="flex flex-wrap items-center justify-center">
                   {partners.map((partner, index) => (
-                    <div>
-                      <Link href={partner.href} key={index}>
-                        <div className="flex h-full items-center justify-center p-8 grayscale hover:grayscale-0">
+                    <div
+                      className="px-4 py-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+                      key={index}
+                    >
+                      <Link href={partner.href} passHref>
+                        <div className="min-w-160 flex h-full items-center justify-center p-8 grayscale hover:grayscale-0">
                           <Image
                             src={partner.src}
-                            alt={partner.alt}
-                            height={50}
+                            alt={partner.alt || ""}
                             width={160}
+                            height={50}
                             objectFit="contain"
-                            layout="intrinsic"
                           />
                         </div>
                       </Link>
                     </div>
                   ))}
                 </div>
-              </section>
+              </Section>
             </>
           )}
           {activeTab === "tab2" && <p>Content for tab 2.</p>}
           {activeTab === "tab3" && <p>Content for tab 3.</p>}
         </div>
-        <section className="my-4 bg-gradient-to-br from-primary-800 to-primary-950">
-          {/*<div className="h-2 bg-gradient-to-r from-primary-800 from-5% via-primary-500 via-30% to-primary-300 to-90%" />*/}
+        <Section className="my-12 bg-gradient-to-br from-primary-800 to-primary-950 pt-4 shadow-lg shadow-primary-900/40">
           <div className="mx-auto flex justify-center sm:py-6 md:py-8 lg:py-14">
             <Image
               src="/assets/industry/industrytimelinefall2022.png"
@@ -344,9 +347,9 @@ export default function Industry() {
               className="w-9/12 rounded-xl"
             />
           </div>
-        </section>
-        <section className="py-16">
-          <div className="justify-center mx-16 px-4">
+        </Section>
+        <Section className="mb-12 mt-20">
+          <div className="justify-center px-4">
             <h1 className="mb-3 text-4xl font-bold">
               Examples of previous AI Projects
             </h1>
@@ -372,7 +375,7 @@ export default function Industry() {
                       />
                     </div>
                     <div className="rounded-b-lg bg-white p-6 text-primary-950">
-                      <h1 className="mb-2 text-lg font-bold">
+                      <h1 className="mb-2 text-lg font-semibold">
                         {project.title}
                       </h1>
                       <p className="mb-2 flex-grow text-sm">
@@ -405,7 +408,7 @@ export default function Industry() {
                     <div className="mt-auto flex justify-between space-x-2 px-6 pb-6 sm:flex-col sm:space-x-0 sm:space-y-2 lg:flex-col">
                       <div className="flex space-x-2">
                         <Link href={project.organizationLink}>
-                          <div className="flex min-w-min max-w-max cursor-pointer items-center justify-center rounded-full bg-primary-800 px-4 py-1 text-primary-50 transition-colors duration-500 hover:bg-primary-500">
+                          <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-primary-800 px-4 py-1 text-primary-50 transition-colors duration-300 hover:bg-primary-500">
                             Visit {project.organization}
                           </div>
                         </Link>
@@ -419,7 +422,7 @@ export default function Industry() {
               ))}
             </div>
           </div>
-        </section>
+        </Section>
       </div>
     </>
   );
