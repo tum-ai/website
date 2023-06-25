@@ -10,7 +10,13 @@ import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import Link from "next/link";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faSlack,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "@ui/Button";
 
 const Navigation = ({ open, setOpen }) => {
   const links = [
@@ -19,9 +25,6 @@ const Navigation = ({ open, setOpen }) => {
     { href: "/industry", text: "Industry Projects" },
     { href: "/partners", text: "Partners" },
     { href: "/members", text: "Members" },
-    { href: "https://join-us.tum-ai.com/", text: "Join us" },
-    { href: "/workshops", text: "Workshops" },
-    { href: "/blog", text: "TUM.ai Blog" },
   ];
   return (
     <Dialog.Root open={open} onOpenChange={(open) => setOpen(open)}>
@@ -58,7 +61,7 @@ const Navigation = ({ open, setOpen }) => {
               </div>
             </div>
 
-            <nav className="container mx-auto flex flex-col space-y-2 text-white">
+            <nav className="container mx-auto flex max-w-lg flex-col space-y-2 text-white">
               {links.map(({ href, text }) => (
                 <Link
                   key={text}
@@ -69,6 +72,38 @@ const Navigation = ({ open, setOpen }) => {
                   {text}
                 </Link>
               ))}
+
+              <hr />
+
+              <div className="flex justify-between p-4">
+                <div className="space-x-4">
+                  <Link href="https://www.instagram.com/tum.ai_official/">
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      size="2xl"
+                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                    />
+                  </Link>
+                  <Link href="https://de.linkedin.com/company/tum-ai">
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      size="2xl"
+                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                    />
+                  </Link>
+                  <Link href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw">
+                    <FontAwesomeIcon
+                      icon={faSlack}
+                      size="2xl"
+                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                    />
+                  </Link>
+                </div>
+
+                <Link href="https://join-us.tum-ai.com/">
+                  <Button>Join us</Button>
+                </Link>
+              </div>
             </nav>
           </Dialog.Content>
         </Dialog.Portal>
