@@ -44,7 +44,7 @@ export default function Partners() {
       <Section background="white">
         <h2 className="mb-8 text-center text-4xl font-bold md:mb-16">
           Partners{" "}
-          <span className="text-primary-500">we have collaborated</span> with
+          <span className="text-purple-500">we have collaborated</span> with
         </h2>
         <Image
           src={PnSPartners}
@@ -65,7 +65,7 @@ export default function Partners() {
           <div className="mb-4 space-y-4">
             <p className="text-xl font-bold">
               Get access to our exclusive{" "}
-              <span className="text-primary-300">
+              <span className="text-purple-300">
                 pre-selected talent pool of AI enthusiasts.
               </span>
               Our members are experienced in software development, data science,
@@ -115,7 +115,7 @@ export default function Partners() {
               with you!
             </p>
 
-            <Button intent="primary">Become a partner</Button>
+            <Button intent="purple">Become a partner</Button>
           </div>
 
           <Image src={MartinTalk} alt="Martin talk" className="rounded" />
@@ -130,7 +130,7 @@ export default function Partners() {
           {cards.map((card) => (
             <article
               key={card.title}
-              className="h-full rounded bg-primary-900 p-4 text-center text-white"
+              className="h-full rounded bg-purple-900 p-4 text-center text-white"
             >
               <Image src={card.img} alt={card.title} />
               <h2 className="my-4 text-2xl font-bold">{card.title}</h2>

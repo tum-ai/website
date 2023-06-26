@@ -8,7 +8,7 @@ const styles = cva(
         variants: {
             background: {
                 white: "",
-                inverted: 'bg-gradient-to-b from-primary-900 to-primary-950 p-8 text-white'
+                inverted: 'bg-gradient-to-b from-purple-900 to-purple-950 p-8 text-white'
             }
         },
         defaultVariants: {
