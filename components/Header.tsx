@@ -35,7 +35,7 @@ const Navigation = ({ open, setOpen }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 flex items-center bg-primary-950/80 backdrop-blur-lg"
+              className="fixed inset-0 flex items-center bg-blue-800/80 backdrop-blur-lg"
             />
           </Dialog.Overlay>
 
@@ -45,7 +45,7 @@ const Navigation = ({ open, setOpen }) => {
                 {links.map(({ href, text }) => (
                   <Link
                     key={text}
-                    className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-primary-500/80"
+                    className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-purple-500/80"
                     href={href}
                     onClick={() => setOpen(false)}
                   >
@@ -62,21 +62,21 @@ const Navigation = ({ open, setOpen }) => {
                     <FontAwesomeIcon
                       icon={faInstagram}
                       size="2xl"
-                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                      className="mb-4 text-white duration-500 hover:text-purple-300"
                     />
                   </Link>
                   <Link href="https://de.linkedin.com/company/tum-ai">
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       size="2xl"
-                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                      className="mb-4 text-white duration-500 hover:text-purple-300"
                     />
                   </Link>
                   <Link href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw">
                     <FontAwesomeIcon
                       icon={faSlack}
                       size="2xl"
-                      className="mb-4 text-white duration-500 hover:text-primary-300"
+                      className="mb-4 text-white duration-500 hover:text-purple-300"
                     />
                   </Link>
                 </div>
@@ -120,7 +120,7 @@ export const Header = () => {
     <motion.header
       className={cx(
         "fixed z-10 w-full px-8 duration-500 md:px-16",
-        scrolled && !navOpen && "bg-primary-950/80 py-8 backdrop-blur-lg",
+        scrolled && !navOpen && "bg-blue-800/80 py-8 backdrop-blur-lg",
         (!scrolled || navOpen) && "py-12"
       )}
     >
