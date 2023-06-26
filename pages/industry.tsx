@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import PictureHero from "../components/BannerHero";
-import Button from "@ui/Button";
 import Section from "@ui/Section";
+import { Fragment, useRef, useState } from "react";
+import { Dialog, Transition, Popover } from "@headlessui/react";
+import {
+  UserGroupIcon,
+  AcademicCapIcon,
+  BuildingOffice2Icon,
+  ArrowLeftOnRectangleIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Industry() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -113,7 +120,7 @@ export default function Industry() {
       image: "/assets/industry/project_cards/radiologie.png",
       description: [
         {
-          text: "The Institute for Diagnostic and Interventional Radiology performs and evaluates examinations using ultrasound, conventional X-ray technology, CT and MRI.&nbsp;Project participants collaborated with radiologists to learn about the specifics of medical imaging formats (such as DICOM) and the basics of medical knowledge required for the task.",
+          text: "The Institute for Diagnostic and Interventional Radiology performs and evaluates examinations using ultrasound, conventional X-ray technology, CT and MRI. Project participants collaborated with radiologists to learn about the specifics of medical imaging formats (such as DICOM) and the basics of medical knowledge required for the task.",
           // Update with links and moreText when more details available
         },
       ],
@@ -139,7 +146,7 @@ export default function Industry() {
       image: "/assets/industry/project_cards/leevi_baby.png",
       description: [
         {
-          text: "During this project we contributed to Leevi's mission of providing digital health solutions for infants.&nbsp;Leevi helps parents accurately understand the wellbeing of their babies through individual insights via a wearable bracelet that collects the babies vital and sleep parameters.",
+          text: "During this project we contributed to Leevi's mission of providing digital health solutions for infants. Leevi helps parents accurately understand the wellbeing of their babies through individual insights via a wearable bracelet that collects the babies vital and sleep parameters.",
         },
       ],
       organization: "Leevi",
@@ -163,7 +170,7 @@ export default function Industry() {
       image: "/assets/industry/project_cards/presize-Logo.jpg",
       description: [
         {
-          text: "&nbsp;We created a recommender system for clothing sizes and benchmarked it against Presize’s own technology. This way we actively contributed of Presize's s vision of reducing the amount of paercel-returns.",
+          text: "We created a recommender system for clothing sizes and benchmarked it against Presize’s own technology. This way we actively contributed of Presize's s vision of reducing the amount of paercel-returns.",
         },
       ],
       organization: "presize.ai",
@@ -197,20 +204,199 @@ export default function Industry() {
     },
   ];
 
+  const [open, setOpen] = useState(false);
+
+  const cancelButtonRef = useRef(null);
+
+  const options = [
+    {
+      name: "Students",
+      description: "Your stepping stone to a career in AI",
+      toTab: "tab1",
+      icon: AcademicCapIcon,
+    },
+    {
+      name: "Industry",
+      description: "Present your AI-related problem – we'll help define the ideal project",
+      toTab: "tab2",
+      icon: BuildingOffice2Icon,
+    },
+  ];
+
   return (
     <>
+      <Transition.Root show={open} as={Fragment}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          initialFocus={cancelButtonRef}
+          onClose={setOpen}
+        >
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 backdrop-blur-sm transition-all" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                enterTo="opacity-100 translate-y-0 sm:scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              >
+                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                  <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div className="sm:flex sm:items-start">
+                      <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-50 sm:mx-0 sm:h-10 sm:w-10">
+                        <UserGroupIcon
+                          className="h-6 w-6 text-primary-500"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-xl font-semibold leading-6 text-primary-500"
+                        >
+                          Let's connect!
+                        </Dialog.Title>
+                        <div className="mt-2">
+                          <p className="text-sm text-gray-700">
+                            If you are interested in partnering with TUM.ai as a
+                            sponsor, Makeathon challenge-setter, Industry
+                            project partner, Workshop host, etc. please reach
+                            out to our "Partners & Sponsors" department.
+                          </p>
+                          <h2 className="mt-6 text-lg font-medium text-primary-500">
+                            partners@tum-ai.com
+                          </h2>
+                          <p className="mt-6 text-sm text-gray-500">
+                            <p className="text-sm text-gray-500">
+                              TUM.ai Student Initiative
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              Arcisstraße 21.
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              80333 Munich
+                            </p>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <button
+                      type="button"
+                      className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                      onClick={() => setOpen(false)}
+                      ref={cancelButtonRef}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition.Root>
       <PictureHero
         imageSrc="/assets/industry/header/infineon_industry.jpeg"
         titleImageSrc="/assets/industry/header/industry_header_no_date.svg"
         subtitle="Your stepping stone to a career in AI"
       />
       <div>
-        <Section className="-mb-16 -mt-4 flex flex-row justify-start text-2xl">
+        <div className="container mx-auto -mb-8 flex justify-center md:hidden">
+          {
+            <Popover className="relative p-10">
+              <Popover.Button className="inline-flex items-center gap-x-1 rounded-xl p-4 text-lg font-medium leading-6 text-primary-800 shadow-lg shadow-primary-900/10 ring-1 ring-gray-400/10 transition-all duration-300 hover:shadow-primary-900/20">
+                <span>Options</span>
+                <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                  <div className="w-screen max-w-xl flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-xl ring-1 ring-gray-900/10">
+                    <div className="p-4">
+                      {options.map((item) => (
+                        <div
+                          key={item.name}
+                          className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
+                          onClick={() => setActiveTab(item.toTab)}
+                        >
+                          <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                            <item.icon
+                              className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-900">
+                              {item.name}
+                              <span className="absolute inset-0" />
+                            </h3>
+                            <p className="mt-1 text-gray-600">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                      <a
+                        key={"Sign up"}
+                        href={"https://industry.tum-ai.com/apply"}
+                        className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
+                      >
+                        <ArrowLeftOnRectangleIcon
+                          className="h-5 w-5 flex-none text-gray-400"
+                          aria-hidden="true"
+                        />
+                        Sign Up
+                      </a>
+                      <button
+                        className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
+                        onClick={() => setOpen(true)}
+                      >
+                        <UserGroupIcon
+                          className="h-5 w-5 flex-none text-gray-400"
+                          aria-hidden="true"
+                        />
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </Popover>
+          }
+        </div>
+        <Section className="-mb-16 -mt-4 hidden flex-row justify-start text-xl md:flex">
           <h2 className="mr-8 inline-block font-semibold text-gray-700">For</h2>
           <button
-            className={`relative z-10 border-b-2 px-5 py-4 text-left transition-all duration-500 ease-in-out ${
+            className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab1"
-                ? "border-primary-700 text-primary-700"
+                ? "border-primary-500 text-primary-500"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab1")}
@@ -218,9 +404,9 @@ export default function Industry() {
             Students
           </button>
           <button
-            className={`relative z-10 border-b-2 px-5 py-4 text-left transition-all duration-500 ease-in-out ${
+            className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab2"
-                ? "border-primary-700 text-primary-700"
+                ? "border-primary-500 text-primary-500"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab2")}
@@ -232,14 +418,14 @@ export default function Industry() {
         <div>
           {activeTab === "tab1" && (
             <>
-              <Section className="flex animate-fadeIn justify-center lg:flex-col">
-                <div className="rounded-3xl bg-gray-50 p-14 shadow-lg shadow-primary-800/10">
+              <Section className="flex animate-fadeIn justify-center">
+                <div className="rounded-3xl shadow-primary-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
                   <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
                     <div>
-                      <h2 className="mb-6 text-3xl font-semibold">
+                      <h2 className="mb-6 text-4xl font-semibold">
                         Applications for Industry Phase 5.0 will open in summer
                       </h2>
-                      <hr className="border-b-1 my-6 border-gray-300"/>
+                      <hr className="border-b-1 my-6 border-gray-300" />
                       <p className="mb-8 text-xl">
                         Push ML boundaries and progress your career with our AI
                         projects!{" "}
@@ -280,21 +466,29 @@ export default function Industry() {
                       </div>
                       <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-primary-500/10">
                         <h1 className="text-xl font-semibold text-gray-900">
-                          <span className="text-primary-500">"</span>
-                          <span>Visit our official </span>
-                          <span className="text-primary-500">
-                            Projects Notion Page
+                          <span>
+                            "Visit our official Projects Notion Page to learn
+                            more about the individual projects and partner
+                            companies of industry phase 5.0"
                           </span>
-                          <span> to learn more about the individual </span>
-                          projects and partner companies{" "}
-                          <span>of industry phase 5.0</span>
-                          <span className="text-primary-400">" 🤙🏼</span>
                         </h1>
                         <div className="text-white">
-                          <button className="w-46 mx-4 mt-5 rounded-full bg-primary-800 px-6 py-1 text-white duration-200 hover:bg-primary-600">
-                            view project page
+                          <button
+                            className="w-46 mt-5 rounded-full bg-primary-800 px-6 py-1 text-white duration-200 hover:bg-primary-700 sm:mx-4"
+                            onClick={() =>
+                              window.open(
+                                "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
+                              )
+                            }
+                          >
+                            project page
                           </button>
-                          <button className="mx-4 mt-5 w-36 rounded-full bg-primary-500 px-6 py-1 text-white duration-200 hover:bg-primary-400">
+                          <button
+                            className="mx-4 mt-5 w-36 rounded-full bg-primary-600 px-6 py-1 text-white duration-200 hover:bg-primary-500"
+                            onClick={() =>
+                              window.open("https://industry.tum-ai.com/apply")
+                            }
+                          >
                             sign up now
                           </button>
                         </div>
@@ -308,14 +502,14 @@ export default function Industry() {
           {activeTab === "tab2" && (
             <>
               <Section className="flex animate-fadeIn justify-center lg:flex-col">
-                <div className="rounded-3xl bg-gray-50 p-14 shadow-lg shadow-primary-800/10">
-                  <h2 className="text-3xl font-semibold">
+                <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg shadow-primary-800/10">
+                  <h2 className="text-4xl font-semibold">
                     Industry Phase 5.0 starting in Fall 2023
                   </h2>
-                  <hr className="border-b-1 my-4 border-gray-300"/>
+                  <hr className="border-b-1 my-4 border-gray-300" />
                   <div className="mt-6 grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
-                    <div className="px-12">
-                      <h2 className="text-center text-xl px-2">
+                    <div className="sm:px-12">
+                      <h2 className="sm:px-2 text-center text-xl">
                         We manage Munich's top pool of{" "}
                         <span className="font-bold text-primary-500">
                           AI talent
@@ -323,19 +517,16 @@ export default function Industry() {
                         and offer affordable, high-quality solutions without any
                         long-term liabilities!
                       </h2>
-                      <div className="flex flex-row items-center justify-center space-x-6 p-6">
-                        <Button className="text-white">Get Access!</Button>
-                        <h3 className="text-xl font-semibold text-primary-950">
-                          industry@tum-ai.de
-                        </h3>
+                      <div className="mt-8 flex flex-row items-center justify-center space-x-6">
+                        <button
+                          className="rounded-full bg-primary-800 px-6 py-2 font-medium text-white duration-200 hover:bg-primary-700"
+                          onClick={() => setOpen(true)}
+                        >
+                          connect!
+                        </button>
                       </div>
                     </div>
                     <div className="flex flex-col items-center justify-center space-y-6 py-4">
-                      <h2 className="text-center text-3xl font-semibold">
-                        For{" "}
-                        <span className="text-primary-500">future partner</span>{" "}
-                        companies
-                      </h2>
                       <Image
                         src={"/assets/industry/freearifiat.png"}
                         className="rounded-xl shadow-lg shadow-primary-800/20"
@@ -346,31 +537,39 @@ export default function Industry() {
                       />
                     </div>
                   </div>
-                  <h2 className="mt-16 text-3xl font-semibold">
+                  <h2 className="mt-16 text-4xl font-semibold">
                     What is an{" "}
                     <span className="text-primary-500">AI Project</span>?
                   </h2>
-                  <hr className="border-b-1 my-4 border-gray-300"/>
-                  <div className="mt-6 grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16 py-6">
-                    <div className="px-12">
-                      <h2 className="text-2xl font-semibold text-primary-500">Project Statement</h2>
-                      <p>Present your AI-related problem – we'll help define the ideal project:</p>
-                      <ol className="text-lg list-inside list-disc space-y-2 font-medium text-gray-700 py-4 px-6">
+                  <hr className="border-b-1 my-4 border-gray-300" />
+                  <div className="mt-6 grid grid-cols-1 gap-10 py-6 xl:grid-cols-2 xl:gap-16">
+                    <div>
+                      <h2 className="text-2xl font-semibold text-primary-500">
+                        Project Statement
+                      </h2>
+                      <p>
+                        Present your AI-related problem – we'll help define the
+                        ideal project:
+                      </p>
+                      <ol className="list-inside list-disc space-y-2 py-4 sm:text-lg font-medium text-gray-700">
                         <li className="pl-2">Building proof of concept</li>
                         <li className="pl-2">Conducting research topics</li>
                         <li className="pl-2">Developing prototypes</li>
                         <li className="pl-2">Improving products/processes</li>
                       </ol>
                     </div>
-                    <div className="px-12">
-                      <h2 className="text-2xl font-semibold text-primary-500">Outstanding Solutions</h2>
-                      <p className="py-2 max-w-lg">
-                        We’ll advertise your project to a wide pool of talented students and
-                        present you with the most outstanding candidates.
+                    <div>
+                      <h2 className="text-2xl font-semibold text-primary-500">
+                        Outstanding Solutions
+                      </h2>
+                      <p className="max-w-lg py-2">
+                        We’ll advertise your project to a wide pool of talented
+                        students and present you with the most outstanding
+                        candidates.
                       </p>
-                      <p className="py-2 max-w-lg">
-                        A team of multi-disciplinary students will work exclusively for your company
-                        as working students.
+                      <p className="max-w-lg py-2">
+                        A team of multi-disciplinary students will work
+                        exclusively for your company as working students.
                       </p>
                     </div>
                   </div>
@@ -378,10 +577,9 @@ export default function Industry() {
               </Section>
             </>
           )}
-          {activeTab === "tab3" && <p>Content for tab 3.</p>}
         </div>
         <Section>
-          <h1 className="mb-3 text-3xl font-semibold">
+          <h1 className="mb-3 text-4xl font-semibold">
             Our partners from{" "}
             <span className="text-primary-500">Industry Phase 4.0</span>
           </h1>
@@ -395,7 +593,7 @@ export default function Industry() {
                 <Link href={partner.href} passHref>
                   <div
                     className="min-w-160 flex h-full items-center justify-center p-8 grayscale 
-                        transition-all duration-200 ease-out hover:shadow-md hover:grayscale-0"
+                        transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary-800/5 hover:grayscale-0"
                   >
                     <Image
                       src={partner.src}
@@ -410,20 +608,24 @@ export default function Industry() {
             ))}
           </div>
         </Section>
-        <Section className="my-12 bg-gradient-to-br from-primary-800 to-primary-950 pt-4 shadow-lg shadow-primary-900/40">
-          <div className="mx-auto flex justify-center sm:py-6 md:py-8 lg:py-14">
+        <Section className="my-12 bg-gradient-to-br from-primary-800 to-primary-950 shadow-lg shadow-primary-900/30">
+          <div className="mx-auto w-full md:w-10/12">
+            <h1 className="mb-3 hidden text-4xl font-semibold text-white md:block">
+              Project Timeline
+            </h1>
+            <hr className="mb-8 mt-4 hidden border-white md:block" />
             <Image
-              src="/assets/industry/industrytimelinefall2022.png"
-              width={500}
-              height={300}
+              src="/assets/industry/industrytimelinefall2022_cropped.png"
+              width={600}
+              height={400}
               alt="Industry Timeline"
-              className="w-9/12 rounded-xl"
+              className="w-full rounded-xl"
             />
           </div>
         </Section>
-        <Section className="mb-12 mt-20">
-          <div className="justify-center px-4">
-            <h1 className="mb-3 text-3xl font-bold">
+        <Section className="mb-12 sm:mt-20">
+          <div className="justify-center sm:px-4">
+            <h1 className="mb-3 text-4xl font-bold">
               Examples of previous AI Projects
             </h1>
             <h2 className="my-3 text-xl">
@@ -441,7 +643,7 @@ export default function Industry() {
                   key={index}
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-48 w-full grayscale">
+                    <div className="relative h-60 w-full grayscale">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -481,16 +683,14 @@ export default function Industry() {
                         ))}
                       </p>
                     </div>
-                    <div className="mt-auto flex justify-between space-x-2 px-6 pb-6 sm:flex-col sm:space-x-0 sm:space-y-2 lg:flex-col">
-                      <div className="flex space-x-2">
-                        <Link href={project.organizationLink}>
-                          <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-primary-800 px-4 py-1 text-primary-50 transition-colors duration-300 hover:bg-primary-500">
-                            Visit {project.organization}
-                          </div>
-                        </Link>
-                        <div className="flex min-w-min max-w-max items-center justify-center px-4 py-1 text-gray-400">
-                          {project.time}
+                    <div className="mt-auto flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center sm:justify-start items-center space-x-2 px-6 pb-6">
+                      <Link href={project.organizationLink}>
+                        <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-primary-800 px-4 py-1 text-primary-50 transition-colors duration-300 hover:bg-primary-500">
+                          {project.organization}
                         </div>
+                      </Link>
+                      <div className="flex min-w-min max-w-max items-center justify-center px-4 py-1 text-gray-400">
+                        {project.time}
                       </div>
                     </div>
                   </div>
