@@ -1,12 +1,3 @@
-import {
-  faInstagram,
-  faLinkedin,
-  faSlack,
-} from "@fortawesome/free-brands-svg-icons";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as Dialog from "@radix-ui/react-dialog";
-import Button from "@ui/Button";
 import { cx } from "class-variance-authority";
 import {
   AnimatePresence,
@@ -15,8 +6,17 @@ import {
   useScroll,
 } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import Link from "next/link";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faSlack,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "@ui/Button";
 
 const Navigation = ({ open, setOpen }) => {
   const links = [
