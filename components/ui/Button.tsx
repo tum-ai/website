@@ -4,11 +4,11 @@ import { VariantProps, cva } from "class-variance-authority";
 const styles = cva("rounded-full px-8 py-2 font-bold duration-500", {
   variants: {
     intent: {
-      primary: "bg-primary-500 hover:bg-primary-400",
+      purple: "bg-purple-500 hover:bg-purple-400",
     },
   },
   defaultVariants: {
-    intent: "primary",
+    intent: "purple",
   },
 });
 
