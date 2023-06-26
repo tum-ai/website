@@ -130,7 +130,7 @@ export default function Partners() {
           {cards.map((card) => (
             <article
               key={card.title}
-              className="h-full rounded bg-purple-900 p-4 text-center text-white"
+              className="h-full rounded bg-blue-700 p-4 text-center text-white"
             >
               <Image src={card.img} alt={card.title} />
               <h2 className="my-4 text-2xl font-bold">{card.title}</h2>
