@@ -35,7 +35,7 @@ const Navigation = ({ open, setOpen }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 flex items-center bg-purple-950/80 backdrop-blur-lg"
+              className="fixed inset-0 flex items-center bg-blue-800/80 backdrop-blur-lg"
             />
           </Dialog.Overlay>
 
@@ -120,7 +120,7 @@ export const Header = () => {
     <motion.header
       className={cx(
         "fixed z-10 w-full px-8 duration-500 md:px-16",
-        scrolled && !navOpen && "bg-purple-950/80 py-8 backdrop-blur-lg",
+        scrolled && !navOpen && "bg-blue-800/80 py-8 backdrop-blur-lg",
         (!scrolled || navOpen) && "py-12"
       )}
     >

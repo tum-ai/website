@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer className="bg-purple-950 text-white">
+    <footer className="bg-blue-700 text-white">
       <div className="container mx-auto grid gap-8 p-16 md:grid-cols-2">
         <div>
           <Image
