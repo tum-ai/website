@@ -394,7 +394,7 @@ export default function Industry() {
         <Section className="-mb-16 -mt-4 hidden flex-row justify-start text-xl md:flex">
           <h2 className="mr-8 inline-block font-medium text-gray-600">For</h2>
           <button
-            className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
+            className={`relative z-1 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab1"
                 ? "border-purple-600 text-purple-600"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
@@ -404,7 +404,7 @@ export default function Industry() {
             Students
           </button>
           <button
-            className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
+            className={`relative z-1 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab2"
                 ? "border-purple-600 text-purple-600"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
@@ -643,7 +643,7 @@ export default function Industry() {
                   key={index}
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-60 w-full grayscale">
+                    <div className="relative h-60 w-full">
                       <Image
                         src={project.image}
                         alt={project.title}
