@@ -659,7 +659,7 @@ export default function Industry() {
                         ))}
                       </p>
                     </div>
-                    <div className="mt-auto flex flex-col items-center justify-center space-x-2 space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0">
+                    <div className="mt-auto flex flex-col items-center justify-center md:space-x-2 space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0">
                       <Link href={project.organizationLink}>
                         <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400 hover:shadow-md">
                           {project.organization}
