@@ -270,14 +270,14 @@ export default function Industry() {
                           as="h3"
                           className="text-xl font-semibold leading-6 text-purple-500"
                         >
-                          Let's connect!
+                          Let&apos;s connect!
                         </Dialog.Title>
                         <div className="mt-2">
                           <p className="text-sm text-gray-700">
                             If you are interested in partnering with TUM.ai as a
                             sponsor, Makeathon challenge-setter, Industry
                             project partner, Workshop host, etc. please reach
-                            out to our "Partners & Sponsors" department.
+                            out to our &quot;Partners & Sponsors&quot; department.
                           </p>
                           <h2 className="mt-6 text-lg font-medium text-purple-500">
                             partners@tum-ai.com
@@ -445,9 +445,9 @@ export default function Industry() {
                       <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-blue-300/10">
                         <h1 className="text-xl font-medium text-gray-900">
                           <span>
-                            "Visit our official Projects Notion Page to learn
+                            Visit our official Projects Notion Page to learn
                             more about the individual projects and partner
-                            companies of industry phase 5.0"
+                            companies of industry phase 5.0
                           </span>
                         </h1>
                         <div className="text-white">
@@ -488,7 +488,7 @@ export default function Industry() {
                   <div className="mt-6 grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
                     <div className="sm:px-12">
                       <h2 className="text-center text-xl sm:px-2">
-                        We manage Munich's top pool of{" "}
+                        We manage Munich&apos;s top pool of{" "}
                         <span className="font-bold text-purple-600">
                           AI talent
                         </span>{" "}
@@ -526,8 +526,8 @@ export default function Industry() {
                         Project Statement
                       </h2>
                       <p>
-                        Present your AI-related problem – we'll help define the
-                        ideal project:
+                        Present your AI-related problem – we&apos;ll help define
+                        the ideal project:
                       </p>
                       <ol className="list-inside list-disc space-y-2 py-4 font-medium text-gray-700 sm:text-lg">
                         <li className="pl-2">Building proof of concept</li>
