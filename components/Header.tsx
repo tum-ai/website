@@ -54,7 +54,7 @@ const Navigation = ({ open, setOpen }) => {
                 ))}
               </ul>
 
-              <hr className="border-b-2 my-8" />
+              <hr className="my-8 border-b-2" />
 
               <div className="flex justify-between p-4">
                 <div className="space-x-4">
