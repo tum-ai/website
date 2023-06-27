@@ -258,16 +258,16 @@ export default function Industry() {
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                   <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                     <div className="sm:flex sm:items-start">
-                      <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary-50 sm:mx-0 sm:h-10 sm:w-10">
+                      <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-fulurple-50 sm:mx-0 sm:h-10 sm:w-10">
                         <UserGroupIcon
-                          className="h-6 w-6 text-primary-500"
+                          className="h-6 w-6 text-purple-500"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                         <Dialog.Title
                           as="h3"
-                          className="text-xl font-semibold leading-6 text-primary-500"
+                          className="text-xl font-semibold leading-6 text-purple-500"
                         >
                           Let's connect!
                         </Dialog.Title>
@@ -278,7 +278,7 @@ export default function Industry() {
                             project partner, Workshop host, etc. please reach
                             out to our "Partners & Sponsors" department.
                           </p>
-                          <h2 className="mt-6 text-lg font-medium text-primary-500">
+                          <h2 className="mt-6 text-lg font-medium text-purple-500">
                             partners@tum-ai.com
                           </h2>
                           <p className="mt-6 text-sm text-gray-500">
@@ -321,7 +321,7 @@ export default function Industry() {
         <div className="container mx-auto -mb-8 flex justify-center md:hidden">
           {
             <Popover className="relative p-10">
-              <Popover.Button className="inline-flex items-center gap-x-1 rounded-xl p-4 text-lg font-medium leading-6 text-primary-800 shadow-lg shadow-primary-900/10 ring-1 ring-gray-400/10 transition-all duration-300 hover:shadow-primary-900/20">
+              <Popover.Button className="inline-flex items-center gap-x-1 rounded-xl p-4 text-lg font-medium leading-6 text-purple-950 shadow-lg shadow-purple-900/10 ring-1 ring-gray-400/10 transition-all duration-300 hover:shadow-purple-900/20">
                 <span>Options</span>
                 <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
               </Popover.Button>
@@ -392,11 +392,11 @@ export default function Industry() {
           }
         </div>
         <Section className="-mb-16 -mt-4 hidden flex-row justify-start text-xl md:flex">
-          <h2 className="mr-8 inline-block font-semibold text-gray-700">For</h2>
+          <h2 className="mr-8 inline-block font-medium text-gray-600">For</h2>
           <button
             className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab1"
-                ? "border-primary-500 text-primary-500"
+                ? "border-purple-600 text-purple-600"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab1")}
@@ -406,7 +406,7 @@ export default function Industry() {
           <button
             className={`relative z-10 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab2"
-                ? "border-primary-500 text-primary-500"
+                ? "border-purple-600 text-purple-600"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab2")}
@@ -419,7 +419,7 @@ export default function Industry() {
           {activeTab === "tab1" && (
             <>
               <Section className="flex animate-fadeIn justify-center">
-                <div className="rounded-3xl shadow-primary-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
+                <div className="rounded-3xl sm:shadow-blue-500/20 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
                   <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
                     <div>
                       <h2 className="mb-6 text-4xl font-semibold">
@@ -429,7 +429,7 @@ export default function Industry() {
                       <p className="mb-8 text-xl">
                         Push ML boundaries and progress your career with our AI
                         projects!{" "}
-                        <span className="text-primary-500">
+                        <span className="text-purple-600">
                           Leverage your skills
                         </span>{" "}
                         and take on real AI projects to test your abilities.
@@ -437,7 +437,7 @@ export default function Industry() {
                         <br />
                         <br />
                         Work in a{" "}
-                        <span className="text-primary-500">
+                        <span className="text-purple-600">
                           team of 4x students for 12 weeks, earn 2700€
                         </span>{" "}
                         and gain valuable contacts. With a project lead guiding
@@ -446,7 +446,7 @@ export default function Industry() {
                         <br />
                         <br />
                         Collaborate with pre-selected partners, including{" "}
-                        <span className="text-primary-500">
+                        <span className="textpurple-600">
                           for-profit companies, startups, and non-profits,
                         </span>{" "}
                         in our upcoming Industry Phase 5.0 starting September
@@ -454,7 +454,7 @@ export default function Industry() {
                       </p>
                     </div>
                     <div className="relative flex flex-col items-center space-y-8 text-center">
-                      <div className="relative mb-3 w-full rounded-lg shadow-md shadow-primary-800/20">
+                      <div className="relative mb-3 w-full rounded-lg shadow-md shadowpurple-800/20">
                         <Image
                           src="/assets/industry/zoom_industry.png"
                           className="rounded-lg grayscale"
@@ -464,8 +464,8 @@ export default function Industry() {
                           alt={"Zoom Industry"}
                         />
                       </div>
-                      <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-primary-500/10">
-                        <h1 className="text-xl font-semibold text-gray-900">
+                      <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-blue-300/10">
+                        <h1 className="text-xl font-medium text-gray-900">
                           <span>
                             "Visit our official Projects Notion Page to learn
                             more about the individual projects and partner
@@ -474,7 +474,7 @@ export default function Industry() {
                         </h1>
                         <div className="text-white">
                           <button
-                            className="w-46 mt-5 rounded-full bg-primary-800 px-6 py-1 text-white duration-200 hover:bg-primary-700 sm:mx-4"
+                            className="w-46 mt-5 rounded-full bg-blue-700 px-6 py-1 text-white duration-200 hover:bg-purple-800 sm:mx-4"
                             onClick={() =>
                               window.open(
                                 "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
@@ -484,7 +484,7 @@ export default function Industry() {
                             project page
                           </button>
                           <button
-                            className="mx-4 mt-5 w-36 rounded-full bg-primary-600 px-6 py-1 text-white duration-200 hover:bg-primary-500"
+                            className="mx-4 mt-5 w-36 rounded-full bg-purple-700 px-6 py-1 text-white duration-200 hover:bg-purple-600"
                             onClick={() =>
                               window.open("https://industry.tum-ai.com/apply")
                             }
@@ -502,7 +502,7 @@ export default function Industry() {
           {activeTab === "tab2" && (
             <>
               <Section className="flex animate-fadeIn justify-center lg:flex-col">
-                <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg shadow-primary-800/10">
+                <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg shadow-purple-800/10">
                   <h2 className="text-4xl font-semibold">
                     Industry Phase 5.0 starting in Fall 2023
                   </h2>
@@ -511,7 +511,7 @@ export default function Industry() {
                     <div className="sm:px-12">
                       <h2 className="sm:px-2 text-center text-xl">
                         We manage Munich's top pool of{" "}
-                        <span className="font-bold text-primary-500">
+                        <span className="font-bold text-purple-600">
                           AI talent
                         </span>{" "}
                         and offer affordable, high-quality solutions without any
@@ -519,7 +519,7 @@ export default function Industry() {
                       </h2>
                       <div className="mt-8 flex flex-row items-center justify-center space-x-6">
                         <button
-                          className="rounded-full bg-primary-800 px-6 py-2 font-medium text-white duration-200 hover:bg-primary-700"
+                          className="rounded-full bg-purple-800 px-6 py-2 font-medium text-white duration-200 hover:bg-purple-700"
                           onClick={() => setOpen(true)}
                         >
                           connect!
@@ -529,7 +529,7 @@ export default function Industry() {
                     <div className="flex flex-col items-center justify-center space-y-6 py-4">
                       <Image
                         src={"/assets/industry/freearifiat.png"}
-                        className="rounded-xl shadow-lg shadow-primary-800/20"
+                        className="rounded-xl shadow-lg shadow-purple-800/20"
                         layout="respinsive"
                         alt="Ferrari for Fiat"
                         width={500}
@@ -539,12 +539,12 @@ export default function Industry() {
                   </div>
                   <h2 className="mt-16 text-4xl font-semibold">
                     What is an{" "}
-                    <span className="text-primary-500">AI Project</span>?
+                    <span className="text-purple-600">AI Project</span>?
                   </h2>
                   <hr className="border-b-1 my-4 border-gray-300" />
                   <div className="mt-6 grid grid-cols-1 gap-10 py-6 xl:grid-cols-2 xl:gap-16">
                     <div>
-                      <h2 className="text-2xl font-semibold text-primary-500">
+                      <h2 className="text-2xl font-semibold text-purple-600">
                         Project Statement
                       </h2>
                       <p>
@@ -559,7 +559,7 @@ export default function Industry() {
                       </ol>
                     </div>
                     <div>
-                      <h2 className="text-2xl font-semibold text-primary-500">
+                      <h2 className="text-2xl font-semibold text-purple-600">
                         Outstanding Solutions
                       </h2>
                       <p className="max-w-lg py-2">
@@ -581,7 +581,7 @@ export default function Industry() {
         <Section>
           <h1 className="mb-3 text-4xl font-semibold">
             Our partners from{" "}
-            <span className="text-primary-500">Industry Phase 4.0</span>
+            <span className="text-purple-600">Industry Phase 4.0</span>
           </h1>
           <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
           <div className="flex flex-wrap items-center justify-center">
@@ -593,7 +593,7 @@ export default function Industry() {
                 <Link href={partner.href} passHref>
                   <div
                     className="min-w-160 flex h-full items-center justify-center p-8 grayscale 
-                        transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary-800/5 hover:grayscale-0"
+                        transition-all duration-200 ease-out hover:shadow-md hover:shadow-purple-800/5 hover:grayscale-0"
                   >
                     <Image
                       src={partner.src}
@@ -608,7 +608,7 @@ export default function Industry() {
             ))}
           </div>
         </Section>
-        <Section className="my-12 bg-gradient-to-br from-primary-800 to-primary-950 shadow-lg shadow-primary-900/30">
+        <Section className="my-12 bg-blue-700 shadow-lg shadow-purple-900/30">
           <div className="mx-auto w-full md:w-10/12">
             <h1 className="mb-3 hidden text-4xl font-semibold text-white md:block">
               Project Timeline
@@ -630,7 +630,7 @@ export default function Industry() {
             </h1>
             <h2 className="my-3 text-xl">
               Explore how our AI enthusiasts have created{" "}
-              <span className="font-semibold text-primary-500">
+              <span className="text-purple-600">
                 measurable impact
               </span>{" "}
               in the past.
@@ -639,7 +639,7 @@ export default function Industry() {
             <div className="3xl:grid-cols-4 grid grid-cols-1 gap-14 lg:grid-cols-2 2xl:grid-cols-3">
               {projects.map((project, index) => (
                 <div
-                  className="rounded-lg bg-white shadow-lg shadow-primary-800/10"
+                  className="rounded-lg bg-white shadow-lg shadow-purple-800/10"
                   key={index}
                 >
                   <div className="flex h-full flex-col">
@@ -652,7 +652,7 @@ export default function Industry() {
                         className="rounded-t-lg"
                       />
                     </div>
-                    <div className="rounded-b-lg bg-white p-6 text-primary-950">
+                    <div className="rounded-b-lg bg-white p-6 text-purple-950">
                       <h1 className="mb-2 text-lg font-semibold">
                         {project.title}
                       </h1>
@@ -668,7 +668,7 @@ export default function Industry() {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-primary-700 underline"
+                                    className="text-purple-700 underline"
                                   >
                                     {link.displayText}
                                   </a>
@@ -685,7 +685,7 @@ export default function Industry() {
                     </div>
                     <div className="mt-auto flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center sm:justify-start items-center space-x-2 px-6 pb-6">
                       <Link href={project.organizationLink}>
-                        <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-primary-800 px-4 py-1 text-primary-50 transition-colors duration-300 hover:bg-primary-500">
+                        <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400">
                           {project.organization}
                         </div>
                       </Link>
