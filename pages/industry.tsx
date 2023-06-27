@@ -167,7 +167,7 @@ export default function Industry() {
     },
     {
       title: "Presize.ai - Clothing size recommender systems",
-      image: "/assets/industry/project_cards/presize-Logo.jpg",
+      image: "/assets/industry/project_cards/Unbenannt 2.jpg",
       description: [
         {
           text: "We created a recommender system for clothing sizes and benchmarked it against Presize’s own technology. This way we actively contributed of Presize's s vision of reducing the amount of paercel-returns.",
@@ -179,7 +179,7 @@ export default function Industry() {
     },
     {
       title: "Heimkapital - Real estate price prediction",
-      image: "/assets/industry/project_cards/heimkapital.png",
+      image: "/assets/industry/project_cards/heimkapital_resized.jpg",
       description: [
         {
           text: "We developed solutions to make an impact on the financial independence of homeowners by implementing an AI that can predict real estate prices based on population data.",
@@ -192,7 +192,7 @@ export default function Industry() {
     },
     {
       title: "DynaGroup & Veritas PR - NLP paraphrasing",
-      image: "/assets/industry/project_cards/dynagroup.png",
+      image: "/assets/industry/project_cards/dyna_group_resize.jpg",
       description: [
         {
           text: "We created an NLP-based system that can paraphrase sequences of text while reliably preserving the meaning - making online content creation easier and less-time consuming for smaller companies and non-profits.",
@@ -396,7 +396,7 @@ export default function Industry() {
           <button
             className={`relative z-1 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab1"
-                ? "border-purple-600 text-purple-600"
+                ? "border-blue-300 text-blue-300"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab1")}
@@ -406,7 +406,7 @@ export default function Industry() {
           <button
             className={`relative z-1 mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
               activeTab === "tab2"
-                ? "border-purple-600 text-purple-600"
+                ? "border-blue-300 text-blue-300"
                 : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
             }`}
             onClick={() => setActiveTab("tab2")}
@@ -474,7 +474,7 @@ export default function Industry() {
                         </h1>
                         <div className="text-white">
                           <button
-                            className="w-46 mt-5 rounded-full bg-blue-700 px-6 py-1 text-white duration-200 hover:bg-purple-800 sm:mx-4"
+                            className="w-46 mt-5 rounded-full bg-blue-700 px-6 py-1 text-white duration-200 hover:bg-blue-400 sm:mx-4"
                             onClick={() =>
                               window.open(
                                 "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
@@ -643,7 +643,7 @@ export default function Industry() {
                   key={index}
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-60 w-full">
+                    <div className="relative h-60 w-full grayscale saturate-200">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -685,7 +685,7 @@ export default function Industry() {
                     </div>
                     <div className="mt-auto flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center sm:justify-start items-center space-x-2 px-6 pb-6">
                       <Link href={project.organizationLink}>
-                        <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400">
+                        <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400 hover:shadow-md">
                           {project.organization}
                         </div>
                       </Link>
