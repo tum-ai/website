@@ -15,6 +15,7 @@ export default function Tabs({
             <RTabs.List className="grid grid-cols-2 text-xl">
                 {
                     Object.keys(data).map((key) => <RTabs.Trigger
+                        key={key}
                         value={key}
                         className="border-b-2 border-gray-400 p-4 text-gray-400 data-[state=active]:border-purple-500 data-[state=active]:text-purple-500"
                     >
@@ -24,7 +25,7 @@ export default function Tabs({
 
             </RTabs.List>
             {
-                Object.keys(data).map((key) => <RTabs.Content value={key}>
+                Object.keys(data).map((key) => <RTabs.Content key={key} value={key}>
                     {data[key]}
                 </RTabs.Content>)
             }
