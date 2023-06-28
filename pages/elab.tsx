@@ -8,23 +8,23 @@ export default function StatSection() {
     <>
       <Hero
         imageSrc={"/assets/tumai_bcg_workshop.png"}
-        title="Workshops and Events"
-        subtitle="What is TUM.ai all about?"
+        title="Template"
+        subtitle="template"
       />
       <Section className="relative overflow-hidden bg-blue-800">
         <h1 className="text-center text-4xl font-bold text-white">
           Last E-Lab
         </h1>
-        <div className="sm-gap-4 mx-auto my-6 grid max-w-2xl justify-items-center sm:grid-cols-3">
+        <div className="sm-gap-4 mx-auto my-12 grid max-w-2xl justify-items-center sm:grid-cols-3">
           <Stat2 description={"Workshops"} value={"17+"} />
           <Stat2 description={"Startups"} value={"15"} />
           <Stat2 description={"Winners"} value={"3"} />
         </div>
 		<hr className="text-white"/>
-        <h2 className="text-center text-white text-2xl mt-10">
+        <h2 className="text-center text-white font-bold text-2xl mt-14">
 			Top 3 Startups have
 		</h2>
-		<div className="gap-y-6 mx-auto my-8 grid max-w-md md:max-w-4xl grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-4">
+		<div className="gap-y-6 mx-auto my-12 grid max-w-md md:max-w-4xl grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-4">
           <Stat2 description={"B2B customers"} value={"8"} />
           <Stat2 description={"funding"} value={"165K"} />
           <Stat2 description={"revenue"} value={"25K"} />
