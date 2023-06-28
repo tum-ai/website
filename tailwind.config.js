@@ -38,6 +38,15 @@ module.exports = {
           950: "#11041B",
         },
       },
+      animation: {
+        fadeIn: "fadeIn 700ms ease-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],
