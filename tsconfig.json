@@ -21,6 +21,9 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
+      "@components/*": [
+        "./components/*"
+      ],
       "@ui/*": [
         "./components/ui/*"
       ],
