@@ -1,4 +1,4 @@
-import cx from 'classnames';
+import { cx } from "class-variance-authority";
 
 export default function Stat2({ description, value, className = "text-white" }) {
   return (
