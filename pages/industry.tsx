@@ -4,12 +4,8 @@ import PictureHero from "../components/BannerHero";
 import Section from "@ui/Section";
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition, Popover } from "@headlessui/react";
-import {
-  UserGroupIcon,
-  AcademicCapIcon,
-  BuildingOffice2Icon,
-  ChevronDownIcon,
-} from "@heroicons/react/24/outline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUsers } from "@fortawesome/free-solid-svg-icons"
 
 export default function Industry() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -207,22 +203,6 @@ export default function Industry() {
 
   const cancelButtonRef = useRef(null);
 
-  const options = [
-    {
-      name: "Students",
-      description: "Your stepping stone to a career in AI",
-      toTab: "tab1",
-      icon: AcademicCapIcon,
-    },
-    {
-      name: "Industry",
-      description:
-        "Present your AI-related problem – we'll help define the ideal project",
-      toTab: "tab2",
-      icon: BuildingOffice2Icon,
-    },
-  ];
-
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
@@ -259,9 +239,10 @@ export default function Industry() {
                   <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                     <div className="sm:flex sm:items-start">
                       <div className="rounded-fulurple-50 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center sm:mx-0 sm:h-10 sm:w-10">
-                        <UserGroupIcon
-                          className="h-6 w-6 text-purple-500"
-                          aria-hidden="true"
+                        <FontAwesomeIcon
+                          icon={faUsers}
+                          size="xl"
+                          className="text-purple-500"
                         />
                       </div>
                       <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -283,15 +264,9 @@ export default function Industry() {
                             partners@tum-ai.com
                           </h2>
                           <p className="mt-6 text-sm text-gray-500">
-                            <p className="text-sm text-gray-500">
-                              TUM.ai Student Initiative
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              Arcisstraße 21.
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              80333 Munich
-                            </p>
+                            TUM.ai Student Initiative<br />
+                            Arcisstraße 21.<br />
+                            80333 Munich
                           </p>
                         </div>
                       </div>
@@ -319,74 +294,22 @@ export default function Industry() {
         subtitle="Your stepping stone to a career in AI"
       />
       <div>
-        <div className="container mx-auto -mb-8 flex justify-center md:hidden">
-          {
-            <Popover className="relative p-10">
-              <Popover.Button className="inline-flex items-center gap-x-1 rounded-xl p-4 text-lg font-medium leading-6 text-purple-950 shadow-lg shadow-purple-900/10 ring-1 ring-gray-400/10 transition-all duration-300 hover:shadow-purple-900/20">
-                <span>Options</span>
-                <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-                  <div className="w-screen max-w-xl flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-xl ring-1 ring-gray-900/10">
-                    <div className="p-4">
-                      {options.map((item) => (
-                        <div
-                          key={item.name}
-                          className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
-                          onClick={() => setActiveTab(item.toTab)}
-                        >
-                          <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                            <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                              aria-hidden="true"
-                            />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-gray-900">
-                              {item.name}
-                              <span className="absolute inset-0" />
-                            </h3>
-                            <p className="mt-1 text-gray-600">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-          }
-        </div>
-        <Section className="-mb-16 -mt-4 hidden flex-row justify-start text-xl md:flex">
+        <Section className="-mb-16 -mt-4 flex-row justify-start text-xl">
           <h2 className="mr-8 inline-block font-medium text-gray-600">For</h2>
           <button
-            className={`z-1 relative mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
-              activeTab === "tab1"
-                ? "border-blue-300 text-blue-300"
-                : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
-            }`}
+            className={`z-1 relative mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${activeTab === "tab1"
+              ? "border-blue-300 text-blue-300"
+              : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
+              }`}
             onClick={() => setActiveTab("tab1")}
           >
             Students
           </button>
           <button
-            className={`z-1 relative mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${
-              activeTab === "tab2"
-                ? "border-blue-300 text-blue-300"
-                : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
-            }`}
+            className={`z-1 relative mx-4 border-b-2 px-1 py-3 text-left transition-all duration-500 ease-in-out ${activeTab === "tab2"
+              ? "border-blue-300 text-blue-300"
+              : "border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-500"
+              }`}
             onClick={() => setActiveTab("tab2")}
           >
             Industry
@@ -675,7 +598,7 @@ export default function Industry() {
             </div>
           </div>
         </Section>
-      </div>
+      </div >
     </>
   );
 }
