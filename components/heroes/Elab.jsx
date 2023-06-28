@@ -1,6 +1,8 @@
 // @ts-nocheck
 import {
+  MeshDistortMaterial,
   useFBO,
+  Sphere,
 } from "@react-three/drei";
 import { Canvas, createPortal, extend, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
@@ -17,7 +19,7 @@ import fragmentShader from './shaders/fragmentShader';
 extend({ SimulationMaterial: SimulationMaterial });
 
 const FBOParticles = () => {
-  const size = 512;
+  const size = 64;
 
   const points = useRef();
   const simulationMaterialRef = useRef();
@@ -114,10 +116,13 @@ export function ELabHero() {
   return (
     <section className="-z-10 h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
-        <Canvas camera={{ position: [1.5, 1.5, 1.5] }}>
-          <ambientLight intensity={0.25} />
-          <directionalLight intensity={0.9} position={[0, 5, 3]} />
+        <Canvas camera={{ position: [1, 1, 1] }}>
+          <ambientLight intensity={0.1} />
+          <directionalLight intensity={1} position={[0, 5, 3]} />
 
+          <Sphere args={[0.8, 32, 32]}>
+            <MeshDistortMaterial distort={0.5} color={fullConfig.theme.colors.purple["700"]} />
+          </Sphere>
           <FBOParticles />
         </Canvas>
       </div>
