@@ -276,7 +276,8 @@ export default function Industry() {
                             If you are interested in partnering with TUM.ai as a
                             sponsor, Makeathon challenge-setter, Industry
                             project partner, Workshop host, etc. please reach
-                            out to our &quot;Partners & Sponsors&quot; department.
+                            out to our &quot;Partners & Sponsors&quot;
+                            department.
                           </p>
                           <h2 className="mt-6 text-lg font-medium text-purple-500">
                             partners@tum-ai.com
@@ -658,7 +659,7 @@ export default function Industry() {
                         ))}
                       </p>
                     </div>
-                    <div className="mt-auto flex flex-col items-center justify-center md:space-x-2 space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0">
+                    <div className="mt-auto flex flex-col items-center justify-center space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0 md:space-x-2">
                       <Link href={project.organizationLink}>
                         <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400 hover:shadow-md">
                           {project.organization}
