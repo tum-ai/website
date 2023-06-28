@@ -8,7 +8,6 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
   BuildingOffice2Icon,
-  ArrowLeftOnRectangleIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 
@@ -167,7 +166,7 @@ export default function Industry() {
     },
     {
       title: "Presize.ai - Clothing size recommender systems",
-      image: "/assets/industry/project_cards/Unbenannt 2.jpg",
+      image: "/assets/industry/project_cards/presize_resize.jpg",
       description: [
         {
           text: "We created a recommender system for clothing sizes and benchmarked it against Presize’s own technology. This way we actively contributed of Presize's s vision of reducing the amount of paercel-returns.",
