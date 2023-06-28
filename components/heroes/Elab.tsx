@@ -20,12 +20,12 @@ export function ELabHero() {
           <directionalLight intensity={1} position={[1.4, 2, 0]} />
 
           <mesh>
-            <icosahedronGeometry args={[1, 42]} />
-            <MeshDistortMaterial distort={0.3} wireframe={true} wireframeLinewidth={3} color={fullConfig.theme.colors.purple["600"]} transparent opacity={0.4} blending={THREE.AdditiveBlending} />
+            <icosahedronGeometry args={[1, 20]} />
+            <MeshDistortMaterial distort={0.3} wireframe={true} wireframeLinewidth={5} color={fullConfig.theme.colors.purple["600"]} transparent opacity={0.4} blending={THREE.AdditiveBlending} />
           </mesh>
 
           <Sphere args={[0.95]}>
-            <MeshDistortMaterial distort={0.3} color={fullConfig.theme.colors.purple["600"]} transparent opacity={0.5} />
+            <MeshDistortMaterial distort={0.3} blending={THREE.MultiplyBlending} />
           </Sphere>
         </Canvas>
       </div>
