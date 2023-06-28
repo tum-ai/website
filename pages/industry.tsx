@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import PictureHero from "../components/BannerHero";
 import Section from "@ui/Section";
-import { Fragment, useRef, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import * as Tabs from '@radix-ui/react-tabs';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons"
+import * as Tabs from "@radix-ui/react-tabs";
+import * as Dialog from "@radix-ui/react-dialog";
+import Button from "@components/ui/Button";
 
 export default function Industry() {
   const partners = [
@@ -199,95 +197,8 @@ export default function Industry() {
     },
   ];
 
-  const [open, setOpen] = useState(false);
-
-  const cancelButtonRef = useRef(null);
-
   return (
     <>
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog
-          as="div"
-          className="relative z-10"
-          initialFocus={cancelButtonRef}
-          onClose={setOpen}
-        >
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 backdrop-blur-sm transition-all" />
-          </Transition.Child>
-
-          <div className="fixed inset-0 z-10 overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                enterTo="opacity-100 translate-y-0 sm:scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              >
-                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                  <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                    <div className="sm:flex sm:items-start">
-                      <div className="rounded-fulurple-50 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center sm:mx-0 sm:h-10 sm:w-10">
-                        <FontAwesomeIcon
-                          icon={faUsers}
-                          size="xl"
-                          className="text-purple-500"
-                        />
-                      </div>
-                      <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                        <Dialog.Title
-                          as="h3"
-                          className="text-xl font-semibold leading-6 text-purple-500"
-                        >
-                          Let&apos;s connect!
-                        </Dialog.Title>
-                        <div className="mt-2">
-                          <p className="text-sm text-gray-700">
-                            If you are interested in partnering with TUM.ai as a
-                            sponsor, Makeathon challenge-setter, Industry
-                            project partner, Workshop host, etc. please reach
-                            out to our &quot;Partners & Sponsors&quot;
-                            department.
-                          </p>
-                          <h2 className="mt-6 text-lg font-medium text-purple-500">
-                            partners@tum-ai.com
-                          </h2>
-                          <p className="mt-6 text-sm text-gray-500">
-                            TUM.ai Student Initiative<br />
-                            Arcisstraße 21.<br />
-                            80333 Munich
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                    <button
-                      type="button"
-                      className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                      onClick={() => setOpen(false)}
-                      ref={cancelButtonRef}
-                    >
-                      Close
-                    </button>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition.Root>
       <PictureHero
         imageSrc="/assets/industry/header/infineon_industry.jpeg"
         titleImageSrc="/assets/industry/header/industry_header_no_date.svg"
@@ -296,10 +207,16 @@ export default function Industry() {
       <div>
         <Tabs.Root defaultValue="students">
           <Tabs.List className="grid grid-cols-2 text-xl">
-            <Tabs.Trigger value="students" className="p-4 border-b-2 border-gray-400 text-gray-400 data-[state=active]:text-purple-500 data-[state=active]:border-purple-500">
+            <Tabs.Trigger
+              value="students"
+              className="border-b-2 border-gray-400 p-4 text-gray-400 data-[state=active]:border-purple-500 data-[state=active]:text-purple-500"
+            >
               Students
             </Tabs.Trigger>
-            <Tabs.Trigger value="industry" className="p-4 border-b-2 border-gray-400 text-gray-400 data-[state=active]:text-purple-500 data-[state=active]:border-purple-500">
+            <Tabs.Trigger
+              value="industry"
+              className="border-b-2 border-gray-400 p-4 text-gray-400 data-[state=active]:border-purple-500 data-[state=active]:text-purple-500"
+            >
               Industry
             </Tabs.Trigger>
           </Tabs.List>
@@ -319,8 +236,8 @@ export default function Industry() {
                       <span className="text-purple-600">
                         Leverage your skills
                       </span>{" "}
-                      and take on real AI projects to test your abilities.
-                      Join us now!
+                      and take on real AI projects to test your abilities. Join
+                      us now!
                       <br />
                       <br />
                       Work in a{" "}
@@ -328,8 +245,8 @@ export default function Industry() {
                         team of 4x students for 12 weeks, earn 2700€
                       </span>{" "}
                       and gain valuable contacts. With a project lead guiding
-                      you, demonstrate your agile project management skills in
-                      a professional setting.
+                      you, demonstrate your agile project management skills in a
+                      professional setting.
                       <br />
                       <br />
                       Collaborate with pre-selected partners, including{" "}
@@ -354,9 +271,9 @@ export default function Industry() {
                     <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-blue-300/10">
                       <h1 className="text-xl font-medium text-gray-900">
                         <span>
-                          Visit our official Projects Notion Page to learn
-                          more about the individual projects and partner
-                          companies of industry phase 5.0
+                          Visit our official Projects Notion Page to learn more
+                          about the individual projects and partner companies of
+                          industry phase 5.0
                         </span>
                       </h1>
                       <div className="text-white">
@@ -396,20 +313,53 @@ export default function Industry() {
                 <div className="mt-6 grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
                   <div className="sm:px-12">
                     <h2 className="text-center text-xl sm:px-2">
-                      We manage Munich&apos;s top pool of{" "}
+                      We manage Munich&apos;s top pool of
                       <span className="font-bold text-purple-600">
-                        AI talent
-                      </span>{" "}
+                        {" "}
+                        AI talent{" "}
+                      </span>
                       and offer affordable, high-quality solutions without any
                       long-term liabilities!
                     </h2>
                     <div className="mt-8 flex flex-row items-center justify-center space-x-6">
-                      <button
-                        className="rounded-full bg-purple-800 px-6 py-2 font-medium text-white duration-200 hover:bg-purple-700"
-                        onClick={() => setOpen(true)}
-                      >
-                        connect!
-                      </button>
+                      <Dialog.Root>
+                        <Dialog.Trigger className="rounded-full bg-purple-800 px-6 py-2 font-medium text-white duration-200 hover:bg-purple-700">
+                          connect!
+                        </Dialog.Trigger>
+                        <Dialog.Portal>
+                          <Dialog.Overlay className="fixed inset-0 flex items-center bg-blue-800/80 backdrop-blur-lg" />
+                          <Dialog.Content className="container fixed left-[50%] top-[50%] mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] space-y-4 rounded-2xl bg-white p-8">
+                            <Dialog.Title className="text-2xl font-bold text-purple-500">
+                              Let&apos;s connect!
+                            </Dialog.Title>
+                            <p className="text-sm text-gray-700">
+                              If you are interested in partnering with TUM.ai as
+                              a sponsor, Makeathon challenge-setter, Industry
+                              project partner, Workshop host, etc. please reach
+                              out to our &quot;Partners & Sponsors&quot;
+                              department.
+                            </p>
+                            <p className="text-xl font-medium text-purple-500">
+                              <a href="mailto:partners@tum-ai.com">
+                                partners@tum-ai.com
+                              </a>
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              TUM.ai Student Initiative
+                              <br />
+                              Arcisstraße 21.
+                              <br />
+                              80333 Munich
+                            </p>
+
+                            <div className="flex justify-end">
+                              <Dialog.Close asChild>
+                                <Button className="text-white">Close</Button>
+                              </Dialog.Close>
+                            </div>
+                          </Dialog.Content>
+                        </Dialog.Portal>
+                      </Dialog.Root>
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-center space-y-6 py-4">
@@ -424,8 +374,8 @@ export default function Industry() {
                   </div>
                 </div>
                 <h2 className="mt-16 text-4xl font-semibold">
-                  What is an{" "}
-                  <span className="text-purple-600">AI Project</span>?
+                  What is an <span className="text-purple-600">AI Project</span>
+                  ?
                 </h2>
                 <hr className="border-b-1 my-4 border-gray-300" />
                 <div className="mt-6 grid grid-cols-1 gap-10 py-6 xl:grid-cols-2 xl:gap-16">
@@ -583,7 +533,7 @@ export default function Industry() {
             </div>
           </div>
         </Section>
-      </div >
+      </div>
     </>
   );
 }
