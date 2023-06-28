@@ -1,0 +1,5 @@
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 0.03em white;
+  }
+}

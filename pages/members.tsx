@@ -172,7 +172,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute flex h-full w-full items-center justify-center p-8 rounded-xl text-center text-white backdrop-blur-md backdrop-brightness-50"
+              className="absolute flex h-full w-full items-center justify-center rounded-xl p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
             >
               <p className="text-lg">{department.description}</p>
             </motion.div>

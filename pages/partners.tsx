@@ -43,8 +43,8 @@ export default function Partners() {
 
       <Section background="white">
         <h2 className="mb-8 text-center text-4xl font-bold md:mb-16">
-          Partners{" "}
-          <span className="text-purple-500">we have collaborated</span> with
+          Partners <span className="text-purple-500">we have collaborated</span>{" "}
+          with
         </h2>
         <Image
           src={PnSPartners}
