@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["three"],
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -12,7 +13,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "**.amazonaws.com",
         port: "",
-      }
+      },
     ],
   },
 };
