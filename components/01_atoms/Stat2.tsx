@@ -1,14 +1,10 @@
-import React from "react";
+export default function Stat2({ description, value, color = "white" }) {
+  const textColorClass = `text-${color}`;
 
-export default function Stat2({ description, value }) {
   return (
-    <div className="flex flex-col items-center justify-center max-w-sm rounded-xl p-4 h-40 w-60">
-		<dd className="text-5xl text-white font-semibold">
-			{ value }
-		</dd>
-		<dt className="text-md text-white">
-			{ description }
-		</dt>
-	</div>
+    <div className="flex h-28 w-48 max-w-sm flex-col items-center justify-center space-y-1 rounded-xl">
+      <dd className={`${textColorClass} text-5xl font-semibold`}>{value}</dd>
+      <dt className={`${textColorClass} text-md`}>{description}</dt>
+    </div>
   );
 }
