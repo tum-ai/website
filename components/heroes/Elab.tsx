@@ -1,8 +1,5 @@
 // @ts-nocheck
-import {
-  MeshDistortMaterial,
-  Sphere
-} from "@react-three/drei";
+import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -21,11 +18,22 @@ export function ELabHero() {
 
           <mesh>
             <icosahedronGeometry args={[1, 10]} />
-            <MeshDistortMaterial distort={0.3} wireframe={true} wireframeLinewidth={5} color={fullConfig.theme.colors.purple["600"]} transparent opacity={0.4} blending={THREE.AdditiveBlending} />
+            <MeshDistortMaterial
+              distort={0.3}
+              wireframe={true}
+              wireframeLinewidth={5}
+              color={fullConfig.theme.colors.purple["600"]}
+              transparent
+              opacity={0.4}
+              blending={THREE.AdditiveBlending}
+            />
           </mesh>
 
-          <Sphere args={[0.90]}>
-            <MeshDistortMaterial distort={0.3} blending={THREE.MultiplyBlending} />
+          <Sphere args={[0.9]}>
+            <MeshDistortMaterial
+              distort={0.3}
+              blending={THREE.MultiplyBlending}
+            />
           </Sphere>
         </Canvas>
       </div>

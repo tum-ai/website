@@ -8,7 +8,9 @@ export const isMember = (data: unknown): boolean => {
     typeof member.description === "string" &&
     typeof member.name === "string" &&
     member.roles.every((role: any) => typeof role === "string") &&
-    member.departments.every((department: any) => typeof department === "string")
+    member.departments.every(
+      (department: any) => typeof department === "string"
+    )
   );
 };
 
