@@ -13,7 +13,7 @@ export default function Hero({ imageSrc, title, subtitle }) {
         fill
         className="absolute -z-10 scale-110 blur-sm brightness-50 saturate-50"
       />
-      <div className=" container relative mx-auto max-w-2xl p-8 py-60 text-center text-white min-h-[40rem]">
+      <div className=" container relative mx-auto min-h-[40rem] max-w-2xl p-8 py-60 text-center text-white">
         <h1 className="mb-4 text-6xl font-bold leading-tight tracking-tight">
           {title}
         </h1>
