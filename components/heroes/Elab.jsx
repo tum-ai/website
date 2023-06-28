@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   useFBO,
 } from "@react-three/drei";
@@ -18,8 +19,8 @@ extend({ SimulationMaterial: SimulationMaterial });
 const FBOParticles = () => {
   const size = 512;
 
-  const points = useRef<any>();
-  const simulationMaterialRef = useRef<any>();
+  const points = useRef();
+  const simulationMaterialRef = useRef();
 
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / Math.pow(2, 53), 1);
