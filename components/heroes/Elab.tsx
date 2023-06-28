@@ -16,7 +16,7 @@ import tailwindConfig from "tailwind.config.js";
 import Button from "@ui/Button";
 import { useState } from "react";
 
-export default function AIELab() {
+export function ELabHero() {
   const fullConfig = resolveConfig(tailwindConfig);
   const [distort, setDistort] = useState(0.3);
   return (
