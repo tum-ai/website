@@ -1,6 +1,5 @@
 import Section from "@ui/Section";
-import Stat from "components/01_atoms/Stat";
-import Stat2 from "components/01_atoms/Stat2";
+import Stat from "components/Stat";
 import Hero from "../components/Hero";
 
 export default function StatSection() {
@@ -16,19 +15,19 @@ export default function StatSection() {
           Last E-Lab
         </h1>
         <div className="sm-gap-4 mx-auto my-12 grid max-w-2xl justify-items-center sm:grid-cols-3">
-          <Stat2 description={"Workshops"} value={"17+"} />
-          <Stat2 description={"Startups"} value={"15"} />
-          <Stat2 description={"Winners"} value={"3"} />
+          <Stat description={"Workshops"} value={"17+"} />
+          <Stat description={"Startups"} value={"15"} />
+          <Stat description={"Winners"} value={"3"} />
         </div>
-		<hr className="text-white"/>
-        <h2 className="text-center text-white font-bold text-2xl mt-14">
-			Top 3 Startups have
-		</h2>
-		<div className="gap-y-6 mx-auto my-12 grid max-w-md md:max-w-4xl grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-4">
-          <Stat2 description={"B2B customers"} value={"8"} />
-          <Stat2 description={"funding"} value={"165K"} />
-          <Stat2 description={"revenue"} value={"25K"} />
-		  <Stat2 description={"hired employees"} value={"9"} />
+        <hr className="text-white" />
+        <h2 className="mt-14 text-center text-2xl font-bold text-white">
+          Top 3 Startups have
+        </h2>
+        <div className="mx-auto my-12 grid max-w-md grid-cols-1 justify-items-center gap-y-6 sm:grid-cols-2 md:max-w-4xl md:grid-cols-4">
+          <Stat description={"B2B customers"} value={"8"} />
+          <Stat description={"funding"} value={"165K"} />
+          <Stat description={"revenue"} value={"25K"} />
+          <Stat description={"hired employees"} value={"9"} />
         </div>
       </Section>
     </>
