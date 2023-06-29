@@ -125,12 +125,14 @@ export const Header = () => {
       )}
     >
       <div className="container relative mx-auto flex flex-row justify-between">
-        <Image
-          src={"/assets/logo_new_white_standard.png"}
-          alt="Logo"
-          width="128"
-          height="32"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/assets/logo_new_white_standard.png"}
+            alt="Logo"
+            width="128"
+            height="32"
+          />
+        </Link>
 
         <Navigation open={navOpen} setOpen={setNavOpen} />
       </div>
