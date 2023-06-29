@@ -1,3 +1,4 @@
+import Logos from "@components/Logos";
 import Button from "@components/ui/Button";
 import Dialog from "@components/ui/Dialog";
 import Tabs from "@components/ui/Tabs";
@@ -25,29 +26,7 @@ export default function Industry() {
           <span className="text-purple-600">Industry Phase 4.0</span>
         </h1>
         <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
-        <div className="flex flex-wrap items-center justify-center">
-          {partners.map((partner, index) => (
-            <div
-              className="px-4 py-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              key={index}
-            >
-              <Link href={partner.href} passHref>
-                <div
-                  className="min-w-160 flex h-full items-center justify-center p-8 grayscale 
-                      transition-all duration-200 ease-out hover:shadow-md hover:shadow-purple-800/5 hover:grayscale-0"
-                >
-                  <Image
-                    src={partner.src}
-                    alt={partner.alt || ""}
-                    width={160}
-                    height={50}
-                    objectFit="contain"
-                  />
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+        <Logos data={partners} />
       </Section>
       <Section className="my-12 bg-blue-700 shadow-lg shadow-purple-900/30">
         <div className="mx-auto w-full md:w-10/12">
