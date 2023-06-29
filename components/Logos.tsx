@@ -19,7 +19,7 @@ export default function Logos({ title, data }: Props) {
             {data.map((object, index) => (
             <div
                 className="px-4 py-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-                key={index}
+                key={object['src']}
             >
                 <Link href={object.href} passHref>
                 <div
