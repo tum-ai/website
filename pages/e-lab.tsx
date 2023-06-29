@@ -1,6 +1,8 @@
-import { ELabHero } from "@components/heroes/Elab";
+import Logos from "@components/Logos";
 import Stat from "@components/Stat";
+import { ELabHero } from "@components/heroes/Elab";
 import Section from "@components/ui/Section";
+import { partners } from "data/industry";
 
 export default function AIELab() {
   return (
@@ -27,6 +29,9 @@ export default function AIELab() {
           <Stat description={"hired employees"} value={"9"} />
         </div>
       </Section>
+      <Logos title="1. Premium Sponsors" data={partners} />
+      <Logos title="2. Sponsors" data={partners} />
+      <Logos title="3. Workshops and more by" data={partners} />
     </>
   );
 }
