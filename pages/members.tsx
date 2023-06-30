@@ -1,15 +1,14 @@
-import Section from "@ui/Section";
-import Hero from "../components/Hero";
-import Image from "next/image";
-import Button from "@ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import { useMembers } from "hooks/useMembers";
-import { AnimatePresence, motion } from "framer-motion";
+import Button from "@ui/Button";
+import Section from "@ui/Section";
 import { departments } from "data/departments";
+import { AnimatePresence, motion } from "framer-motion";
+import { useMembers } from "hooks/useMembers";
+import Image from "next/image";
+import { useState } from "react";
+import Hero from "../components/Hero";
 
 const MemberCard = ({ member, open, setOpen, index }) => {
-  // TODO: Add more detailed information in overview. e.g. university, socials, etc
   return (
     <article>
       <div
@@ -23,10 +22,12 @@ const MemberCard = ({ member, open, setOpen, index }) => {
         }}
       >
         <Image
+          className="grayscale"
           src={member.image}
           alt={`image of ${member.name}`}
           fill
           style={{ objectFit: "cover" }}
+          priority
         />
         {open === index && (
           <AnimatePresence>
@@ -36,6 +37,10 @@ const MemberCard = ({ member, open, setOpen, index }) => {
               exit={{ opacity: 0 }}
               className="absolute h-full w-full rounded-xl p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
             >
+              <b>Degree</b>
+              <p>{member.degree}</p>
+              <br />
+
               <p>{member.description}</p>
             </motion.div>
           </AnimatePresence>
@@ -121,20 +126,12 @@ const MemberListSection = () => {
     <Section>
       <div className="mb-16">
         <h2 className="mb-2 text-center text-4xl font-bold">
-          Our team members
+          Our active team members
         </h2>
         <p className="text-center">
-          Meet our team of <strong>{members?.length ?? "170"}+</strong> AI
+          Meet our team of <strong>{members?.length ?? "..."}+</strong> AI
           Enthusiasts.
         </p>
-      </div>
-
-      <div className="mb-8 flex justify-center space-x-2">
-        <Button className="text-white">Management Team</Button>
-
-        <Button className="text-white">Board of advisors</Button>
-
-        <Button className="text-white">Department selection</Button>
       </div>
 
       <MembersCardList members={members} status={status} />
