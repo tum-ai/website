@@ -7,7 +7,8 @@ export const isMember = (data: unknown): boolean => {
     typeof member.image === "string" &&
     typeof member.description === "string" &&
     typeof member.name === "string" &&
-    member.roles.every((role: any) => typeof role === "string") &&
+    member.roles.every((role: any) => (typeof role === "string") && (!["Inactive", "Unclear", "Pause", "Alumni", "Advisor", "Board", "kicked"].includes(role))) &&
+    member.roles.length > 0 &&
     member.departments.every(
       (department: any) => typeof department === "string"
     )
@@ -17,7 +18,7 @@ export const isMember = (data: unknown): boolean => {
 export default async function handler(req, res) {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
   const data = await notion.databases.query({
-    database_id: "8590ada99c13454691e5ed6329697b09",
+    database_id: "a5cc732e1e6e4ef0a4ce737c9f71e815",
   });
 
   const notionMembers = data.results as NotionMember[];
@@ -31,7 +32,9 @@ export default async function handler(req, res) {
         "Functional or Mission-Based Department"
       ].multi_select.map((department) => department.name),
       description: "",
+      degree: member?.properties?.Degree?.select?.name
     }))
+    .sort((a, b) => (a.roles[0] < b.roles[0] ? 1 : -1))
     .filter(isMember);
 
   res.status(200).json(members);
