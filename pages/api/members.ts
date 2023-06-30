@@ -18,7 +18,7 @@ export const isMember = (data: unknown): boolean => {
 export default async function handler(req, res) {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
   const data = await notion.databases.query({
-    database_id: "8590ada99c13454691e5ed6329697b09",
+    database_id: "a5cc732e1e6e4ef0a4ce737c9f71e815",
   });
 
   const notionMembers = data.results as NotionMember[];

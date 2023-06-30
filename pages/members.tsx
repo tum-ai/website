@@ -9,7 +9,6 @@ import { useState } from "react";
 import Hero from "../components/Hero";
 
 const MemberCard = ({ member, open, setOpen, index }) => {
-  // TODO: Add more detailed information in overview. e.g. university, socials, etc
   return (
     <article>
       <div
@@ -23,13 +22,13 @@ const MemberCard = ({ member, open, setOpen, index }) => {
         }}
       >
         <Image
+          className="grayscale"
           src={member.image}
           alt={`image of ${member.name}`}
           fill
           style={{ objectFit: "cover" }}
           priority
         />
-        <div className="absolute flex h-full w-full rounded-xl bg-blue-700 text-white opacity-40"></div>
         {open === index && (
           <AnimatePresence>
             <motion.div
