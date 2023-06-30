@@ -7,6 +7,8 @@ import { useState } from "react";
 import { useMembers } from "hooks/useMembers";
 import { AnimatePresence, motion } from "framer-motion";
 import { departments } from "data/departments";
+import { cx } from "class-variance-authority";
+import { bitter } from "@styles/fonts";
 
 const MemberCard = ({ member, open, setOpen, index }) => {
   // TODO: Add more detailed information in overview. e.g. university, socials, etc
@@ -120,10 +122,10 @@ const MemberListSection = () => {
   return (
     <Section>
       <div className="mb-16">
-        <h2 className="mb-2 text-center text-4xl font-bold">
-          Our team members
+        <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
+          Our Team Members
         </h2>
-        <p className="text-center">
+        <p>
           Meet our team of <strong>{members?.length ?? "170"}+</strong> AI
           Enthusiasts.
         </p>
@@ -213,7 +215,7 @@ export default function Members() {
       <MemberListSection />
 
       <Section>
-        <h2 className="mb-8 text-center text-4xl font-bold">
+        <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
           The TUM.ai leadership journey
         </h2>
 
@@ -242,8 +244,9 @@ export default function Members() {
 
       <Section>
         <div className="mb-16">
-          <h2 className="mb-2 text-center text-4xl font-bold">Departments</h2>
-          <p className="text-center">
+
+          <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>Departments</h2>
+          <p>
             All of our active members contribute to one or more of the following
             organizational departments.
           </p>
