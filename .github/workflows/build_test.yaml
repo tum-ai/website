@@ -1,71 +1,71 @@
 on:
-    push:
-        branches: [main]
-    pull_request:
-        types: [opened, synchronize]
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize]
 
 name: Build, test, and deploy
 
 env:
-    PNPM_VERSION: 7.3.0
+  PNPM_VERSION: 7.3.0
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        env:
-            NEXT_TELEMETRY_DISABLED: 1
-        steps:
-            - name: Setup node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-                  check-latest: true
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          check-latest: true
 
-            - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-            - run: npm i -g pnpm@${PNPM_VERSION}
+      - run: npm i -g pnpm@${PNPM_VERSION}
 
-            - run: pnpm install
-            - run: pnpm run build
+      - run: pnpm install
+      - run: pnpm run build
 
-            - uses: actions/cache@v3
-              id: cache-build
-              with:
-                  path: ./*
-                  key: ${{ github.sha }}-${{ github.run_number }}
+      - uses: actions/cache@v3
+        id: cache-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}-${{ github.run_number }}
 
-    lint:
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
-            - name: Setup node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-                  check-latest: true
+  lint:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          check-latest: true
 
-            - uses: actions/cache@v3
-              id: restore-build
-              with:
-                  path: ./*
-                  key: ${{ github.sha }}-${{ github.run_number }}
+      - uses: actions/cache@v3
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}-${{ github.run_number }}
 
-            - run: npm run lint
+      - run: npm run lint
 
-    # test:
-    #   runs-on: ubuntu-latest
-    #   needs: build
-    #   steps:
-    #     - name: Setup node
-    #       uses: actions/setup-node@v3
-    #       with:
-    #         node-version: 16
-    #         check-latest: true
+  # test:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+  #         check-latest: true
 
-    #     - uses: actions/cache@v3
-    #       id: restore-build
-    #       with:
-    #         path: ./*
-    #         key: ${{ github.sha }}-${{ github.run_number }}
+  #     - uses: actions/cache@v3
+  #       id: restore-build
+  #       with:
+  #         path: ./*
+  #         key: ${{ github.sha }}-${{ github.run_number }}
 
-    #     - run: npm run test
+  #     - run: npm run test
