@@ -24,7 +24,7 @@ export default function Partners() {
       text: "Being a partner opens the door for many sorts of collaboration, like becoming a challenge setter for our Makeathons, joining for an industry project or hosting networking workshops with our members. We are only limited by your creativity!",
     },
     {
-      img: "../public/assets/partners/PnS_map_2023.jpg",
+      img: "/assets/partners/PnS_map_2023.jpg",
       title: "Network & Ecosystem",
       text: "We invite you to benefit from our entrepreneurial ecosystem, our own AI startup founders, as well as insights from our own R&D projects. We invite you to leverage our connections to other top university AI clubs, as well as the association to the TUM brand to drive AI in your company.",
     },

@@ -23,7 +23,7 @@ export default function VerticalCards({ cards }: Props) {
 
 function Card({ card }) {
   return (
-    <article className="border border-gray-300 bg-white shadow transition-all duration-200 hover:scale-105 hover:shadow-xl">
+    <article className="border rounded-lg border-gray-300 bg-white shadow overflow-hidden">
       <Image alt={card.title} src={card.img} width={1000} height={100} />
 
       <div className="flex flex-col space-y-4 p-4 text-center">
