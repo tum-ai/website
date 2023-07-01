@@ -58,8 +58,6 @@ export default function Partners() {
           connecting students, industry and academia.
         </h2>
 
-        <hr className="my-8" />
-
         <div className="grid gap-4 md:grid-cols-2">
           <div className="mb-4 space-y-4">
             <p className="text-xl font-bold">

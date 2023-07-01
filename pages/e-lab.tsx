@@ -11,6 +11,8 @@ import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { bitter } from "@styles/fonts";
+import { cx } from "class-variance-authority";
 
 export default function AIELab() {
   return (
@@ -37,9 +39,29 @@ export default function AIELab() {
           <Stat description={"hired employees"} value={"9"} />
         </div>
       </Section>
-      <Logos title="1. Premium Sponsors" data={partners} />
-      <Logos title="2. Sponsors" data={partners} />
-      <Logos title="3. Workshops and more by" data={partners} />
+
+      <Section>
+        <div className="mb-24">
+          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+            1. Premium Sponsors
+          </h3>
+          <Logos logos={partners} />
+        </div>
+
+        <div className="mb-24">
+          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+            2. Sponsors
+          </h3>
+          <Logos logos={partners} />
+        </div>
+
+        <div className="mb-24">
+          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+            3. Workshops and more by
+          </h3>
+          <Logos logos={partners} />
+        </div>
+      </Section >
     </>
   );
 }

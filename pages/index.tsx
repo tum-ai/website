@@ -14,6 +14,8 @@ import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { cx } from "class-variance-authority";
+import { bitter } from "@styles/fonts";
 
 export default function Index() {
   return (
@@ -22,7 +24,7 @@ export default function Index() {
       <Content1 />
       <Content2 />
       <div className="relative h-[450px] w-full bg-blend-overlay">
-        <div className="bg-primary-500 absolute z-10 h-full w-full opacity-20"></div>
+        <div className="bg-purple-500 absolute z-10 h-full w-full opacity-20"></div>
         <Image
           src={"/assets/aibootcamp.jpg"}
           alt=""
@@ -31,19 +33,26 @@ export default function Index() {
         />
       </div>
       <Content3 />
-      <Logos
-        title={
-          <h3 className="text-3xl">
-            Partners{" "}
-            <span className="text-purple-500">we have collaborated</span> with
-          </h3>
-        }
-        data={partners}
-      />
-      <Logos
-        title={<h3 className="text-3xl">Partners Initiatives</h3>}
-        data={partners}
-      />
+
+      <Section>
+        <h2 className={cx("text-uppercase w-full text-4xl mb-12 font-semibold", bitter.className)}>
+          Partners{" "}
+          <span className="text-purple-500">we have collaborated</span> with
+        </h2>
+        <Logos
+          logos={partners}
+        />
+      </Section>
+
+      <Section>
+        <h2 className={cx("text-uppercase w-full text-4xl mb-12 font-semibold", bitter.className)}>
+          Partners Initiatives
+        </h2>
+        <Logos
+          logos={partners}
+        />
+      </Section>
+
       <Slack />
     </>
   );
@@ -231,14 +240,10 @@ function Content1() {
 function Content2() {
   return (
     <Section>
-      {/* title */}
-      <h2 className="text-uppercase w-full text-center text-4xl font-bold">
+      <h2 className={cx("mb-8 text-4xl md:mb-16 font-semibold", bitter.className)}>
         With over 170 active members, TUM.ai is{" "}
-        <span className="text-purple-500">{`Germany's leading AI student initiative`}</span>{" "}
-        , located in Munich.
+        <span className="text-purple-500">Germany&apos;s leading AI student initiative</span>
       </h2>
-
-      <hr className="my-16 border-gray-500" />
 
       <div className="grid gap-16 lg:grid-cols-2">
         {/* image */}
@@ -253,18 +258,18 @@ function Content2() {
         </div>
         {/* text */}
         <div className="mb-4 space-y-4">
-          <p className="text-xl font-bold">
+          <p className="font-bold text-xl">
             Get access to our{" "}
-            <span className="text-[#a450e6]">
+            <span className="text-purple-500">
               exclusive pre-selected talent pool
             </span>{" "}
             of highly qualified Software/Data Engineers and AI Strategists.
           </p>
 
           <div className="space-y-4">
-            <p className="text-xl">
+            <p>
               Since founded in 2020,{" "}
-              <span className="text-primary-500 font-bold">
+              <span className="text-purple-500 font-bold">
                 TUM.ai&apos;s Vision
               </span>{" "}
               is to connect students and all relevant stakeholders to facilitate
@@ -281,7 +286,7 @@ function Content2() {
             </p>
             <p>
               Under the Motto &quot;
-              <span className="text-primary-500 font-bold">
+              <span className="text-purple-500 font-bold">
                 Connect-Execute-Learn
               </span>
               &quot; we aim at lowering the entry-bar to AI-creation and -usage for
@@ -296,7 +301,7 @@ function Content2() {
         {/* card */}
         <div className="flex flex-col items-center space-y-2 rounded bg-gray-100 p-8 shadow">
           <p className="text-center">
-            <span className="text-primary-500 font-bold">
+            <span className="text-purple-500 font-bold">
               Interested in joining TUM.ai?{" "}
             </span>
             Visit our Transparency Page to learn more! (application phase ended
@@ -323,12 +328,10 @@ function Content2() {
 function Content3() {
   return (
     <Section background="inverted">
-      <h2 className="text-uppercase w-full text-center text-4xl font-bold text-white">
+      <h2 className={cx("text-uppercase w-full text-4xl text-white mb-12 font-semibold", bitter.className)}>
         We connect <span className="text-[#a450e6]">stellar</span> Students and
         Companies
       </h2>
-
-      <hr className="my-16 border-gray-500" />
 
       <div className="grid gap-4 md:grid-cols-2">
         <div className="mb-4 space-y-4">
@@ -361,7 +364,7 @@ function Content3() {
             <Button
               link
               href={"https://join-us.tum-ai.com/"}
-              className="bg-primary-500"
+              className="bg-purple-500"
             >
               Apply as a partner
             </Button>
@@ -383,14 +386,12 @@ function Content3() {
 function Slack() {
   return (
     <Section>
-      <div className="flex flex-col items-center text-center">
-        <h3 className="text-3xl font-bold">
+      <div className="flex flex-col">
+        <h2 className={cx("text-uppercase w-full text-4xl mb-12 font-semibold", bitter.className)}>
           Wanna stay up to date? Join our{" "}
           <span className=" text-purple-500">public Slack!</span>
-        </h3>
-        <br />
-        <hr className="w-1/2" />
-        <br />
+        </h2>
+
         <p>
           Be among the first to be informed about upcoming events, job
           opportunities and workshops.
@@ -415,8 +416,6 @@ function Slack() {
             className="mb-4  duration-500 hover:text-purple-300"
           />
         </div>
-        <br />
-        <hr className="w-1/2" />
       </div>
     </Section>
   );

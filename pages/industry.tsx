@@ -23,11 +23,11 @@ export default function Industry() {
         "Industry": <IndustrySection />
       }} />
       <Section>
-        <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
+        <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
           Our partners from{" "}
           <span className="text-purple-600">Industry Phase 4.0</span>
         </h2>
-        <Logos data={partners} />
+        <Logos logos={partners} />
       </Section>
       <Section className="bg-blue-700">
         <div className="mx-auto w-full">
