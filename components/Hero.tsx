@@ -15,7 +15,7 @@ export default function Hero({ imageSrc, title, subtitle }) {
         fill
         className="absolute -z-10 scale-110 blur-sm brightness-50 saturate-50"
       />
-      <div className="container flex justify-center flex-col relative mx-auto max-w-4xl p-8 md:p-16 text-white min-h-[80vh]">
+      <div className="container relative mx-auto flex min-h-[80vh] max-w-4xl flex-col justify-center p-8 text-white md:p-16">
         <h1 className={cx("mb-4 text-6xl font-medium", bitter.className)}>
           {title}
         </h1>
