@@ -1,35 +1,32 @@
 import Button from "@ui/Button";
+import Section from "@ui/Section";
+import Hero from "components/Hero";
+import VerticalCards from "components/VerticalCards";
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
-import AlelphalphAworkshopGroup from "../public/assets/partners/alelphalpha_workshop_group.jpg";
-import RichardTalk from "../public/assets/partners/richard_talk.jpg";
-import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
-import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
-import Section from "@ui/Section";
-import Hero from "components/Hero";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
 
 export default function Partners() {
   const cards = [
     {
-      img: AlelphalphAworkshopGroup,
+      img: "/assets/partners/alelphalpha_workshop_group.jpg",
       title: "AI Talent Pool",
       text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
     },
     {
-      img: RichardTalk,
+      img: "/assets/partners/richard_talk.jpg",
       title: "Marketing & Awareness",
       text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (3.5k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
     },
     {
-      img: LeopoldInfineon,
+      img: "/assets/partners/leopold_infineon.jpeg",
       title: "Project Collaborations",
       text: "Being a partner opens the door for many sorts of collaboration, like becoming a challenge setter for our Makeathons, joining for an industry project or hosting networking workshops with our members. We are only limited by your creativity!",
     },
     {
-      img: PnSMap,
+      img: "/assets/partners/PnS_map_2023.jpg",
       title: "Network & Ecosystem",
       text: "We invite you to benefit from our entrepreneurial ecosystem, our own AI startup founders, as well as insights from our own R&D projects. We invite you to leverage our connections to other top university AI clubs, as well as the association to the TUM brand to drive AI in your company.",
     },
@@ -44,7 +41,12 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2 className={cx("mb-8 text-4xl md:mb-16 font-semibold", bitter.className)}>
+        <h2
+          className={cx(
+            "mb-8 text-4xl font-semibold md:mb-16",
+            bitter.className
+          )}
+        >
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>
@@ -56,7 +58,12 @@ export default function Partners() {
       </Section>
 
       <Section background="inverted">
-        <h2 className={cx("text-uppercase w-full text-4xl text-white mb-12 font-semibold", bitter.className)}>
+        <h2
+          className={cx(
+            "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+            bitter.className
+          )}
+        >
           Building the AI ecosystem in Munich, Germany, and worldwide by
           connecting students, industry and academia.
         </h2>
@@ -65,7 +72,9 @@ export default function Partners() {
           <div className="mb-4 space-y-4">
             <p className="text-xl font-bold">
               Get access to our exclusive{" "}
-              <span className="text-purple-300">pre-selected talent pool of AI enthusiasts.</span>
+              <span className="text-purple-300">
+                pre-selected talent pool of AI enthusiasts.
+              </span>
             </p>
             <p>
               Our members are experienced in software development, data science,
@@ -126,19 +135,7 @@ export default function Partners() {
         background="white"
         backgroundImage="/assets/partners/alephalpha_workshop.jpg"
       >
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {cards.map((card) => (
-            <article
-              key={card.title}
-              className="h-full rounded bg-blue-700 p-4 text-center text-white"
-            >
-              <Image src={card.img} alt={card.title} />
-              <h2 className="my-4 text-2xl font-bold">{card.title}</h2>
-              <hr className="my-4" />
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
+        <VerticalCards cards={cards} />
       </Section>
     </>
   );

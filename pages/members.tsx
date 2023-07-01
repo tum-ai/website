@@ -241,8 +241,9 @@ export default function Members() {
 
       <Section>
         <div className="mb-16">
-
-          <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>Departments</h2>
+          <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
+            Departments
+          </h2>
           <p>
             All of our active members contribute to one or more of the following
             organizational departments.
