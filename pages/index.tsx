@@ -2,22 +2,22 @@ import Logos from "@components/Logos";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import { faSlack } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MeshDistortMaterial, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { bitter } from "@styles/fonts";
+import { cx } from "class-variance-authority";
 import VerticalCards, {
   type Props as VerticalCardsProps,
 } from "components/VerticalCards";
 import { partners } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
-import MartinTalk from "../public/assets/partners/martin_talk.jpg";
-import { MeshDistortMaterial, Sphere } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { cx } from "class-variance-authority";
-import { bitter } from "@styles/fonts";
+import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 
 export default function Index() {
   return (
@@ -70,7 +70,7 @@ function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
 
   return (
-    <section className="relative -z-10 h-screen">
+    <section className="relative h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-blue-800">
         <Canvas camera={{ position: [2, 0, 0] }}>
           <ambientLight intensity={0.05} />
@@ -108,9 +108,7 @@ function Hero() {
           />
           <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Button asChild>
-              <Link href="https://www.tum-ai.com/forPartners.html">
-                Become a Partner
-              </Link>
+              <Link href="/partners">Become a Partner</Link>
             </Button>
             <Button asChild>
               <Link href="https://join-us.tum-ai.com/">Become a Member</Link>
