@@ -13,7 +13,7 @@ export interface Props {
 
 export default function VerticalCards({ cards }: Props) {
   return (
-    <div className="m-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:px-60 2xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-4">
       {cards.map((card) => (
         <Card card={card} key={card.title} />
       ))}
