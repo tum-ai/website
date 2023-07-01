@@ -8,118 +8,19 @@ import { partners } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+// @ts-nocheck
+import { MeshDistortMaterial, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import tailwindConfig from "tailwind.config.js";
+import resolveConfig from "tailwindcss/resolveConfig";
+import * as THREE from "three";
 
 export default function Index() {
   return (
     <>
-      <Header />
-      <Section>
-        <VerticalCards
-          data={[
-            {
-              img: "/assets/home_img1.jpg",
-              title: "AI Academy and educational offers",
-              text: "a series of advanced AI workshops, featuring hands-on coding tutorials, provided by exciting tech companies, open for everyone!",
-              subText:
-                "sponsored online course certificates and company visits are exclusive to TUM.ai members",
-              body: (
-                <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                  <Button
-                    link
-                    href={"https://education.tum-ai.com/"}
-                    className="bg-gray-400"
-                  >
-                    Learn more
-                  </Button>
-                  <Button
-                    link
-                    href={"https://www.eventbrite.de/o/tumai-31793295023"}
-                    className="bg-purple-500"
-                  >
-                    Apply now
-                  </Button>
-                </div>
-              ),
-            },
-            {
-              img: "/assets/home_img2.png",
-              title: "Makeathon Competitions",
-              text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
-              subText: "applications closed, finished",
-              body: (
-                <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                  <Button
-                    link
-                    href={"https://makeathon.tum-ai.com/"}
-                    className="bg-gray-400"
-                  >
-                    Learn more
-                  </Button>
-                  <Button
-                    link
-                    href={"https://makeathon23.tum-ai.com/apply"}
-                    className="bg-gray-500"
-                    disabled
-                  >
-                    Apply now
-                  </Button>
-                </div>
-              ),
-            },
-            {
-              img: "/assets/home_img3.png",
-              title: "Industry Project Cooperations",
-              text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame",
-              subText: "applications closed, currently ongoing",
-              body: (
-                <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                  <Button
-                    link
-                    href={"https://www.tum-ai.com/industry-projects.html"}
-                    className="bg-gray-400"
-                  >
-                    Learn more
-                  </Button>
-                  <Button
-                    link
-                    href={"https://industry.tum-ai.com/apply"}
-                    className="bg-gray-500"
-                    disabled
-                  >
-                    Apply now
-                  </Button>
-                </div>
-              ),
-            },
-            {
-              img: "/assets/home_img4.jpg",
-              title: "AI E-Lab Entrepreneurship",
-              text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
-              subText: "applications closed, currently ongoing",
-              body: (
-                <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                  <Button
-                    link
-                    href={"https://aielab.tum-ai.com/"}
-                    className="bg-gray-400"
-                  >
-                    Learn more
-                  </Button>
-                  <Button
-                    link
-                    href={"https://aielab.tum-ai.com/"}
-                    className="bg-gray-500"
-                    disabled
-                  >
-                    Apply now
-                  </Button>
-                </div>
-              ),
-            },
-          ]}
-        />
-      </Section>
+      <Hero />
       <Content1 />
+      <Content2 />
       <div className="relative h-[450px] w-full bg-blend-overlay">
         <div className="bg-primary-500 absolute z-10 h-full w-full opacity-20"></div>
         <Image
@@ -129,7 +30,7 @@ export default function Index() {
           className="object-cover"
         />
       </div>
-      <Content2 />
+      <Content3 />
       <Logos
         title={
           <h3 className="text-3xl">
@@ -148,49 +49,176 @@ export default function Index() {
   );
 }
 
-function Slack() {
-  return (
-    <Section>
-      <div className="flex flex-col items-center text-center">
-        <h3 className="text-3xl font-bold">
-          Wanna stay up to date? Join our{" "}
-          <span className=" text-purple-500">public Slack!</span>
-        </h3>
-        <br />
-        <hr className="w-1/2" />
-        <br />
-        <p>
-          Be among the first to be informed about upcoming events, job
-          opportunities and workshops.
-        </p>
-        <Link
-          className="text-purple-500"
-          href={"https://www.tum-ai.com/newsletter"}
-        >
-          Terms & Conditions
-        </Link>
-        <div className="mt-6 flex space-x-4">
-          <Button
-            link
-            href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
-          >
-            TUM.ai Public Slack
-          </Button>
+function Hero() {
+  const fullConfig = resolveConfig(tailwindConfig);
 
-          <FontAwesomeIcon
-            icon={faSlack}
-            size="2xl"
-            className="mb-4  duration-500 hover:text-purple-300"
-          />
-        </div>
-        <br />
-        <hr className="w-1/2" />
+  return (
+    <section className="-z-10 h-screen">
+      <div className="absolute top-0 -z-10 h-full w-full bg-blue-800">
+        <Canvas camera={{ position: [2, 0, 0] }}>
+          <ambientLight intensity={0.05} />
+          <directionalLight intensity={1} position={[1.4, 2, 0]} />
+
+          <mesh>
+            <icosahedronGeometry args={[1, 10]} />
+            <MeshDistortMaterial
+              distort={0.3}
+              wireframe={true}
+              wireframeLinewidth={5}
+              color={fullConfig.theme.colors.purple["600"]}
+              transparent
+              opacity={0.4}
+              blending={THREE.AdditiveBlending}
+            />
+          </mesh>
+
+          <Sphere args={[0.9]}>
+            <MeshDistortMaterial
+              distort={0.3}
+              blending={THREE.MultiplyBlending}
+            />
+          </Sphere>
+        </Canvas>
       </div>
-    </Section>
+
+      <div className="flex h-full w-full items-center text-white">
+        <div className="m-auto space-y-8 lg:inline-block">
+          <Image
+            src={"/assets/logo_new_white_standard.png"}
+            alt="Logo"
+            width={450}
+            height={100}
+          />
+          <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+            <Button
+              link
+              href={"https://www.tum-ai.com/forPartners.html"}
+              intent="purple"
+            >
+              Become a Partner
+            </Button>
+            <Button link href={"https://join-us.tum-ai.com/"} intent="purple">
+              Become a Member
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
 function Content1() {
+  return (
+    <Section className="bg-gray-100">
+      <VerticalCards
+        data={[
+          {
+            img: "/assets/home_img1.jpg",
+            title: "AI Academy and educational offers",
+            text: "a series of advanced AI workshops, featuring hands-on coding tutorials, provided by exciting tech companies, open for everyone!",
+            subText:
+              "sponsored online course certificates and company visits are exclusive to TUM.ai members",
+            body: (
+              <div className="m-auto flex w-fit flex-col items-center space-y-2">
+                <Button
+                  link
+                  href={"https://education.tum-ai.com/"}
+                  className="bg-gray-400"
+                >
+                  Learn more
+                </Button>
+                <Button
+                  link
+                  href={"https://www.eventbrite.de/o/tumai-31793295023"}
+                  className="bg-purple-500"
+                >
+                  Apply now
+                </Button>
+              </div>
+            ),
+          },
+          {
+            img: "/assets/home_img2.png",
+            title: "Makeathon Competitions",
+            text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
+            subText: "applications closed, finished",
+            body: (
+              <div className="m-auto flex w-fit flex-col items-center space-y-2">
+                <Button
+                  link
+                  href={"https://makeathon.tum-ai.com/"}
+                  className="bg-gray-400"
+                >
+                  Learn more
+                </Button>
+                <Button
+                  link
+                  href={"https://makeathon23.tum-ai.com/apply"}
+                  className="bg-gray-500"
+                  disabled
+                >
+                  Apply now
+                </Button>
+              </div>
+            ),
+          },
+          {
+            img: "/assets/home_img3.png",
+            title: "Industry Project Cooperations",
+            text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame",
+            subText: "applications closed, currently ongoing",
+            body: (
+              <div className="m-auto flex w-fit flex-col items-center space-y-2">
+                <Button
+                  link
+                  href={"https://www.tum-ai.com/industry-projects.html"}
+                  className="bg-gray-400"
+                >
+                  Learn more
+                </Button>
+                <Button
+                  link
+                  href={"https://industry.tum-ai.com/apply"}
+                  className="bg-gray-500"
+                  disabled
+                >
+                  Apply now
+                </Button>
+              </div>
+            ),
+          },
+          {
+            img: "/assets/home_img4.jpg",
+            title: "AI E-Lab Entrepreneurship",
+            text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
+            subText: "applications closed, currently ongoing",
+            body: (
+              <div className="m-auto flex w-fit flex-col items-center space-y-2">
+                <Button
+                  link
+                  href={"https://aielab.tum-ai.com/"}
+                  className="bg-gray-400"
+                >
+                  Learn more
+                </Button>
+                <Button
+                  link
+                  href={"https://aielab.tum-ai.com/"}
+                  className="bg-gray-500"
+                  disabled
+                >
+                  Apply now
+                </Button>
+              </div>
+            ),
+          },
+        ]}
+      />
+    </Section>
+  );
+}
+
+function Content2() {
   return (
     <Section>
       {/* title */}
@@ -282,7 +310,7 @@ function Content1() {
   );
 }
 
-function Content2() {
+function Content3() {
   return (
     <Section background="inverted">
       <h2 className="text-uppercase w-full text-center text-4xl font-bold text-white">
@@ -342,29 +370,44 @@ function Content2() {
   );
 }
 
-function Header() {
+function Slack() {
   return (
-    <div className="flex h-screen bg-blue-500 px-8 py-16">
-      <div className="m-auto space-y-8 lg:inline-block">
-        <Image
-          src={"/assets/logo_new_white_standard.png"}
-          alt="Logo"
-          width={450}
-          height={100}
-        />
-        <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+    <Section>
+      <div className="flex flex-col items-center text-center">
+        <h3 className="text-3xl font-bold">
+          Wanna stay up to date? Join our{" "}
+          <span className=" text-purple-500">public Slack!</span>
+        </h3>
+        <br />
+        <hr className="w-1/2" />
+        <br />
+        <p>
+          Be among the first to be informed about upcoming events, job
+          opportunities and workshops.
+        </p>
+        <Link
+          className="text-purple-500"
+          href={"https://www.tum-ai.com/newsletter"}
+        >
+          Terms & Conditions
+        </Link>
+        <div className="mt-6 flex space-x-4">
           <Button
             link
-            href={"https://www.tum-ai.com/forPartners.html"}
-            intent="purple"
+            href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
           >
-            Become a Partner
+            TUM.ai Public Slack
           </Button>
-          <Button link href={"https://join-us.tum-ai.com/"} intent="purple">
-            Become a Member
-          </Button>
+
+          <FontAwesomeIcon
+            icon={faSlack}
+            size="2xl"
+            className="mb-4  duration-500 hover:text-purple-300"
+          />
         </div>
+        <br />
+        <hr className="w-1/2" />
       </div>
-    </div>
+    </Section>
   );
 }
