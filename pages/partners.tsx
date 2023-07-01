@@ -49,7 +49,7 @@ export default function Partners() {
       <Section background="white">
         <h2
           className={cx(
-            "mb-8 text-4xl font-semibold md:mb-16",
+            "mb-8 text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -66,7 +66,7 @@ export default function Partners() {
       <Section background="inverted">
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+            "text-uppercase mb-8 w-full text-4xl font-semibold text-white",
             bitter.className
           )}
         >
@@ -137,7 +137,7 @@ export default function Partners() {
       <Section background="white">
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >

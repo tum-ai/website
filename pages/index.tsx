@@ -39,7 +39,7 @@ export default function Index() {
       <Section>
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -52,7 +52,7 @@ export default function Index() {
       <Section>
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -206,7 +206,7 @@ function Content2() {
   return (
     <Section>
       <h2
-        className={cx("mb-8 text-4xl font-semibold md:mb-16", bitter.className)}
+        className={cx("mb-8 text-4xl font-semibold", bitter.className)}
       >
         With over 170 active members, TUM.ai is{" "}
         <span className="text-purple-500">
@@ -297,7 +297,7 @@ function Content3() {
     <Section background="inverted">
       <h2
         className={cx(
-          "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+          "text-uppercase mb-8 w-full text-4xl font-semibold text-white",
           bitter.className
         )}
       >
@@ -355,7 +355,7 @@ function Slack() {
       <div className="flex flex-col">
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >

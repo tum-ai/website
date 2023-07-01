@@ -126,13 +126,16 @@ const MemberListSection = () => {
 
   return (
     <Section>
-      <div className="mb-16">
-        <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
+      <div className="mb-8">
+        <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
           Our Active Team Members
         </h2>
         <p>
-          Meet our team of <strong>{members?.length ?? "..."}+</strong> AI
-          Enthusiasts.
+          Meet our team of{" "}
+          <span className="font-semibold text-purple-500">
+            {members?.length ?? "..."}+
+          </span>{" "}
+          AI Enthusiasts.
         </p>
       </div>
 
@@ -213,7 +216,7 @@ export default function Members() {
 
       <Section>
         <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
-          The TUM.ai leadership journey
+          The TUM.ai Leadership Journey
         </h2>
 
         <div className="flex flex-wrap items-center justify-center">
@@ -240,8 +243,8 @@ export default function Members() {
       </Section>
 
       <Section>
-        <div className="mb-16">
-          <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
+        <div className="mb-8">
+          <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
             Departments
           </h2>
           <p>

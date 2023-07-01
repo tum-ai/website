@@ -35,7 +35,7 @@ export default function Industry() {
         <div className="mx-auto w-full">
           <h2
             className={cx(
-              "mb-12 text-4xl font-semibold text-white",
+              "mb-8 text-4xl font-semibold text-white",
               bitter.className
             )}
           >
@@ -52,10 +52,10 @@ export default function Industry() {
       </Section>
       <Section>
         <div className="justify-center sm:px-4">
-          <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
+          <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
             Examples of previous AI Projects
           </h2>
-          <p className="mb-12">
+          <p className="mb-8">
             Explore how our participants have created{" "}
             <span className="text-purple-600">measurable impact</span> in the
             past.
@@ -134,7 +134,7 @@ function StudentsSection() {
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
             <h2
-              className={cx("mb-12 text-4xl font-semibold", bitter.className)}
+              className={cx("mb-8 text-4xl font-semibold", bitter.className)}
             >
               Applications for Industry Phase 5.0 will open in summer
             </h2>
@@ -200,12 +200,12 @@ function IndustrySection() {
   return (
     <Section className="flex animate-fadeIn justify-center lg:flex-col">
       <div className="rounded-3xl shadow-purple-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
-        <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
+        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
           Industry Phase 5.0 starting in Fall 2023
         </h2>
         <div className="grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
           <div>
-            <p className="mb-8 text-xl">
+            <p className="mb-8">
               We manage Munich&apos;s top pool of
               <span className="font-bold text-purple-600"> AI talent </span>
               and offer affordable, high-quality solutions without any long-term
@@ -249,7 +249,7 @@ function IndustrySection() {
         </div>
 
         <div className="mt-16 ">
-          <h3 className={cx("mb-4 text-3xl font-semibold")}>
+          <h3 className={cx("mb-8 text-3xl font-semibold")}>
             What is an <span className="text-purple-600">AI Project</span>?
           </h3>
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16">
