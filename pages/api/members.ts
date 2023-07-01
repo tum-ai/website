@@ -7,7 +7,19 @@ export const isMember = (data: unknown): boolean => {
     typeof member.image === "string" &&
     typeof member.description === "string" &&
     typeof member.name === "string" &&
-    member.roles.every((role: any) => (typeof role === "string") && (!["Inactive", "Unclear", "Pause", "Alumni", "Advisor", "Board", "kicked"].includes(role))) &&
+    member.roles.every(
+      (role: any) =>
+        typeof role === "string" &&
+        ![
+          "Inactive",
+          "Unclear",
+          "Pause",
+          "Alumni",
+          "Advisor",
+          "Board",
+          "kicked",
+        ].includes(role)
+    ) &&
     member.roles.length > 0 &&
     member.departments.every(
       (department: any) => typeof department === "string"
@@ -32,7 +44,7 @@ export default async function handler(req, res) {
         "Functional or Mission-Based Department"
       ].multi_select.map((department) => department.name),
       description: "",
-      degree: member?.properties?.Degree?.select?.name
+      degree: member?.properties?.Degree?.select?.name,
     }))
     .sort((a, b) => (a.roles[0] < b.roles[0] ? 1 : -1))
     .filter(isMember);

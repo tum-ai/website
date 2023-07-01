@@ -42,26 +42,26 @@ export default function AIELab() {
 
       <Section>
         <div className="mb-24">
-          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
             1. Premium Sponsors
           </h3>
           <Logos logos={partners} />
         </div>
 
         <div className="mb-24">
-          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
             2. Sponsors
           </h3>
           <Logos logos={partners} />
         </div>
 
         <div className="mb-24">
-          <h3 className="text-uppercase w-full text-4xl mb-12 font-semibold text-center">
+          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
             3. Workshops and more by
           </h3>
           <Logos logos={partners} />
         </div>
-      </Section >
+      </Section>
     </>
   );
 }
@@ -118,12 +118,14 @@ function Hero() {
         </div>
       </div>
 
-      <button className="absolute bottom-16 left-[50%] -translate-x-[50%]"
-        onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}>
+      <button
+        className="absolute bottom-16 left-[50%] -translate-x-[50%]"
+        onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}
+      >
         <FontAwesomeIcon
           icon={faChevronDown}
           size="2xl"
-          className="text-white animate-bounce"
+          className="animate-bounce text-white"
         />
       </button>
     </section>

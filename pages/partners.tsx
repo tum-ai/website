@@ -41,7 +41,12 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2 className={cx("mb-8 text-4xl md:mb-16 font-semibold", bitter.className)}>
+        <h2
+          className={cx(
+            "mb-8 text-4xl font-semibold md:mb-16",
+            bitter.className
+          )}
+        >
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>
@@ -53,7 +58,12 @@ export default function Partners() {
       </Section>
 
       <Section background="inverted">
-        <h2 className={cx("text-uppercase w-full text-4xl text-white mb-12 font-semibold", bitter.className)}>
+        <h2
+          className={cx(
+            "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+            bitter.className
+          )}
+        >
           Building the AI ecosystem in Munich, Germany, and worldwide by
           connecting students, industry and academia.
         </h2>
@@ -62,7 +72,9 @@ export default function Partners() {
           <div className="mb-4 space-y-4">
             <p className="text-xl font-bold">
               Get access to our exclusive{" "}
-              <span className="text-purple-300">pre-selected talent pool of AI enthusiasts.</span>
+              <span className="text-purple-300">
+                pre-selected talent pool of AI enthusiasts.
+              </span>
             </p>
             <p>
               Our members are experienced in software development, data science,
