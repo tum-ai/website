@@ -7,6 +7,8 @@ import { partners, projects } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
 import PictureHero from "../components/BannerHero";
+import { bitter } from "@styles/fonts";
+import { cx } from "class-variance-authority";
 
 export default function Industry() {
   return (
@@ -21,19 +23,17 @@ export default function Industry() {
         "Industry": <IndustrySection />
       }} />
       <Section>
-        <h1 className="mb-3 text-4xl font-semibold">
+        <h2 className={cx("mb-2 text-4xl font-semibold", bitter.className)}>
           Our partners from{" "}
           <span className="text-purple-600">Industry Phase 4.0</span>
-        </h1>
-        <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
+        </h2>
         <Logos data={partners} />
       </Section>
-      <Section className="my-12 bg-blue-700 shadow-lg shadow-purple-900/30">
-        <div className="mx-auto w-full md:w-10/12">
-          <h1 className="mb-3 hidden text-4xl font-semibold text-white md:block">
+      <Section className="bg-blue-700">
+        <div className="mx-auto w-full">
+          <h2 className={cx("mb-12 text-4xl font-semibold text-white", bitter.className)}>
             Project Timeline
-          </h1>
-          <hr className="mb-8 mt-4 hidden border-white md:block" />
+          </h2>
           <Image
             src="/assets/industry/industrytimelinefall2022_cropped.png"
             width={600}
@@ -43,17 +43,16 @@ export default function Industry() {
           />
         </div>
       </Section>
-      <Section className="mb-12 sm:mt-20">
+      <Section>
         <div className="justify-center sm:px-4">
-          <h1 className="mb-3 text-4xl font-bold">
+          <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
             Examples of previous AI Projects
-          </h1>
-          <h2 className="my-3 text-xl">
+          </h2>
+          <p className="mb-12">
             Explore how our AI enthusiasts have created{" "}
             <span className="text-purple-600">measurable impact</span> in the
             past.
-          </h2>
-          <hr className="my-12 border-gray-300 sm:my-8 md:my-10" />
+          </p>
           <div className="3xl:grid-cols-4 grid grid-cols-1 gap-14 lg:grid-cols-2 2xl:grid-cols-3">
             {projects.map((project, index) => (
               <div
@@ -126,12 +125,11 @@ function StudentsSection() {
   return <Section className="flex animate-fadeIn justify-center">
     <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg sm:shadow-blue-500/20">
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
-        <div>
-          <h2 className="mb-6 text-4xl font-semibold">
+        <div className="space-y-4">
+          <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
             Applications for Industry Phase 5.0 will open in summer
           </h2>
-          <hr className="border-b-1 my-6 border-gray-300" />
-          <p className="mb-8 text-xl">
+          <p>
             Push ML boundaries and progress your career with our AI
             projects!{" "}
             <span className="text-purple-600">
@@ -139,8 +137,8 @@ function StudentsSection() {
             </span>{" "}
             and take on real AI projects to test your abilities. Join
             us now!
-            <br />
-            <br />
+          </p>
+          <p>
             Work in a{" "}
             <span className="text-purple-600">
               team of 4x students for 12 weeks, earn 2700€
@@ -148,8 +146,8 @@ function StudentsSection() {
             and gain valuable contacts. With a project lead guiding
             you, demonstrate your agile project management skills in a
             professional setting.
-            <br />
-            <br />
+          </p>
+          <p>
             Collaborate with pre-selected partners, including{" "}
             <span className="textpurple-600">
               for-profit companies, startups, and non-profits,
@@ -169,17 +167,14 @@ function StudentsSection() {
               alt={"Zoom Industry"}
             />
           </div>
-          <div className="my-3 rounded-lg bg-white p-8 shadow-lg shadow-blue-300/10">
-            <h1 className="text-xl font-medium text-gray-900">
-              <span>
-                Visit our official Projects Notion Page to learn more
-                about the individual projects and partner companies of
-                industry phase 5.0
-              </span>
-            </h1>
-            <div className="text-white">
-              <button
-                className="w-46 mt-5 rounded-full bg-blue-700 px-6 py-1 text-white duration-200 hover:bg-blue-400 sm:mx-4"
+          <div className="my-3 rounded-lg p-8  space-y-8">
+            <h3 className="text-xl font-medium">
+              Visit our official Projects Notion Page to learn more
+              about the individual projects and partner companies of
+              industry phase 5.0
+            </h3>
+            <div className="text-white space-x-4">
+              <Button
                 onClick={() =>
                   window.open(
                     "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
@@ -187,15 +182,14 @@ function StudentsSection() {
                 }
               >
                 project page
-              </button>
-              <button
-                className="mx-4 mt-5 w-36 rounded-full bg-purple-700 px-6 py-1 text-white duration-200 hover:bg-purple-600"
+              </Button>
+              <Button
                 onClick={() =>
                   window.open("https://industry.tum-ai.com/apply")
                 }
               >
                 sign up now
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -207,13 +201,12 @@ function StudentsSection() {
 function IndustrySection() {
   return <Section className="flex animate-fadeIn justify-center lg:flex-col">
     <div className="rounded-3xl shadow-purple-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
-      <h2 className="text-4xl font-semibold">
+      <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
         Industry Phase 5.0 starting in Fall 2023
       </h2>
-      <hr className="border-b-1 my-4 border-gray-300" />
-      <div className="mt-6 grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
-        <div className="sm:px-12">
-          <h2 className="text-center text-xl sm:px-2">
+      <div className="grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
+        <div>
+          <p className="text-xl mb-8">
             We manage Munich&apos;s top pool of
             <span className="font-bold text-purple-600">
               {" "}
@@ -221,33 +214,31 @@ function IndustrySection() {
             </span>
             and offer affordable, high-quality solutions without any
             long-term liabilities!
-          </h2>
-          <div className="mt-8 flex flex-row items-center justify-center space-x-6">
-            <Dialog content={{
-              trigger: <>connect!</>,
-              title: <>Let&apos;s connect!</>,
-              body: <><p className="text-sm text-gray-700">
-                If you are interested in partnering with TUM.ai as
-                a sponsor, Makeathon challenge-setter, Industry
-                project partner, Workshop host, etc. please reach
-                out to our &quot;Partners & Sponsors&quot;
-                department.
+          </p>
+          <Dialog content={{
+            trigger: <>connect!</>,
+            title: <>Let&apos;s connect!</>,
+            body: <><p className="text-sm text-gray-700">
+              If you are interested in partnering with TUM.ai as
+              a sponsor, Makeathon challenge-setter, Industry
+              project partner, Workshop host, etc. please reach
+              out to our &quot;Partners & Sponsors&quot;
+              department.
+            </p>
+              <p className="text-xl font-medium text-purple-500">
+                <a href="mailto:partners@tum-ai.com">
+                  partners@tum-ai.com
+                </a>
               </p>
-                <p className="text-xl font-medium text-purple-500">
-                  <a href="mailto:partners@tum-ai.com">
-                    partners@tum-ai.com
-                  </a>
-                </p>
-                <p className="text-sm text-gray-500">
-                  TUM.ai Student Initiative
-                  <br />
-                  Arcisstraße 21.
-                  <br />
-                  80333 Munich
-                </p></>,
-              close: <Button className="text-white">Close</Button>
-            }} />
-          </div>
+              <p className="text-sm text-gray-500">
+                TUM.ai Student Initiative
+                <br />
+                Arcisstraße 21.
+                <br />
+                80333 Munich
+              </p></>,
+            close: <Button className="text-white">Close</Button>
+          }} />
         </div>
         <div className="flex flex-col items-center justify-center space-y-6 py-4">
           <Image
@@ -260,40 +251,41 @@ function IndustrySection() {
           />
         </div>
       </div>
-      <h2 className="mt-16 text-4xl font-semibold">
-        What is an <span className="text-purple-600">AI Project</span>
-        ?
-      </h2>
-      <hr className="border-b-1 my-4 border-gray-300" />
-      <div className="mt-6 grid grid-cols-1 gap-10 py-6 xl:grid-cols-2 xl:gap-16">
-        <div>
-          <h2 className="text-2xl font-semibold text-purple-600">
-            Project Statement
-          </h2>
-          <p>
-            Present your AI-related problem – we&apos;ll help define
-            the ideal project:
-          </p>
-          <ol className="list-inside list-disc space-y-2 py-4 font-medium text-gray-700 sm:text-lg">
-            <li className="pl-2">Building proof of concept</li>
-            <li className="pl-2">Conducting research topics</li>
-            <li className="pl-2">Developing prototypes</li>
-            <li className="pl-2">Improving products/processes</li>
-          </ol>
-        </div>
-        <div>
-          <h2 className="text-2xl font-semibold text-purple-600">
-            Outstanding Solutions
-          </h2>
-          <p className="max-w-lg py-2">
-            We’ll advertise your project to a wide pool of talented
-            students and present you with the most outstanding
-            candidates.
-          </p>
-          <p className="max-w-lg py-2">
-            A team of multi-disciplinary students will work
-            exclusively for your company as working students.
-          </p>
+
+      <div className="mt-16 ">
+        <h3 className={cx("mb-4 text-3xl font-semibold")}>
+          What is an <span className="text-purple-600">AI Project</span>?
+        </h3>
+        <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16">
+          <div>
+            <h4 className="text-xl font-semibold text-purple-600">
+              Project Statement
+            </h4>
+            <p>
+              Present your AI-related problem – we&apos;ll help define
+              the ideal project:
+            </p>
+            <ol className="list-inside list-disc space-y-2 py-4 ">
+              <li className="pl-2">Building proof of concept</li>
+              <li className="pl-2">Conducting research topics</li>
+              <li className="pl-2">Developing prototypes</li>
+              <li className="pl-2">Improving products/processes</li>
+            </ol>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold text-purple-600">
+              Outstanding Solutions
+            </h4>
+            <p className="max-w-lg py-2">
+              We’ll advertise your project to a wide pool of talented
+              students and present you with the most outstanding
+              candidates.
+            </p>
+            <p className="max-w-lg py-2">
+              A team of multi-disciplinary students will work
+              exclusively for your company as working students.
+            </p>
+          </div>
         </div>
       </div>
     </div>
