@@ -139,7 +139,7 @@ function Content1() {
           "sponsored online course certificates and company visits are exclusive to TUM.ai members",
         buttons: [
           { href: "https://www.eventbrite.de/o/tumai-31793295023", text: "Apply now" },
-          { href: "https://education.tum-ai.com/", text: "Learn more", intent: "secondary" },
+          { href: "https://education.tum-ai.com/", text: "Learn more", intent: "tertiary" },
         ],
       },
       {
@@ -149,7 +149,7 @@ function Content1() {
         subtext: "applications closed, finished",
         buttons: [
           { href: "https://makeathon23.tum-ai.com/apply", text: "Apply now" },
-          { href: "https://makeathon.tum-ai.com/", text: "Learn more", intent: "secondary" },
+          { href: "https://makeathon.tum-ai.com/", text: "Learn more", intent: "tertiary" },
         ],
       },
       {
@@ -159,7 +159,7 @@ function Content1() {
         subtext: "applications closed, currently ongoing",
         buttons: [
           { href: "https://industry.tum-ai.com/apply", text: "Apply now" },
-          { href: "https://www.tum-ai.com/industry-projects.html", text: "Learn more", intent: "secondary" },
+          { href: "https://www.tum-ai.com/industry-projects.html", text: "Learn more", intent: "tertiary" },
         ],
       },
       {
@@ -169,7 +169,7 @@ function Content1() {
         subtext: "applications closed, currently ongoing",
         buttons: [
           { href: "https://aielab.tum-ai.com/", text: "Apply now" },
-          { href: "https://aielab.tum-ai.com/", text: "Learn more", intent: "secondary" },
+          { href: "https://aielab.tum-ai.com/", text: "Learn more", intent: "tertiary" },
         ],
       },
     ];
@@ -343,17 +343,14 @@ function Slack() {
           Terms & Conditions
         </Link>
         <div className="mt-6 flex space-x-4">
-          <Button asChild >
+          <Button>
+            <FontAwesomeIcon
+              icon={faSlack}
+              size="xl" className="mr-4" />
             <Link href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw">
               TUM.ai Public Slack
             </Link>
           </Button>
-
-          <FontAwesomeIcon
-            icon={faSlack}
-            size="2xl"
-            className="mb-4  duration-500 hover:text-purple-300"
-          />
         </div>
       </div >
     </Section >
