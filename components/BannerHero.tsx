@@ -11,7 +11,7 @@ export default function Hero({ imageSrc, titleImageSrc, subtitle }) {
         alt="Hero background image"
         className="absolute -z-10 scale-110 blur-sm brightness-50 saturate-50"
       />
-      <div className="container relative mx-auto flex max-w-3xl flex-col items-center justify-center p-8 py-48 text-center text-white">
+      <div className="container relative mx-auto flex max-w-3xl flex-col items-center justify-center p-8 py-48 text-center text-white min-h-[80vh]">
         <div className="mb-10">
           <Image
             src={titleImageSrc}
@@ -24,7 +24,7 @@ export default function Hero({ imageSrc, titleImageSrc, subtitle }) {
             }}
           />
         </div>
-        <p className="text-2xl font-medium uppercase">{subtitle}</p>
+        <p className="text-2xl">{subtitle}</p>
       </div>
     </section>
   );

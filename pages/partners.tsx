@@ -8,6 +8,8 @@ import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
 import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
+import { cx } from "class-variance-authority";
+import { bitter } from "@styles/fonts";
 
 export default function Partners() {
   const cards = [
@@ -38,11 +40,11 @@ export default function Partners() {
       <Hero
         imageSrc={"/assets/partners.jpg"}
         title="Become a partner"
-        subtitle="Get access to Munich's largest student talent pool of AI enthusiasts!"
+        subtitle="Get access to Munich's largest student talent pool of AI enthusiasts"
       />
 
       <Section background="white">
-        <h2 className="mb-8 text-center text-4xl font-bold md:mb-16">
+        <h2 className={cx("mb-8 text-4xl md:mb-16 font-semibold", bitter.className)}>
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>
@@ -54,20 +56,18 @@ export default function Partners() {
       </Section>
 
       <Section background="inverted">
-        <h2 className="text-uppercase w-full text-center text-4xl font-bold text-white">
+        <h2 className={cx("text-uppercase w-full text-4xl text-white mb-12 font-semibold", bitter.className)}>
           Building the AI ecosystem in Munich, Germany, and worldwide by
           connecting students, industry and academia.
         </h2>
-
-        <hr className="my-8" />
 
         <div className="grid gap-4 md:grid-cols-2">
           <div className="mb-4 space-y-4">
             <p className="text-xl font-bold">
               Get access to our exclusive{" "}
-              <span className="text-purple-300">
-                pre-selected talent pool of AI enthusiasts.
-              </span>
+              <span className="text-purple-300">pre-selected talent pool of AI enthusiasts.</span>
+            </p>
+            <p>
               Our members are experienced in software development, data science,
               data engineering and AI business strategy.
             </p>
