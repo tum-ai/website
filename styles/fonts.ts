@@ -1,9 +1,10 @@
-import { IBM_Plex_Sans } from "@next/font/google";
+import { Inter, Bitter } from "@next/font/google";
 
-const ibm_plex_sans = IBM_Plex_Sans({
-  weight: ["400", "700"],
-  variable: "--font-ibm-plex-sans",
-  fallback: ["arial", "helvetica", "sans-serif"],
-});
+const inter = Inter({
+  weight: 'variable'
+})
+const bitter = Bitter({
+  weight: 'variable',
+})
 
-export { ibm_plex_sans };
+export { inter, bitter };
