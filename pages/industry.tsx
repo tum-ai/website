@@ -19,8 +19,8 @@ export default function Industry() {
         subtitle="Your stepping stone to a career in AI"
       />
       <Tabs
-        data={{
-          students: <StudentsSection />,
+        tabs={{
+          Students: <StudentsSection />,
           Industry: <IndustrySection />,
         }}
       />
