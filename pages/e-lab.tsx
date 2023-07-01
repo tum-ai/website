@@ -9,6 +9,8 @@ import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function AIELab() {
   return (
@@ -93,6 +95,15 @@ function Hero() {
           <Button>Apply</Button>
         </div>
       </div>
+
+      <button className="absolute bottom-16 left-[50%] -translate-x-[50%]"
+        onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}>
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          size="2xl"
+          className="text-white animate-bounce"
+        />
+      </button>
     </section>
   );
 }

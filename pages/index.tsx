@@ -13,6 +13,7 @@ import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Index() {
   return (
@@ -52,7 +53,7 @@ function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
 
   return (
-    <section className="-z-10 h-screen">
+    <section className="-z-10 h-screen relative">
       <div className="absolute top-0 -z-10 h-full w-full bg-blue-800">
         <Canvas camera={{ position: [2, 0, 0] }}>
           <ambientLight intensity={0.05} />
@@ -102,6 +103,15 @@ function Hero() {
           </div>
         </div>
       </div>
+
+      <button className="absolute bottom-16 left-[50%] -translate-x-[50%]"
+        onClick={() => window.scrollBy(0, 500)}>
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          size="2xl"
+          className="text-white animate-bounce"
+        />
+      </button>
     </section>
   );
 }
