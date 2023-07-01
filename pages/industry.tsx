@@ -56,7 +56,7 @@ export default function Industry() {
             Examples of previous AI Projects
           </h2>
           <p className="mb-12">
-            Explore how our AI enthusiasts have created{" "}
+            Explore how our participants have created{" "}
             <span className="text-purple-600">measurable impact</span> in the
             past.
           </p>
@@ -172,26 +172,20 @@ function StudentsSection() {
               />
             </div>
             <div className="my-3 space-y-8 rounded-lg  p-8">
-              <h3 className="text-xl font-medium">
+              <p>
                 Visit our official Projects Notion Page to learn more about the
                 individual projects and partner companies of industry phase 5.0
-              </h3>
-              <div className="space-x-4 text-white">
-                <Button
-                  onClick={() =>
-                    window.open(
-                      "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
-                    )
-                  }
-                >
-                  project page
+              </p>
+              <div className="flex flex-col justify-center text-white sm:flex-row sm:space-x-4">
+                <Button asChild>
+                  <Link href="https://industry.tum-ai.com/apply">
+                    Sign up now
+                  </Link>
                 </Button>
-                <Button
-                  onClick={() =>
-                    window.open("https://industry.tum-ai.com/apply")
-                  }
-                >
-                  sign up now
+                <Button asChild intent="tertiary">
+                  <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc">
+                    Project page
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -218,40 +212,35 @@ function IndustrySection() {
               liabilities!
             </p>
             <Dialog
-              content={{
-                trigger: <>connect!</>,
-                title: <>Let&apos;s connect!</>,
-                body: (
-                  <>
-                    <p className="text-sm text-gray-700">
-                      If you are interested in partnering with TUM.ai as a
-                      sponsor, Makeathon challenge-setter, Industry project
-                      partner, Workshop host, etc. please reach out to our
-                      &quot;Partners & Sponsors&quot; department.
-                    </p>
-                    <p className="text-xl font-medium text-purple-500">
-                      <a href="mailto:partners@tum-ai.com">
-                        partners@tum-ai.com
-                      </a>
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      TUM.ai Student Initiative
-                      <br />
-                      Arcisstraße 21.
-                      <br />
-                      80333 Munich
-                    </p>
-                  </>
-                ),
-                close: <Button className="text-white">Close</Button>,
-              }}
+              trigger={<Button>connect!</Button>}
+              title="Let's connect!"
+              body={
+                <>
+                  <p className="text-sm text-gray-700">
+                    If you are interested in partnering with TUM.ai as a
+                    sponsor, Makeathon challenge-setter, Industry project
+                    partner, Workshop host, etc. please reach out to our
+                    &quot;Partners & Sponsors&quot; department.
+                  </p>
+                  <p className="text-xl font-medium text-purple-500">
+                    <a href="mailto:partners@tum-ai.com">partners@tum-ai.com</a>
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    TUM.ai Student Initiative
+                    <br />
+                    Arcisstraße 21.
+                    <br />
+                    80333 Munich
+                  </p>
+                </>
+              }
+              hasCloseButton
             />
           </div>
-          <div className="flex flex-col items-center justify-center space-y-6 py-4">
+          <div className="flex flex-col items-center space-y-6 py-4 xl:items-start">
             <Image
               src={"/assets/industry/freearifiat.png"}
               className="rounded-xl shadow-lg shadow-purple-800/20"
-              layout="respinsive"
               alt="Ferrari for Fiat"
               width={500}
               height={100}
