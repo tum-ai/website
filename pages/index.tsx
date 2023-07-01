@@ -1,16 +1,19 @@
 import Logos from "@components/Logos";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
+import { faSlack } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import VerticalCards from "components/VerticalCards";
 import { partners } from "data/industry";
 import Image from "next/image";
+import Link from "next/link";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 
 export default function Index() {
   return (
     <>
       <Header />
-      <Section className="">
+      <Section>
         <VerticalCards
           data={[
             {
@@ -129,18 +132,61 @@ export default function Index() {
       <Content2 />
       <Logos
         title={
-          <h3>
+          <h3 className="text-3xl">
             Partners{" "}
-            <span className="text-2xl text-purple-500">
-              we have collaborated
-            </span>{" "}
-            with
+            <span className="text-purple-500">we have collaborated</span> with
           </h3>
         }
         data={partners}
       />
-      <Logos title={<h3>Partners Initiatives</h3>} data={partners} />
+      <Logos
+        title={<h3 className="text-3xl">Partners Initiatives</h3>}
+        data={partners}
+      />
+      <Slack />
     </>
+  );
+}
+
+function Slack() {
+  return (
+    <Section>
+      <div className="flex flex-col items-center text-center">
+        <h3 className="text-3xl font-bold">
+          Wanna stay up to date? Join our{" "}
+          <span className=" text-purple-500">public Slack!</span>
+        </h3>
+        <br />
+        <hr className="w-1/2" />
+        <br />
+        <p>
+          Be among the first to be informed about upcoming events, job
+          opportunities and workshops.
+        </p>
+        <Link
+          className="text-purple-500"
+          href={"https://www.tum-ai.com/newsletter"}
+        >
+          Terms & Conditions
+        </Link>
+        <div className="mt-6 flex space-x-4">
+          <Button
+            link
+            href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
+          >
+            TUM.ai Public Slack
+          </Button>
+
+          <FontAwesomeIcon
+            icon={faSlack}
+            size="2xl"
+            className="mb-4  duration-500 hover:text-purple-300"
+          />
+        </div>
+        <br />
+        <hr className="w-1/2" />
+      </div>
+    </Section>
   );
 }
 
