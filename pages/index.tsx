@@ -8,7 +8,6 @@ import { partners } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
-// @ts-nocheck
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
@@ -108,112 +107,113 @@ function Hero() {
 }
 
 function Content1() {
+  const cards =
+    [
+      {
+        img: "/assets/home_img1.jpg",
+        title: "AI Academy and educational offers",
+        text: "a series of advanced AI workshops, featuring hands-on coding tutorials, provided by exciting tech companies, open for everyone!",
+        subText:
+          "sponsored online course certificates and company visits are exclusive to TUM.ai members",
+        body: (
+          <div className="m-auto flex w-fit flex-col items-center space-y-2">
+            <Button
+              link
+              href={"https://education.tum-ai.com/"}
+              className="bg-gray-400"
+            >
+              Learn more
+            </Button>
+            <Button
+              link
+              href={"https://www.eventbrite.de/o/tumai-31793295023"}
+              className="bg-purple-500"
+            >
+              Apply now
+            </Button>
+          </div>
+        ),
+      },
+      {
+        img: "/assets/home_img2.png",
+        title: "Makeathon Competitions",
+        text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
+        subText: "applications closed, finished",
+        body: (
+          <div className="m-auto flex w-fit flex-col items-center space-y-2">
+            <Button
+              link
+              href={"https://makeathon.tum-ai.com/"}
+              className="bg-gray-400"
+            >
+              Learn more
+            </Button>
+            <Button
+              link
+              href={"https://makeathon23.tum-ai.com/apply"}
+              className="bg-gray-500"
+              disabled
+            >
+              Apply now
+            </Button>
+          </div>
+        ),
+      },
+      {
+        img: "/assets/home_img3.png",
+        title: "Industry Project Cooperations",
+        text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame",
+        subText: "applications closed, currently ongoing",
+        body: (
+          <div className="m-auto flex w-fit flex-col items-center space-y-2">
+            <Button
+              link
+              href={"https://www.tum-ai.com/industry-projects.html"}
+              className="bg-gray-400"
+            >
+              Learn more
+            </Button>
+            <Button
+              link
+              href={"https://industry.tum-ai.com/apply"}
+              className="bg-gray-500"
+              disabled
+            >
+              Apply now
+            </Button>
+          </div>
+        ),
+      },
+      {
+        img: "/assets/home_img4.jpg",
+        title: "AI E-Lab Entrepreneurship",
+        text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
+        subText: "applications closed, currently ongoing",
+        body: (
+          <div className="m-auto flex w-fit flex-col items-center space-y-2">
+            <Button
+              link
+              href={"https://aielab.tum-ai.com/"}
+              className="bg-gray-400"
+            >
+              Learn more
+            </Button>
+            <Button
+              link
+              href={"https://aielab.tum-ai.com/"}
+              className="bg-gray-500"
+              disabled
+            >
+              Apply now
+            </Button>
+          </div>
+        ),
+      },
+    ];
+
   return (
     <Section className="bg-gray-100">
-      <VerticalCards
-        data={[
-          {
-            img: "/assets/home_img1.jpg",
-            title: "AI Academy and educational offers",
-            text: "a series of advanced AI workshops, featuring hands-on coding tutorials, provided by exciting tech companies, open for everyone!",
-            subText:
-              "sponsored online course certificates and company visits are exclusive to TUM.ai members",
-            body: (
-              <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                <Button
-                  link
-                  href={"https://education.tum-ai.com/"}
-                  className="bg-gray-400"
-                >
-                  Learn more
-                </Button>
-                <Button
-                  link
-                  href={"https://www.eventbrite.de/o/tumai-31793295023"}
-                  className="bg-purple-500"
-                >
-                  Apply now
-                </Button>
-              </div>
-            ),
-          },
-          {
-            img: "/assets/home_img2.png",
-            title: "Makeathon Competitions",
-            text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
-            subText: "applications closed, finished",
-            body: (
-              <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                <Button
-                  link
-                  href={"https://makeathon.tum-ai.com/"}
-                  className="bg-gray-400"
-                >
-                  Learn more
-                </Button>
-                <Button
-                  link
-                  href={"https://makeathon23.tum-ai.com/apply"}
-                  className="bg-gray-500"
-                  disabled
-                >
-                  Apply now
-                </Button>
-              </div>
-            ),
-          },
-          {
-            img: "/assets/home_img3.png",
-            title: "Industry Project Cooperations",
-            text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame",
-            subText: "applications closed, currently ongoing",
-            body: (
-              <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                <Button
-                  link
-                  href={"https://www.tum-ai.com/industry-projects.html"}
-                  className="bg-gray-400"
-                >
-                  Learn more
-                </Button>
-                <Button
-                  link
-                  href={"https://industry.tum-ai.com/apply"}
-                  className="bg-gray-500"
-                  disabled
-                >
-                  Apply now
-                </Button>
-              </div>
-            ),
-          },
-          {
-            img: "/assets/home_img4.jpg",
-            title: "AI E-Lab Entrepreneurship",
-            text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
-            subText: "applications closed, currently ongoing",
-            body: (
-              <div className="m-auto flex w-fit flex-col items-center space-y-2">
-                <Button
-                  link
-                  href={"https://aielab.tum-ai.com/"}
-                  className="bg-gray-400"
-                >
-                  Learn more
-                </Button>
-                <Button
-                  link
-                  href={"https://aielab.tum-ai.com/"}
-                  className="bg-gray-500"
-                  disabled
-                >
-                  Apply now
-                </Button>
-              </div>
-            ),
-          },
-        ]}
-      />
+      <VerticalCards cards={cards} />
     </Section>
   );
 }
@@ -253,28 +253,28 @@ function Content2() {
 
           <div className="space-y-4">
             <p className="text-xl">
-              "Since founded in 2020,{" "}
+              Since founded in 2020,{" "}
               <span className="text-primary-500 font-bold">
-                TUM.ai's Vision
+                TUM.ai&apos;s Vision
               </span>{" "}
               is to connect students and all relevant stakeholders to facilitate
               the application of AI across domains and drive positive societal
-              impact through inter-disciplinary projects."
+              impact through inter-disciplinary projects.
             </p>
             <p>
               Together with our highly-talented members, we run data science
               projects with industry, startup & VC partners, organize workshops
-              and our "Makeathon" AI-product development competitions. We thrive
+              and our &quot;Makeathon&quot; AI-product development competitions. We thrive
               to deploy AI solutions into new fields and industries! Do not
               hesitate to reach out to us, we are looking forward to ambitious
               collaborations.{" "}
             </p>
             <p>
-              Under the Motto "
+              Under the Motto &quot;
               <span className="text-primary-500 font-bold">
                 Connect-Execute-Learn
               </span>
-              " we aim at lowering the entry-bar to AI-creation and -usage for
+              &quot; we aim at lowering the entry-bar to AI-creation and -usage for
               people of every domain by establishing a platform to make
               practical experience through a diverse set of applied AI projects.
               We therefore educate and connect students from diverse backgrounds
@@ -337,7 +337,7 @@ function Content3() {
             Makeathon competitions. If you are looking for a high-quality, but
             affordable team of Data Scientists and AI Strategists to solve
             problems for your firm, consider becoming a cooperation partner for
-            TUM.ai's industry project format. (Student Data Consultancy)
+            TUM.ai&apos;s industry project format. (Student Data Consultancy)
           </p>
 
           <div className="flex w-fit flex-col items-start space-y-4 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0">
@@ -346,7 +346,7 @@ function Content3() {
               href={"https://www.tum-ai.com/forPartners.html"}
               className="bg-gray-500"
             >
-              Partner's of TUM.ai
+              Partner&apos;s of TUM.ai
             </Button>
             <Button
               link
