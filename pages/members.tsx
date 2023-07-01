@@ -14,7 +14,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
   return (
     <article>
       <div
-        className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
+        className="relative h-80 cursor-pointer overflow-hidden rounded shadow-md duration-500 hover:shadow-xl"
         onClick={() => {
           if (open === index) {
             setOpen(undefined);
@@ -37,7 +37,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute h-full w-full rounded-xl p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
+              className="absolute h-full w-full rounded p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
             >
               <b>Degree</b>
               <p>{member.degree}</p>
@@ -75,7 +75,7 @@ const MembersCardList = ({ members, status }) => {
         {Array.from<number>({ length: amountTruncatedMembers }).map((index) => (
           <div
             key={index}
-            className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded-xl bg-gray-300 shadow-md"
+            className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded bg-gray-300 shadow-md"
           ></div>
         ))}
       </div>
@@ -145,7 +145,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
   return (
     <article>
       <div
-        className="relative h-80 cursor-pointer overflow-hidden rounded-xl shadow-md duration-500 hover:shadow-xl"
+        className="relative h-80 cursor-pointer overflow-hidden rounded shadow-md duration-500 hover:shadow-xl"
         onClick={() => {
           if (open === index) {
             setOpen(undefined);
@@ -160,7 +160,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
           fill
           style={{ objectFit: "cover" }}
         />
-        <div className="absolute flex h-full w-full flex-col items-center justify-center rounded-xl text-white backdrop-brightness-50">
+        <div className="absolute flex h-full w-full flex-col items-center justify-center rounded text-white backdrop-brightness-50">
           <FontAwesomeIcon icon={department.icon} size="4x" className="mb-4" />
           <h2 className="text-4xl font-bold">{department.name}</h2>
         </div>
@@ -171,7 +171,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute flex h-full w-full items-center justify-center rounded-xl p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
+              className="absolute flex h-full w-full items-center justify-center rounded p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
             >
               <p className="text-lg">{department.description}</p>
             </motion.div>
@@ -217,22 +217,22 @@ export default function Members() {
         </h2>
 
         <div className="flex flex-wrap items-center justify-center">
-          <div className="clip-point-down xl:clip-point-right w-full bg-white bg-gradient-to-b from-blue-300 to-blue-400 p-8 pb-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:pb-8 xl:pr-16">
+          <div className="clip-point-down xl:clip-point-right w-full rounded bg-white bg-gradient-to-b from-blue-300 to-blue-400 p-8 pb-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:pb-8 xl:pr-16">
             <h3 className="text-xl font-bold">Member</h3>
             <p>Once you are accepted</p>
           </div>
 
-          <div className="clip-chev-down xl:clip-chev-right w-full bg-white bg-gradient-to-b from-blue-400 to-blue-500 p-8 py-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:px-16 xl:py-8">
+          <div className="clip-chev-down xl:clip-chev-right w-full rounded bg-white bg-gradient-to-b from-blue-400 to-blue-500 p-8 py-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:px-16 xl:py-8">
             <h3 className="text-xl font-bold">Teamlead</h3>
             <p>max. for 2 semesters</p>
           </div>
 
-          <div className="clip-chev-down xl:clip-chev-right w-full bg-white bg-gradient-to-b from-blue-500 to-blue-600 p-8 py-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:px-16 xl:py-8">
+          <div className="clip-chev-down xl:clip-chev-right w-full rounded bg-white bg-gradient-to-b from-blue-500 to-blue-600 p-8 py-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:px-16 xl:py-8">
             <h3 className="text-xl font-bold">Mentor</h3>
             <p>strategic advisors</p>
           </div>
 
-          <div className="clip-enter-down xl:clip-enter-right w-full bg-white bg-gradient-to-b from-blue-600 to-blue-700 p-8 pt-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:py-8 xl:pl-16">
+          <div className="clip-enter-down xl:clip-enter-right w-full rounded bg-white bg-gradient-to-b from-blue-600 to-blue-700 p-8 pt-16 text-center text-white xl:w-max xl:bg-gradient-to-r xl:py-8 xl:pl-16">
             <h3 className="text-xl font-bold">President</h3>
             <p>max. for 2 semesters</p>
           </div>
