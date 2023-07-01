@@ -40,7 +40,12 @@ function Card(card: CardProps) {
         <div className="relative bottom-0 mt-auto p-4">
           <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
             {card.buttons.map(({ href, text, ...buttonData }) => (
-              <Button key={href} asChild {...buttonData}>
+              <Button
+                key={href}
+                asChild
+                {...buttonData}
+                className="text-center"
+              >
                 <Link href={href}>{text}</Link>
               </Button>
             ))}
