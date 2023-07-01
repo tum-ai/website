@@ -1,13 +1,14 @@
 import Button from "@ui/Button";
-import Image from "next/image";
-import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
-import MartinTalk from "../public/assets/partners/martin_talk.jpg";
-import AlelphalphAworkshopGroup from "../public/assets/partners/alelphalpha_workshop_group.jpg";
-import RichardTalk from "../public/assets/partners/richard_talk.jpg";
-import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
-import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
+import VerticalCards from "components/VerticalCards";
+import Image from "next/image";
+import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
+import PnSMap from "../public/assets/partners/PnS_map_2023.jpg";
+import AlelphalphAworkshopGroup from "../public/assets/partners/alelphalpha_workshop_group.jpg";
+import LeopoldInfineon from "../public/assets/partners/leopold_infineon.jpeg";
+import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+import RichardTalk from "../public/assets/partners/richard_talk.jpg";
 
 export default function Partners() {
   const cards = [
@@ -59,7 +60,7 @@ export default function Partners() {
           connecting students, industry and academia.
         </h2>
 
-        <hr className="my-8" />
+        <hr className="my-16 border-gray-500" />
 
         <div className="grid gap-4 md:grid-cols-2">
           <div className="mb-4 space-y-4">
@@ -126,19 +127,7 @@ export default function Partners() {
         background="white"
         backgroundImage="/assets/partners/alephalpha_workshop.jpg"
       >
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {cards.map((card) => (
-            <article
-              key={card.title}
-              className="h-full rounded bg-blue-700 p-4 text-center text-white"
-            >
-              <Image src={card.img} alt={card.title} />
-              <h2 className="my-4 text-2xl font-bold">{card.title}</h2>
-              <hr className="my-4" />
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
+        <VerticalCards data={cards} />
       </Section>
     </>
   );
