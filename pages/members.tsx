@@ -24,11 +24,10 @@ const MemberCard = ({ member, open, setOpen, index }) => {
         }}
       >
         <Image
-          className="grayscale"
+          className="object-cover grayscale"
           src={member.image}
           alt={`image of ${member.name}`}
           fill
-          style={{ objectFit: "cover" }}
           priority
         />
         {open === index && (
@@ -161,7 +160,7 @@ const DepartmentCard = ({ department, open, setOpen, index }) => {
           src={department.image}
           alt={`image of ${department.name}`}
           fill
-          style={{ objectFit: "cover" }}
+          className="object-cover"
         />
         <div className="absolute flex h-full w-full flex-col items-center justify-center rounded text-white backdrop-brightness-50">
           <FontAwesomeIcon icon={department.icon} size="4x" className="mb-4" />

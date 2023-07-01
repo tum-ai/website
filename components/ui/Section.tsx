@@ -31,12 +31,9 @@ export default function Section({
       {backgroundImage && (
         <Image
           src={backgroundImage}
-          style={{
-            objectFit: "cover",
-          }}
           alt="Hero background image"
           fill
-          className="absolute -z-10"
+          className="absolute -z-10 object-cover"
         />
       )}
       <div className="container mx-auto">{children}</div>

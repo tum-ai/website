@@ -27,7 +27,7 @@ export default function Logos({ logos }: Props) {
                   alt={logo.alt || ""}
                   width={160}
                   height={50}
-                  objectFit="contain"
+                  className="object-contain"
                 />
               </div>
             </Link>

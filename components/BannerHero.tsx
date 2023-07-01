@@ -6,10 +6,9 @@ export default function Hero({ imageSrc, titleImageSrc, subtitle }) {
     <section className="relative overflow-hidden">
       <Image
         src={imageSrc}
-        layout="fill"
-        objectFit="cover"
+        fill
         alt="Hero background image"
-        className="absolute -z-10 scale-110 blur-sm brightness-50 saturate-50"
+        className="absolute -z-10 scale-110 object-cover blur-sm brightness-50 saturate-50"
       />
       <div className="container relative mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center p-8 py-48 text-center text-white">
         <div className="mb-10">

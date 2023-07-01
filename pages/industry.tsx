@@ -71,9 +71,8 @@ export default function Industry() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-t-lg"
+                      fill
+                      className="rounded-t-lg object-cover"
                     />
                   </div>
                   <div className="rounded-b-lg bg-white p-6 text-purple-950">
@@ -133,9 +132,7 @@ function StudentsSection() {
       <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg sm:shadow-blue-500/20">
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
-            <h2
-              className={cx("mb-8 text-4xl font-semibold", bitter.className)}
-            >
+            <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
               Applications for Industry Phase 5.0 will open in summer
             </h2>
             <p>
