@@ -3,7 +3,6 @@ import Stat from "@components/Stat";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import { partners } from "data/industry";
-// @ts-nocheck
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
@@ -11,8 +10,7 @@ import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { bitter } from "@styles/fonts";
-import { cx } from "class-variance-authority";
+import VerticalCards from "@components/VerticalCards";
 
 export default function AIELab() {
   return (
@@ -38,6 +36,96 @@ export default function AIELab() {
           <Stat description={"revenue"} value={"25K"} />
           <Stat description={"hired employees"} value={"9"} />
         </div>
+      </Section>
+
+      <Section>
+        <div className="grid gap-16 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-8 w-full text-4xl font-semibold">
+              You,
+              <br />
+              Yes you.
+              <br />
+              <span className="text-purple-500">You can build</span> something
+              great.
+            </h2>
+
+            <p className="mb-4 text-xl font-bold">
+              Entrepreneurship means change and we believe that everyone is
+              qualified to become an entrepreneur.
+            </p>
+            <p>
+              Think about your last big achievement, your perseverance over
+              hurdles and what it took to succeed - you already proved that you
+              are a real changemaker. Are you ready for your next step? Great.
+              With our AI Entrepreneurship Lab we aim at making the founding of
+              AI startups accessible to everyone, including you. You bring in
+              the motivation and dedication, and we connect you and try to make
+              founding as easy as possible for you.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-8 w-full text-4xl font-semibold">
+              How founders experience the{" "}
+              <span className="text-purple-500">AI E-Lab</span>.
+            </h2>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full"
+            ></iframe>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="lg:max-w-[50%]">
+          <h2 className="mb-8 w-full text-4xl font-semibold">
+            We <span className="text-purple-500">support</span> you in achieving
+            your endeavors because your{" "}
+            <span className="text-purple-500">personal growth</span> is our
+            goal.
+          </h2>
+          <p>
+            <strong>We want to challenge curious and dedicated people </strong>
+            with an interest in founding an AI-based startup. We accept already
+            existing teams and individuals of any background and level of
+            experience, since we value motivation and commitment most. This is a
+            part-time program and we expect you to provide us with intermediate
+            deliverables on a weekly basis: pitches, MVPs, learning outcomes,
+            sprint planning, etc. Our events are planned to take place in
+            Munich, so you must be able join in person. The more you commit, the
+            more you get.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <VerticalCards
+          cards={[
+            {
+              title: "Access our Network",
+              text: "In order to shape something meaningful and have impact, knowledge alone does not suffice. You need a network of diverse people you can learn from and share your passion with. We therefore organize several events where you can meet and mingle with TUM.ai members, business and domain experts, startups, founders, investors and many more.",
+            },
+            {
+              title: "Learn and Grow",
+              text: "Everyone has superpowers and we support you in using them to excel. With hands-on workshops we provide you with the knowledge to found your AI startup and encourage you to test it in a real-world setting. Listening to and interacting with others are key to personal growth and success, which is why our program is customer-centric and feedback-oriented.",
+            },
+            {
+              title: "Count on our Support",
+              text: "We help you develop your final MVP and guide you through the program with individual coaching and tailored mentoring with founders and domain experts. You and your team have the opportunity to experience vidid discussions in our co-working spaces. We also provide you with software and hardware resources, and you can count on tech support.",
+            },
+            {
+              title: "We are Equity-free",
+              text: "Making AI and the founding process accessible to everyone is one of our missions at TUM.ai. We therefore do not charge any costs for the AI E-Lab and do not take any equity stake in your venture. Further, we don't expect pre-seed readiness or any initial investment. The only investment you have to arrange is your time, eagerness and dedication.",
+            },
+          ]}
+        />
       </Section>
 
       <Section>
