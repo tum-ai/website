@@ -65,7 +65,12 @@ export default function AIELab() {
 
       <Section background="inverted">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 text-center text-4xl font-semibold text-white">
+          <h2
+            className={cx(
+              "mb-8 text-center text-4xl font-semibold text-white",
+              bitter.className
+            )}
+          >
             Apply now and join the{" "}
             <span className="text-purple-500">AI E-Lab</span>
           </h2>
