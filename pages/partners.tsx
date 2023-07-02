@@ -1,34 +1,40 @@
 import Button from "@ui/Button";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
-import VerticalCards from "components/VerticalCards";
 import Image from "next/image";
 import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBullhorn,
+  faHandshakeSimple,
+  faHeart,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Partners() {
   const cards = [
     {
-      img: "/assets/partners/alelphalpha_workshop_group.jpg",
       title: "AI Talent Pool",
       text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
+      icon: faHeart,
     },
     {
-      img: "/assets/partners/richard_talk.jpg",
       title: "Marketing & Awareness",
       text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (3.5k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
+      icon: faBullhorn,
     },
     {
-      img: "/assets/partners/leopold_infineon.jpeg",
       title: "Project Collaborations",
       text: "Being a partner opens the door for many sorts of collaboration, like becoming a challenge setter for our Makeathons, joining for an industry project or hosting networking workshops with our members. We are only limited by your creativity!",
+      icon: faHandshakeSimple,
     },
     {
-      img: "/assets/partners/PnS_map_2023.jpg",
       title: "Network & Ecosystem",
       text: "We invite you to benefit from our entrepreneurial ecosystem, our own AI startup founders, as well as insights from our own R&D projects. We invite you to leverage our connections to other top university AI clubs, as well as the association to the TUM brand to drive AI in your company.",
+      icon: faPeopleGroup,
     },
   ];
 
@@ -43,7 +49,7 @@ export default function Partners() {
       <Section background="white">
         <h2
           className={cx(
-            "mb-8 text-4xl font-semibold md:mb-16",
+            "mb-8 text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -60,34 +66,31 @@ export default function Partners() {
       <Section background="inverted">
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+            "text-uppercase mb-8 w-full text-4xl font-semibold text-white",
             bitter.className
           )}
         >
-          Building the AI ecosystem in Munich, Germany, and worldwide by
-          connecting students, industry and academia.
+          Connecting students, industry and academia.
         </h2>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="mb-4 space-y-4">
-            <p className="text-xl font-bold">
+          <div className="mb-4">
+            <p className="mb-4 text-xl">
               Get access to our exclusive{" "}
               <span className="text-purple-300">
-                pre-selected talent pool of AI enthusiasts.
+                pre-selected talent pool of AI enthusiasts
               </span>
-            </p>
-            <p>
-              Our members are experienced in software development, data science,
-              data engineering and AI business strategy.
+              . Our members are experienced in software development, data
+              science, data engineering and AI business strategy.
             </p>
 
-            <p>
+            <p className="mb-4">
               Joining TUM.ai as a partner or sponsor can support our non-profit
               organization in many ways. Interact with us in our signature
               projects and formats like:
             </p>
 
-            <ul className="list-disc">
+            <ul className="mb-4 list-inside list-disc">
               <li>
                 <b>Challenge setter</b> for the Makeathon
               </li>
@@ -119,7 +122,7 @@ export default function Partners() {
                 network
               </li>
             </ul>
-            <p>
+            <p className="mb-8">
               We would be more than happy to discuss a long-term collaboration
               with you!
             </p>
@@ -131,11 +134,30 @@ export default function Partners() {
         </div>
       </Section>
 
-      <Section
-        background="white"
-        backgroundImage="/assets/partners/alephalpha_workshop.jpg"
-      >
-        <VerticalCards cards={cards} />
+      <Section background="white">
+        <h2
+          className={cx(
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
+            bitter.className
+          )}
+        >
+          What we offer
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          {cards.map((card) => (
+            <article key={card.title} className="flex gap-8">
+              <FontAwesomeIcon
+                icon={card.icon}
+                size="2xl"
+                className="h-8 w-8 rounded bg-purple-500 p-2 text-white duration-500"
+              />
+              <div>
+                <h3 className="mb-4 text-xl font-semibold">{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </Section>
     </>
   );

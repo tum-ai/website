@@ -4,7 +4,7 @@ import {
   faCode,
   faFileContract,
   faGraduationCap,
-  faHandshake,
+  faHandshakeSimple,
   faIndustry,
   faLaptop,
   faRocket,
@@ -83,6 +83,6 @@ export const departments: Department[] = [
     description:
       "We make sure that we cooperate with the most awesome partners and sponsors and thereby strengthen the TUM.AI network. Our partner- and sponsorships are the basis for creating ambitious events and project collaborations. ",
     image: "https://www.tum-ai.com/assets/img/departments/partners.jpg",
-    icon: faHandshake,
+    icon: faHandshakeSimple,
   },
 ];

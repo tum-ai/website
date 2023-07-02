@@ -6,7 +6,7 @@ const styles = cva("relative p-8 md:p-16", {
   variants: {
     background: {
       white: "",
-      inverted: "bg-gradient-to-b from-blue-600 to-blue-700 p-8 text-white",
+      inverted: "bg-gradient-to-b from-blue-700 to-blue-800 text-white",
     },
   },
   defaultVariants: {
@@ -31,12 +31,9 @@ export default function Section({
       {backgroundImage && (
         <Image
           src={backgroundImage}
-          style={{
-            objectFit: "cover",
-          }}
           alt="Hero background image"
           fill
-          className="absolute -z-10"
+          className="absolute -z-10 object-cover"
         />
       )}
       <div className="container mx-auto">{children}</div>

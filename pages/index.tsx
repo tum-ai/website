@@ -39,7 +39,7 @@ export default function Index() {
       <Section>
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -52,7 +52,7 @@ export default function Index() {
       <Section>
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >
@@ -206,7 +206,7 @@ function Content2() {
   return (
     <Section>
       <h2
-        className={cx("mb-8 text-4xl font-semibold md:mb-16", bitter.className)}
+        className={cx("mb-8 text-4xl font-semibold", bitter.className)}
       >
         With over 170 active members, TUM.ai is{" "}
         <span className="text-purple-500">
@@ -215,17 +215,15 @@ function Content2() {
       </h2>
 
       <div className="grid gap-16 lg:grid-cols-2">
-        {/* image */}
-        <div className="relative h-[450px] w-full rounded bg-blend-overlay">
-          <div className="absolute z-10 h-full w-full bg-purple-500 opacity-20"></div>
+        <div className="relative h-[450px] w-full rounded">
           <Image
             src={"/assets/aibootcamp.jpg"}
             alt=""
             fill
-            className="object-cover"
+            className="rounded object-cover"
           />
         </div>
-        {/* text */}
+
         <div className="mb-4 space-y-4">
           <p className="text-xl font-bold">
             Get access to our{" "}
@@ -267,25 +265,26 @@ function Content2() {
             </p>
           </div>
         </div>
-        {/* card */}
-        <div className="flex flex-col items-center space-y-2 rounded bg-gray-100 p-8 shadow">
-          <p className="text-center">
-            <span className="font-bold text-purple-500">
-              Interested in joining TUM.ai?{" "}
-            </span>
-            Visit our Transparency Page to learn more! (application phase ended
-            for this semester)
-          </p>
-          <div className="m-auto flex w-fit flex-col items-center space-x-0 space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
-            <Button asChild>
-              <Link href={"https://www.tum-ai.com/members.html"}>
-                Meet our Members
-              </Link>
-            </Button>
-            <Button asChild>
-              <Link href="https://join-us.tum-ai.com/">Learn more!</Link>
-            </Button>
-          </div>
+      </div>
+
+      <div className="mt-12 flex flex-col items-center space-y-2 rounded p-8 text-center">
+        <h3 className="text-3xl font-semibold">
+          Interested in joining TUM.ai?
+        </h3>
+        <p>
+          Visit our Transparency Page to learn more! (application phase ended
+          for this semester)
+        </p>
+
+        <div className="m-auto flex flex-col items-center space-x-0 space-y-2 pt-4 lg:flex-row lg:space-x-2 lg:space-y-0">
+          <Button asChild>
+            <Link href={"https://www.tum-ai.com/members.html"}>
+              Meet our Members
+            </Link>
+          </Button>
+          <Button asChild intent="tertiary">
+            <Link href="https://join-us.tum-ai.com/">Learn more!</Link>
+          </Button>
         </div>
       </div>
     </Section>
@@ -297,7 +296,7 @@ function Content3() {
     <Section background="inverted">
       <h2
         className={cx(
-          "text-uppercase mb-12 w-full text-4xl font-semibold text-white",
+          "text-uppercase mb-8 w-full text-4xl font-semibold text-white",
           bitter.className
         )}
       >
@@ -325,14 +324,14 @@ function Content3() {
             TUM.ai&apos;s industry project format. (Student Data Consultancy)
           </p>
 
-          <div className="flex w-fit flex-col items-start space-y-4 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0">
+          <div className="flex w-fit flex-col items-start space-y-4 pt-8 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0">
             <Button asChild>
+              <Link href="https://join-us.tum-ai.com/">Apply as a partner</Link>
+            </Button>
+            <Button asChild intent="tertiary">
               <Link href="https://www.tum-ai.com/forPartners.html">
                 Partner&apos;s of TUM.ai
               </Link>
-            </Button>
-            <Button asChild>
-              <Link href="https://join-us.tum-ai.com/">Apply as a partner</Link>
             </Button>
           </div>
         </div>
@@ -355,7 +354,7 @@ function Slack() {
       <div className="flex flex-col">
         <h2
           className={cx(
-            "text-uppercase mb-12 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-4xl font-semibold",
             bitter.className
           )}
         >

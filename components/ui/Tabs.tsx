@@ -1,31 +1,31 @@
-import * as RTabs from "@radix-ui/react-tabs";
+import * as RadixTabs from "@radix-ui/react-tabs";
 import React from "react";
 
 export interface Props {
-  data: {
+  tabs: {
     [name: string]: React.ReactNode;
   };
 }
 
-export default function Tabs({ data }: Props) {
+export default function Tabs({ tabs }: Props) {
   return (
-    <RTabs.Root defaultValue="students">
-      <RTabs.List className="grid grid-cols-2 text-xl">
-        {Object.keys(data).map((key) => (
-          <RTabs.Trigger
-            key={key}
-            value={key}
+    <RadixTabs.Root defaultValue={Object.keys(tabs).at(0)}>
+      <RadixTabs.List className="grid grid-cols-2 text-xl">
+        {Object.keys(tabs).map((tabName) => (
+          <RadixTabs.Trigger
+            key={tabName}
+            value={tabName}
             className="border-b-2 border-gray-400 p-4 text-gray-400 data-[state=active]:border-purple-500 data-[state=active]:text-purple-500"
           >
-            {key}
-          </RTabs.Trigger>
+            {tabName}
+          </RadixTabs.Trigger>
         ))}
-      </RTabs.List>
-      {Object.keys(data).map((key) => (
-        <RTabs.Content key={key} value={key}>
-          {data[key]}
-        </RTabs.Content>
+      </RadixTabs.List>
+      {Object.keys(tabs).map((tabName) => (
+        <RadixTabs.Content key={`${tabName}-content`} value={tabName}>
+          {tabs[tabName]}
+        </RadixTabs.Content>
       ))}
-    </RTabs.Root>
+    </RadixTabs.Root>
   );
 }
