@@ -7,11 +7,11 @@ export interface Props {
   };
 }
 
-export default function Tabs({ tabs: data }: Props) {
+export default function Tabs({ tabs }: Props) {
   return (
-    <RadixTabs.Root defaultValue="students">
+    <RadixTabs.Root defaultValue={Object.keys(tabs).at(0)}>
       <RadixTabs.List className="grid grid-cols-2 text-xl">
-        {Object.keys(data).map((tabName) => (
+        {Object.keys(tabs).map((tabName) => (
           <RadixTabs.Trigger
             key={tabName}
             value={tabName}
@@ -21,9 +21,9 @@ export default function Tabs({ tabs: data }: Props) {
           </RadixTabs.Trigger>
         ))}
       </RadixTabs.List>
-      {Object.keys(data).map((tabContent) => (
-        <RadixTabs.Content key={tabContent} value={tabContent}>
-          {data[tabContent]}
+      {Object.keys(tabs).map((tabName) => (
+        <RadixTabs.Content key={`${tabName}-content`} value={tabName}>
+          {tabs[tabName]}
         </RadixTabs.Content>
       ))}
     </RadixTabs.Root>
