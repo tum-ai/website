@@ -18,9 +18,9 @@ export default function VerticalCards({ cards }: Props) {
 }
 
 interface CardProps {
-  img: string;
   title: string;
   text: string;
+  img?: string;
   subtext?: string;
   buttons?: (Omit<ButtonProps, "children"> & { text: string; href: string })[];
 }
@@ -28,7 +28,9 @@ interface CardProps {
 function Card(card: CardProps) {
   return (
     <article className="flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white shadow">
-      <Image alt={card.title} src={card.img} width={1000} height={100} />
+      {!!card.img && (
+        <Image alt={card.title} src={card.img} width={1000} height={100} />
+      )}
 
       <div className="flex flex-col space-y-4 p-4">
         <h3 className="text-xl font-semibold">{card.title}</h3>
