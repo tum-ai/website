@@ -215,8 +215,7 @@ function Content2() {
       </h2>
 
       <div className="grid gap-16 lg:grid-cols-2">
-        <div className="relative h-[450px] w-full rounded bg-blend-overlay">
-          <div className="absolute z-10 h-full w-full bg-purple-500 opacity-20"></div>
+        <div className="relative h-[450px] w-full rounded">
           <Image
             src={"/assets/aibootcamp.jpg"}
             alt=""
