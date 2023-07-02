@@ -19,8 +19,8 @@ export default function Industry() {
         subtitle="Your stepping stone to a career in AI"
       />
       <Tabs
-        data={{
-          students: <StudentsSection />,
+        tabs={{
+          Students: <StudentsSection />,
           Industry: <IndustrySection />,
         }}
       />
@@ -35,7 +35,7 @@ export default function Industry() {
         <div className="mx-auto w-full">
           <h2
             className={cx(
-              "mb-12 text-4xl font-semibold text-white",
+              "mb-8 text-4xl font-semibold text-white",
               bitter.className
             )}
           >
@@ -52,11 +52,11 @@ export default function Industry() {
       </Section>
       <Section>
         <div className="justify-center sm:px-4">
-          <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
+          <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
             Examples of previous AI Projects
           </h2>
-          <p className="mb-12">
-            Explore how our AI enthusiasts have created{" "}
+          <p className="mb-8">
+            Explore how our participants have created{" "}
             <span className="text-purple-600">measurable impact</span> in the
             past.
           </p>
@@ -71,9 +71,8 @@ export default function Industry() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-t-lg"
+                      fill
+                      className="rounded-t-lg object-cover"
                     />
                   </div>
                   <div className="rounded-b-lg bg-white p-6 text-purple-950">
@@ -133,9 +132,7 @@ function StudentsSection() {
       <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg sm:shadow-blue-500/20">
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
-            <h2
-              className={cx("mb-12 text-4xl font-semibold", bitter.className)}
-            >
+            <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
               Applications for Industry Phase 5.0 will open in summer
             </h2>
             <p>
@@ -172,26 +169,20 @@ function StudentsSection() {
               />
             </div>
             <div className="my-3 space-y-8 rounded-lg  p-8">
-              <h3 className="text-xl font-medium">
+              <p>
                 Visit our official Projects Notion Page to learn more about the
                 individual projects and partner companies of industry phase 5.0
-              </h3>
-              <div className="space-x-4 text-white">
-                <Button
-                  onClick={() =>
-                    window.open(
-                      "https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc"
-                    )
-                  }
-                >
-                  project page
+              </p>
+              <div className="flex flex-col justify-center text-white sm:flex-row sm:space-x-4">
+                <Button asChild>
+                  <Link href="https://industry.tum-ai.com/apply">
+                    Sign up now
+                  </Link>
                 </Button>
-                <Button
-                  onClick={() =>
-                    window.open("https://industry.tum-ai.com/apply")
-                  }
-                >
-                  sign up now
+                <Button asChild intent="tertiary">
+                  <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc">
+                    Project page
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -206,52 +197,47 @@ function IndustrySection() {
   return (
     <Section className="flex animate-fadeIn justify-center lg:flex-col">
       <div className="rounded-3xl shadow-purple-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
-        <h2 className={cx("mb-3 text-4xl font-semibold", bitter.className)}>
+        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
           Industry Phase 5.0 starting in Fall 2023
         </h2>
         <div className="grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
           <div>
-            <p className="mb-8 text-xl">
+            <p className="mb-8">
               We manage Munich&apos;s top pool of
               <span className="font-bold text-purple-600"> AI talent </span>
               and offer affordable, high-quality solutions without any long-term
               liabilities!
             </p>
             <Dialog
-              content={{
-                trigger: <>connect!</>,
-                title: <>Let&apos;s connect!</>,
-                body: (
-                  <>
-                    <p className="text-sm text-gray-700">
-                      If you are interested in partnering with TUM.ai as a
-                      sponsor, Makeathon challenge-setter, Industry project
-                      partner, Workshop host, etc. please reach out to our
-                      &quot;Partners & Sponsors&quot; department.
-                    </p>
-                    <p className="text-xl font-medium text-purple-500">
-                      <a href="mailto:partners@tum-ai.com">
-                        partners@tum-ai.com
-                      </a>
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      TUM.ai Student Initiative
-                      <br />
-                      Arcisstraße 21.
-                      <br />
-                      80333 Munich
-                    </p>
-                  </>
-                ),
-                close: <Button className="text-white">Close</Button>,
-              }}
+              trigger={<Button>connect!</Button>}
+              title="Let's connect!"
+              body={
+                <>
+                  <p className="text-sm text-gray-700">
+                    If you are interested in partnering with TUM.ai as a
+                    sponsor, Makeathon challenge-setter, Industry project
+                    partner, Workshop host, etc. please reach out to our
+                    &quot;Partners & Sponsors&quot; department.
+                  </p>
+                  <p className="text-xl font-medium text-purple-500">
+                    <a href="mailto:partners@tum-ai.com">partners@tum-ai.com</a>
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    TUM.ai Student Initiative
+                    <br />
+                    Arcisstraße 21.
+                    <br />
+                    80333 Munich
+                  </p>
+                </>
+              }
+              hasCloseButton
             />
           </div>
-          <div className="flex flex-col items-center justify-center space-y-6 py-4">
+          <div className="flex flex-col items-center space-y-6 py-4 xl:items-start">
             <Image
               src={"/assets/industry/freearifiat.png"}
               className="rounded-xl shadow-lg shadow-purple-800/20"
-              layout="respinsive"
               alt="Ferrari for Fiat"
               width={500}
               height={100}
@@ -260,7 +246,7 @@ function IndustrySection() {
         </div>
 
         <div className="mt-16 ">
-          <h3 className={cx("mb-4 text-3xl font-semibold")}>
+          <h3 className={cx("mb-8 text-3xl font-semibold")}>
             What is an <span className="text-purple-600">AI Project</span>?
           </h3>
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16">

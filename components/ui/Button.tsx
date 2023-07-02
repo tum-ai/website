@@ -13,7 +13,7 @@ const styles = cva(
         secondary:
           "border-4 border-purple-500 text-purple-500 hover:bg-purple-100",
         tertiary:
-          "border-4 border-transparent text-purple-500 hover:bg-purple-100",
+          "border-4 border-transparent text-purple-500 hover:text-purple-400",
       },
     },
     defaultVariants: {
