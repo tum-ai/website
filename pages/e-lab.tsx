@@ -11,6 +11,8 @@ import * as THREE from "three";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import VerticalCards from "@components/VerticalCards";
+import { cx } from "class-variance-authority";
+import { bitter } from "@styles/fonts";
 
 export default function AIELab() {
   return (
@@ -18,9 +20,9 @@ export default function AIELab() {
       <Hero />
       <Section className="relative overflow-hidden bg-black">
         text-stroke text-4xl font-bold text-transparent
-        <h1 className="text-center text-4xl font-bold text-white">
+        <h2 className="text-center text-4xl font-bold text-white">
           Last E-Lab
-        </h1>
+        </h2>
         <div className="sm-gap-4 mx-auto my-8 grid max-w-2xl justify-items-center sm:grid-cols-3">
           <Stat description={"Workshops"} value={"17+"} />
           <Stat description={"Startups"} value={"15"} />
@@ -41,7 +43,12 @@ export default function AIELab() {
       <Section>
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
-            <h2 className="mb-8 w-full text-4xl font-semibold">
+            <h2
+              className={cx(
+                "mb-8 w-full text-4xl font-semibold",
+                bitter.className
+              )}
+            >
               You,
               <br />
               Yes you.
@@ -66,7 +73,12 @@ export default function AIELab() {
           </div>
 
           <div>
-            <h2 className="mb-8 w-full text-4xl font-semibold">
+            <h2
+              className={cx(
+                "mb-8 w-full text-4xl font-semibold",
+                bitter.className
+              )}
+            >
               How founders experience the{" "}
               <span className="text-purple-500">AI E-Lab</span>.
             </h2>
@@ -85,7 +97,12 @@ export default function AIELab() {
 
       <Section>
         <div className="lg:max-w-[50%]">
-          <h2 className="mb-8 w-full text-4xl font-semibold">
+          <h2
+            className={cx(
+              "mb-8 w-full text-4xl font-semibold",
+              bitter.className
+            )}
+          >
             We <span className="text-purple-500">support</span> you in achieving
             your endeavors because your{" "}
             <span className="text-purple-500">personal growth</span> is our
@@ -130,21 +147,21 @@ export default function AIELab() {
 
       <Section>
         <div className="mb-24">
-          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
+          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             1. Premium Sponsors
           </h3>
           <Logos logos={partners} />
         </div>
 
         <div className="mb-24">
-          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
+          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             2. Sponsors
           </h3>
           <Logos logos={partners} />
         </div>
 
         <div className="mb-24">
-          <h3 className="text-uppercase mb-12 w-full text-center text-4xl font-semibold">
+          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             3. Workshops and more by
           </h3>
           <Logos logos={partners} />
