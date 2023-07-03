@@ -2,50 +2,31 @@ import { ELabHero } from "@components/heroes/Elab";
 import Stat from "@components/Stat";
 import Section from "@components/ui/Section";
 import Image from "next/image";
-import SwiperCore, { Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
 
-SwiperCore.use([Navigation]);
-
-function Slider({ data }) {
+function SliderCard({ imgSrc, name, text }) {
   return (
-      <div className="relative">
-        <Swiper
-            spaceBetween={40}
-            centeredSlides={true}
-            loop={true}
-            className="mySwiper"
-            mousewheel={true}
-            slidesPerView="auto"
-            modules={[Navigation]}
-            navigation={true}
-            grabCursor={true}
-        >
-          {data.map((item, index) => (
-              <SwiperSlide key={index} style={{ width: "250px" }}>
-                <SliderCard
-                    imgSrc={item.imgSrc}
-                    name={item.name}
-                    text={item.text}
-                />
-              </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="relative h-full w-full min-w-sm rounded-lg grayscale saturate-200 overflow-hidden">
+        <Image src={imgSrc} alt={name} layout="fill" objectFit="cover"/>
+        <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+          <h2 className="font-bold">{name}</h2>
+          <p>{text}</p>
+        </div>
       </div>
   );
 }
 
-
-function SliderCard({ imgSrc, name, text }) {
+function SnapSlider({ data }) {
   return (
-      <div className="relative h-60 max-w-sm overflow-hidden rounded-lg grayscale saturate-200">
-        <Image src={imgSrc} alt={name} layout="fill" objectFit="cover" />
-        <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-50 p-2 text-white backdrop-blur">
-          <h2 className="font-bold">{name}</h2>
-          <p>{text}</p>
-        </div>
+      <div className="snap-x flex overflow-x-auto scrollbar-hide space-x-8 pb-4">
+        {data.map((item, index) => (
+            <div className="snap-center inline-flex min-w-[220px] min-h-[220px] align-middle" key={index}>
+              <SliderCard
+                  imgSrc={item.imgSrc}
+                  name={item.name}
+                  text={item.text}
+              />
+            </div>
+        ))}
       </div>
   );
 }
@@ -142,7 +123,7 @@ export default function AIELab() {
           <h1 className="mb-16 text-center text-4xl font-bold text-white">
             Our mentor network
           </h1>
-          <Slider data={data} />
+          <SnapSlider data={data} />
         </Section>
       </>
   );
