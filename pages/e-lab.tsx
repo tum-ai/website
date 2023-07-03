@@ -42,10 +42,10 @@ export default function AIELab() {
         </div>
       </Section>
       <Section className="relative overflow-hidden bg-black">
-        <h1 className="mb-16 text-center text-4xl font-bold text-white">
+        <h2 className="mb-16 text-center text-4xl font-bold text-white">
           Our mentor network
-        </h1>
-        <SnapSlider data={ mentors } />
+        </h2>
+        <SnapSlider cards={ mentors } />
       </Section>
       <Section>
         <div className="grid gap-16 lg:grid-cols-2">
@@ -274,23 +274,19 @@ function SliderCard({ imgSrc, name, text }) {
       <div className="relative h-full w-full min-w-sm rounded-lg grayscale saturate-200 overflow-hidden">
         <Image src={imgSrc} alt={name} fill objectFit="cover"/>
         <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
-          <h2 className="font-bold">{name}</h2>
+          <h3 className="font-bold">{name}</h3>
           <p>{text}</p>
         </div>
       </div>
   );
 }
 
-function SnapSlider({ data }) {
+function SnapSlider({ cards }) {
   return (
       <div className="snap-x flex overflow-x-auto scrollbar-hide space-x-8 pb-4">
-        {data.map((item, index) => (
-            <div className="snap-center inline-flex min-w-[220px] min-h-[220px] align-middle" key={index}>
-              <SliderCard
-                  imgSrc={item.imgSrc}
-                  name={item.name}
-                  text={item.text}
-              />
+        {cards.map(card => (
+            <div className="snap-center inline-flex min-w-[220px] min-h-[220px] align-middle" key={`${card.name}-${card.text}`}>
+              <SliderCard {...card}/>
             </div>
         ))}
       </div>
