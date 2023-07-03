@@ -1,5 +1,5 @@
-@layer tailwind {
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
