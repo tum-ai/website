@@ -11,7 +11,7 @@ const styles = cva(
         primary:
           "border-4 border-purple-500 text-white bg-purple-500 hover:bg-purple-400 hover:border-purple-400",
         secondary:
-          "border-4 border-purple-500 text-purple-500 hover:bg-purple-100",
+          "border-4 border-purple-500 text-purple-500 hover:border-purple-400 hover:text-purple-400",
         tertiary:
           "border-4 border-transparent text-purple-500 hover:text-purple-400",
       },
