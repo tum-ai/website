@@ -14,7 +14,73 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import VerticalCards from "@components/VerticalCards";
 import { cx } from "class-variance-authority";
-import { bitter } from "@styles/fonts";
+import { bitter, interBold } from "@styles/fonts";
+
+function Hero() {
+  const fullConfig = resolveConfig(tailwindConfig);
+
+  return (
+    <section className="-z-10 h-screen">
+      <div className="absolute top-0 -z-10 h-full w-full bg-black">
+        <Canvas camera={{ position: [2, 0, 0] }}>
+          <ambientLight intensity={0.05} />
+          <directionalLight intensity={1} position={[1.4, 2, 0]} />
+
+          <mesh>
+            <icosahedronGeometry args={[1, 10]} />
+            <MeshDistortMaterial
+              distort={0.3}
+              wireframe={true}
+              wireframeLinewidth={5}
+              color={fullConfig.theme.colors.purple["600"]}
+              transparent
+              opacity={0.4}
+              blending={THREE.AdditiveBlending}
+            />
+          </mesh>
+
+          <Sphere args={[0.9]}>
+            <MeshDistortMaterial
+              distort={0.3}
+              blending={THREE.MultiplyBlending}
+            />
+          </Sphere>
+        </Canvas>
+      </div>
+
+      <div className="flex h-full w-full items-center text-white">
+        <div className="mx-auto max-w-3xl space-y-6 p-8 md:p-16">
+          <span className={interBold.className}>
+            <h1 className="text-stroke text-center text-9xl font-bold text-transparent">
+              AI
+            </h1>
+            <h2 className="text-stroke text-4xl font-bold text-transparent sm:text-6xl">
+              Entrepreneurship Lab
+            </h2>
+          </span>
+
+          <p className="max-w-lg text-2xl font-bold">
+            Join the AI E-Lab and unlock your potential to shape the future of
+            technology
+          </p>
+
+          <Button>Apply</Button>
+        </div>
+      </div>
+
+      <button
+        className="absolute bottom-16 left-[50%] -translate-x-[50%]"
+        onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}
+      >
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          size="2xl"
+          className="animate-bounce text-white"
+        />
+      </button>
+    </section>
+  );
+}
 
 export default function AIELab() {
   return (
@@ -200,72 +266,6 @@ export default function AIELab() {
         </div>
       </Section>
     </>
-  );
-}
-
-function Hero() {
-  const fullConfig = resolveConfig(tailwindConfig);
-
-  return (
-    <section className="-z-10 h-screen">
-      <div className="absolute top-0 -z-10 h-full w-full bg-black">
-        <Canvas camera={{ position: [2, 0, 0] }}>
-          <ambientLight intensity={0.05} />
-          <directionalLight intensity={1} position={[1.4, 2, 0]} />
-
-          <mesh>
-            <icosahedronGeometry args={[1, 10]} />
-            <MeshDistortMaterial
-              distort={0.3}
-              wireframe={true}
-              wireframeLinewidth={5}
-              color={fullConfig.theme.colors.purple["600"]}
-              transparent
-              opacity={0.4}
-              blending={THREE.AdditiveBlending}
-            />
-          </mesh>
-
-          <Sphere args={[0.9]}>
-            <MeshDistortMaterial
-              distort={0.3}
-              blending={THREE.MultiplyBlending}
-            />
-          </Sphere>
-        </Canvas>
-      </div>
-
-      <div className="flex h-full w-full items-center text-white">
-        <div className="mx-auto max-w-3xl space-y-6 p-8 md:p-16">
-          <span>
-            <h1 className="text-stroke text-center text-9xl font-bold text-transparent">
-              AI
-            </h1>
-            <h2 className="text-stroke text-4xl font-bold text-transparent sm:text-6xl">
-              Entrepreneurship Lab
-            </h2>
-          </span>
-
-          <p className="max-w-lg text-2xl font-bold">
-            Join the AI E-Lab and unlock your potential to shape the future of
-            technology
-          </p>
-
-          <Button>Apply</Button>
-        </div>
-      </div>
-
-      <button
-        className="absolute bottom-16 left-[50%] -translate-x-[50%]"
-        onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}
-      >
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          size="2xl"
-          className="animate-bounce text-white"
-        />
-      </button>
-    </section>
   );
 }
 

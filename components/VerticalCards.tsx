@@ -27,7 +27,7 @@ interface CardProps {
 
 function Card(card: CardProps) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white shadow">
+    <article className="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
       {!!card.img && (
         <Image alt={card.title} src={card.img} width={1000} height={100} />
       )}
