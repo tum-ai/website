@@ -6,12 +6,7 @@ export default function Stat2({
   className = "text-white",
 }) {
   return (
-    <div
-      className={cx(
-        "flex h-40 w-48 max-w-sm flex-col items-center justify-center space-y-1 rounded-xl",
-        className
-      )}
-    >
+    <div className={cx("flex flex-col items-center gap-2 p-8", className)}>
       <h3 className="text-5xl font-bold">{value}</h3>
       <p className="text-md">{description}</p>
     </div>
