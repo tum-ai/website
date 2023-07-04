@@ -47,12 +47,7 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2
-          className={cx(
-            "mb-8 text-4xl font-semibold",
-            bitter.className
-          )}
-        >
+        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>

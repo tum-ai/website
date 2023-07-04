@@ -205,9 +205,7 @@ function Content1() {
 function Content2() {
   return (
     <Section>
-      <h2
-        className={cx("mb-8 text-4xl font-semibold", bitter.className)}
-      >
+      <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
         With over 170 active members, TUM.ai is{" "}
         <span className="text-purple-500">
           Germany&apos;s leading AI student initiative
