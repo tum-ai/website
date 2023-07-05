@@ -48,21 +48,21 @@ export default function Footer() {
         <div className="grid h-max sm:grid-cols-2 md:text-right">
           <Link
             className="py-2 underline duration-500 hover:text-purple-300"
-            href=""
+            href="mailto:contact@tum-ai.com"
           >
             Contact
           </Link>
           <Link
             className="py-2 underline duration-500 hover:text-purple-300"
-            href="inprint"
+            href="/inprint"
           >
             Inprint
           </Link>
           <Link
             className="py-2 underline duration-500 hover:text-purple-300"
-            href=""
+            href="/data-privacy"
           >
-            Terms &amp; Security
+            Data privacy
           </Link>
           <Link
             className="py-2 underline duration-500 hover:text-purple-300"
