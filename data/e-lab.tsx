@@ -45,3 +45,66 @@ export const partners = [
     alt: "Rhode-Schwarz",
   },
 ];
+
+export const mentors = [
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 1",
+    text: "This is person 1",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 2",
+    text: "This is person 2",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 3",
+    text: "This is person 3",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 1",
+    text: "This is person 4",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 2",
+    text: "This is person 5",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 3",
+    text: "This is person 6",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 1",
+    text: "This is person 7",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 2",
+    text: "This is person 8",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 3",
+    text: "This is person 9",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 1",
+    text: "This is person 10",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 2",
+    text: "This is person 11",
+  },
+  {
+    imgSrc: "/assets/partners/richard_talk.jpg",
+    name: "Person 3",
+    text: "This is person 12",
+  },
+];

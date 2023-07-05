@@ -2,7 +2,9 @@ import Logos from "@components/Logos";
 import Stat from "@components/Stat";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
+import Image from "next/image";
 import { partners } from "data/industry";
+import { mentors } from "data/e-lab";
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
@@ -105,7 +107,12 @@ export default function AIELab() {
           <Stat description={"hired employees"} value={"9"} />
         </div>
       </Section>
-
+      <Section className="relative overflow-hidden bg-black">
+        <h2 className="mb-16 text-center text-4xl font-bold text-white">
+          Our mentor network
+        </h2>
+        <SnapSlider cards={mentors} />
+      </Section>
       <Section>
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
@@ -259,5 +266,32 @@ export default function AIELab() {
         </div>
       </Section>
     </>
+  );
+}
+
+function SliderCard({ imgSrc, name, text }) {
+  return (
+    <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
+      <Image src={imgSrc} alt={name} fill objectFit="cover" />
+      <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+        <h3 className="font-bold">{name}</h3>
+        <p>{text}</p>
+      </div>
+    </div>
+  );
+}
+
+function SnapSlider({ cards }) {
+  return (
+    <div className="scrollbar-hidden sm:scrollbar-purple flex snap-x space-x-8 overflow-x-auto pb-4">
+      {cards.map((card) => (
+        <div
+          className="inline-flex min-h-[220px] min-w-[220px] snap-center align-middle"
+          key={`${card.name}-${card.text}`}
+        >
+          <SliderCard {...card} />
+        </div>
+      ))}
+    </div>
   );
 }

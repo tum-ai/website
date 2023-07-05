@@ -1,0 +1,15 @@
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .scrollbar-purple {
+    &::-webkit-scrollbar {
+      @apply flex bg-blue-800;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-2xl bg-purple-500;
+    }
+  }
+}
