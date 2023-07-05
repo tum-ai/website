@@ -3,7 +3,12 @@ import { cx } from "class-variance-authority";
 import Image from "next/image";
 import React from "react";
 
-export default function Hero({ imageSrc, title, subtitle }) {
+interface Props {
+  imageSrc: string;
+  title: string;
+  subtitle?: string;
+}
+export default function Hero({ imageSrc, title, subtitle }: Props) {
   return (
     <section className="relative overflow-hidden">
       <Image
@@ -16,7 +21,7 @@ export default function Hero({ imageSrc, title, subtitle }) {
         <h1 className={cx("mb-4 text-6xl font-medium", bitter.className)}>
           {title}
         </h1>
-        <p className="text-xl">{subtitle}</p>
+        {!!subtitle && <p className="text-xl">{subtitle}</p>}
       </div>
     </section>
   );

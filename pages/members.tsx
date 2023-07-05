@@ -27,6 +27,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
           className="object-cover grayscale"
           src={member.image}
           alt={`image of ${member.name}`}
+          unoptimized
           fill
           priority
         />
