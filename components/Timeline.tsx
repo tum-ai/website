@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Phase({ title, date, duration, imageSrc, phaseText }) {
   return (
     <motion.div
-      className="relative flex justify-between"
+      className="relative flex flex-col-reverse justify-between md:flex-row"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }} // customize transition here
@@ -22,10 +22,17 @@ function Phase({ title, date, duration, imageSrc, phaseText }) {
         <h2 className="mb-4 inline-block rounded-3xl bg-gradient-to-r from-blue-500 to-blue-900 px-4 py-2 text-xs font-medium text-gray-100">
           {date} <br />({duration})
         </h2>
-        <div className="relative mb-10 flex-1 rounded-3xl border-b-4 border-blue-200 bg-white shadow">
-          <Image src={imageSrc} alt={title} width={1920} height={1080} />
+        <div className="relative mb-10 flex flex-1 flex-col rounded-3xl border-b-4 border-blue-200 bg-white shadow">
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }} // optional
+          />
 
-          <div className="relative z-20 p-6">
+          <div className="z-20 p-6">
             <p className="mb-2 text-xl font-bold text-gray-900">{title}</p>
             <p className="text-gray-800">{phaseText}</p>
           </div>
@@ -43,7 +50,7 @@ export default function Timeline() {
           title="Formation and Exploration"
           date="2nd October - 15th October 2023"
           duration="2 Weeks"
-          imageSrc="/assets/e-lab/phases/co-founder.jpg"
+          imageSrc="/assets/e-lab/e-phases/co-founder.jpg"
           phaseText="
                     You will interact with potential co-founders, explore ideas
                     and form teams through the AI E-Lab onboarding, co-founder
@@ -58,7 +65,7 @@ export default function Timeline() {
           title="Idea Validation and Litmus Test"
           date="16th October - 12th November 2023"
           duration="4 Weeks"
-          imageSrc="/assets/e-lab/phases/ideation.jpeg"
+          imageSrc="/assets/e-lab/e-phases/ideation.jpeg"
           phaseText="
                     You will focus on validating and shaping your startup idea
                     from the previous phase through market research and
@@ -71,7 +78,7 @@ export default function Timeline() {
                     "
           date="13th November - 10 December 2023"
           duration="4 Weeks"
-          imageSrc="/assets/e-lab/phases/building.jpeg"
+          imageSrc="/assets/e-lab/e-phases/building.jpeg"
           phaseText="
                     If your team can make it through the Litmus Test with
                     validated ideas you will start to build prototypes, measure
@@ -89,7 +96,7 @@ export default function Timeline() {
                     "
           date="11th December 2023 - 19th Januray 2024"
           duration="4 Weeks"
-          imageSrc="/assets/e-lab/phases/final-pitch.jpg"
+          imageSrc="/assets/e-lab/e-phases/final-pitch.jpg"
           phaseText="
                     Should your team successfully pass the Stress Test, you will
                     continue to refine your prototypes into Minimum Viable
