@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Phase({ title, date, duration, imageSrc, phaseText }) {
   return (
     <motion.div
-      className="relative flex flex-col-reverse justify-between md:flex-row"
+      className="relative flex flex-row justify-between"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }} // customize transition here
