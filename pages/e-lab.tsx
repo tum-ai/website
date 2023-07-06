@@ -169,7 +169,7 @@ export default function AIELab() {
         </div>
       </Section>
       <Section className="z-0">
-        <Timeline/>
+        <Timeline />
       </Section>
 
       <Section>
