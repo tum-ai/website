@@ -15,6 +15,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import VerticalCards from "@components/VerticalCards";
 import { cx } from "class-variance-authority";
 import { bitter, interBold } from "@styles/fonts";
+import Timeline from "@components/Timeline";
 
 function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -167,32 +168,8 @@ export default function AIELab() {
           </div>
         </div>
       </Section>
-
-      <Section>
-        <div className="lg:max-w-[50%]">
-          <h2
-            className={cx(
-              "mb-8 w-full text-4xl font-semibold",
-              bitter.className
-            )}
-          >
-            We <span className="text-purple-500">support</span> you in achieving
-            your endeavors because your{" "}
-            <span className="text-purple-500">personal growth</span> is our
-            goal.
-          </h2>
-          <p>
-            <strong>We want to challenge curious and dedicated people </strong>
-            with an interest in founding an AI-based startup. We accept already
-            existing teams and individuals of any background and level of
-            experience, since we value motivation and commitment most. This is a
-            part-time program and we expect you to provide us with intermediate
-            deliverables on a weekly basis: pitches, MVPs, learning outcomes,
-            sprint planning, etc. Our events are planned to take place in
-            Munich, so you must be able join in person. The more you commit, the
-            more you get.
-          </p>
-        </div>
+      <Section className="z-0">
+        <Timeline/>
       </Section>
 
       <Section>
