@@ -2,7 +2,7 @@ import React from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import Image from "next/image";
 
-const styles = cva("relative p-8 md:p-16", {
+const styles = cva("relative py-8 md:py-16", {
   variants: {
     background: {
       white: "",
