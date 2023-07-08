@@ -87,7 +87,7 @@ export default function AIELab() {
   return (
     <>
       <Hero />
-      <Section className="relative overflow-hidden bg-black">
+      <Section className="relative overflow-hidden bg-black ">
         text-stroke text-4xl font-bold text-transparent
         <h2 className="text-center text-4xl font-bold text-white">
           Last E-Lab
@@ -109,13 +109,15 @@ export default function AIELab() {
         </div>
       </Section>
       <Section className="relative overflow-hidden bg-black">
-        <h2 className="mb-16 text-center text-4xl font-bold text-white">
-          Our mentor network
-        </h2>
-        <SnapSlider cards={mentors} />
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-16 text-center text-4xl font-bold text-white">
+            Our mentor network
+          </h2>
+          <SnapSlider cards={mentors} />
+        </div>
       </Section>
-      <Section>
-        <div className="grid gap-16 lg:grid-cols-2">
+      <Section className="mx-auto max-w-7xl">
+        <div className="grid gap-16 lg:grid-cols-2 ">
           <div>
             <h2
               className={cx(
@@ -168,11 +170,11 @@ export default function AIELab() {
           </div>
         </div>
       </Section>
-      <Section className="z-0">
+      <Section className="z-0 mx-auto max-w-7xl p-0">
         <Timeline />
       </Section>
 
-      <Section>
+      <Section className="mx-auto max-w-7xl">
         <VerticalCards
           cards={[
             {

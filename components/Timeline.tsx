@@ -10,7 +10,7 @@ function Phase({ title, date, duration, imageSrc, phaseText }) {
       transition={{ duration: 1 }} // customize transition here
       viewport={{ once: true }}
     >
-      <div className="mr-4 flex w-10 flex-col items-center md:w-24">
+      <div className="mr-4 flex w-10 flex-col items-center">
         <div>
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-200 ">
             <div className="h-4 w-4 rounded-full bg-blue-600"></div>
@@ -44,8 +44,8 @@ function Phase({ title, date, duration, imageSrc, phaseText }) {
 
 export default function Timeline() {
   return (
-    <div className="z-0 max-w-6xl justify-center md:px-6 lg:py-8">
-      <div className="mx-auto w-full lg:max-w-3xl">
+    <div className="z-0 justify-center lg:py-8 lg:pr-64">
+      <div className="mx-auto w-full">
         <Phase
           title="Formation and Exploration"
           date="2nd October - 15th October 2023"
