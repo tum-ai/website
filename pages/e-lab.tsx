@@ -197,7 +197,7 @@ export default function AIELab() {
         />
       </Section>
 
-      <Section>
+      <Section className="mx-auto max-w-7xl">
         <div className="mb-24">
           <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             1. Premium Sponsors
