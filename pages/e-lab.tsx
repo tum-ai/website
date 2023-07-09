@@ -72,30 +72,29 @@ export default function AIELab() {
     <>
       <Hero />
       <Section className="bg-purple-950 text-white">
-        <div className="md:w-3/5">
+        <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
             What is the AI E-Lab?
           </h2>
-          <p>
+          <p className="text-2xl">
             <span className="text-yellow-500">The AI Entrepreneurship Lab</span>{" "}
             is a 3-months founding journey for curious and driven individuals.
             We provide you with relevant knowhow and a team as well as support
             you in laying the foundation for your own AI startup.
           </p>
         </div>
+
         <div className="flex items-end justify-end">
-          <div className="mt-12 w-full md:w-3/5">
+          <div className="w-full md:w-3/5">
             <h3 className="mb-4 text-center text-4xl font-semibold text-yellow-500">
-              About last AI E-Lab
+              Our Last Batch of the E-Lab
             </h3>
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full rounded border-8 border-yellow-500"
+              className="aspect-video w-full rounded border-8 border-yellow-500"
             ></iframe>
           </div>
         </div>
@@ -111,7 +110,7 @@ export default function AIELab() {
           <span>can build sth great</span>
         </p>
 
-        <div className="my-12 grid gap-8 md:grid-cols-2">
+        <div className="my-12 grid gap-16 md:grid-cols-2">
           <p>
             Entrepreneurship means change and we believe that everyone is
             qualified to become an{" "}
@@ -145,7 +144,7 @@ export default function AIELab() {
           <Stat description={"Winners"} value={"3"} />
         </div>
 
-        <div className="mt-12">
+        <div className="mt-24">
           <h3 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
             Top 3 Startups have:
           </h3>
@@ -163,14 +162,14 @@ export default function AIELab() {
           Benefits
         </h2>
 
-        <p className="mb-12 text-center text-4xl">
+        <p className="mb-8 text-center text-4xl">
           We <span className="text-yellow-500">support </span>you in achieving
           your endeavors because your{" "}
           <span className="text-yellow-500">personal growth</span> is our{" "}
           <span className="text-yellow-500">goal</span>
         </p>
 
-        <p className="mb-12 text-center">
+        <p className="mb-32 text-center">
           We want to challenge curious and dedicated people with an interest in
           founding an AI-based startup. We accept already existing teams and
           individuals of any background and level of experience, since we value
@@ -209,7 +208,7 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-12 ml-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent md:ml-0">
           Timeline
         </h2>
         <Timeline
@@ -311,7 +310,7 @@ function SliderCard({ imgSrc, name, text }) {
 
 function SnapSlider({ cards }) {
   return (
-    <div className="scrollbar-hidden sm:scrollbar-purple flex snap-x space-x-8 overflow-x-auto pb-4">
+    <div className="scrollbar-hidden sm:scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
       {cards.map((card) => (
         <div
           className="inline-flex min-h-[220px] min-w-[220px] snap-center align-middle"

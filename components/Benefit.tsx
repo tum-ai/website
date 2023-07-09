@@ -32,7 +32,7 @@ interface Props extends VariantProps<typeof iconStyles> {
 
 const Benefits = ({ benefits, color }: Props) => {
   return (
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-16 md:grid-cols-2">
       {benefits.map((benefit) => (
         <article key={benefit.title} className="flex gap-8">
           <FontAwesomeIcon
