@@ -24,7 +24,7 @@ function Hero() {
   return (
     <section className="-z-10 h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
-        <Spline scene="https://prod.spline.design/jpWlmEoqcopISjbe/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/EAkcpdJTKDSGjRQS/scene.splinecode" />
       </div>
 
       <div className="flex h-full w-full items-center text-white">
@@ -63,77 +63,23 @@ export default function AIELab() {
   return (
     <>
       <Hero />
-      <Section className="relative overflow-hidden bg-black ">
-        text-stroke text-4xl font-bold text-transparent
-        <h2 className="text-center text-4xl font-bold text-white">
-          Last E-Lab
-        </h2>
-        <div className="sm-gap-4 mx-auto my-8 grid max-w-2xl justify-items-center sm:grid-cols-3">
-          <Stat description={"Workshops"} value={"17+"} />
-          <Stat description={"Startups"} value={"15"} />
-          <Stat description={"Winners"} value={"3"} />
-        </div>
-        <hr className="border-blue-700" />
-        <h2 className="mt-20 text-center text-2xl font-bold text-white">
-          Top 3 Startups have
-        </h2>
-        <div className="mx-auto mt-8 grid max-w-md grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-y-6 md:max-w-4xl md:grid-cols-4">
-          <Stat description={"B2B customers"} value={"8"} />
-          <Stat description={"funding"} value={"165K"} />
-          <Stat description={"revenue"} value={"25K"} />
-          <Stat description={"hired employees"} value={"9"} />
-        </div>
-      </Section>
-      <Section className="relative overflow-hidden bg-black">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mb-16 text-center text-4xl font-bold text-white">
-            Our mentor network
+      <Section className="bg-purple-950 text-white">
+        <div className="w-3/5">
+          <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
+            What is the AI E-Lab?
           </h2>
-          <SnapSlider cards={mentors} />
+          <p>
+            <span className="text-yellow-500">The AI Entrepreneurship Lab</span>{" "}
+            is a 3-months founding journey for curious and driven individuals.
+            We provide you with relevant knowhow and a team as well as support
+            you in laying the foundation for your own AI startup.
+          </p>
         </div>
-      </Section>
-      <Section className="mx-auto max-w-7xl">
-        <div className="grid gap-16 lg:grid-cols-2 ">
-          <div>
-            <h2
-              className={cx(
-                "mb-8 w-full text-4xl font-semibold",
-                bitter.className
-              )}
-            >
-              You,
-              <br />
-              Yes you.
-              <br />
-              <span className="text-purple-500">You can build</span> something
-              great.
-            </h2>
-
-            <p className="mb-4 text-xl font-bold">
-              Entrepreneurship means change and we believe that everyone is
-              qualified to become an entrepreneur.
-            </p>
-            <p>
-              Think about your last big achievement, your perseverance over
-              hurdles and what it took to succeed - you already proved that you
-              are a real changemaker. Are you ready for your next step? Great.
-              With our AI Entrepreneurship Lab we aim at making the founding of
-              AI startups accessible to everyone, including you. You bring in
-              the motivation and dedication, and we connect you and try to make
-              founding as easy as possible for you.
-            </p>
-          </div>
-
-          <div>
-            <h2
-              className={cx(
-                "mb-8 w-full text-4xl font-semibold",
-                bitter.className
-              )}
-            >
-              How founders experience the{" "}
-              <span className="text-purple-500">AI E-Lab</span>.
-            </h2>
+        <div className="flex items-end justify-end">
+          <div className="mt-12 w-3/5">
+            <h3 className="text-center text-4xl font-semibold text-yellow-500">
+              About last AI E-Lab
+            </h3>
             <iframe
               width="560"
               height="315"
@@ -141,11 +87,93 @@ export default function AIELab() {
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full"
+              className="w-full rounded border-8 border-yellow-500"
             ></iframe>
           </div>
         </div>
       </Section>
+
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase tracking-widest text-transparent">
+          How founders experience the E-Lab
+        </h2>
+        <p className="flex justify-between text-4xl font-semibold text-yellow-500">
+          <span>you</span>
+          <span>yes you</span>
+          <span>can build sth great</span>
+        </p>
+
+        <div className="my-12 grid grid-cols-2">
+          <p>
+            Entrepreneurship means change and we believe that everyone is
+            qualified to become an{" "}
+            <span className="text-red-500">entrepreneur</span>. Think about your
+            last big achievement, your perseverance over hurdles and what it
+            took to succeed - you already proved that you are a real
+            changemaker.
+          </p>
+
+          <p>
+            Are you ready for your next step? Great. With our AI
+            Entrepreneurship Lab we aim at making the founding of AI{" "}
+            <span className="text-red-500">startups</span>
+            accessible to everyone, including you. You bring in the motivation
+            and dedication, and we connect you and try to make founding as easy
+            as possible for you.
+          </p>
+        </div>
+
+        <SnapSlider cards={mentors} />
+      </Section>
+
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          Last AI E-Lab in numbers
+        </h2>
+
+        <div className="sm-gap-4 mx-auto my-8 grid max-w-2xl justify-items-center sm:grid-cols-3">
+          <Stat description={"Workshops"} value={"17+"} />
+          <Stat description={"Startups"} value={"15"} />
+          <Stat description={"Winners"} value={"3"} />
+        </div>
+
+        <div className="mt-12">
+          <h3 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
+            Top 3 Startups have:
+          </h3>
+          <div className="mx-auto mt-8 grid max-w-md grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-y-6 md:max-w-4xl md:grid-cols-4">
+            <Stat description={"B2B customers"} value={"8"} />
+            <Stat description={"funding"} value={"165K"} />
+            <Stat description={"revenue"} value={"25K"} />
+            <Stat description={"hired employees"} value={"9"} />
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          Benefits
+        </h2>
+
+        <p className="mb-12 text-center text-4xl">
+          We <span className="text-yellow-500">support </span>you in achieving
+          your endeavors because your{" "}
+          <span className="text-yellow-500">personal growth</span> is our{" "}
+          <span className="text-yellow-500">goal</span>
+        </p>
+
+        <p className="text-center">
+          We want to challenge curious and dedicated people with an interest in
+          founding an AI-based startup. We accept already existing teams and
+          individuals of any background and level of experience, since we value
+          motivation and commitment most. This is a part-time program and we
+          expect you to provide us with intermediate deliverables on a weekly
+          basis: pitches, MVPs, learning outcomes, sprint planning, etc. Our
+          events are planned to take place in Munich, so you must be able join
+          in person. The more you commit, the more you get.
+        </p>
+      </Section>
+
       <Section className="z-0 mx-auto max-w-7xl p-0">
         <Timeline />
       </Section>
