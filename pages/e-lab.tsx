@@ -5,11 +5,8 @@ import Section from "@components/ui/Section";
 import Image from "next/image";
 import { partners } from "data/industry";
 import { mentors } from "data/e-lab";
-import { MeshDistortMaterial, Sphere } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
-import * as THREE from "three";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
@@ -18,12 +15,11 @@ import {
   faHandsHoldingCircle,
   faHandshakeSimple,
 } from "@fortawesome/free-solid-svg-icons";
-import VerticalCards from "@components/VerticalCards";
 import { cx } from "class-variance-authority";
 import { bitter, interBold } from "@styles/fonts";
-import Timeline from "@components/Timeline";
 import Spline from "@splinetool/react-spline";
 import Benefits from "@components/Benefit";
+import Timeline from "@components/Timeline";
 
 function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -212,8 +208,38 @@ export default function AIELab() {
         />
       </Section>
 
-      <Section className="z-0 mx-auto max-w-7xl p-0">
-        <Timeline />
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          Timeline
+        </h2>
+        <Timeline
+          events={[
+            {
+              title: "Formation & Ideation",
+              duration: "4 Weeks",
+              date: "October 2023",
+              text: "Founders come together to explore ideas, meet their co-founders and build startup teams trough the AI E-Lab onboarding, co-founder matching/ team building, and ideation activities. This phase will end in a relaxed informal event where founders announce their teams and ideas",
+            },
+            {
+              title: "Idea validation",
+              duration: "2 Weeks",
+              date: "November 2023",
+              text: "Startups will focus on validating & shaping their ideals form the previous phase trough market research & developing robust business models that will undergo evaluation in a Litmus Test (first pitch event) to a jury",
+            },
+            {
+              title: "Build-measure learn",
+              duration: "4 Weeks",
+              date: "Nov - Dec 2023",
+              text: "Startups will make it trough the Litmus Test with validated ideas will start to build prototypes, measure performance, gather valuable feedback from mentors, industry experts, and customers, and continuously integrate towards achieving product-market fit. This phase will end with a Stress test (second pitch event) where more experienced jury will rigorously test the product market fit & prototypes of these startups and determine who is fit to make it to the final pitch to pitch to investors in Phase 4",
+            },
+            {
+              title: "Refinement & Final pitch",
+              duration: "4 Weeks",
+              date: "Dec - Jan 2024",
+              text: "Startups that make it trough the Stress Test will continue in this phase to refine their prototypes into Minimum Viable Products (MVP) and further refine their business models, and pitch based on the valuable feedback received from customers, mentors, industry experts, and the jury during the Stress Test. The goal of every startup in this phase will be to prepare to showcase their polished startups to real investors and a public audience in the AI E-Lab final pitch event",
+            },
+          ]}
+        />
       </Section>
 
       <Section className="bg-purple-950 text-white">

@@ -1,114 +1,153 @@
+import { cx } from "class-variance-authority";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
-function Phase({ title, date, duration, imageSrc, phaseText }) {
-  return (
-    <motion.div
-      className="relative flex flex-row justify-between"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }} // customize transition here
-      viewport={{ once: true }}
-    >
-      <div className="mr-4 flex w-10 flex-col items-center">
-        <div>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-200 ">
-            <div className="h-4 w-4 rounded-full bg-blue-600"></div>
-          </div>
-        </div>
-        <div className="h-full w-px bg-blue-300"></div>
-      </div>
-      <div>
-        <h2 className="mb-4 inline-block rounded-3xl bg-gradient-to-r from-blue-500 to-blue-900 px-4 py-2 text-xs font-medium text-gray-100">
-          {date} <br />({duration})
-        </h2>
-        <div className="relative mb-10 flex flex-1 flex-col rounded-3xl border-b-4 border-blue-200 bg-white shadow">
-          <Image
-            src={imageSrc}
-            alt={title}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }} // optional
-          />
-
-          <div className="z-20 p-6">
-            <p className="mb-2 text-xl font-bold text-gray-900">{title}</p>
-            <p className="text-gray-800">{phaseText}</p>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
+interface Event {
+  title: string;
+  duration: string;
+  date: string;
+  text: string;
 }
 
-export default function Timeline() {
-  return (
-    <div className="z-0 justify-center lg:py-8 lg:pr-64">
-      <div className="mx-auto w-full">
-        <Phase
-          title="Formation and Exploration"
-          date="2nd October - 15th October 2023"
-          duration="2 Weeks"
-          imageSrc="/assets/e-lab/e-phases/co-founder.jpg"
-          phaseText="
-                    You will interact with potential co-founders, explore ideas
-                    and form teams through the AI E-Lab onboarding, co-founder
-                    matching/team building, and ideation activities. This phase
-                    will end with a relaxed informal event where you and your
-                    team will share your ideas and concepts. Everybody who finds
-                    a team is admitted to the next stage.
-                    "
-        />
+interface EventProps {
+  event: Event;
+  step: number;
+}
 
-        <Phase
-          title="Idea Validation and Litmus Test"
-          date="16th October - 12th November 2023"
-          duration="4 Weeks"
-          imageSrc="/assets/e-lab/e-phases/ideation.jpeg"
-          phaseText="
-                    You will focus on validating and shaping your startup idea
-                    from the previous phase through market research and
-                    developing robust business models that will undergo
-                    evaluation in the first pitch event, a Litmus Test to a
-                    jury."
+const EventComponent = ({ event, step }: EventProps) => {
+  const stepGradient = [
+    "from-yellow-500 to-[#EF754E]",
+    "from-[#EF754E] to-red-500",
+    "from-red-500 to-purple-500",
+    "from-purple-500 to-purple-500",
+  ];
+  const stepText = [
+    "text-yellow-500",
+    "text-[#EF754E]",
+    "text-red-500",
+    "text-purple-500",
+  ];
+  const stepBackground = [
+    "bg-yellow-500",
+    "bg-[#EF754E]",
+    "bg-red-500",
+    "bg-purple-500",
+  ];
+  const stepBorder = [
+    "border-yellow-500",
+    "border-[#EF754E]",
+    "border-red-500",
+    "border-purple-500",
+  ];
+
+  const TextRight = ({ className = "" }) => (
+    <div className={cx("grid grid-cols-[1px_1fr] md:grid-cols-2", className)}>
+      <div className="relative h-full pl-8 md:pl-0">
+        <span
+          className={cx(
+            "absolute right-0 z-10 -mr-8 -mt-8 rounded-full border-8",
+            stepBorder[step - 1]
+          )}
+        >
+          <span
+            className={cx(
+              "m-2 flex h-9 w-9 items-center justify-center rounded-full text-2xl font-bold",
+              stepBackground[step - 1]
+            )}
+          >
+            {step}
+          </span>
+        </span>
+
+        <span
+          className={cx(
+            "absolute right-0 flex h-full w-2 bg-gradient-to-b",
+            stepGradient[step - 1]
+          )}
         />
-        <Phase
-          title="Build-Measure-Learn
-                    "
-          date="13th November - 10 December 2023"
-          duration="4 Weeks"
-          imageSrc="/assets/e-lab/e-phases/building.jpeg"
-          phaseText="
-                    If your team can make it through the Litmus Test with
-                    validated ideas you will start to build prototypes, measure
-                    performance, gather valuable feedback from mentors, industry
-                    experts, and customers, and continuously iterate towards
-                    achieving product-market fit. This phase will end with a
-                    Stress test (second pitch event) where a more experienced
-                    jury will rigorously test the product market fit and
-                    prototypes of your startup and determine who is fit enough
-                    to make it to the final pitch to pitch to investors in Phase
-                    4."
-        />
-        <Phase
-          title="Refinement and Final Pitch
-                    "
-          date="11th December 2023 - 19th Januray 2024"
-          duration="4 Weeks"
-          imageSrc="/assets/e-lab/e-phases/final-pitch.jpg"
-          phaseText="
-                    Should your team successfully pass the Stress Test, you will
-                    continue to refine your prototypes into Minimum Viable
-                    Products (MVPs) and further refine your business models, and
-                    pitches based on the valuable feedback received from
-                    customers, mentors, industry experts, and the jury during
-                    the Stress Test. The goal of your startup in this phase will
-                    be to prepare to showcase your polished startups to real
-                    investors and a public audience in the AI E-Lab final pitch
-                    event."
-        />
+      </div>
+      <div className="flex flex-col items-center gap-4 pb-32 pl-20 text-center">
+        <h3 className={cx("text-4xl uppercase", stepText[step - 1])}>
+          {event.title}
+        </h3>
+        <p>
+          <span className="text-xl font-semibold uppercase">
+            {event.duration}
+          </span>
+          <br />
+          <span>{event.date}</span>
+        </p>
+        <p>{event.text}</p>
       </div>
     </div>
   );
+
+  const TextLeft = ({ className = "" }) => (
+    <div className={cx("relative w-1/2", className)}>
+      <div className="relative flex h-full pl-8 md:pl-0">
+        <div className="flex flex-col items-center gap-4 pb-32 pr-20 text-center">
+          <h3 className={cx("text-4xl uppercase", stepText[step - 1])}>
+            {event.title}
+          </h3>
+          <p>
+            <span className="text-xl font-semibold uppercase">
+              {event.duration}
+            </span>
+            <br />
+            <span>{event.date}</span>
+          </p>
+          <p>{event.text}</p>
+        </div>
+      </div>
+
+      <span
+        className={cx(
+          "absolute right-0 z-10 -mr-8 -mt-8 rounded-full border-8",
+          stepBorder[step - 1]
+        )}
+      >
+        <span
+          className={cx(
+            "m-2 flex h-9 w-9 items-center justify-center rounded-full text-2xl font-bold",
+            stepBackground[step - 1]
+          )}
+        >
+          {step}
+        </span>
+      </span>
+
+      <span
+        className={cx(
+          "absolute right-0 flex h-full w-2 bg-gradient-to-b",
+          stepGradient[step - 1]
+        )}
+      />
+    </div>
+  );
+
+  if (step % 2 !== 0) {
+    return <TextRight />;
+  }
+
+  return (
+    <>
+      <TextRight className="md:hidden" />
+      <TextLeft className="hidden md:grid" />
+    </>
+  );
+};
+
+interface Props {
+  events: Event[];
 }
+
+const Timeline = ({ events }: Props) => {
+  return (
+    <div className="pt-8">
+      {events.map((event, i) => (
+        <EventComponent key={event.title} event={event} step={i + 1} />
+      ))}
+    </div>
+  );
+};
+
+export default Timeline;

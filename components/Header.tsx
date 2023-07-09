@@ -119,7 +119,7 @@ export const Header = () => {
   return (
     <motion.header
       className={cx(
-        "fixed z-10 w-full px-8 duration-500 md:px-16",
+        "z-50 fixed w-full px-8 duration-500 md:px-16",
         scrolled && !navOpen && "bg-blue-800/90 py-8 backdrop-blur-lg",
         (!scrolled || navOpen) && "py-12"
       )}
