@@ -16,6 +16,7 @@ import VerticalCards from "@components/VerticalCards";
 import { cx } from "class-variance-authority";
 import { bitter, interBold } from "@styles/fonts";
 import Timeline from "@components/Timeline";
+import Spline from "@splinetool/react-spline";
 
 function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -23,39 +24,14 @@ function Hero() {
   return (
     <section className="-z-10 h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
-        <Canvas camera={{ position: [2, 0, 0] }}>
-          <ambientLight intensity={0.05} />
-          <directionalLight intensity={1} position={[1.4, 2, 0]} />
-
-          <mesh>
-            <icosahedronGeometry args={[1, 10]} />
-            <MeshDistortMaterial
-              distort={0.3}
-              wireframe={true}
-              wireframeLinewidth={5}
-              color={fullConfig.theme.colors.purple["600"]}
-              transparent
-              opacity={0.4}
-              blending={THREE.AdditiveBlending}
-            />
-          </mesh>
-
-          <Sphere args={[0.9]}>
-            <MeshDistortMaterial
-              distort={0.3}
-              blending={THREE.MultiplyBlending}
-            />
-          </Sphere>
-        </Canvas>
+        <Spline scene="https://prod.spline.design/jpWlmEoqcopISjbe/scene.splinecode" />
       </div>
 
       <div className="flex h-full w-full items-center text-white">
         <div className="mx-auto max-w-3xl space-y-6 p-8 md:p-16">
-          <span className={interBold.className}>
-            <h1 className="text-stroke text-center text-9xl font-bold text-transparent">
-              AI
-            </h1>
-            <h2 className="text-stroke text-4xl font-bold text-transparent sm:text-6xl">
+          <span>
+            <h1 className="text-9xl font-bold">AI</h1>
+            <h2 className="text-4xl font-bold sm:text-6xl">
               Entrepreneurship Lab
             </h2>
           </span>
