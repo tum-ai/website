@@ -28,20 +28,25 @@ function Hero() {
       </div>
 
       <div className="flex h-full w-full items-center text-white">
-        <div className="mx-auto max-w-3xl space-y-6 p-8 md:p-16">
-          <span>
-            <h1 className="text-9xl font-bold">AI</h1>
-            <h2 className="text-4xl font-bold sm:text-6xl">
+        <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
+          <h1 className="font-bold">
+            <span className="text-8xl">AI</span>
+            <br />
+            <span className="text-3xl sm:text-5xl xl:text-8xl">
               Entrepreneurship Lab
-            </h2>
-          </span>
+            </span>
+          </h1>
 
-          <p className="max-w-lg text-2xl font-bold">
-            Join the AI E-Lab and unlock your potential to shape the future of
-            technology
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="mb-8 max-w-2xl text-center text-2xl font-bold">
+              Join the AI E-Lab and unlock your potential to shape the future of
+              technology
+            </p>
 
-          <Button>Apply</Button>
+            <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500">
+              Apply now
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -64,7 +69,7 @@ export default function AIELab() {
     <>
       <Hero />
       <Section className="bg-purple-950 text-white">
-        <div className="w-3/5">
+        <div className="md:w-3/5">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
             What is the AI E-Lab?
           </h2>
@@ -76,8 +81,8 @@ export default function AIELab() {
           </p>
         </div>
         <div className="flex items-end justify-end">
-          <div className="mt-12 w-3/5">
-            <h3 className="text-center text-4xl font-semibold text-yellow-500">
+          <div className="mt-12 w-full md:w-3/5">
+            <h3 className="mb-4 text-center text-4xl font-semibold text-yellow-500">
               About last AI E-Lab
             </h3>
             <iframe
@@ -97,13 +102,13 @@ export default function AIELab() {
         <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase tracking-widest text-transparent">
           How founders experience the E-Lab
         </h2>
-        <p className="flex justify-between text-4xl font-semibold text-yellow-500">
+        <p className="flex flex-col justify-between gap-2 text-4xl font-semibold text-yellow-500 sm:flex-row">
           <span>you</span>
           <span>yes you</span>
           <span>can build sth great</span>
         </p>
 
-        <div className="my-12 grid grid-cols-2">
+        <div className="my-12 grid gap-8 md:grid-cols-2">
           <p>
             Entrepreneurship means change and we believe that everyone is
             qualified to become an{" "}
@@ -131,7 +136,7 @@ export default function AIELab() {
           Last AI E-Lab in numbers
         </h2>
 
-        <div className="sm-gap-4 mx-auto my-8 grid max-w-2xl justify-items-center sm:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-24">
           <Stat description={"Workshops"} value={"17+"} />
           <Stat description={"Startups"} value={"15"} />
           <Stat description={"Winners"} value={"3"} />
@@ -141,11 +146,11 @@ export default function AIELab() {
           <h3 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
             Top 3 Startups have:
           </h3>
-          <div className="mx-auto mt-8 grid max-w-md grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-y-6 md:max-w-4xl md:grid-cols-4">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-24">
             <Stat description={"B2B customers"} value={"8"} />
-            <Stat description={"funding"} value={"165K"} />
-            <Stat description={"revenue"} value={"25K"} />
-            <Stat description={"hired employees"} value={"9"} />
+            <Stat description={"Funding"} value={"165K"} />
+            <Stat description={"Revenue"} value={"26K"} />
+            <Stat description={"Hired employees"} value={"15"} />
           </div>
         </div>
       </Section>
