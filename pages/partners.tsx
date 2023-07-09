@@ -13,9 +13,10 @@ import {
   faHeart,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import Benefits from "@components/Benefit";
 
 export default function Partners() {
-  const cards = [
+  const benefits = [
     {
       title: "AI Talent Pool",
       text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
@@ -138,21 +139,7 @@ export default function Partners() {
         >
           What we offer
         </h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {cards.map((card) => (
-            <article key={card.title} className="flex gap-8">
-              <FontAwesomeIcon
-                icon={card.icon}
-                size="2xl"
-                className="h-8 w-8 rounded bg-purple-500 p-2 text-white duration-500"
-              />
-              <div>
-                <h3 className="mb-4 text-xl font-semibold">{card.title}</h3>
-                <p>{card.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <Benefits benefits={benefits} color="purple" />
       </Section>
     </>
   );
