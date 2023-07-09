@@ -307,27 +307,23 @@ export default function AIELab() {
         </div>
       </Section>
 
-      <Section background="inverted">
-        <div className="mx-auto max-w-4xl">
-          <h2
-            className={cx(
-              "mb-8 text-center text-4xl font-semibold text-white",
-              bitter.className
-            )}
-          >
-            Apply now and join the{" "}
-            <span className="text-purple-500">AI E-Lab</span>
-          </h2>
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          Apply now and join the AI E-Lab
+        </h2>
 
-          <div className="grid gap-8 lg:grid-cols-2">
-            <p>
-              Do you want to become part of a commmunity of AI enthusiasts and
-              found your AI startup? We are excited to have you on board.
-            </p>
-            <div className="flex flex-col justify-center gap-4">
-              <Button>Apply for the AI E-Lab</Button>
-              <Button intent="secondary">Become a partner</Button>
-            </div>
+        <div className="grid gap-8 lg:grid-cols-2">
+          <p>
+            Do you want to become part of a commmunity of AI enthusiasts and
+            found your AI startup? We are excited to have you on board.
+          </p>
+          <div className="flex flex-col justify-center gap-4">
+            <button className="rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 font-bold">
+              Apply now
+            </button>
+            <button className="rounded-full border-2 border-yellow-500 p-4 font-bold text-yellow-500">
+              Become a partner
+            </button>
           </div>
         </div>
       </Section>

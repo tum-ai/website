@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-700 text-white">
+    <footer className="bg-purple-950 text-white">
       {/* <Section className="mx-auto max-w-7xl "> */}
 
       <Section>
