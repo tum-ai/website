@@ -11,12 +11,19 @@ import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faChevronDown,
+  faCircleNodes,
+  faHandsHoldingCircle,
+  faHandshakeSimple,
+} from "@fortawesome/free-solid-svg-icons";
 import VerticalCards from "@components/VerticalCards";
 import { cx } from "class-variance-authority";
 import { bitter, interBold } from "@styles/fonts";
 import Timeline from "@components/Timeline";
 import Spline from "@splinetool/react-spline";
+import Benefits from "@components/Benefit";
 
 function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -167,7 +174,7 @@ export default function AIELab() {
           <span className="text-yellow-500">goal</span>
         </p>
 
-        <p className="text-center">
+        <p className="mb-12 text-center">
           We want to challenge curious and dedicated people with an interest in
           founding an AI-based startup. We accept already existing teams and
           individuals of any background and level of experience, since we value
@@ -177,36 +184,43 @@ export default function AIELab() {
           events are planned to take place in Munich, so you must be able join
           in person. The more you commit, the more you get.
         </p>
+
+        <Benefits
+          benefits={[
+            {
+              icon: faCircleNodes,
+              title: "Access to our network",
+              text: "In order to shape something meaningful and have impact, knowledge alone does not suffice. You need a network of diverse people you can learn from and share your passion with. Wee therefore organize several events where you can meet & mingle with TUM.ai members, business and domain experts, startups, founders, investors & many more",
+            },
+            {
+              icon: faHandshakeSimple,
+              title: "Count on our support",
+              text: "We help you develop your final MVP and guide you through the program with individual coaching and tailored mentoring with founders and domain experts. You and your team have the opportunity to experience vidid discussions in our co-working spaces. We also provide you with software and hardware resources, and you can count on tech support.",
+            },
+            {
+              icon: faBook,
+              title: "Learn and grow",
+              text: "Everyone has superpowers and we support you in using them to excel. With hands-on workshops we provide you with the knowledge to found your AI startup and encourage you to test it in a real-world setting. Listening to and interacting with others are key to personal growth and success, which is why our program is customer-centric and feedback-oriented.",
+            },
+            {
+              icon: faHandsHoldingCircle,
+              title: "We are equity free",
+              text: "Making AI and the founding process accessible to everyone is one of our missions at TUM.ai. We therefore do not charge any costs for the AI E-Lab and do not take any equity stake in your venture. Further, we don’t expect pre-seed readiness or any initial investment. The only investment you have to arrange is your time, eagerness and dedication.",
+            },
+          ]}
+          color="yellow"
+        />
       </Section>
 
       <Section className="z-0 mx-auto max-w-7xl p-0">
         <Timeline />
       </Section>
 
-      <Section className="mx-auto max-w-7xl">
-        <VerticalCards
-          cards={[
-            {
-              title: "Access our Network",
-              text: "In order to shape something meaningful and have impact, knowledge alone does not suffice. You need a network of diverse people you can learn from and share your passion with. We therefore organize several events where you can meet and mingle with TUM.ai members, business and domain experts, startups, founders, investors and many more.",
-            },
-            {
-              title: "Learn and Grow",
-              text: "Everyone has superpowers and we support you in using them to excel. With hands-on workshops we provide you with the knowledge to found your AI startup and encourage you to test it in a real-world setting. Listening to and interacting with others are key to personal growth and success, which is why our program is customer-centric and feedback-oriented.",
-            },
-            {
-              title: "Count on our Support",
-              text: "We help you develop your final MVP and guide you through the program with individual coaching and tailored mentoring with founders and domain experts. You and your team have the opportunity to experience vidid discussions in our co-working spaces. We also provide you with software and hardware resources, and you can count on tech support.",
-            },
-            {
-              title: "We are Equity-free",
-              text: "Making AI and the founding process accessible to everyone is one of our missions at TUM.ai. We therefore do not charge any costs for the AI E-Lab and do not take any equity stake in your venture. Further, we don't expect pre-seed readiness or any initial investment. The only investment you have to arrange is your time, eagerness and dedication.",
-            },
-          ]}
-        />
-      </Section>
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          Meet our sponsors
+        </h2>
 
-      <Section className="mx-auto max-w-7xl">
         <div className="mb-24">
           <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             1. Premium Sponsors

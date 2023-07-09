@@ -17,7 +17,7 @@ const iconStyles = cva("h-8 w-8 rounded p-2 text-white duration-500", {
   },
 });
 
-const headingStyles = cva("mb-4 text-xl font-semibold", {
+const headingStyles = cva("mb-4 text-xl font-semibold uppercase", {
   variants: {
     color: {
       purple: "text-purple-500",
