@@ -250,21 +250,60 @@ export default function AIELab() {
           <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             1. Premium Sponsors
           </h3>
-          <Logos logos={partners} />
+          <Logos
+            logos={[
+              {
+                src: "/assets/e-lab/partners/10x_founders.svg",
+                alt: "",
+                href: "#",
+              },
+            ]}
+          />
         </div>
 
         <div className="mb-24">
           <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             2. Sponsors
           </h3>
-          <Logos logos={partners} />
+          <Logos
+            logos={[
+              {
+                src: "/assets/e-lab/partners/IBM.png",
+                alt: "",
+                href: "#",
+              },
+            ]}
+          />
         </div>
 
         <div className="mb-24">
           <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             3. Workshops and more by
           </h3>
-          <Logos logos={partners} />
+          <Logos
+            logos={[
+              {
+                src: "/assets/e-lab/partners/aleph.svg",
+                alt: "",
+                href: "#",
+              },
+              {
+                src: "/assets/e-lab/partners/ryverai.png",
+                alt: "",
+                href: "#",
+              },
+              {
+                src: "/assets/e-lab/partners/fortiss.png",
+                alt: "",
+                href: "#",
+              },
+              {
+                src: "/assets/e-lab/partners/TNG.png",
+                alt: "",
+                href: "#",
+              },
+            ]}
+          />
         </div>
       </Section>
 
