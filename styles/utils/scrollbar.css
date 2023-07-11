@@ -5,11 +5,21 @@
 
   .scrollbar-purple {
     &::-webkit-scrollbar {
-      @apply flex bg-blue-800;
+      @apply flex bg-purple-500/10;
     }
 
     &::-webkit-scrollbar-thumb {
       @apply rounded-2xl bg-purple-500;
+    }
+  }
+
+  .scrollbar-yellow {
+    &::-webkit-scrollbar {
+      @apply flex bg-yellow-500/10;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-2xl bg-yellow-500;
     }
   }
 }
