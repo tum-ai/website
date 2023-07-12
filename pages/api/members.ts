@@ -32,30 +32,30 @@ export default async function handler(req, res) {
   const data = await notion.databases.query({
     database_id: process.env.NOTION_MEMBERS_DATABASE_ID,
     filter: {
-      "and": [
+      and: [
         {
-          "property": "Name",
-          "title": {
-            "is_not_empty": true
-          }
+          property: "Name",
+          title: {
+            is_not_empty: true,
+          },
         },
         {
-          "or": [
+          or: [
             {
-              "property": "Role",
-              "multi_select": {
-                "contains": "President"
-              }
+              property: "Role",
+              multi_select: {
+                contains: "President",
+              },
             },
             {
-              "property": "Role",
-              "multi_select": {
-                "contains": "Teamlead"
-              }
-            }
-          ]
-        }
-      ]
+              property: "Role",
+              multi_select: {
+                contains: "Teamlead",
+              },
+            },
+          ],
+        },
+      ],
     },
   });
 
@@ -65,15 +65,17 @@ export default async function handler(req, res) {
     .map((member: NotionMember) => ({
       name: member?.properties?.Name?.title?.at(0)?.plain_text,
       image: member?.icon?.file?.url,
-      roles: member?.properties?.Role.multi_select.map((role) => role.name).sort((a, b) => {
-        if (a == "President" && b !== "President") {
-          return -1
-        } else if (a == "Teamlead" && b !== "Teamlead") {
-          return -1
-        } else {
-          return 1
-        }
-      }),
+      roles: member?.properties?.Role.multi_select
+        .map((role) => role.name)
+        .sort((a, b) => {
+          if (a == "President" && b !== "President") {
+            return -1;
+          } else if (a == "Teamlead" && b !== "Teamlead") {
+            return -1;
+          } else {
+            return 1;
+          }
+        }),
       departments: member?.properties?.[
         "Functional or Mission-Based Department"
       ].multi_select.map((department) => department.name),
@@ -82,11 +84,14 @@ export default async function handler(req, res) {
     }))
     .sort((a, b) => {
       if (a.roles.includes("President") && !b.roles.includes("President")) {
-        return -1
-      } else if (a.roles.includes("Teamlead") && !b.roles.includes("Teamlead")) {
-        return -1
+        return -1;
+      } else if (
+        a.roles.includes("Teamlead") &&
+        !b.roles.includes("Teamlead")
+      ) {
+        return -1;
       } else {
-        return 1
+        return 1;
       }
     })
     .filter(isMember);
