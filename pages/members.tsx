@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { bitter } from "@styles/fonts";
 import Button from "@ui/Button";
 import Section from "@ui/Section";
+import { cx } from "class-variance-authority";
+import { departments } from "data/departments";
 import { AnimatePresence, motion } from "framer-motion";
+import { useMembers } from "hooks/useMembers";
 import Image from "next/image";
 import { useState } from "react";
 import Hero from "../components/Hero";
-import { useMembers } from "hooks/useMembers";
-import { departments } from "data/departments";
-import { cx } from "class-variance-authority";
-import { bitter } from "@styles/fonts";
 
 const MemberCard = ({ member, open, setOpen, index }) => {
   return (
@@ -52,9 +52,7 @@ const MemberCard = ({ member, open, setOpen, index }) => {
       <div className="p-4 text-center">
         <h3 className="text-xl font-bold">{member.name}</h3>
         <div>
-          {member.roles.map((role: string) => (
-            <p key={role}>{role}</p>
-          ))}
+          <p>{member.roles.join(", ")}</p>
           {member.departments.map((department: string) => (
             <p key={department}>{department}</p>
           ))}
@@ -131,7 +129,7 @@ const MemberListSection = () => {
           Our Active Team Members
         </h2>
         <p>
-          Meet our team of{" "}
+          Meet our management team of{" "}
           <span className="font-semibold text-purple-500">
             {members?.length ?? "..."}+
           </span>{" "}
