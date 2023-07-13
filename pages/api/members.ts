@@ -61,40 +61,35 @@ export default async function handler(req, res) {
 
   const notionMembers = data.results as NotionMember[];
 
+  const roleOrder = {
+    President: 0,
+    Teamlead: 1,
+    Member: 2,
+  };
+
   const members = notionMembers
     .map((member: NotionMember) => ({
       name: member?.properties?.Name?.title?.at(0)?.plain_text,
       image: member?.icon?.file?.url,
       roles: member?.properties?.Role.multi_select
         .map((role) => role.name)
-        .sort((a, b) => {
-          if (a == "President" && b !== "President") {
-            return -1;
-          } else if (a == "Teamlead" && b !== "Teamlead") {
-            return -1;
-          } else {
-            return 1;
-          }
-        }),
+        .sort((a, b) => roleOrder[a] - roleOrder[b]),
       departments: member?.properties?.[
         "Functional or Mission-Based Department"
       ].multi_select.map((department) => department.name),
       description: "",
       degree: member?.properties?.Degree?.select?.name,
     }))
+    .filter(isMember)
     .sort((a, b) => {
-      if (a.roles.includes("President") && !b.roles.includes("President")) {
-        return -1;
-      } else if (
-        a.roles.includes("Teamlead") &&
-        !b.roles.includes("Teamlead")
-      ) {
-        return -1;
-      } else {
-        return 1;
-      }
-    })
-    .filter(isMember);
+      const mostImportantRoleA = Math.min(
+        ...a.roles.map((role) => roleOrder[role])
+      );
+      const mostImportantRoleB = Math.min(
+        ...b.roles.map((role) => roleOrder[role])
+      );
+      return mostImportantRoleA - mostImportantRoleB;
+    });
 
   res.status(200).json(members);
 }
