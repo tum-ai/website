@@ -108,7 +108,7 @@ function Hero() {
           />
           <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Button asChild>
-              <Link href="/partners">Become a Partner</Link>
+              <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
             </Button>
             <Button asChild>
               <Link href="https://join-us.tum-ai.com/">Become a Member</Link>
@@ -276,9 +276,7 @@ function Content2() {
 
         <div className="m-auto flex flex-col items-center space-x-0 space-y-2 pt-4 lg:flex-row lg:space-x-2 lg:space-y-0">
           <Button asChild>
-            <Link href={"https://www.tum-ai.com/members.html"}>
-              Meet our Members
-            </Link>
+            <Link href="/members">Meet our Members</Link>
           </Button>
           <Button asChild intent="tertiary">
             <Link href="https://join-us.tum-ai.com/">Learn more!</Link>
@@ -327,9 +325,7 @@ function Content3() {
               <Link href="https://join-us.tum-ai.com/">Apply as a partner</Link>
             </Button>
             <Button asChild intent="tertiary">
-              <Link href="https://www.tum-ai.com/forPartners.html">
-                Partner&apos;s of TUM.ai
-              </Link>
+              <Link href="/partners">Partner&apos;s of TUM.ai</Link>
             </Button>
           </div>
         </div>
@@ -364,10 +360,7 @@ function Slack() {
           Be among the first to be informed about upcoming events, job
           opportunities and workshops.
         </p>
-        <Link
-          className="text-purple-500"
-          href={"https://www.tum-ai.com/newsletter"}
-        >
+        <Link className="text-purple-500" href={"/data-privacy"}>
           Terms & Conditions
         </Link>
         <div className="mt-6 flex space-x-4">
