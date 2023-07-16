@@ -1,4 +1,5 @@
 import Button from "@ui/Button";
+import Head from "next/head";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
 import Image from "next/image";
@@ -6,7 +7,6 @@ import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBullhorn,
   faHandshakeSimple,
@@ -41,6 +41,16 @@ export default function Partners() {
 
   return (
     <>
+      <Head>
+        <title>
+          <title>TUM.ai - Partners</title>
+        </title>
+        <meta
+          name="description"
+          content="Is your company currently facing challenges with data-driven technologies or you are looking for the greatest talent in artifical intelligence? If one of the answers is yes, become a partners.
+"
+        />
+      </Head>
       <Hero
         imageSrc={"/assets/partners.jpg"}
         title="Become a partner"

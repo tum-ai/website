@@ -18,10 +18,20 @@ import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>
+          TUM.ai - Student Initiative focused on Artificial Intelligence
+        </title>
+        <meta
+          name="description"
+          content='TUM.ai is a student initiative based at the Technical University of Munich. We connect students and all relevant stakeholders to facilitate the application of AI across domains to drive positive societal impact through interdisciplinary projects. Together with our highly talented members, we run projects with industry partners, workshops and so called "Makeathon" product development competitions all around the topic of Artificial Intelligence and Data Analytics. '
+        />
+      </Head>
       <Hero />
       <Content1 />
       <Content2 />

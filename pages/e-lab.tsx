@@ -3,10 +3,8 @@ import Stat from "@components/Stat";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import Image from "next/image";
-import { partners } from "data/industry";
+import Head from "next/head";
 import { mentors } from "data/e-lab";
-import tailwindConfig from "tailwind.config.js";
-import resolveConfig from "tailwindcss/resolveConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
@@ -15,15 +13,11 @@ import {
   faHandsHoldingCircle,
   faHandshakeSimple,
 } from "@fortawesome/free-solid-svg-icons";
-import { cx } from "class-variance-authority";
-import { bitter, interBold } from "@styles/fonts";
 import Spline from "@splinetool/react-spline";
 import Benefits from "@components/Benefit";
 import Timeline from "@components/Timeline";
 
 function Hero() {
-  const fullConfig = resolveConfig(tailwindConfig);
-
   return (
     <section className="-z-10 h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
@@ -70,6 +64,15 @@ function Hero() {
 export default function AIELab() {
   return (
     <>
+      <Head>
+        <title>
+          TUM.ai - AI Entrepreneurship Lab
+        </title>
+        <meta
+          name="description"
+          content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."
+        />
+      </Head>
       <Hero />
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
