@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { bitter } from "@styles/fonts";
+import Head from "next/head";
 import Button from "@ui/Button";
 import Section from "@ui/Section";
 import { cx } from "class-variance-authority";
@@ -204,6 +205,13 @@ const DepartmentList = () => {
 export default function Members() {
   return (
     <>
+      <Head>
+        <title>TUM.ai - Members</title>
+        <meta
+          name="description"
+          content='TUM.ai is a student initiative based at the Technical University of Munich. We connect students and all relevant stakeholders to facilitate the application of AI across domains to drive positive societal impact through interdisciplinary projects. Together with our highly talented members, we run projects with industry partners, workshops and so called "Makeathon" product development competitions all around the topic of Artificial Intelligence and Data Analytics. '
+        />
+      </Head>
       <Hero
         imageSrc={"/assets/tu_cropped.jpg"}
         title="Innovative & Passionate"
