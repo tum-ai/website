@@ -6,9 +6,7 @@ export default function Inprint() {
   return (
     <>
       <Head>
-        <title>
-          TUM.ai - Inprint
-        </title>
+        <title>TUM.ai - Inprint</title>
       </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Impressum" />
       <Section>

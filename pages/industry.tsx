@@ -15,9 +15,7 @@ export default function Industry() {
   return (
     <>
       <Head>
-        <title>
-          TUM.ai - Industry
-        </title>
+        <title>TUM.ai - Industry</title>
         <meta
           name="description"
           content="Work on real-world AI and Data solutions! 2250€ total compensation, 10 week working student arrangements, September 15th - end of November"

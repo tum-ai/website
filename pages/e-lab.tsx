@@ -65,9 +65,7 @@ export default function AIELab() {
   return (
     <>
       <Head>
-        <title>
-          TUM.ai - AI Entrepreneurship Lab
-        </title>
+        <title>TUM.ai - AI Entrepreneurship Lab</title>
         <meta
           name="description"
           content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."

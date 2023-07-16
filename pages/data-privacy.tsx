@@ -6,9 +6,7 @@ export default function Inprint() {
   return (
     <>
       <Head>
-        <title>
-          TUM.ai - Data privacy
-        </title>
+        <title>TUM.ai - Data privacy</title>
       </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Datenschutz" />
       <Section>
