@@ -20,8 +20,9 @@ import { useState } from "react";
 
 const Navigation = ({ open, setOpen }) => {
   const links = [
+    { href: "https://education.tum-ai.com/", text: "AI Academy" },
     { href: "/e-lab", text: "AI E-Lab" },
-    { href: "https://makeathon.tum-ai.com/", text: "Makeathon" },
+    { href: "https://summit.tum-ai.com", text: "AI Summit" },
     { href: "/industry", text: "Industry Projects" },
     { href: "/partners", text: "Partners" },
     { href: "/members", text: "Members" },
