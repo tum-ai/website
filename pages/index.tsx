@@ -12,6 +12,8 @@ import VerticalCards, {
   type Props as VerticalCardsProps,
 } from "components/VerticalCards";
 import { partners } from "data/industry";
+import { partners_collabrated_with } from "data/partners";
+import { initiatives_collabrated_with } from "data/partners";
 import Image from "next/image";
 import Link from "next/link";
 import tailwindConfig from "tailwind.config.js";
@@ -56,7 +58,7 @@ export default function Index() {
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>
-        <Logos logos={partners} />
+        <Logos logos={partners_collabrated_with} />
       </Section>
 
       <Section>
@@ -68,7 +70,7 @@ export default function Index() {
         >
           Partners Initiatives
         </h2>
-        <Logos logos={partners} />
+        <Logos logos={initiatives_collabrated_with} />
       </Section>
 
       <Slack />
