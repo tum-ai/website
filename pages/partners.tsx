@@ -6,6 +6,7 @@ import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBullhorn,
@@ -123,7 +124,9 @@ export default function Partners() {
               with you!
             </p>
 
-            <Button intent="purple">Become a partner</Button>
+            <Button intent="purple" asChild>
+              <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
+            </Button>
           </div>
 
           <Image src={MartinTalk} alt="Martin talk" className="rounded" />
