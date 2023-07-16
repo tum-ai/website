@@ -7,6 +7,7 @@ import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
+import Link from "next/link";
 import {
   faBullhorn,
   faHandshakeSimple,
