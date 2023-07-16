@@ -51,8 +51,8 @@ export default function Industry() {
           </h2>
           <Image
             src="/assets/industry/industrytimelinefall2022_cropped.png"
-            width={600}
-            height={400}
+            width={1775}
+            height={795}
             alt="Industry Timeline"
             className="w-full rounded-xl"
           />
