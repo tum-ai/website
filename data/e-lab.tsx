@@ -48,63 +48,23 @@ export const partners = [
 
 export const mentors = [
   {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 1",
-    text: "This is person 1",
+    imgSrc: "/assets/e-lab/testimonials/tom_doerr.jpeg",
+    name: "Tom Dörr",
+    text: "I gained real, usable insights into the world of start-ups, including the ins and outs of fundraising. The feedback of others added layers to my understanding and helped refine my ideas. The interactive nature of the sessions, were great, the one on product-market fit really stood out for me. One of the best parts was connecting with people who share a passion for AI. Working on projects with them has been a unique and rewarding experience.",
   },
   {
     imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 2",
-    text: "This is person 2",
+    name: "Luca Dombetzki",
+    text: 'The AI E Lab was one of the few "non-bullshit" sources during our journey. It was a sandbox full of other really cool people truly wanting to challenge themselves and their idea. Through those interactions could we understand our own business better, share insights and give back to the community and feel like every single one of the people there will walk out of the AI E Lab with a new perspective!',
   },
   {
     imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 3",
+    name: "Florian",
     text: "This is person 3",
   },
   {
     imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 1",
+    name: "Leon Hergert",
     text: "This is person 4",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 2",
-    text: "This is person 5",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 3",
-    text: "This is person 6",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 1",
-    text: "This is person 7",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 2",
-    text: "This is person 8",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 3",
-    text: "This is person 9",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 1",
-    text: "This is person 10",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 2",
-    text: "This is person 11",
-  },
-  {
-    imgSrc: "/assets/partners/richard_talk.jpg",
-    name: "Person 3",
-    text: "This is person 12",
   },
 ];
