@@ -18,7 +18,7 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="-mx-4 flex flex-wrap">
+        <div className="flex flex-wrap">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="I don’t feel experienced yet. Should I still apply?"
@@ -82,7 +82,7 @@ const AccordionItem = ({ header, text }) => {
   };
   return (
     <div
-      className="single-faq z-0 mb-8 w-full rounded-lg p-4 text-white sm:p-8 lg:px-6 xl:px-8"
+      className="single-faq z-0 mb-8 w-full rounded-lg p-4 text-white sm:p-6 lg:px-6 xl:px-8"
       style={{
         backgroundImage: "linear-gradient(to right, #eab308, #ef4444)",
         backgroundClip: "border-box",
@@ -93,7 +93,7 @@ const AccordionItem = ({ header, text }) => {
         className={`faq-btn flex w-full text-left`}
         onClick={() => handleToggle()}
       >
-        <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg ">
+        <div className="mr-5 flex h-6 w-full max-w-[40px] items-center justify-center rounded-lg ">
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${
               active ? "rotate-180" : ""

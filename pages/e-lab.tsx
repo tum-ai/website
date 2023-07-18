@@ -49,7 +49,7 @@ function Hero() {
             </p>
 
             <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500">
-              Apply now
+              Pre-register now
             </Button>
           </div>
         </div>
@@ -357,21 +357,22 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
-          Apply now and join the AI E-Lab
+        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+          {/* Pre-register and join the AI E-Lab */}
+          Pre-register
         </h2>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col items-center justify-center gap-8">
           <p>
             Do you want to become part of a commmunity of AI enthusiasts and
             found your AI startup? We are excited to have you on board.
           </p>
-          <div className="flex flex-col justify-center gap-4">
+          <div className="flex flex-col justify-center gap-6 ">
             <a
-              className="rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center font-bold"
+              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
               href="https://forms.tum-ai.com/ai-elab-preregistration"
             >
-              Apply now
+              Sign-up now
             </a>
             <a
               href="mailto:venture@tum-ai.com"
