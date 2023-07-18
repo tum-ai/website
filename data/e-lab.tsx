@@ -46,12 +46,12 @@ export const partners = [
   },
 ];
 
-export const mentors = [
+export const testimonials = [
   {
     imgSrc: "/assets/e-lab/testimonials/tom_doerr.jpeg",
     name: "Tom Dörr",
     text: "I gained real, usable insights into the world of start-ups, including the ins and outs of fundraising. The feedback of others added layers to my understanding and helped refine my ideas. The interactive nature of the sessions, were great, the one on product-market fit really stood out for me. One of the best parts was connecting with people who share a passion for AI. Working on projects with them has been a unique and rewarding experience.",
-    logoSrc: "/assets/e-lab/testimonials/conic_w.png",
+    logoSrc: "/assets/e-lab/testimonials/conic_wof.png",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/luca_dombetzki.jpeg",
@@ -63,7 +63,7 @@ export const mentors = [
     imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
     name: "Leon Hergert",
     text: "As the co-founder of Spherecast, a software solution for e-commerce brands addressing stock imbalances with advanced machine learning, our  journey began with the AI E-Lab program. Beyond just the network, the AI E-Lab's mentorship was instrumental. Our mentor, a seasoned e-commerce entrepreneur, continues to provide invaluable guidance and challenge us. If AI and startups excite you, whether you have an idea or seek co-founders, the AI E-Lab is the ideal platform.",
-    logoSrc: "/assets/e-lab/testimonials/spherecast.png",
+    logoSrc: "/assets/e-lab/testimonials/spherecast_ls.png",
   },
   // {
   //   imgSrc: "/assets/partners/richard_talk.jpg",

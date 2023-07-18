@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { cx } from "class-variance-authority";
 
 const FAQ = () => {
   return (
@@ -37,8 +36,8 @@ const FAQ = () => {
               text="Unfortunately, no. Your startup idea has to be related to artificial intelligence."
             />
             <AccordionItem
-              header="When will the application open?"
-              text="The application will open on 01.08.2023."
+              header="When will the application phase begin?"
+              text="The application phase will begin on 01.08.2023."
             />
             <AccordionItem
               header="When is the application deadline?"
@@ -62,10 +61,6 @@ const FAQ = () => {
               header="What is the time commitment for this program?"
               text="The AI E-Lab is a part-time program. Keep in mind that the more you commit, the more you get out of this program. "
             />
-            <AccordionItem
-              header="You still have other questions?"
-              text="We got you. Send us a mail at venture@tum-ai.com!"
-            />
           </div>
         </div>
       </div>
@@ -81,18 +76,8 @@ const AccordionItem = ({ header, text }) => {
     setActive(!active);
   };
   return (
-    <div
-      className="single-faq z-0 mb-8 w-full rounded-lg p-4 text-white sm:p-6 lg:px-6 xl:px-8"
-      style={{
-        backgroundImage: "linear-gradient(to right, #eab308, #ef4444)",
-        backgroundClip: "border-box",
-        boxDecorationBreak: "clone",
-      }}
-    >
-      <button
-        className={`faq-btn flex w-full text-left`}
-        onClick={() => handleToggle()}
-      >
+    <div className="mb-8 w-full rounded-lg p-4 text-white shadow-lg shadow-blue-200/10 sm:p-6 lg:px-6 xl:px-8">
+      <button className="flex w-full text-left" onClick={() => handleToggle()}>
         <div className="mr-5 flex h-6 w-full max-w-[40px] items-center justify-center rounded-lg ">
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${

@@ -3,8 +3,6 @@ import Stat from "@components/Stat";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import Image from "next/image";
-import { partners } from "data/industry";
-import { mentors } from "data/e-lab";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,16 +10,16 @@ import {
   faBook,
   faChevronDown,
   faCircleNodes,
-  faHandsHoldingCircle,
   faHandshakeSimple,
+  faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { cx } from "class-variance-authority";
-import { bitter, interBold } from "@styles/fonts";
 import Spline from "@splinetool/react-spline";
 import Benefits from "@components/Benefit";
 import Timeline from "@components/Timeline";
 import FAQ from "@components/FAQ";
 import Testimonials from "@components/Testimonials";
+import Link from "next/link";
+import React from "react";
 
 function Hero() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -49,7 +47,9 @@ function Hero() {
             </p>
 
             <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500">
-              Pre-register now
+              <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
+                Pre-register now
+              </Link>
             </Button>
           </div>
         </div>
@@ -113,13 +113,13 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           How founders experience the E-Lab
         </h2>
-        <p className="flex flex-col justify-between gap-2 text-4xl font-semibold text-yellow-500 sm:flex-row">
-          <span>you</span>
-          <span>yes you</span>
-          <span>you can build sth great</span>
+        <p className="flex flex-col justify-start gap-2 text-3xl font-semibold text-yellow-500 sm:text-4xl">
+          <span>you.</span>
+          <span>yes you.</span>
+          <span>you can build something great!</span>
         </p>
 
         <div className="my-12 grid gap-16 md:grid-cols-2">
@@ -141,12 +141,15 @@ export default function AIELab() {
             easy as possible for you.
           </p>
         </div>
-
-        <SnapSlider cards={mentors} />
+        {/*
+          <div className="mt-16">
+            <SnapSlider cards={testimonials} />
+          </div>
+        */}
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Last AI E-Lab in numbers
         </h2>
 
@@ -157,7 +160,7 @@ export default function AIELab() {
         </div>
 
         <div className="mt-24">
-          <h3 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
+          <h3 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
             Top 3 Startups have:
           </h3>
           <div className="flex flex-wrap justify-center gap-8 md:gap-24">
@@ -170,44 +173,37 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Benefits
         </h2>
-
         <p className="mb-8 text-center text-4xl">
           We <span className="text-yellow-500">support </span>you in achieving
           your endeavors because your{" "}
           <span className="text-yellow-500">personal growth</span> is our{" "}
           <span className="text-yellow-500">goal</span>
         </p>
-
-        <p className="text-center">
-          Are you passionate about AI and ready to make a real-world impact?
-          TUM.ai invites you to join our AI E-Lab, a platform where visionaries,
-          doers, and risk-takers with an interest in founding an AI-based
-          startup come together to shape the future of AI. We value diversity,
-          curiosity, and a commitment to learning and improvement.
-        </p>
-        <p className="text-center">
-          As part of the AI E-Lab, you'll connect with a vibrant ecosystem of
-          startups, industry partners, and like-minded peers. You'll have the
-          opportunity to contribute to groundbreaking AI projects and drive
-          positive social impact.
-        </p>
-        <p className="text-center">
-          This is a part-time program and we expect you to provide us with
-          intermediate deliverables on a weekly basis: pitches, MVPs, learning
-          outcomes, sprint planning, etc. Our events are planned to take place
-          in Munich, so you must be able join in person. The more you commit,
-          the more you get.
-        </p>
-
-        <p className="mb-32 text-center">
-          If you're ready to embark on an exciting journey in the world of AI,
-          we'd love to hear from you. Join us at AI E-Lab, and let's shape the
-          future of AI, together.
-        </p>
-
+        <div className="my-24 flex flex-col gap-8 lg:px-24 xl:px-44">
+          <p className="px-8 text-center">
+            Are you passionate about AI and ready to make a real-world impact?
+            TUM.ai invites you to join our AI E-Lab, a platform where
+            visionaries, doers, and risk-takers with an interest in founding an
+            AI-based startup come together to shape the future of AI. We value
+            diversity, curiosity, and a commitment to learning and improvement.
+          </p>
+          <p className="px-8 text-center">
+            As part of the AI E-Lab, you'll connect with a vibrant ecosystem of
+            startups, industry partners, and like-minded peers. You'll have the
+            opportunity to contribute to groundbreaking AI projects and drive
+            positive social impact.
+          </p>
+          <p className="px-8 text-center">
+            This is a part-time program and we expect you to provide us with
+            intermediate deliverables on a weekly basis: pitches, MVPs, learning
+            outcomes, sprint planning, etc. Our events are planned to take place
+            in Munich, so you must be able join in person. The more you commit,
+            the more you get.
+          </p>
+        </div>
         <Benefits
           benefits={[
             {
@@ -236,7 +232,7 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 ml-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent md:ml-0">
+        <h2 className="mb-12 ml-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl md:ml-0">
           Timeline
         </h2>
         <Timeline
@@ -270,7 +266,7 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Meet our Partners and Sponsors
         </h2>
 
@@ -305,10 +301,10 @@ export default function AIELab() {
           <Logos
             logos={[
               /*  {
-                src: "/assets/e-lab/partners/10x_founders.svg",
-                alt: "",
-                href: "#",
-              }, */
+                              src: "/assets/e-lab/partners/10x_founders.svg",
+                              alt: "",
+                              href: "#",
+                            }, */
               {
                 src: "/assets/e-lab/partners/uvc_w.svg",
                 alt: "",
@@ -316,15 +312,15 @@ export default function AIELab() {
               },
 
               /*  {
-                src: "/assets/e-lab/partners/merantix.svg",
-                alt: "",
-                href: "#",
-              },
-              {
-                src: "/assets/e-lab/partners/TNG.png",
-                alt: "",
-                href: "#",
-              }, */
+                              src: "/assets/e-lab/partners/merantix.svg",
+                              alt: "",
+                              href: "#",
+                            },
+                            {
+                              src: "/assets/e-lab/partners/TNG.png",
+                              alt: "",
+                              href: "#",
+                            }, */
             ]}
           />
         </div>
@@ -357,7 +353,7 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-5xl font-semibold uppercase tracking-widest text-transparent">
+        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           {/* Pre-register and join the AI E-Lab */}
           Pre-register
         </h2>
@@ -368,24 +364,35 @@ export default function AIELab() {
             found your AI startup? We are excited to have you on board.
           </p>
           <div className="flex flex-col justify-center gap-6 ">
-            <a
+            <Link
               className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
               href="https://forms.tum-ai.com/ai-elab-preregistration"
             >
               Sign-up now
-            </a>
-            <a
-              href="mailto:venture@tum-ai.com"
+            </Link>
+            <Link
               className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
+              href="mailto:venture@tum-ai.com"
             >
               Become a partner
-            </a>
+            </Link>
           </div>
         </div>
       </Section>
 
       <Section className="bg-purple-950">
         <FAQ />
+        <div className="flex flex-col items-center justify-center justify-center gap-6 ">
+          <h3 className="mt-16 text-center text-3xl font-semibold text-white">
+            You still have other questions?
+          </h3>
+          <Link
+            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
+            href="https://forms.tum-ai.com/ai-elab-preregistration"
+          >
+            Ask us here
+          </Link>
+        </div>
       </Section>
     </>
   );
@@ -408,7 +415,7 @@ function SnapSlider({ cards }) {
     <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
       {cards.map((card) => (
         <div
-          className="z-1000 inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
+          className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
           key={`${card.name}-${card.text}`}
         >
           <Testimonials {...card} />
