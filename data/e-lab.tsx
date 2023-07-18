@@ -57,7 +57,7 @@ export const mentors = [
     imgSrc: "/assets/e-lab/testimonials/luca_dombetzki.jpeg",
     name: "Luca Dombetzki",
     text: 'The AI E Lab was one of the few "non-bullshit" sources during our journey. It was a sandbox full of other really cool people truly wanting to challenge themselves and their idea. Through those interactions could we understand our own business better, share insights and give back to the community and feel like every single one of the people there will walk out of the AI E Lab with a new perspective!',
-    logoSrc: "/assets/e-lab/testimonials/conic_w.png",
+    logoSrc: "/assets/e-lab/testimonials/ikigai.png",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
