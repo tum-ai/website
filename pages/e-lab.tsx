@@ -3,8 +3,7 @@ import Stat from "@components/Stat";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import Image from "next/image";
-import tailwindConfig from "tailwind.config.js";
-import resolveConfig from "tailwindcss/resolveConfig";
+import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
