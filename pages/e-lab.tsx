@@ -142,7 +142,7 @@ export default function AIELab() {
           </p>
         </div>
 
-        {/* <SnapSlider cards={mentors} /> */}
+        <SnapSlider cards={mentors} />
       </Section>
 
       <Section className="bg-purple-950 text-white">
