@@ -22,8 +22,6 @@ import Link from "next/link";
 import React from "react";
 
 function Hero() {
-  const fullConfig = resolveConfig(tailwindConfig);
-
   return (
     <section className="-z-10 h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
@@ -72,6 +70,13 @@ function Hero() {
 export default function AIELab() {
   return (
     <>
+      <Head>
+        <title>TUM.ai - AI Entrepreneurship Lab</title>
+        <meta
+          name="description"
+          content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."
+        />
+      </Head>
       <Hero />
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
@@ -101,13 +106,6 @@ export default function AIELab() {
                 alt=""
               />
             </div>
-            {/*   <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="aspect-video w-full rounded border-8 border-yellow-500"
-            ></iframe> */}
           </div>
         </div>
       </Section>
@@ -176,6 +174,7 @@ export default function AIELab() {
         <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Benefits
         </h2>
+
         <p className="mb-8 text-center text-4xl">
           We <span className="text-yellow-500">support </span>you in achieving
           your endeavors because your{" "}
@@ -300,56 +299,14 @@ export default function AIELab() {
           </h3>
           <Logos
             logos={[
-              /*  {
-                              src: "/assets/e-lab/partners/10x_founders.svg",
-                              alt: "",
-                              href: "#",
-                            }, */
               {
                 src: "/assets/e-lab/partners/uvc_w.svg",
                 alt: "",
                 href: "#",
               },
-
-              /*  {
-                              src: "/assets/e-lab/partners/merantix.svg",
-                              alt: "",
-                              href: "#",
-                            },
-                            {
-                              src: "/assets/e-lab/partners/TNG.png",
-                              alt: "",
-                              href: "#",
-                            }, */
             ]}
           />
         </div>
-
-        {/* <div className="mb-24">
-          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
-            3. Workshops and more by
-          </h3>
-          <Logos
-            logos={[
-              {
-                src: "/assets/e-lab/partners/aleph.svg",
-                alt: "",
-                href: "#",
-              },
-              {
-                src: "/assets/e-lab/partners/ryverai.png",
-                alt: "",
-                href: "#",
-              },
-              {
-                src: "/assets/e-lab/partners/fortiss.png",
-                alt: "",
-                href: "#",
-              },
-              
-            ]}
-          />
-        </div> */}
       </Section>
 
       <Section className="bg-purple-950 text-white">

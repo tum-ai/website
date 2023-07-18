@@ -12,16 +12,28 @@ import VerticalCards, {
   type Props as VerticalCardsProps,
 } from "components/VerticalCards";
 import { partners } from "data/industry";
+import { partners_collabrated_with } from "data/partners";
+import { initiatives_collabrated_with } from "data/partners";
 import Image from "next/image";
 import Link from "next/link";
 import tailwindConfig from "tailwind.config.js";
 import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>
+          TUM.ai - Student Initiative focused on Artificial Intelligence
+        </title>
+        <meta
+          name="description"
+          content='TUM.ai is a student initiative based at the Technical University of Munich. We connect students and all relevant stakeholders to facilitate the application of AI across domains to drive positive societal impact through interdisciplinary projects. Together with our highly talented members, we run projects with industry partners, workshops and so called "Makeathon" product development competitions all around the topic of Artificial Intelligence and Data Analytics. '
+        />
+      </Head>
       <Hero />
       <Content1 />
       <Content2 />
@@ -46,7 +58,7 @@ export default function Index() {
           Partners <span className="text-purple-500">we have collaborated</span>{" "}
           with
         </h2>
-        <Logos logos={partners} />
+        <Logos logos={partners_collabrated_with} />
       </Section>
 
       <Section>
@@ -58,7 +70,7 @@ export default function Index() {
         >
           Partners Initiatives
         </h2>
-        <Logos logos={partners} />
+        <Logos logos={initiatives_collabrated_with} />
       </Section>
 
       <Slack />
@@ -108,7 +120,7 @@ function Hero() {
           />
           <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Button asChild>
-              <Link href="/partners">Become a Partner</Link>
+              <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
             </Button>
             <Button asChild>
               <Link href="https://join-us.tum-ai.com/">Become a Member</Link>
@@ -276,9 +288,7 @@ function Content2() {
 
         <div className="m-auto flex flex-col items-center space-x-0 space-y-2 pt-4 lg:flex-row lg:space-x-2 lg:space-y-0">
           <Button asChild>
-            <Link href={"https://www.tum-ai.com/members.html"}>
-              Meet our Members
-            </Link>
+            <Link href="/members">Meet our Members</Link>
           </Button>
           <Button asChild intent="tertiary">
             <Link href="https://join-us.tum-ai.com/">Learn more!</Link>
@@ -327,9 +337,7 @@ function Content3() {
               <Link href="https://join-us.tum-ai.com/">Apply as a partner</Link>
             </Button>
             <Button asChild intent="tertiary">
-              <Link href="https://www.tum-ai.com/forPartners.html">
-                Partner&apos;s of TUM.ai
-              </Link>
+              <Link href="/partners">Partner&apos;s of TUM.ai</Link>
             </Button>
           </div>
         </div>
@@ -364,10 +372,7 @@ function Slack() {
           Be among the first to be informed about upcoming events, job
           opportunities and workshops.
         </p>
-        <Link
-          className="text-purple-500"
-          href={"https://www.tum-ai.com/newsletter"}
-        >
+        <Link className="text-purple-500" href={"/data-privacy"}>
           Terms & Conditions
         </Link>
         <div className="mt-6 flex space-x-4">

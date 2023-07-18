@@ -1,9 +1,13 @@
 import Hero from "@components/Hero";
 import Section from "@components/ui/Section";
+import Head from "next/head";
 
 export default function Inprint() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>TUM.ai - Inprint</title>
+      </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Impressum" />
       <Section>
         <div className="space-y-12">
@@ -71,6 +75,6 @@ export default function Inprint() {
           </div>
         </div>
       </Section>
-    </div>
+    </>
   );
 }

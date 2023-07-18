@@ -7,12 +7,20 @@ import { partners, projects } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
 import PictureHero from "../components/BannerHero";
+import Head from "next/head";
 import { bitter } from "@styles/fonts";
 import { cx } from "class-variance-authority";
 
 export default function Industry() {
   return (
     <>
+      <Head>
+        <title>TUM.ai - Industry</title>
+        <meta
+          name="description"
+          content="Work on real-world AI and Data solutions! 2250€ total compensation, 10 week working student arrangements, September 15th - end of November"
+        />
+      </Head>
       <PictureHero
         imageSrc="/assets/industry/header/infineon_industry.jpeg"
         titleImageSrc="/assets/industry/header/industry_header_no_date.svg"
@@ -43,8 +51,8 @@ export default function Industry() {
           </h2>
           <Image
             src="/assets/industry/industrytimelinefall2022_cropped.png"
-            width={600}
-            height={400}
+            width={1775}
+            height={795}
             alt="Industry Timeline"
             className="w-full rounded-xl"
           />
