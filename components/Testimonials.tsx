@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Testimonials = ({ imgSrc, name, text, logoSrc }) => {
+const Testimonials = ({ imgSrc, name, text, logoSrc, logoAlt }) => {
   return (
     <div className="max-w-s 10 w-full rounded-lg p-4 text-white sm:max-w-lg sm:p-10">
       <div className="just flex h-full flex-col items-center">
@@ -20,7 +20,7 @@ const Testimonials = ({ imgSrc, name, text, logoSrc }) => {
           <div className="min-w-160 flex h-full items-center justify-center p-8">
             <img
               src={logoSrc}
-              alt=""
+              alt={logoAlt}
               style={{ width: "100%", height: "80px", objectFit: "contain" }}
             />
           </div>

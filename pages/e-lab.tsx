@@ -16,7 +16,6 @@ import Spline from "@splinetool/react-spline";
 import Benefits from "@components/Benefit";
 import Timeline from "@components/Timeline";
 import FAQ from "@components/FAQ";
-import Testimonials from "@components/Testimonials";
 import { faq } from "data/e-lab";
 import Link from "next/link";
 import React from "react";
@@ -44,7 +43,10 @@ function Hero() {
               technology
             </p>
 
-            <Button className="asChild border-none bg-gradient-to-b from-yellow-500 to-red-500">
+            <Button
+              className="border-none bg-gradient-to-b from-yellow-500 to-red-500"
+              asChild
+            >
               <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
                 Pre-register now
               </Link>
@@ -346,7 +348,7 @@ export default function AIELab() {
         </h4>
         <FAQ questions={faq} />
         <div className="flex flex-col items-center justify-center gap-6 ">
-          <h3 className="mt-16 text-center text-3xl font-semibold">
+          <h3 className="mt-20 text-center text-2xl font-semibold">
             You still have other questions?
           </h3>
           <Link
@@ -361,29 +363,33 @@ export default function AIELab() {
   );
 }
 
-function SliderCard({ imgSrc, name, text }) {
-  return (
-    <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
-      <Image src={imgSrc} alt={name} fill objectFit="cover" />
-      <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
-        <h3 className="font-bold">{name}</h3>
-        <p>{text}</p>
-      </div>
-    </div>
-  );
-}
-
-function SnapSlider({ cards }) {
-  return (
-    <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
-      {cards.map((card) => (
-        <div
-          className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
-          key={`${card.name}-${card.text}`}
-        >
-          <Testimonials {...card} />
+{
+  /* This code is needed for the testimonials, which will be added later on
+  function SliderCard({imgSrc, name, text}) {
+    return (
+        <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
+          <Image src={imgSrc} alt={name} fill objectFit="cover"/>
+          <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+            <h3 className="font-bold">{name}</h3>
+            <p>{text}</p>
+          </div>
         </div>
-      ))}
-    </div>
-  );
+    );
+  }
+
+  function SnapSlider({cards}) {
+    return (
+        <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
+          {cards.map((card) => (
+              <div
+                  className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
+                  key={`${card.name}-${card.text}`}
+              >
+                <Testimonials {...card} />
+              </div>
+          ))}
+        </div>
+    );
+  }
+*/
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import * as Accordion from "@radix-ui/react-accordion";
+import { cx } from "class-variance-authority";
 
 const FAQ = ({ questions }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -28,13 +29,10 @@ const FAQ = ({ questions }) => {
               <FontAwesomeIcon
                 icon={faChevronDown}
                 aria-hidden
-                style={{
-                  transition: "transform 0.3s ease",
-                  transform:
-                    openIndex === question.question
-                      ? "rotate(180deg)"
-                      : "rotate(0deg)",
-                }}
+                className={cx("transition-transform duration-300 ease-in-out", {
+                  "rotate-180": openIndex === question.question,
+                  "rotate-0": openIndex !== question.question,
+                })}
               />
             </Accordion.Trigger>
           </Accordion.Header>
