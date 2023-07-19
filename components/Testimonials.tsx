@@ -7,14 +7,14 @@ const Testimonials = ({ imgSrc, name, text, logoSrc }) => {
         <Image
           className="h-100 mb-3 w-36 rounded-full shadow-lg"
           src={imgSrc}
-          alt="Bonnie image"
+          alt={name}
           width={96}
           height={96}
         />
         <h5 className="my-8 text-xl font-bold text-white">{name}</h5>
 
         <p className="sm:text-md text-center leading-8 text-white sm:p-4">
-          "{text}”
+          &quot;{text}&quot;
         </p>
         <div className="mt-auto h-32">
           <div className="min-w-160 flex h-full items-center justify-center p-8">
@@ -25,7 +25,6 @@ const Testimonials = ({ imgSrc, name, text, logoSrc }) => {
             />
           </div>
         </div>
-        {/* <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span> */}
       </div>
     </div>
   );

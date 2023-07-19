@@ -43,7 +43,7 @@ function Hero() {
               technology
             </p>
 
-            <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500">
+            <Button className="asChild border-none bg-gradient-to-b from-yellow-500 to-red-500">
               <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
                 Pre-register now
               </Link>
@@ -91,6 +91,7 @@ export default function AIELab() {
             foundation for your own AI startup.
           </p>
         </div>
+
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
@@ -188,10 +189,10 @@ export default function AIELab() {
             diversity, curiosity, and a commitment to learning and improvement.
           </p>
           <p className="px-8 text-center">
-            As part of the AI E-Lab, you'll connect with a vibrant ecosystem of
-            startups, industry partners, and like-minded peers. You'll have the
-            opportunity to contribute to groundbreaking AI projects and drive
-            positive social impact.
+            As part of the AI E-Lab, you&apos;ll connect with a vibrant
+            ecosystem of startups, industry partners, and like-minded peers.
+            You&apos;ll have the opportunity to contribute to groundbreaking AI
+            projects and drive positive social impact.
           </p>
           <p className="px-8 text-center">
             This is a part-time program and we expect you to provide us with
@@ -337,12 +338,12 @@ export default function AIELab() {
 
       <Section className="bg-purple-950">
         <FAQ />
-        <div className="flex flex-col items-center justify-center justify-center gap-6 ">
+        <div className="flex flex-col items-center justify-center gap-6 ">
           <h3 className="mt-16 text-center text-3xl font-semibold text-white">
             You still have other questions?
           </h3>
           <Link
-            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white text-yellow-500 transition-colors duration-300 hover:border-red-500 hover:text-red-500 sm:min-w-[400px]"
+            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
             href="mailto:venture@tum-ai.com"
           >
             Ask us here
