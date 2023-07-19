@@ -45,7 +45,7 @@ export default function Industry() {
           width={1775}
           height={795}
           alt="Industry Timeline"
-          className="my-12 w-full"
+          className="w-full"
         />
       </Section>
       <Section>
