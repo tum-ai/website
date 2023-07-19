@@ -24,10 +24,6 @@ const FAQ = () => {
               text="Definitely. Our program is designed to equip you with all relevant knowledge and to make your founding experience as convenient as possible."
             />
             <AccordionItem
-              header="Can I apply with a team?"
-              text="Yes, you can, we will consider your application then as a team application. "
-            />
-            <AccordionItem
               header="Do I need to be enrolled at a university?"
               text="No. We want to make founding accessible to everyone and fair. Regardless of your background, we would like to help you with founding your AI startup."
             />
@@ -45,6 +41,10 @@ const FAQ = () => {
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
+            <AccordionItem
+              header="Can I apply with a team?"
+              text="Yes, you can, we will consider your application then as a team application. "
+            />
             <AccordionItem
               header="What if I don’t find a team during the first week of the AI E-Lab?"
               text="No worries, if you don’t find a team, you’ll still be able to continue your journey in the E-Lab."

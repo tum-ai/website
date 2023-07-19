@@ -91,7 +91,6 @@ export default function AIELab() {
             foundation for your own AI startup.
           </p>
         </div>
-
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
@@ -157,8 +156,8 @@ export default function AIELab() {
         </div>
 
         <div className="mt-24">
-          <h3 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-4xl font-semibold tracking-widest text-transparent">
-            Top 3 Startups have:
+          <h3 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-2xl font-medium uppercase tracking-widest text-transparent sm:text-4xl">
+            Top 3 Startups have
           </h3>
           <div className="flex flex-wrap justify-center gap-8 md:gap-24">
             <Stat description={"B2B customers"} value={"8"} />
@@ -343,8 +342,8 @@ export default function AIELab() {
             You still have other questions?
           </h3>
           <Link
-            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
-            href="https://forms.tum-ai.com/ai-elab-preregistration"
+            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white text-yellow-500 transition-colors duration-300 hover:border-red-500 hover:text-red-500 sm:min-w-[400px]"
+            href="mailto:venture@tum-ai.com"
           >
             Ask us here
           </Link>
