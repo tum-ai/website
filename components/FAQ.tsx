@@ -1,107 +1,50 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { cx } from "class-variance-authority";
+import * as Accordion from "@radix-ui/react-accordion";
 
-const FAQ = () => {
+const FAQ = ({ questions }) => {
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
-    <section className="relative z-20 overflow-hidden bg-purple-950 text-white">
-      <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <span className="text-primary mb-2 block text-lg font-semibold">
-                FAQ
-              </span>
-              <h2 className="text-dark mb-4 text-3xl font-bold sm:text-4xl ">
-                Do you have any questions?
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap">
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="I don’t feel experienced yet. Should I still apply?"
-              text="Definitely. Our program is designed to equip you with all relevant knowledge and to make your founding experience as convenient as possible."
-            />
-            <AccordionItem
-              header="Do I need to be enrolled at a university?"
-              text="No. We want to make founding accessible to everyone and fair. Regardless of your background, we would like to help you with founding your AI startup."
-            />
-            <AccordionItem
-              header="My idea is not AI related. Can I still apply?"
-              text="Unfortunately, no. Your startup idea has to be related to artificial intelligence."
-            />
-            <AccordionItem
-              header="When will the application phase begin?"
-              text="The application phase will begin on 01.08.2023."
-            />
-            <AccordionItem
-              header="When is the application deadline?"
-              text="The application phase closes on 31.08.2023 at 23:59. "
-            />
-          </div>
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="Can I apply with a team?"
-              text="Yes, you can, we will consider your application then as a team application. "
-            />
-            <AccordionItem
-              header="What if I don’t find a team during the first week of the AI E-Lab?"
-              text="No worries, if you don’t find a team, you’ll still be able to continue your journey in the E-Lab."
-            />
-            <AccordionItem
-              header="Do I have to be located in Munich during the program or can I join remotely?"
-              text="Since we organize in-person activities, participants need to be present in Munich during these activities."
-            />
-            <AccordionItem
-              header="Am I legally bound to TUM.ai or a partner company?"
-              text="No. We are equity-free and do not want a share in your startup. You only need to invest your dedication and eagerness and we would like to help you with your AI startup."
-            />
-            <AccordionItem
-              header="What is the time commitment for this program?"
-              text="The AI E-Lab is a part-time program. Keep in mind that the more you commit, the more you get out of this program. "
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+    <Accordion.Root
+      type="single"
+      className="AccordionRoot grid grid-cols-1 gap-6 sm:grid-cols-2"
+      collapsible
+      onValueChange={(value) => setOpenIndex(value)}
+    >
+      {questions.map((question) => (
+        <Accordion.Item
+          className="AccordionItem"
+          value={question.question}
+          key={`${question.question}`}
+        >
+          <Accordion.Header>
+            <Accordion.Trigger
+              className="AccordionTrigger focus:shadow-outline-purple flex w-full justify-between gap-4
+            rounded-lg bg-purple-900 px-4 py-3 text-left text-lg font-medium text-white focus:outline-none"
+            >
+              <span>{question.question}</span>
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                aria-hidden
+                style={{
+                  transition: "transform 0.3s ease",
+                  transform:
+                    openIndex === question.question
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                }}
+              />
+            </Accordion.Trigger>
+          </Accordion.Header>
+          <Accordion.Content className="px-4 py-3">
+            <p className="text-white">{question.answer}</p>
+          </Accordion.Content>
+        </Accordion.Item>
+      ))}
+    </Accordion.Root>
   );
 };
 
-const AccordionItem = ({ header, text }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <div className="mb-4">
-      <button
-        className="focus:shadow-outline-purple flex w-full items-center justify-between rounded-lg bg-purple-900 px-4 py-3 text-left text-lg font-semibold focus:outline-none"
-        onClick={toggleAccordion}
-      >
-        <span>{header}</span>
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className={cx(
-            `ml-2 transform transition-transform duration-200`,
-            isOpen ? "rotate-180" : ""
-          )}
-        />
-      </button>
-      <div
-        className={cx(
-          `px-4 py-3 text-white duration-200 ease-in-out`,
-          isOpen ? "block" : "hidden"
-        )}
-      >
-        {text}
-      </div>
-    </div>
-  );
-};
 export default FAQ;

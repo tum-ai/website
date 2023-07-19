@@ -17,6 +17,7 @@ import Benefits from "@components/Benefit";
 import Timeline from "@components/Timeline";
 import FAQ from "@components/FAQ";
 import Testimonials from "@components/Testimonials";
+import { faq } from "data/e-lab";
 import Link from "next/link";
 import React from "react";
 
@@ -336,14 +337,20 @@ export default function AIELab() {
         </div>
       </Section>
 
-      <Section className="bg-purple-950">
-        <FAQ />
+      <Section className="bg-purple-950 text-white">
+        <h3 className="text-primary mb-2 block text-center text-lg font-semibold">
+          FAQ
+        </h3>
+        <h4 className="text-dark mb-12 text-center text-3xl font-bold sm:text-4xl">
+          Do you have any questions?
+        </h4>
+        <FAQ questions={faq} />
         <div className="flex flex-col items-center justify-center gap-6 ">
-          <h3 className="mt-16 text-center text-3xl font-semibold text-white">
+          <h3 className="mt-16 text-center text-3xl font-semibold">
             You still have other questions?
           </h3>
           <Link
-            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
+            className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
             href="mailto:venture@tum-ai.com"
           >
             Ask us here

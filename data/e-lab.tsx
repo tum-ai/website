@@ -71,3 +71,55 @@ export const testimonials = [
   //   text: "This is person 3",
   // },
 ];
+
+export const faq = [
+  {
+    question: "I don’t feel experienced yet. Should I still apply?",
+    answer:
+      "Definitely. Our program is designed to equip you with all relevant knowledge and to make your founding experience as convenient as possible.",
+  },
+  {
+    question: "Do I need to be enrolled at a university?",
+    answer:
+      "No. We want to make founding accessible to everyone and fair. Regardless of your background, we would like to help you with founding your AI startup.",
+  },
+  {
+    question: "My idea is not AI related. Can I still apply?",
+    answer:
+      "Unfortunately, no. Your startup idea has to be related to artificial intelligence.",
+  },
+  {
+    question: "When will the application phase begin?",
+    answer: "The application phase will begin on 01.08.2023.",
+  },
+  {
+    question: "When is the application deadline?",
+    answer: "The application phase closes on 31.08.2023 at 23:59.",
+  },
+  {
+    question: "Can I apply with a team?",
+    answer:
+      "Yes, you can, we will consider your application then as a team application.",
+  },
+  {
+    question:
+      "What if I don’t find a team during the first week of the AI E-Lab?",
+    answer:
+      "No worries, if you don’t find a team, you’ll still be able to continue your journey in the E-Lab.",
+  },
+  {
+    question: "Do I have to be located in Munich during the program?",
+    answer:
+      "Since we organize in-person activities, participants need to be present in Munich during these activities.",
+  },
+  {
+    question: "Am I legally bound to TUM.ai or a partner company?",
+    answer:
+      "No. We are equity-free and do not want a share in your startup. You only need to invest your dedication and eagerness and we would like to help you with your AI startup.",
+  },
+  {
+    question: "What is the time commitment for this program?",
+    answer:
+      "The AI E-Lab is a part-time program. Keep in mind that the more you commit, the more you get out of this program.",
+  },
+];
