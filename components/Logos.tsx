@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Section from "./ui/Section";
 
 export interface Props {
   logos: {

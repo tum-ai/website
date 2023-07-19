@@ -1,5 +1,4 @@
 import { cx } from "class-variance-authority";
-import Image from "next/image";
 
 interface Event {
   title: string;
@@ -66,7 +65,9 @@ const EventComponent = ({ event, step }: EventProps) => {
         />
       </div>
       <div className="flex flex-col items-center gap-4 pb-32 pl-20 text-center">
-        <h3 className={cx("text-4xl uppercase", stepText[step - 1])}>
+        <h3
+          className={cx("text-2xl uppercase sm:text-4xl", stepText[step - 1])}
+        >
           {event.title}
         </h3>
         <p>
