@@ -43,7 +43,7 @@ function Hero() {
               technology
             </p>
 
-            <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500 asChild">
+            <Button className="asChild border-none bg-gradient-to-b from-yellow-500 to-red-500">
               <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
                 Pre-register now
               </Link>
@@ -138,7 +138,6 @@ export default function AIELab() {
             easy as possible for you.
           </p>
         </div>
-      
       </Section>
 
       <Section className="bg-purple-950 text-white">
@@ -185,10 +184,10 @@ export default function AIELab() {
             diversity, curiosity, and a commitment to learning and improvement.
           </p>
           <p className="px-8 text-center">
-            As part of the AI E-Lab, you&apos;ll connect with a vibrant ecosystem of
-            startups, industry partners, and like-minded peers. You&apos;ll have the
-            opportunity to contribute to groundbreaking AI projects and drive
-            positive social impact.
+            As part of the AI E-Lab, you&apos;ll connect with a vibrant
+            ecosystem of startups, industry partners, and like-minded peers.
+            You&apos;ll have the opportunity to contribute to groundbreaking AI
+            projects and drive positive social impact.
           </p>
           <p className="px-8 text-center">
             This is a part-time program and we expect you to provide us with

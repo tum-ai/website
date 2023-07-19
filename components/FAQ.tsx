@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { cx } from "class-variance-authority";
 
 const FAQ = () => {
@@ -81,15 +81,23 @@ const AccordionItem = ({ header, text }) => {
   return (
     <div className="mb-4">
       <button
-        className="flex items-center justify-between w-full px-4 py-3 text-left text-lg font-semibold bg-purple-900 rounded-lg focus:outline-none focus:shadow-outline-purple"
+        className="focus:shadow-outline-purple flex w-full items-center justify-between rounded-lg bg-purple-900 px-4 py-3 text-left text-lg font-semibold focus:outline-none"
         onClick={toggleAccordion}
       >
         <span>{header}</span>
-        <FontAwesomeIcon icon={faChevronDown} className={cx(`ml-2 transition-transform duration-200 transform`, isOpen ? "rotate-180" : "")} />
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className={cx(
+            `ml-2 transform transition-transform duration-200`,
+            isOpen ? "rotate-180" : ""
+          )}
+        />
       </button>
       <div
-        className={cx(`duration-200 ease-in-out px-4 py-3 text-white`, isOpen ? "block" : "hidden")}
-
+        className={cx(
+          `px-4 py-3 text-white duration-200 ease-in-out`,
+          isOpen ? "block" : "hidden"
+        )}
       >
         {text}
       </div>

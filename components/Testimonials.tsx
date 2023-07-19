@@ -14,7 +14,7 @@ const Testimonials = ({ imgSrc, name, text, logoSrc }) => {
         <h5 className="my-8 text-xl font-bold text-white">{name}</h5>
 
         <p className="sm:text-md text-center leading-8 text-white sm:p-4">
-        &quot;{text}&quot;
+          &quot;{text}&quot;
         </p>
         <div className="mt-auto h-32">
           <div className="min-w-160 flex h-full items-center justify-center p-8">
