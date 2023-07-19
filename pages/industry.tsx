@@ -39,13 +39,15 @@ export default function Industry() {
         </h2>
         <Logos logos={partners} />
       </Section>
-      <Image
-        src="/assets/industry/header/test_header.svg"
-        width={1775}
-        height={795}
-        alt="Industry Timeline"
-        className="my-12 w-full"
-      />
+      <Section>
+        <Image
+          src="/assets/industry/header/test_header.svg"
+          width={1775}
+          height={795}
+          alt="Industry Timeline"
+          className="my-12 w-full"
+        />
+      </Section>
       <Section>
         <div className="justify-center sm:px-4">
           <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
