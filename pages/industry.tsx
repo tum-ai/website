@@ -39,25 +39,13 @@ export default function Industry() {
         </h2>
         <Logos logos={partners} />
       </Section>
-      <Section className="bg-blue-700">
-        <div className="mx-auto w-full">
-          <h2
-            className={cx(
-              "mb-8 text-4xl font-semibold text-white",
-              bitter.className
-            )}
-          >
-            Project Timeline
-          </h2>
-          <Image
-            src="/assets/industry/industrytimelinefall2022_cropped.png"
-            width={1775}
-            height={795}
-            alt="Industry Timeline"
-            className="w-full rounded-xl"
-          />
-        </div>
-      </Section>
+      <Image
+        src="/assets/industry/header/test_header.svg"
+        width={1775}
+        height={795}
+        alt="Industry Timeline"
+        className="my-12 w-full"
+      />
       <Section>
         <div className="justify-center sm:px-4">
           <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
