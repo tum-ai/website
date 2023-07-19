@@ -43,7 +43,7 @@ function Hero() {
               technology
             </p>
 
-            <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500">
+            <Button className="border-none bg-gradient-to-b from-yellow-500 to-red-500 asChild">
               <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
                 Pre-register now
               </Link>
@@ -138,11 +138,7 @@ export default function AIELab() {
             easy as possible for you.
           </p>
         </div>
-        {/*
-          <div className="mt-16">
-            <SnapSlider cards={testimonials} />
-          </div>
-        */}
+      
       </Section>
 
       <Section className="bg-purple-950 text-white">
@@ -189,8 +185,8 @@ export default function AIELab() {
             diversity, curiosity, and a commitment to learning and improvement.
           </p>
           <p className="px-8 text-center">
-            As part of the AI E-Lab, you'll connect with a vibrant ecosystem of
-            startups, industry partners, and like-minded peers. You'll have the
+            As part of the AI E-Lab, you&apos;ll connect with a vibrant ecosystem of
+            startups, industry partners, and like-minded peers. You&apos;ll have the
             opportunity to contribute to groundbreaking AI projects and drive
             positive social impact.
           </p>
@@ -338,13 +334,13 @@ export default function AIELab() {
 
       <Section className="bg-purple-950">
         <FAQ />
-        <div className="flex flex-col items-center justify-center justify-center gap-6 ">
+        <div className="flex flex-col items-center justify-center gap-6 ">
           <h3 className="mt-16 text-center text-3xl font-semibold text-white">
             You still have other questions?
           </h3>
           <Link
             className="min-w-[300px] rounded-full border-2 border-yellow-500 p-4 text-center font-semibold text-white transition-colors duration-300 hover:border-red-500 sm:min-w-[400px]"
-            href="https://forms.tum-ai.com/ai-elab-preregistration"
+            href="mailto:venture@tum-ai.com"
           >
             Ask us here
           </Link>
