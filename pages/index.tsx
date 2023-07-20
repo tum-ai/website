@@ -11,9 +11,10 @@ import { cx } from "class-variance-authority";
 import VerticalCards, {
   type Props as VerticalCardsProps,
 } from "components/VerticalCards";
-import { partners } from "data/industry";
-import { partners_collabrated_with } from "data/partners";
-import { initiatives_collabrated_with } from "data/partners";
+import {
+  initiatives_collabrated_with,
+  partners_collabrated_with,
+} from "data/partners";
 import Image from "next/image";
 import Link from "next/link";
 import tailwindConfig from "tailwind.config.js";
@@ -180,12 +181,12 @@ function Content1() {
     {
       img: "/assets/home_img3.png",
       title: "Industry Project Cooperations",
-      text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 10 weeks time-frame",
+      text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 12 weeks time-frame",
       subtext: "applications closed, currently ongoing",
       buttons: [
         { href: "https://industry.tum-ai.com/apply", text: "Apply now" },
         {
-          href: "https://www.tum-ai.com/industry-projects.html",
+          href: "https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1",
           text: "Learn more",
           intent: "tertiary",
         },

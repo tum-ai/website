@@ -178,7 +178,7 @@ function StudentsSection() {
                   </Link>
                 </Button>
                 <Button asChild intent="tertiary">
-                  <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc">
+                  <Link href="https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1">
                     Project page
                   </Link>
                 </Button>
