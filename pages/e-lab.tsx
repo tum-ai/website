@@ -1,10 +1,10 @@
+import Benefits from "@components/Benefit";
+import FAQ from "@components/FAQ";
 import Logos from "@components/Logos";
 import Stat from "@components/Stat";
+import Timeline from "@components/Timeline";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
-import Image from "next/image";
-import Head from "next/head";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
   faChevronDown,
@@ -12,13 +12,11 @@ import {
   faHandshakeSimple,
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import Spline from "@splinetool/react-spline";
-import Benefits from "@components/Benefit";
-import Timeline from "@components/Timeline";
-import FAQ from "@components/FAQ";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faq } from "data/e-lab";
+import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function Hero() {
   return (
