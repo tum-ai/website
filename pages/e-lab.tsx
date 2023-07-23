@@ -13,6 +13,7 @@ import {
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spline from "@splinetool/react-spline";
 import { faq } from "data/e-lab";
 import Head from "next/head";
 import Image from "next/image";
