@@ -39,24 +39,14 @@ export default function Industry() {
         </h2>
         <Logos logos={partners} />
       </Section>
-      <Section className="bg-blue-700">
-        <div className="mx-auto w-full">
-          <h2
-            className={cx(
-              "mb-8 text-4xl font-semibold text-white",
-              bitter.className
-            )}
-          >
-            Project Timeline
-          </h2>
-          <Image
-            src="/assets/industry/industrytimelinefall2022_cropped.png"
-            width={1775}
-            height={795}
-            alt="Industry Timeline"
-            className="w-full rounded-xl"
-          />
-        </div>
+      <Section>
+        <Image
+          src="/assets/industry/header/test_header.svg"
+          width={1775}
+          height={795}
+          alt="Industry Timeline"
+          className="w-full"
+        />
       </Section>
       <Section>
         <div className="justify-center sm:px-4">
@@ -188,7 +178,7 @@ function StudentsSection() {
                   </Link>
                 </Button>
                 <Button asChild intent="tertiary">
-                  <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-4-0-AI-Projects-8d1baf8b57e7493c954b5e7b275d74bc">
+                  <Link href="https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1">
                     Project page
                   </Link>
                 </Button>
