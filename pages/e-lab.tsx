@@ -22,12 +22,12 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="-z-10 h-screen">
-      <div className="absolute top-0 -z-10 h-full w-full bg-black">
+    <section className="-z-10 h-screen bg-purple-950">
+      <div className="hidden h-full w-full lg:flex">
         <Spline scene="https://prod.spline.design/EAkcpdJTKDSGjRQS/scene.splinecode" />
       </div>
 
-      <div className="flex h-full w-full items-center text-white">
+      <div className="absolute top-0 flex h-full w-full items-center text-white">
         <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
           <h1 className="font-bold">
             <span className="text-8xl">AI</span>
