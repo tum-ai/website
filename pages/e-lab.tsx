@@ -21,7 +21,7 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="-z-10 h-screen">
+    <section className="-z-10 h-[100dvh]">
       <div className="absolute top-0 -z-10 h-full w-full bg-black">
         <Spline scene="https://prod.spline.design/EAkcpdJTKDSGjRQS/scene.splinecode" />
       </div>
