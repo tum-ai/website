@@ -61,14 +61,14 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/ikigai.png",
     logoAlt: "ikigai",
   },
-   {
+  {
     imgSrc: "/assets/e-lab/testimonials/florian_scherl.jpg",
     name: "Florian Scherl",
     text: "I really loved the abundance of pitch events. It not only immensely improved my pitching but I also received priceless feedback for my idea and even found my NLP team lead at the final pitch. I definitely recommend applying to the AI E-Lab and using the provided knowledge and resources to the fullest. They offer great advice and guidance. Lastly, I greatly appreciated the peer-to-peer exchange. They absolutely brought the brightest minds together to start new thriving ventures.",
     logoSrc: "/assets/e-lab/testimonials/fast_ai_movies.png",
     logoAlt: "FAST AI Movies",
   },
-    
+
   // {
   //   imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
   //   name: "Leon Hergert",

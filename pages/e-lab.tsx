@@ -143,11 +143,11 @@ export default function AIELab() {
             easy as possible for you.
           </p>
         </div>
-        
-          <div className="mt-16">
-            <SnapSlider cards={testimonials} />
-          </div>
-       
+
+        <div className="mt-16">
+          <SnapSlider cards={testimonials} />
+        </div>
+
       </Section>
 
       <Section className="bg-purple-950 text-white">
@@ -363,37 +363,37 @@ export default function AIELab() {
       </Section>
     </>
   );
-  function SnapSlider({cards}) {
+  function SnapSlider({ cards }) {
     return (
-        <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
-          {cards.map((card) => (
-              <div
-                  className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
-                  key={`${card.name}-${card.text}`}
-              >
-                <Testimonials {...card} />
-              </div>
-          ))}
-        </div>
-    );
-}
-
-/* {
-    /* This code is needed for the Mentors and Advisors, which will be added later on
-
-  function SliderCard({imgSrc, name, text}) {
-    return (
-        <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
-          <Image src={imgSrc} alt={name} fill objectFit="cover"/>
-          <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
-            <h3 className="font-bold">{name}</h3>
-            <p>{text}</p>
+      <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
+        {cards.map((card) => (
+          <div
+            className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
+            key={`${card.name}-${card.text}`}
+          >
+            <Testimonials {...card} />
           </div>
-        </div>
+        ))}
+      </div>
     );
   }
 
+  /* {
+      /* This code is needed for the Mentors and Advisors, which will be added later on
   
-  } */
+    function SliderCard({imgSrc, name, text}) {
+      return (
+          <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
+            <Image src={imgSrc} alt={name} fill objectFit="cover"/>
+            <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+              <h3 className="font-bold">{name}</h3>
+              <p>{text}</p>
+            </div>
+          </div>
+      );
+    }
+  
+    
+    } */
 
 }
