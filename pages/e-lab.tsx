@@ -31,7 +31,7 @@ function Hero() {
 
       <div className="absolute top-0 flex h-full w-full items-center text-white">
         <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
-          <h1 className="font-bold text-center">
+          <h1 className="text-center font-bold">
             <span className="text-8xl">AI</span>
             <br />
             <span className="text-3xl sm:text-5xl xl:text-8xl">
@@ -147,7 +147,6 @@ export default function AIELab() {
         <div className="mt-16">
           <SnapSlider cards={testimonials} />
         </div>
-
       </Section>
 
       <Section className="bg-purple-950 text-white">
@@ -395,5 +394,4 @@ export default function AIELab() {
   
     
     } */
-
 }
