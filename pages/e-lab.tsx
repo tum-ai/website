@@ -31,7 +31,7 @@ function Hero() {
 
       <div className="absolute top-0 flex h-full w-full items-center text-white">
         <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
-          <h1 className="text-center font-bold">
+          <h1 className="text-center font-bold lg:text-left">
             <span className="text-8xl">AI</span>
             <br />
             <span className="text-3xl sm:text-5xl xl:text-8xl">
@@ -100,16 +100,16 @@ export default function AIELab() {
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
-              Our Last Batch of the E-Lab
+              How founders experience the E-Lab
             </h3>
-            <div>
-              <Image
-                src="/assets/e-lab/the-elab.jpg"
-                width={800}
-                height={500}
-                alt=""
-              />
-            </div>
+            <iframe
+              style={{ aspectRatio: 16 / 9 }}
+              src="https://www.youtube.com/embed/EMkIoTgybuM"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full"
+            ></iframe>
           </div>
         </div>
       </Section>
