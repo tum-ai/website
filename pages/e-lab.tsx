@@ -4,6 +4,7 @@ import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import Image from "next/image";
 import Head from "next/head";
+import Testimonials from "@components/Testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
@@ -19,6 +20,7 @@ import FAQ from "@components/FAQ";
 import { faq } from "data/e-lab";
 import Link from "next/link";
 import React from "react";
+import { testimonials } from "data/e-lab";
 
 function Hero() {
   return (
@@ -29,7 +31,7 @@ function Hero() {
 
       <div className="absolute top-0 flex h-full w-full items-center text-white">
         <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
-          <h1 className="font-bold">
+          <h1 className="text-center font-bold lg:text-left">
             <span className="text-8xl">AI</span>
             <br />
             <span className="text-3xl sm:text-5xl xl:text-8xl">
@@ -47,8 +49,8 @@ function Hero() {
               className="border-none bg-gradient-to-b from-yellow-500 to-red-500"
               asChild
             >
-              <Link href="https://forms.tum-ai.com/ai-elab-preregistration">
-                Pre-register now
+              <Link href="https://forms.tum-ai.com/ai-elab-application">
+                Apply now
               </Link>
             </Button>
           </div>
@@ -98,16 +100,16 @@ export default function AIELab() {
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
-              Our Last Batch of the E-Lab
+              How founders experience the E-Lab
             </h3>
-            <div>
-              <Image
-                src="/assets/e-lab/the-elab.jpg"
-                width={800}
-                height={500}
-                alt=""
-              />
-            </div>
+            <iframe
+              style={{ aspectRatio: 16 / 9 }}
+              src="https://www.youtube.com/embed/EMkIoTgybuM"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full"
+            ></iframe>
           </div>
         </div>
       </Section>
@@ -141,11 +143,10 @@ export default function AIELab() {
             easy as possible for you.
           </p>
         </div>
-        {/*
-          <div className="mt-16">
-            <SnapSlider cards={testimonials} />
-          </div>
-        */}
+
+        <div className="mt-16">
+          <SnapSlider cards={testimonials} />
+        </div>
       </Section>
 
       <Section className="bg-purple-950 text-white">
@@ -325,9 +326,9 @@ export default function AIELab() {
           <div className="flex flex-col justify-center gap-6 ">
             <Link
               className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
-              href="https://forms.tum-ai.com/ai-elab-preregistration"
+              href="https://forms.tum-ai.com/ai-elab-application"
             >
-              Sign-up now
+              Apply now
             </Link>
             <Link
               className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
@@ -361,35 +362,36 @@ export default function AIELab() {
       </Section>
     </>
   );
-}
-
-{
-  /* This code is needed for the testimonials, which will be added later on
-  function SliderCard({imgSrc, name, text}) {
+  function SnapSlider({ cards }) {
     return (
-        <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
-          <Image src={imgSrc} alt={name} fill objectFit="cover"/>
-          <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
-            <h3 className="font-bold">{name}</h3>
-            <p>{text}</p>
+      <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
+        {cards.map((card) => (
+          <div
+            className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
+            key={`${card.name}-${card.text}`}
+          >
+            <Testimonials {...card} />
           </div>
-        </div>
+        ))}
+      </div>
     );
   }
 
-  function SnapSlider({cards}) {
-    return (
-        <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
-          {cards.map((card) => (
-              <div
-                  className="inline-flex min-h-[220px] min-w-[300px] snap-center align-middle sm:min-w-[400px]"
-                  key={`${card.name}-${card.text}`}
-              >
-                <Testimonials {...card} />
-              </div>
-          ))}
-        </div>
-    );
-  }
-*/
+  /* {
+      /* This code is needed for the Mentors and Advisors, which will be added later on
+  
+    function SliderCard({imgSrc, name, text}) {
+      return (
+          <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
+            <Image src={imgSrc} alt={name} fill objectFit="cover"/>
+            <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+              <h3 className="font-bold">{name}</h3>
+              <p>{text}</p>
+            </div>
+          </div>
+      );
+    }
+  
+    
+    } */
 }
