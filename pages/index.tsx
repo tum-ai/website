@@ -198,9 +198,9 @@ function Content1() {
       text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
       subtext: "applications closed, currently ongoing",
       buttons: [
-        { href: "https://aielab.tum-ai.com/", text: "Apply now" },
+        { href: "/e-lab", text: "Apply now" },
         {
-          href: "https://aielab.tum-ai.com/",
+          href: "/e-lab",
           text: "Learn more",
           intent: "tertiary",
         },
