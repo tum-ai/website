@@ -156,7 +156,7 @@ export default function AIELab() {
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-24">
           <Stat description={"Workshops"} value={"17+"} />
-          <Stat description={"Startups"} value={"15"} />
+          <Stat description={"Startups"} value={"16"} />
           <Stat description={"Winners"} value={"3"} />
         </div>
 
@@ -273,49 +273,58 @@ export default function AIELab() {
         </h2>
 
         <div className="mb-24">
-          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
+          {/*     <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
             Partners
-          </h3>
+          </h3> */}
           <Logos
             logos={[
               {
                 src: "/assets/e-lab/partners/ai_munich_w.png",
-                alt: "",
-                href: "#",
+                alt: "AI+Munich",
+                href: "https://www.must-munich.com/aimunich/",
               },
               {
                 src: "/assets/e-lab/partners/ewor_w.png",
-                alt: "",
-                href: "#",
+                alt: "Ewor",
+                href: "https://ewor.io/",
               },
               {
-                src: "/assets/e-lab/partners/campusfounders_logo_white.svg",
-                alt: "",
-                href: "#",
+                src: "/assets/e-lab/partners/campus_founders_w.png",
+                alt: "Campus Founders",
+                href: "https://campusfounders.de/",
+              },
+              {
+                src: "/assets/e-lab/partners/merantix.svg",
+                alt: "Merantix",
+                href: "https://www.merantix.com/",
               },
             ]}
           />
         </div>
-        <div>
-          <h3 className="text-uppercase mb-12 w-full text-center text-2xl font-bold">
-            Sponsors
-          </h3>
-          <Logos
-            logos={[
-              {
-                src: "/assets/e-lab/partners/uvc_w.svg",
-                alt: "",
-                href: "#",
-              },
-            ]}
-          />
-        </div>
+        <Logos
+          logos={[
+            {
+              src: "/assets/e-lab/partners/uvc_w.svg",
+              alt: "UVC Partners",
+              href: "https://www.uvcpartners.com/",
+            },
+            {
+              href: "https://www.10xfounders.com/",
+              src: "/assets/e-lab/partners/10x_founders.svg",
+              alt: "10x Founders",
+            },
+            {
+              href: "https://www.cherry.vc/",
+              src: "/assets/e-lab/partners/cherry_w.png",
+              alt: "Cherry VC",
+            },
+          ]}
+        />
       </Section>
 
       <Section className="bg-purple-950 text-white">
         <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
-          {/* Pre-register and join the AI E-Lab */}
-          Pre-register
+          Apply now and join the AI E-Lab
         </h2>
 
         <div className="flex flex-col items-center justify-center gap-8">
