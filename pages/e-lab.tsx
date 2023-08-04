@@ -298,6 +298,11 @@ export default function AIELab() {
                 alt: "Merantix",
                 href: "https://www.merantix.com/",
               },
+              {
+                src: "/assets/e-lab/partners/hubert_burda_media.png",
+                alt: "Burda",
+                href: "https://www.burda.com/",
+              },
             ]}
           />
         </div>
