@@ -68,6 +68,13 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/fast_ai_movies.png",
     logoAlt: "FAST AI Movies",
   },
+  {
+    imgSrc: "/assets/e-lab/testimonials/marc_alexander_kuehn.jpg",
+    name: "Marc Alexander Kühn (Jury)",
+    text: "Participating in AI E-Lab's final pitch event as a jury member was an enriching experience. It was great to see so many young people driving change in Artificial Intelligence. Also, it was thrilling to see some of the teams making significant progress after the incubation program. Above all, I believe what TUM.ai E-Lab is doing for the Munich ecosystem is of significant value. They're cultivating a vibrant environment for young, talented students and graduates to kick-start their entrepreneurial journey. Their dedication to unleashing the future of AI innovation in Munich is remarkable and I'm excited to see where their efforts will lead.",
+    logoSrc: "/assets/e-lab/partners/uvc_w.svg",
+    logoAlt: "UVC Partners",
+  },
 
   // {
   //   imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
