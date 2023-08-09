@@ -177,4 +177,228 @@ export const initiatives_collabrated_with = [
     src: "/assets/partners_sponsors/MCML_Logo_2.png",
     alt: "MCML",
   },
+  {
+    href: "https://www.uvcpartners.com",
+    src: "/assets/partners_sponsors/uvc.jpg",
+    alt: "UVC Partners",
+  },
+  {
+    href: "https://www.munich-ecosystem.de/ai-munich",
+    src: "/assets/partners_sponsors/ai_plus_munich.jpeg",
+    alt: "AI Plus",
+  },
+];
+
+export const strategic_partners = [
+  {
+    href: "",
+    src: "",
+    alt: "NVIDIA"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Baiosphere"
+  },
+  {
+    href: "https://www.appliedai.de/de/",
+    src: "/assets/partners_sponsors/appliedai_logo.png",
+    alt: "Applied AI",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "TUM Venture Labs"
+  }
+];
+
+export const enablers_and_sponsors = [
+  {
+    href: "",
+    src: "",
+    alt: "Janestreet"
+  },
+  {
+    href: "https://www.mcml.ai",
+    src: "/assets/partners_sponsors/MCML_Logo_2.png",
+    alt: "MCML",
+  },
+  {
+    href: "https://www.tngtech.com/index.html",
+    src: "/assets/partners_sponsors/TNG_logo.png",
+    alt: "TNG Tech",
+  },
+  {
+    href: "https://www.munich-ecosystem.de/ai-munich",
+    src: "/assets/partners_sponsors/ai_plus_munich.jpeg",
+    alt: "AI Plus",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Campus Founders"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Merantix"
+  },
+  {
+    href: "https://www.cdtm.de/",
+    src: "/assets/partners_sponsors/cdtm_logo.png",
+    alt: "CDTM",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Bavarian State Ministry for Digital Affairs"
+  },
+  {
+    href: "https://www.10xfounders.com/",
+    src: "/assets/partners_sponsors/10xfounderslogo.png",
+    alt: "10x Founders",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Hubert Burda Media"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "KI Park"
+  },
+  {
+    href: "https://www.startmunich.de/",
+    src: "/assets/partners_sponsors/start_munich.png",
+    alt: "Start Munich",
+  },
+];
+
+export const project_partners = [
+  {
+    href: "https://www.atoss.com/de",
+    src: "/assets/industry/partners/ATOSS.png",
+    alt: "atoss",
+  },
+  {
+    href: "https://www.hypovereinsbank.de",
+    src: "/assets/industry/partners/HVB_2.png",
+    alt: "hypovereinsbank",
+  },
+  {
+    href: "https://www.infineon.com/cms/de/",
+    src: "/assets/industry/partners/infineon_logo.png",
+    alt: "infineon",
+  },
+  {
+    href: "https://www.prosiebensat1.com",
+    src: "/assets/industry/partners/P7S1_transparent.png",
+    alt: "prosiebensat1",
+  },
+  {
+    href: "https://www.sportortho.mri.tum.de",
+    src: "/assets/industry/partners/MRI.png",
+    alt: "MRI",
+  },
+  {
+    href: "https://neuralprophet.com",
+    src: "/assets/industry/partners/neuralprophet_logo.png",
+    alt: "neuralprophet",
+  },
+  {
+    href: "https://eyeo.com",
+    src: "/assets/industry/partners/eyeo.png",
+    alt: "eyeo",
+  },
+  {
+    href: "https://gruppe.schwarz",
+    src: "/assets/industry/partners/schwarzgroup_edit_cropped.png",
+    alt: "Schwarz Gruppe",
+  },
+  {
+    href: "https://www.rohde-schwarz.com/de",
+    src: "/assets/industry/partners/RandS.png",
+    alt: "Rhode-Schwarz",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "ESA"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "GResearch"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "BMW"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Cohere"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Daiki"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Genistat"
+  },
+  {
+    href: "https://www.microsoft.com/de-de/about",
+    src: "/assets/partners_sponsors/Microsoft_Logo.png",
+    alt: "Microsoft",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "BurdaForward"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "UniCredit"
+  },
+  {
+    href: "https://www.ibm.com/de-de",
+    src: "/assets/partners_sponsors/ibm_logo.png",
+    alt: "IBM",
+  },
+  {
+    href: "https://www.infineon.com/",
+    src: "/assets/partners_sponsors/infineon_logo.png",
+    alt: "Infineon",
+  },
+  {
+    href: "https://www.mri.tum.de/",
+    src: "/assets/partners_sponsors/Klinikum_rechts_der_Isar_logo.svg",
+    alt: "Klinikum Rechts der Isar",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Roche"
+  },
+  {
+    href: "",
+    src: "",
+    alt: "Landeshauptstadt München"
+  },
+  {
+    href: "https://quantco.com/",
+    src: "/assets/partners_sponsors/quantco_logo.png",
+    alt: "QuantCo",
+  },
+  {
+    href: "https://www.avimedical.com/",
+    src: "/assets/partners_sponsors/avi_medical_logo.png",
+    alt: "Avi Medical",
+  },
 ];
