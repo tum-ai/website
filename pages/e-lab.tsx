@@ -13,7 +13,6 @@ import {
   faHandshakeSimple,
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import Spline from "@splinetool/react-spline";
 import Benefits from "@components/Benefit";
 import Timeline from "@components/Timeline";
 import FAQ from "@components/FAQ";
