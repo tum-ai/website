@@ -25,9 +25,9 @@ import { testimonials } from "data/e-lab";
 function Hero() {
   return (
     <section className="-z-10 h-screen bg-purple-950">
-      <div className="hidden h-full w-full lg:flex">
-        <Spline scene="https://prod.spline.design/EAkcpdJTKDSGjRQS/scene.splinecode" />
-      </div>
+      <video muted autoPlay loop className="h-full w-full">
+        <source src="/assets/e-lab/spheretumai.mp4" />
+      </video>
 
       <div className="absolute top-0 flex h-full w-full items-center text-white">
         <div className="max-w-8xl mx-auto space-y-6 p-8 md:p-16">
