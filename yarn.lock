@@ -609,22 +609,6 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.3.2.tgz"
   integrity sha512-V+MvGwaHH03hYhY+k6Ef/xKd6RYlc4q8WBx+2ANmipHJcKuktNcI/NgEsJgdSUF6Lw32njT6OnrRsKYCdgHjYw==
 
-"@splinetool/react-spline@^2.2.6":
-  version "2.2.6"
-  resolved "https://registry.npmjs.org/@splinetool/react-spline/-/react-spline-2.2.6.tgz"
-  integrity sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==
-  dependencies:
-    lodash.debounce "^4.0.8"
-    react-merge-refs "^2.0.1"
-
-"@splinetool/runtime@^0.9.381":
-  version "0.9.383"
-  resolved "https://registry.npmjs.org/@splinetool/runtime/-/runtime-0.9.383.tgz"
-  integrity sha512-2NqNxxQPvWMTn9+uOXLAAFB0mIuzE0NBMaixQ16yAKxL+8YySUwOYLyM4iX0D3afUYfZovQSZiY2lSiQzL82SQ==
-  dependencies:
-    on-change "^4.0.0"
-    semver-compare "^1.0.0"
-
 "@swc/helpers@0.4.14":
   version "0.4.14"
   resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.14.tgz"
@@ -2249,11 +2233,6 @@ lodash.clamp@^4.0.3:
   resolved "https://registry.npmjs.org/lodash.clamp/-/lodash.clamp-4.0.3.tgz"
   integrity sha512-HvzRFWjtcguTW7yd8NJBshuNaCa8aqNFtnswdT7f/cMd/1YKy5Zzoq4W/Oxvnx9l7aeY258uSdDfM793+eLsVg==
 
-lodash.debounce@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
-  integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
@@ -2504,11 +2483,6 @@ object.values@^1.1.6:
     call-bind "^1.0.2"
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
-
-on-change@^4.0.0:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/on-change/-/on-change-4.0.2.tgz"
-  integrity sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==
 
 once@^1.3.0:
   version "1.4.0"
@@ -2766,11 +2740,6 @@ react-merge-refs@^1.1.0:
   resolved "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-1.1.0.tgz"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
-react-merge-refs@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-2.0.2.tgz"
-  integrity sha512-V5BGTwGa2r+/t0A/BZMS6L7VPXY0CU8xtAhkT3XUoI1WJJhhtvulvoiZkJ5Jt9YAW23m4xFWmhQ+C5HwjtTFhQ==
-
 react-reconciler@^0.27.0:
   version "0.27.0"
   resolved "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.27.0.tgz"
@@ -2940,11 +2909,6 @@ scheduler@^0.23.0:
   integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
   dependencies:
     loose-envify "^1.1.0"
-
-semver-compare@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz"
-  integrity sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==
 
 semver@^6.3.0:
   version "6.3.0"
