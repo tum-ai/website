@@ -195,8 +195,8 @@ function Content1() {
     {
       img: "/assets/home_img4.jpg",
       title: "AI E-Lab Entrepreneurship",
-      text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
-      subtext: "applications closed, currently ongoing",
+      text: `Startup incubation program for anyone interested in founding AI ventures, access TUM.ai's network to boost your vision`,
+      subtext: "applications open, starting in October",
       buttons: [
         { href: "/e-lab", text: "Apply now" },
         {
