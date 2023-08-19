@@ -23,7 +23,7 @@ import { testimonials } from "data/e-lab";
 
 function Hero() {
   return (
-    <section className="-z-10 h-screen bg-purple-950">
+    <section className="relative -z-10 h-screen bg-purple-950">
       <video muted autoPlay loop className="h-full w-full">
         <source src="/assets/e-lab/spheretumai.mp4" />
       </video>
@@ -82,6 +82,27 @@ export default function AIELab() {
       </Head>
       <Hero />
       <Section className="bg-purple-950 text-white">
+        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+          AI E-Lab Info Session
+        </h2>
+
+        <div className="flex flex-col items-center justify-center gap-8">
+          <p>
+            Join us online at 5:30pm on Friday, August 25th for an interactive
+            session where we&apos;ll unpack everything you need to know about AI
+            E-Lab.{" "}
+          </p>
+          <div className="flex flex-col justify-center gap-6 ">
+            <Link
+              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+              href="https://www.eventbrite.de/e/ai-e-lab-info-session-tickets-696671752967?aff=oddtdtcreator"
+            >
+              Register Here
+            </Link>
+          </div>
+        </div>
+      </Section>
+      <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
             What is the AI E-Lab?
@@ -99,7 +120,7 @@ export default function AIELab() {
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
-              How founders experience the E-Lab
+              Inside the E-Lab: A Founder&apos;s Journey
             </h3>
             <iframe
               style={{ aspectRatio: 16 / 9 }}
@@ -321,6 +342,11 @@ export default function AIELab() {
               href: "https://www.cherry.vc/",
               src: "/assets/e-lab/partners/cherry_w.png",
               alt: "Cherry VC",
+            },
+            {
+              href: "https://ananda.vc/",
+              src: "/assets/e-lab/partners/anandavc.png",
+              alt: "Ananda Impact Ventures",
             },
           ]}
         />

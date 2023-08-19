@@ -11,7 +11,9 @@ const Testimonials = ({ imgSrc, name, text, logoSrc, logoAlt }) => {
           width={96}
           height={96}
         />
-        <h5 className="my-8 text-xl font-bold text-white">{name}</h5>
+        <h5 className="my-8 text-center text-xl font-bold text-white">
+          {name}
+        </h5>
 
         <p className="sm:text-md text-center leading-8 text-white sm:p-4">
           &quot;{text}&quot;
