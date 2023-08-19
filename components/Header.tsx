@@ -14,7 +14,6 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -122,8 +121,9 @@ export const Header = () => {
     <motion.header
       className={cx(
         "fixed z-50 w-full px-8 duration-500 md:px-16",
-        scrolled && !navOpen && "bg-purple-950/90 py-8 backdrop-blur-lg",
-        (!scrolled || navOpen) && "py-12"
+        scrolled && !navOpen && "top-0 bg-purple-950/90 py-8 backdrop-blur-lg",
+        (!scrolled || navOpen) && "py-12",
+        navOpen && "top-0"
       )}
     >
       <div className="container relative mx-auto flex flex-row justify-between">
