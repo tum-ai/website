@@ -12,7 +12,7 @@ function Banner() {
           <h2 className="text-xl">Upcoming AI Summit </h2>
           <p className="text-md font-light">Oct 20th - 21st 2023</p>
         </div>
-        <Button>
+        <Button asChild>
           <Link href="http://summit.tum-ai.com">Get Tickets</Link>
         </Button>
       </div>
