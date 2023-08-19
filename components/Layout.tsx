@@ -1,8 +1,7 @@
 import { inter } from "@styles/fonts";
+import Link from "next/link";
 import Footer from "./Footer";
 import { Header } from "./Header";
-import Link from "next/link";
-import React from "react";
 
 function Banner() {
   return (
