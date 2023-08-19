@@ -23,7 +23,7 @@ import { testimonials } from "data/e-lab";
 
 function Hero() {
   return (
-    <section className="-z-10 h-screen bg-purple-950">
+    <section className="-z-10 h-screen bg-purple-950 relative">
       <video muted autoPlay loop className="h-full w-full">
         <source src="/assets/e-lab/spheretumai.mp4" />
       </video>
