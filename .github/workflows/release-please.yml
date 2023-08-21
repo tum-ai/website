@@ -9,6 +9,10 @@ permissions:
 
 name: release-please
 
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
@@ -17,3 +21,19 @@ jobs:
         with:
           release-type: node
           package-name: tumai-website
+      - uses: actions/checkout@v2
+        # these if statements ensure that a publication only occurs when
+        # a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
