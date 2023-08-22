@@ -134,7 +134,7 @@ export default function Partners() {
               with you!
             </p>
 
-            <Button intent="purple" asChild>
+            <Button intent="primary" asChild>
               <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
             </Button>
           </div>
