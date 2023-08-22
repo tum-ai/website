@@ -46,7 +46,7 @@ const Navigation = ({ open, setOpen }) => {
                 {links.map(({ href, text }) => (
                   <Link
                     key={text}
-                    className="w-full rounded-2xl p-4 text-2xl duration-500 hover:bg-purple-500/80"
+                    className="w-full rounded-2xl px-4 py-2 text-lg duration-500 hover:bg-purple-500/80"
                     href={href}
                     onClick={() => setOpen(false)}
                   >
