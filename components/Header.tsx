@@ -176,14 +176,14 @@ const Logo = ({ scrolled, navOpen }) => {
 
 function Banner() {
   return (
-    <div className="w-full bg-purple-100 px-8 py-2">
-      <div className="container mx-auto flex items-center justify-center gap-12">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:space-x-4">
-          <h2 className="text-xl">Upcoming AI Summit </h2>
+    <div className="w-full bg-purple-100 py-2 md:px-8">
+      <div className="container mx-auto flex items-center justify-center gap-4 md:gap-12">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+          <h2 className="text-lg">Upcoming AI Summit </h2>
           <p className="text-md font-light">Oct 20th - 21st 2023</p>
         </div>
         <Button asChild small intent="primary">
-          <Link href="http://summit.tum-ai.com">Get Tickets</Link>
+          <Link href="http://summit.tum-ai.com/tickets">Get Tickets</Link>
         </Button>
       </div>
     </div>
