@@ -1,21 +1,12 @@
-import {
-  faInstagram,
-  faLinkedin,
-  faSlack,
-} from "@fortawesome/free-brands-svg-icons";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faInstagram, faLinkedin, faSlack,} from "@fortawesome/free-brands-svg-icons";
+import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
 import Button from "@ui/Button";
-import { cx } from "class-variance-authority";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import {cx} from "class-variance-authority";
+import {AnimatePresence, motion, useMotionValueEvent, useScroll,} from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import {useState} from "react";
 
 const Navigation = ({ open, setOpen }) => {
   const links = [
@@ -40,13 +31,13 @@ const Navigation = ({ open, setOpen }) => {
             />
           </Dialog.Overlay>
 
-          <Dialog.Content className="container fixed left-[50%] top-[50%]  mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] text-white">
+          <Dialog.Content className="container fixed left-[50%] top-[50%] mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] text-white mt-20">
             <nav className="p-4">
               <ul className="flex flex-col space-y-2">
                 {links.map(({ href, text }) => (
                   <Link
                     key={text}
-                    className="w-full rounded-2xl px-4 py-2 text-lg duration-500 hover:bg-purple-500/80"
+                    className="w-full rounded-2xl px-4 py-2 text-2xl duration-500 hover:bg-purple-500/80"
                     href={href}
                     onClick={() => setOpen(false)}
                   >
@@ -177,12 +168,12 @@ const Logo = ({ scrolled, navOpen }) => {
 function Banner() {
   return (
     <div className="w-full bg-purple-100 px-8 py-2">
-      <div className="container mx-auto flex items-center justify-center gap-12">
+      <div className="container mx-auto flex items-center justify-between gap-12">
         <div className="flex flex-col sm:flex-row sm:items-end sm:space-x-4">
           <h2 className="text-xl">Upcoming AI Summit </h2>
           <p className="text-md font-light">Oct 20th - 21st 2023</p>
         </div>
-        <Button asChild small intent="primary">
+        <Button asChild small intent="primary" className="text-center">
           <Link href="http://summit.tum-ai.com">Get Tickets</Link>
         </Button>
       </div>
