@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/tum-ai/website/compare/v1.0.0...v1.0.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* Add new banner style ([#75](https://github.com/tum-ai/website/issues/75)) ([61fb6bc](https://github.com/tum-ai/website/commit/61fb6bcee70deaf03df444c7bb1e37eeed1d5e7a))
+* navigation not clickable on smaller screens ([#71](https://github.com/tum-ai/website/issues/71)) ([d7c6fe0](https://github.com/tum-ai/website/commit/d7c6fe0005af8c3afd6459591aaa50a705553310))
+
 ## 1.0.0 (2023-08-22)
 
 
