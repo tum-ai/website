@@ -1,12 +1,21 @@
-import {faInstagram, faLinkedin, faSlack,} from "@fortawesome/free-brands-svg-icons";
-import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faSlack,
+} from "@fortawesome/free-brands-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
 import Button from "@ui/Button";
-import {cx} from "class-variance-authority";
-import {AnimatePresence, motion, useMotionValueEvent, useScroll,} from "framer-motion";
+import { cx } from "class-variance-authority";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import Link from "next/link";
-import {useState} from "react";
+import { useState } from "react";
 
 const Navigation = ({ open, setOpen }) => {
   const links = [
@@ -31,13 +40,13 @@ const Navigation = ({ open, setOpen }) => {
             />
           </Dialog.Overlay>
 
-          <Dialog.Content className="container fixed left-[50%] top-[50%] mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] text-white mt-24">
+          <Dialog.Content className="container fixed left-[50%] top-[50%] mx-auto mt-24 max-w-lg translate-x-[-50%] translate-y-[-50%] text-white">
             <nav className="px-4 sm:py-4">
               <ul className="flex flex-col sm:space-y-2">
                 {links.map(({ href, text }) => (
                   <Link
                     key={text}
-                    className="w-full rounded-2xl px-4 py-2 text-lg sm:text-2xl duration-500 hover:bg-purple-500/80"
+                    className="w-full rounded-2xl px-4 py-2 text-lg duration-500 hover:bg-purple-500/80 sm:text-2xl"
                     href={href}
                     onClick={() => setOpen(false)}
                   >
@@ -46,7 +55,7 @@ const Navigation = ({ open, setOpen }) => {
                 ))}
               </ul>
 
-              <hr className="my-1 sm:my-8 border-b-2" />
+              <hr className="my-1 border-b-2 sm:my-8" />
 
               <div className="flex justify-between p-4">
                 <div className="space-x-4">
