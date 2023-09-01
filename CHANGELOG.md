@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/tum-ai/website/compare/v1.0.1...v1.1.0) (2023-09-01)
+
+
+### Features
+
+* elab: deadline, new testamonial, remove section ([#77](https://github.com/tum-ai/website/issues/77)) ([fa29be8](https://github.com/tum-ai/website/commit/fa29be83cd26f62e1778201e9dcbd18257bfcd4c))
+
 ## [1.0.1](https://github.com/tum-ai/website/compare/v1.0.0...v1.0.1) (2023-08-23)
 
 
