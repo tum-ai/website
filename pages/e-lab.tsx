@@ -356,8 +356,9 @@ export default function AIELab() {
 
         <div className="flex flex-col items-center justify-center gap-8">
           <p>
-            Do you want to become part of a commmunity of AI enthusiasts and
-            found your AI startup? We are excited to have you on board.
+            Do you want to become part of a community of AI enthusiasts and
+            found your AI startup? Don’t miss your chance — applications close
+            on 07.09. We are excited to have you on board.
           </p>
           <div className="flex flex-col justify-center gap-6 ">
             <Link
