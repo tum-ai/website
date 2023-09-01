@@ -1,11 +1,11 @@
+import Benefits from "@components/Benefit";
+import FAQ from "@components/FAQ";
 import Logos from "@components/Logos";
 import Stat from "@components/Stat";
+import Testimonials from "@components/Testimonials";
+import Timeline from "@components/Timeline";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
-import Image from "next/image";
-import Head from "next/head";
-import Testimonials from "@components/Testimonials";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
   faChevronDown,
@@ -13,13 +13,10 @@ import {
   faHandshakeSimple,
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import Benefits from "@components/Benefit";
-import Timeline from "@components/Timeline";
-import FAQ from "@components/FAQ";
-import { faq } from "data/e-lab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faq, testimonials } from "data/e-lab";
+import Head from "next/head";
 import Link from "next/link";
-import React from "react";
-import { testimonials } from "data/e-lab";
 
 function Hero() {
   return (
@@ -81,7 +78,7 @@ export default function AIELab() {
         />
       </Head>
       <Hero />
-      <Section className="bg-purple-950 text-white">
+      {/* <Section className="bg-purple-950 text-white">
         <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           AI E-Lab Info Session
         </h2>
@@ -101,7 +98,7 @@ export default function AIELab() {
             </Link>
           </div>
         </div>
-      </Section>
+      </Section> */}
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">

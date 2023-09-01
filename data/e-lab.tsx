@@ -75,6 +75,13 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/partners/uvc_w.svg",
     logoAlt: "UVC Partners",
   },
+  {
+    imgSrc: "/assets/e-lab/testimonials/maximilian_jesch.png",
+    name: "Maximilian Jesch",
+    text: "Being a jury member at the AI Startup Contest was an exhilarating experience! The passion and innovation displayed by the participating teams left me truly impressed. Their groundbreaking ideas and impeccably delivered pitches showcased the immense potential of the next generation of AI-driven entrepreneurship. I have no doubt that these teams are on the cusp of revolutionizing the industry and driving us into an exciting AI-powered future. It's an honor to be part of their journey, and I eagerly anticipate witnessing their continued success and impact on the world.",
+    logoSrc: "",
+    logoAlt: "",
+  },
 
   // {
   //   imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
@@ -108,7 +115,7 @@ export const faq = [
   },
   {
     question: "When is the application deadline?",
-    answer: "The application phase closes on 31.08.2023 at 23:59.",
+    answer: "The application phase closes on 07.09.2023 at 23:59.",
   },
   {
     question: "Can I apply with a team?",
