@@ -77,7 +77,7 @@ export const testimonials = [
   },
   {
     imgSrc: "/assets/e-lab/testimonials/maximilian_jesch.png",
-    name: "Maximilian Jesch",
+    name: "Maximilian Jesch (Jury)",
     text: "Being a jury member at the AI Startup Contest was an exhilarating experience! The passion and innovation displayed by the participating teams left me truly impressed. Their groundbreaking ideas and impeccably delivered pitches showcased the immense potential of the next generation of AI-driven entrepreneurship. I have no doubt that these teams are on the cusp of revolutionizing the industry and driving us into an exciting AI-powered future. It's an honor to be part of their journey, and I eagerly anticipate witnessing their continued success and impact on the world.",
     logoSrc: "",
     logoAlt: "",
