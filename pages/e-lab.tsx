@@ -40,15 +40,6 @@ function Hero() {
               Join the AI E-Lab and unlock your potential to shape the future of
               technology
             </p>
-
-            <Button
-              className="border-none bg-gradient-to-b from-yellow-500 to-red-500"
-              asChild
-            >
-              <Link href="https://forms.tum-ai.com/ai-elab-application">
-                Apply now
-              </Link>
-            </Button>
           </div>
         </div>
       </div>
@@ -350,31 +341,12 @@ export default function AIELab() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
-          Apply now and join the AI E-Lab
-        </h2>
-
-        <div className="flex flex-col items-center justify-center gap-8">
-          <p>
-            Do you want to become part of a community of AI enthusiasts and
-            found your AI startup? Don’t miss your chance — applications close
-            on 07.09. We are excited to have you on board.
-          </p>
-          <div className="flex flex-col justify-center gap-6 ">
-            <Link
-              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
-              href="https://forms.tum-ai.com/ai-elab-application"
-            >
-              Apply now
-            </Link>
-            <Link
-              className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
-              href="mailto:venture@tum-ai.com"
-            >
-              Become a partner
-            </Link>
-          </div>
-        </div>
+        <Link
+          className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
+          href="mailto:venture@tum-ai.com"
+        >
+          Become a partner
+        </Link>
       </Section>
 
       <Section className="bg-purple-950 text-white">
