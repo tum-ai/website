@@ -21,7 +21,7 @@ import Link from "next/link";
 function Hero() {
   return (
     <section className="relative h-screen bg-purple-950">
-      <video muted autoPlay loop className="h-full w-full">
+      <video muted autoPlay loop playsInline className="h-full w-full">
         <source src="/assets/e-lab/spheretumai.mp4" />
       </video>
 
