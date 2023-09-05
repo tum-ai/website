@@ -170,7 +170,6 @@ function Content1() {
       text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
       subtext: "applications closed, finished",
       buttons: [
-        { href: "https://makeathon23.tum-ai.com/apply", text: "Apply now" },
         {
           href: "https://makeathon.tum-ai.com/",
           text: "Learn more",
@@ -184,7 +183,6 @@ function Content1() {
       text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 12 weeks time-frame",
       subtext: "applications closed, currently ongoing",
       buttons: [
-        { href: "https://industry.tum-ai.com/apply", text: "Apply now" },
         {
           href: "https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1",
           text: "Learn more",
