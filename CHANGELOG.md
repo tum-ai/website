@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/tum-ai/website/compare/v1.1.0...v1.2.0) (2023-09-06)
+
+
+### Features
+
+* remove apply buttons for e-lab ([#80](https://github.com/tum-ai/website/issues/80)) ([14aa896](https://github.com/tum-ai/website/commit/14aa89653142ec993635d80214937832338de760))
+* remove outdated apply buttons ([#81](https://github.com/tum-ai/website/issues/81)) ([34ef41a](https://github.com/tum-ai/website/commit/34ef41ab5c0874493e0841b8cd54339e339973e3))
+
+
+### Bug Fixes
+
+* e-lab animation not playing on ios ([f46ec6b](https://github.com/tum-ai/website/commit/f46ec6ba8a3bd2ee937fa87f8a372ef178bba867))
+
 ## [1.1.0](https://github.com/tum-ai/website/compare/v1.0.1...v1.1.0) (2023-09-01)
 
 
