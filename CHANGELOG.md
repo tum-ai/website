@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/tum-ai/website/compare/v1.2.0...v1.3.0) (2023-09-11)
+
+
+### Features
+
+* update e lab content ([#82](https://github.com/tum-ai/website/issues/82)) ([bf6709b](https://github.com/tum-ai/website/commit/bf6709b4b19d43b8b916098b18cd735b920594ca))
+
 ## [1.2.0](https://github.com/tum-ai/website/compare/v1.1.0...v1.2.0) (2023-09-06)
 
 
