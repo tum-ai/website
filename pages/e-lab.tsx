@@ -111,13 +111,13 @@ export default function AIELab() {
               Inside the E-Lab: A Founder&apos;s Journey
             </h3>
             <iframe
+              src="https://www.youtube.com/embed/DPJGAG9blO8?si=jDCtCvf6sVZRX69X"
               style={{ aspectRatio: 16 / 9 }}
-              src="https://www.youtube.com/embed/EMkIoTgybuM"
+              className="w-full"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full"
-            ></iframe>
+            />
           </div>
         </div>
       </Section>
