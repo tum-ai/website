@@ -111,13 +111,13 @@ export default function AIELab() {
               Inside the E-Lab: A Founder&apos;s Journey
             </h3>
             <iframe
+              src="https://www.youtube.com/embed/DPJGAG9blO8?si=jDCtCvf6sVZRX69X"
               style={{ aspectRatio: 16 / 9 }}
-              src="https://www.youtube.com/embed/EMkIoTgybuM"
+              className="w-full"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full"
-            ></iframe>
+            />
           </div>
         </div>
       </Section>
@@ -320,11 +320,6 @@ export default function AIELab() {
               src: "/assets/e-lab/partners/uvc_w.svg",
               alt: "UVC Partners",
               href: "https://www.uvcpartners.com/",
-            },
-            {
-              href: "https://www.10xfounders.com/",
-              src: "/assets/e-lab/partners/10x_founders.svg",
-              alt: "10x Founders",
             },
             {
               href: "https://www.cherry.vc/",
