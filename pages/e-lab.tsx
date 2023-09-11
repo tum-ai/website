@@ -322,11 +322,6 @@ export default function AIELab() {
               href: "https://www.uvcpartners.com/",
             },
             {
-              href: "https://www.10xfounders.com/",
-              src: "/assets/e-lab/partners/10x_founders.svg",
-              alt: "10x Founders",
-            },
-            {
               href: "https://www.cherry.vc/",
               src: "/assets/e-lab/partners/cherry_w.png",
               alt: "Cherry VC",
