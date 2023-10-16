@@ -290,31 +290,31 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/ai_munich_w.png",
                 alt: "AI+Munich",
                 href: "https://www.must-munich.com/aimunich/",
-                width: 160
+                width: 160,
               },
               {
                 src: "/assets/e-lab/partners/ewor_w.png",
                 alt: "Ewor",
                 href: "https://ewor.io/",
-                width: 120
+                width: 120,
               },
               {
                 src: "/assets/e-lab/partners/campus_founders_w.png",
                 alt: "Campus Founders",
                 href: "https://campusfounders.de/",
-                width: 160
+                width: 160,
               },
               {
                 src: "/assets/e-lab/partners/merantix.svg",
                 alt: "Merantix",
                 href: "https://www.merantix.com/",
-                width: 200
+                width: 200,
               },
               {
                 src: "/assets/e-lab/partners/hubert_burda_media.png",
                 alt: "Burda",
                 href: "https://www.burda.com/",
-                width: 300
+                width: 300,
               },
             ]}
           />
@@ -325,19 +325,19 @@ export default function AIELab() {
               src: "/assets/e-lab/partners/uvc_w.svg",
               alt: "UVC Partners",
               href: "https://www.uvcpartners.com/",
-              width: 140
+              width: 140,
             },
             {
               href: "https://www.cherry.vc/",
               src: "/assets/e-lab/partners/cherry_w.png",
               alt: "Cherry VC",
-              width: 140
+              width: 140,
             },
             {
               href: "https://ananda.vc/",
               src: "/assets/e-lab/partners/anandavc.png",
               alt: "Ananda Impact Ventures",
-              width: 200
+              width: 200,
             },
           ]}
         />

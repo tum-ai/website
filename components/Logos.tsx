@@ -20,7 +20,11 @@ export default function Logos({ logos }: Props) {
             key={logo.src}
           >
             <Link href={logo.href} passHref>
-              <div className={`min-w-160 flex h-full items-center justify-center ${logo.width > 200 ? '' : 'p-8'}`}>
+              <div
+                className={`min-w-160 flex h-full items-center justify-center ${
+                  logo.width > 200 ? "" : "p-8"
+                }`}
+              >
                 <Image
                   src={logo.src}
                   alt={logo.alt || ""}
