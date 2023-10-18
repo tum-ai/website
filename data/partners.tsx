@@ -3,43 +3,36 @@ export const partners_collabrated_with = [
     href: "https://www.microsoft.com/de-de/about",
     src: "/assets/partners_sponsors/Microsoft_Logo.png",
     alt: "Microsoft",
-    width: 160,
   },
   {
     href: "https://www.ibm.com/de-de",
     src: "/assets/partners_sponsors/ibm_logo.png",
     alt: "IBM",
-    width: 160,
   },
   {
     href: "https://www.appliedai.de/de/",
     src: "/assets/partners_sponsors/appliedai_logo.png",
     alt: "Applied AI",
-    width: 160,
   },
   {
     href: "https://www.unternehmertum.de/",
     src: "/assets/partners_sponsors/UnternehmerTUM.webp",
     alt: "UnternehmerTUM",
-    width: 160,
   },
   {
     href: "https://www2.deloitte.com/de/de/pages/risk/solutions/aistudio.html",
     src: "/assets/partners_sponsors/deloitte.png",
     alt: "Deloitte",
-    width: 160,
   },
   {
     href: "https://www.bcg.com/beyond-consulting/bcg-gamma/overview",
     src: "/assets/partners_sponsors/bcggamma_logo.png",
     alt: "BCG Gamma",
-    width: 160,
   },
   {
     href: "https://about.google/",
     src: "/assets/partners_sponsors/google_logo.png",
     alt: "Google",
-    width: 160,
   },
   {
     href: "https://openai.com/",
