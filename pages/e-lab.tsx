@@ -4,7 +4,6 @@ import Logos from "@components/Logos";
 import Stat from "@components/Stat";
 import Testimonials from "@components/Testimonials";
 import Timeline from "@components/Timeline";
-import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import {
   faBook,
@@ -290,7 +289,6 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/ai_munich_w.png",
                 alt: "AI+Munich",
                 href: "https://www.must-munich.com/aimunich/",
-                width: 160,
               },
               {
                 src: "/assets/e-lab/partners/ewor_w.png",
@@ -302,7 +300,6 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/campus_founders_w.png",
                 alt: "Campus Founders",
                 href: "https://campusfounders.de/",
-                width: 160,
               },
               {
                 src: "/assets/e-lab/partners/merantix.svg",

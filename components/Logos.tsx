@@ -6,7 +6,7 @@ export interface Props {
     src: string;
     alt: string;
     href: string;
-    width: number;
+    width?: number;
   }[];
 }
 
@@ -28,7 +28,7 @@ export default function Logos({ logos }: Props) {
                 <Image
                   src={logo.src}
                   alt={logo.alt || ""}
-                  width={logo.width}
+                  width={logo.width || 160}
                   height={50}
                   className="object-contain"
                 />
