@@ -4,7 +4,6 @@ import Logos from "@components/Logos";
 import Stat from "@components/Stat";
 import Testimonials from "@components/Testimonials";
 import Timeline from "@components/Timeline";
-import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import {
   faBook,
@@ -295,6 +294,7 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/ewor_w.png",
                 alt: "Ewor",
                 href: "https://ewor.io/",
+                width: 120,
               },
               {
                 src: "/assets/e-lab/partners/campus_founders_w.png",
@@ -305,11 +305,13 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/merantix.svg",
                 alt: "Merantix",
                 href: "https://www.merantix.com/",
+                width: 200,
               },
               {
                 src: "/assets/e-lab/partners/hubert_burda_media.png",
                 alt: "Burda",
                 href: "https://www.burda.com/",
+                width: 300,
               },
             ]}
           />
@@ -320,16 +322,19 @@ export default function AIELab() {
               src: "/assets/e-lab/partners/uvc_w.svg",
               alt: "UVC Partners",
               href: "https://www.uvcpartners.com/",
+              width: 140,
             },
             {
               href: "https://www.cherry.vc/",
               src: "/assets/e-lab/partners/cherry_w.png",
               alt: "Cherry VC",
+              width: 140,
             },
             {
               href: "https://ananda.vc/",
               src: "/assets/e-lab/partners/anandavc.png",
               alt: "Ananda Impact Ventures",
+              width: 200,
             },
           ]}
         />
