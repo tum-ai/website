@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/tum-ai/website/compare/v1.3.0...v1.4.0) (2023-10-18)
+
+
+### Features
+
+* change sizes of logos ([#84](https://github.com/tum-ai/website/issues/84)) ([72343fd](https://github.com/tum-ai/website/commit/72343fdf952c8b76b695058123896542a944edb2))
+
 ## [1.3.0](https://github.com/tum-ai/website/compare/v1.2.0...v1.3.0) (2023-09-11)
 
 
