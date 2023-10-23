@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/tum-ai/website/compare/v1.4.0...v1.5.0) (2023-10-23)
+
+
+### Features
+
+* remove banner from header ([#86](https://github.com/tum-ai/website/issues/86)) ([53dc3b0](https://github.com/tum-ai/website/commit/53dc3b0f750625973eb9b0ab626539f53ff5e23d))
+
 ## [1.4.0](https://github.com/tum-ai/website/compare/v1.3.0...v1.4.0) (2023-10-18)
 
 
