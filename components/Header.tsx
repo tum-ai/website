@@ -120,7 +120,6 @@ export const Header = () => {
         scrolled && !navOpen && "bg-purple-950/90 backdrop-blur-lg"
       )}
     >
-      <Banner />
       <div className="px-8 py-4">
         <div
           className={cx(
@@ -173,19 +172,3 @@ const Logo = ({ scrolled, navOpen }) => {
     </Link>
   );
 };
-
-function Banner() {
-  return (
-    <div className="w-full bg-purple-100 py-2 md:px-8">
-      <div className="container mx-auto flex items-center justify-center gap-4 md:gap-12">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-          <h2 className="text-lg">Upcoming AI Summit </h2>
-          <p className="text-md font-light">Oct 20th - 21st 2023</p>
-        </div>
-        <Button asChild small intent="primary">
-          <Link href="http://summit.tum-ai.com/tickets">Get Tickets</Link>
-        </Button>
-      </div>
-    </div>
-  );
-}
