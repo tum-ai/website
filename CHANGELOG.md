@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/tum-ai/website/compare/v1.5.0...v1.5.1) (2023-11-14)
+
+
+### Bug Fixes
+
+* updated impressum ([0781bfb](https://github.com/tum-ai/website/commit/0781bfbaf9e731f6f58afb4ed523a24fe95992d6))
+
 ## [1.5.0](https://github.com/tum-ai/website/compare/v1.4.0...v1.5.0) (2023-10-23)
 
 
