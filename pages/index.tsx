@@ -121,7 +121,7 @@ function Hero() {
           />
           <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Button asChild>
-              <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
+              <Link href="mailto:partners@tum-ai.com">Become a Partner</Link>
             </Button>
             <Button asChild>
               <Link href="https://join-us.tum-ai.com/">Become a Member</Link>
