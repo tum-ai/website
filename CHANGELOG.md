@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/tum-ai/website/compare/v1.5.1...v1.5.2) (2023-11-21)
+
+
+### Bug Fixes
+
+* casing error ([#90](https://github.com/tum-ai/website/issues/90)) ([c3ad72d](https://github.com/tum-ai/website/commit/c3ad72de454f17b53fffd7c5f4e2f3ffa6f25aa7))
+
 ## [1.5.1](https://github.com/tum-ai/website/compare/v1.5.0...v1.5.1) (2023-11-14)
 
 
