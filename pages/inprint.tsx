@@ -16,7 +16,8 @@ export default function Inprint() {
               <strong>Organisation</strong>: TUM.ai e.V. Vereinsregisternummer:
               VR209059 <br />
               <strong>Adresse</strong>: Arcistrasse 21, 80333 München <br />
-              <strong>Vertreter</strong>: Hamze Al-Zamkan, David Podolskyi, Georgy Chomakhashvili
+              <strong>Vertreter</strong>: Hamze Al-Zamkan, David Podolskyi,
+              Georgy Chomakhashvili
               <br />
               <strong>Mail</strong>: contact@tum-ai.com
             </p>
