@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/tum-ai/website/compare/v1.5.2...v1.5.3) (2023-11-27)
+
+
+### Bug Fixes
+
+* added Unite as Partner ([52abe87](https://github.com/tum-ai/website/commit/52abe87495eb00b7fb6c6ab9689bbcd5bff6b6c8))
+
 ## [1.5.2](https://github.com/tum-ai/website/compare/v1.5.1...v1.5.2) (2023-11-21)
 
 
