@@ -154,7 +154,7 @@ function Content1() {
         "sponsored online course certificates and company visits are exclusive to TUM.ai members",
       buttons: [
         {
-          href: "https://www.eventbrite.de/o/tumai-31793295023",
+          href: "https://lu.ma/ai-academy",
           text: "Apply now",
         },
         {
