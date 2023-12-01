@@ -121,7 +121,7 @@ function Hero() {
           />
           <div className="m-auto flex w-fit flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
             <Button asChild>
-              <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
+              <Link href="mailto:partners@tum-ai.com">Become a Partner</Link>
             </Button>
             <Button asChild>
               <Link href="https://join-us.tum-ai.com/">Become a Member</Link>
@@ -154,7 +154,7 @@ function Content1() {
         "sponsored online course certificates and company visits are exclusive to TUM.ai members",
       buttons: [
         {
-          href: "https://www.eventbrite.de/o/tumai-31793295023",
+          href: "https://lu.ma/ai-academy",
           text: "Apply now",
         },
         {
@@ -170,7 +170,6 @@ function Content1() {
       text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
       subtext: "applications closed, finished",
       buttons: [
-        { href: "https://makeathon23.tum-ai.com/apply", text: "Apply now" },
         {
           href: "https://makeathon.tum-ai.com/",
           text: "Learn more",
@@ -184,7 +183,6 @@ function Content1() {
       text: "Teams of 4x paid working students, deployed to implement data-driven solutions and consult partner companies, over 12 weeks time-frame",
       subtext: "applications closed, currently ongoing",
       buttons: [
-        { href: "https://industry.tum-ai.com/apply", text: "Apply now" },
         {
           href: "https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1",
           text: "Learn more",
@@ -195,10 +193,9 @@ function Content1() {
     {
       img: "/assets/home_img4.jpg",
       title: "AI E-Lab Entrepreneurship",
-      text: `StartUp incubation program for students who are interested in founding AI Ventures, access TUM.ai's network to boost your vision`,
-      subtext: "applications closed, currently ongoing",
+      text: `Startup incubation program for anyone interested in founding AI ventures, access TUM.ai's network to boost your vision`,
+      subtext: "applications closed, starting in October",
       buttons: [
-        { href: "/e-lab", text: "Apply now" },
         {
           href: "/e-lab",
           text: "Learn more",

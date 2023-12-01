@@ -1,11 +1,10 @@
+import Benefits from "@components/Benefit";
+import FAQ from "@components/FAQ";
 import Logos from "@components/Logos";
 import Stat from "@components/Stat";
-import Button from "@components/ui/Button";
-import Section from "@components/ui/Section";
-import Image from "next/image";
-import Head from "next/head";
 import Testimonials from "@components/Testimonials";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Timeline from "@components/Timeline";
+import Section from "@components/ui/Section";
 import {
   faBook,
   faChevronDown,
@@ -13,18 +12,15 @@ import {
   faHandshakeSimple,
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import Benefits from "@components/Benefit";
-import Timeline from "@components/Timeline";
-import FAQ from "@components/FAQ";
-import { faq } from "data/e-lab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faq, testimonials } from "data/e-lab";
+import Head from "next/head";
 import Link from "next/link";
-import React from "react";
-import { testimonials } from "data/e-lab";
 
 function Hero() {
   return (
-    <section className="-z-10 h-screen bg-purple-950">
-      <video muted autoPlay loop className="h-full w-full">
+    <section className="relative h-screen bg-purple-950">
+      <video muted autoPlay loop playsInline className="h-full w-full">
         <source src="/assets/e-lab/spheretumai.mp4" />
       </video>
 
@@ -43,15 +39,6 @@ function Hero() {
               Join the AI E-Lab and unlock your potential to shape the future of
               technology
             </p>
-
-            <Button
-              className="border-none bg-gradient-to-b from-yellow-500 to-red-500"
-              asChild
-            >
-              <Link href="https://forms.tum-ai.com/ai-elab-application">
-                Apply now
-              </Link>
-            </Button>
           </div>
         </div>
       </div>
@@ -81,6 +68,27 @@ export default function AIELab() {
         />
       </Head>
       <Hero />
+      {/* <Section className="bg-purple-950 text-white">
+        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+          AI E-Lab Info Session
+        </h2>
+
+        <div className="flex flex-col items-center justify-center gap-8">
+          <p>
+            Join us online at 5:30pm on Friday, August 25th for an interactive
+            session where we&apos;ll unpack everything you need to know about AI
+            E-Lab.{" "}
+          </p>
+          <div className="flex flex-col justify-center gap-6 ">
+            <Link
+              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+              href="https://www.eventbrite.de/e/ai-e-lab-info-session-tickets-696671752967?aff=oddtdtcreator"
+            >
+              Register Here
+            </Link>
+          </div>
+        </div>
+      </Section> */}
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
@@ -99,16 +107,16 @@ export default function AIELab() {
         <div className="flex items-end justify-end">
           <div className="flex w-full flex-col items-center md:w-3/5">
             <h3 className="mb-4 text-4xl font-semibold text-yellow-500">
-              How founders experience the E-Lab
+              Inside the E-Lab: A Founder&apos;s Journey
             </h3>
             <iframe
+              src="https://www.youtube.com/embed/DPJGAG9blO8?si=jDCtCvf6sVZRX69X"
               style={{ aspectRatio: 16 / 9 }}
-              src="https://www.youtube.com/embed/EMkIoTgybuM"
+              className="w-full"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full"
-            ></iframe>
+            />
           </div>
         </div>
       </Section>
@@ -286,6 +294,7 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/ewor_w.png",
                 alt: "Ewor",
                 href: "https://ewor.io/",
+                width: 120,
               },
               {
                 src: "/assets/e-lab/partners/campus_founders_w.png",
@@ -296,11 +305,13 @@ export default function AIELab() {
                 src: "/assets/e-lab/partners/merantix.svg",
                 alt: "Merantix",
                 href: "https://www.merantix.com/",
+                width: 200,
               },
               {
                 src: "/assets/e-lab/partners/hubert_burda_media.png",
                 alt: "Burda",
                 href: "https://www.burda.com/",
+                width: 300,
               },
             ]}
           />
@@ -311,46 +322,31 @@ export default function AIELab() {
               src: "/assets/e-lab/partners/uvc_w.svg",
               alt: "UVC Partners",
               href: "https://www.uvcpartners.com/",
-            },
-            {
-              href: "https://www.10xfounders.com/",
-              src: "/assets/e-lab/partners/10x_founders.svg",
-              alt: "10x Founders",
+              width: 140,
             },
             {
               href: "https://www.cherry.vc/",
               src: "/assets/e-lab/partners/cherry_w.png",
               alt: "Cherry VC",
+              width: 140,
+            },
+            {
+              href: "https://ananda.vc/",
+              src: "/assets/e-lab/partners/anandavc.png",
+              alt: "Ananda Impact Ventures",
+              width: 200,
             },
           ]}
         />
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
-          Apply now and join the AI E-Lab
-        </h2>
-
-        <div className="flex flex-col items-center justify-center gap-8">
-          <p>
-            Do you want to become part of a commmunity of AI enthusiasts and
-            found your AI startup? We are excited to have you on board.
-          </p>
-          <div className="flex flex-col justify-center gap-6 ">
-            <Link
-              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
-              href="https://forms.tum-ai.com/ai-elab-application"
-            >
-              Apply now
-            </Link>
-            <Link
-              className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
-              href="mailto:venture@tum-ai.com"
-            >
-              Become a partner
-            </Link>
-          </div>
-        </div>
+        <Link
+          className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
+          href="mailto:venture@tum-ai.com"
+        >
+          Become a partner
+        </Link>
       </Section>
 
       <Section className="bg-purple-950 text-white">

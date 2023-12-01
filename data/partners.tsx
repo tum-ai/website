@@ -2,6 +2,11 @@ import { partners } from "./industry";
 
 export const partners_collabrated_with = [
   {
+    href: "https://unite.eu/de-de",
+    src: "/assets/partners_sponsors/Unite_logo.png",
+    alt: "Unite",
+  },
+  {
     href: "https://www.microsoft.com/de-de/about",
     src: "/assets/partners_sponsors/Microsoft_Logo.png",
     alt: "Microsoft",

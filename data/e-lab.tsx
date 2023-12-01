@@ -68,6 +68,20 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/fast_ai_movies.png",
     logoAlt: "FAST AI Movies",
   },
+  {
+    imgSrc: "/assets/e-lab/testimonials/marc_alexander_kuehn.jpg",
+    name: "Marc Alexander Kühn (Jury)",
+    text: "Participating in AI E-Lab's final pitch event as a jury member was an enriching experience. It was great to see so many young people driving change in Artificial Intelligence. Also, it was thrilling to see some of the teams making significant progress after the incubation program. Above all, I believe what TUM.ai E-Lab is doing for the Munich ecosystem is of significant value. They're cultivating a vibrant environment for young, talented students and graduates to kick-start their entrepreneurial journey. Their dedication to unleashing the future of AI innovation in Munich is remarkable and I'm excited to see where their efforts will lead.",
+    logoSrc: "/assets/e-lab/partners/uvc_w.svg",
+    logoAlt: "UVC Partners",
+  },
+  {
+    imgSrc: "/assets/e-lab/testimonials/maximilian_jesch.png",
+    name: "Maximilian Jesch (Jury)",
+    text: "Being a jury member at the AI Startup Contest was an exhilarating experience! The passion and innovation displayed by the participating teams left me truly impressed. Their groundbreaking ideas and impeccably delivered pitches showcased the immense potential of the next generation of AI-driven entrepreneurship. I have no doubt that these teams are on the cusp of revolutionizing the industry and driving us into an exciting AI-powered future. It's an honor to be part of their journey, and I eagerly anticipate witnessing their continued success and impact on the world.",
+    logoSrc: "",
+    logoAlt: "",
+  },
 
   // {
   //   imgSrc: "/assets/e-lab/testimonials/leon_hergert.jpeg",
@@ -101,7 +115,7 @@ export const faq = [
   },
   {
     question: "When is the application deadline?",
-    answer: "The application phase closes on 31.08.2023 at 23:59.",
+    answer: "The application phase closes on 07.09.2023 at 23:59.",
   },
   {
     question: "Can I apply with a team?",
