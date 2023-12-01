@@ -1,3 +1,5 @@
+import { partners } from "./industry";
+
 export const partners_collabrated_with = [
   {
     href: "https://www.microsoft.com/de-de/about",
@@ -178,3 +180,158 @@ export const initiatives_collabrated_with = [
     alt: "MCML",
   },
 ];
+
+export const strategic_partnerts = [
+  {
+    href: "https://www.nvidia.com",
+    src: "/assets/partners/strategic_partners/Nvidia_(logo).svg.png",
+    alt: "nvidia"
+  }, 
+  {
+    href: "https://baiosphere.org", 
+    src: "/assets/partners/strategic_partners/baiosphere_logo-1-1.png",
+    alt: "baiosphere"
+  }, 
+  {
+    href: "https://www.appliedai.de/de/",
+    src: "/assets/partners_sponsors/appliedai_logo.png",
+    alt: "Applied AI",
+  },
+  {
+    href: "https://www.tum-venture-labs.de",
+    src: "/assets/partners/strategic_partners/TUMVentureLabs.jpg",
+    alt: "TumVentureLabs"
+  },
+]
+
+export const enablers_supporters = [
+  {
+    href: "https://www.janestreet.com",
+    src: "/assets/partners/enablers_and_supporters/120px-Jane_Street_Capital_Logo.svg.png",
+    alt: "janestreet",
+  },
+  {
+    href: "https://www.mcml.ai",
+    src: "/assets/partners_sponsors/MCML_Logo_2.png",
+    alt: "MCML",
+  },
+  {
+    href: "https://www.tngtech.com/index.html",
+    src: "/assets/partners_sponsors/TNG_logo.png",
+    alt: "TNG Tech",
+  },
+  {
+    href: "https://campusfounders.de/de/",
+    src: "/assets/partners/enablers_and_supporters/campus_founders.png",
+    alt: "campusfounders",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "merantix",
+  },
+  {
+    href: "https://www.cdtm.de/",
+    src: "/assets/partners_sponsors/cdtm_logo.png",
+    alt: "CDTM",
+  },
+  {
+    href: "https://www.stmd.bayern.de",
+    src: "/assets/partners/enablers_and_supporters/StMD_logo_grey.svg",
+    alt: "ministry_for_digital_affairs",
+  },
+  {
+    href: "https://www.10xfounders.com/",
+    src: "/assets/partners_sponsors/10xfounderslogo.png",
+    alt: "10x Founders",
+  },
+  {
+    href: "https://www.burda.com/",
+    src: "/assets/partners/enablers_and_supporters/Hubert_Burda_Media_2013_logo.svg.png",
+    alt: "HubertBurda",
+  },
+  {
+    href: "",
+    src: "",
+    alt: "KIPark",
+  },
+  {
+    href: "https://www.startmunich.de/",
+    src: "/assets/partners_sponsors/start_munich.png",
+    alt: "Start Munich",
+  },
+]
+
+export const project_partners = [
+  {
+    href: "https://www.esa.int",
+    src: "/assets/partners/project_partners/1ESA_logo.svg.png",
+    alt: "ESA",
+  },
+  {
+    href: "https://www.gresearch.com",
+    src: "/assets/partners/project_partners/gresearch-logo.png",
+    alt: "GResearch",
+  },
+  {
+    href: "https://www.bmw.com",
+    src: "/assets/partners/project_partners/bmw-7.svg",
+    alt: "BMW",
+  },
+  {
+    href: "https://cohere.com",
+    src: "/assets/partners/project_partners/cohere_logo.svg",
+    alt: "Cohere",
+  },
+  {
+    href: "https://dai.ki",
+    src: "/assets/partners/project_partners/daiki.png",
+    alt: "Daiki",
+  },
+  {
+    href: "https://www.genistat.ch/en/",
+    src: "/assets/partners/project_partners/Genistat_Logo.png",
+    alt: "Genistat",
+  },
+  {
+    href: "https://www.microsoft.com/de-de/about",
+    src: "/assets/partners_sponsors/Microsoft_Logo.png",
+    alt: "Microsoft",
+  },
+
+  {
+    href: "https://www.burda-forward.de",
+    src: "/assets/partners/project_partners/burdaforward-logo.svg",
+    alt: "BurdaForward",
+  },
+  {
+    href: "https://www.unicreditgroup.eu/",
+    src: "/assets/partners/project_partners/UniCredit_(logo).svg.png",
+    alt: "UniCredit",
+  },
+  {
+    href: "https://www.ibm.com/de-de",
+    src: "/assets/partners_sponsors/ibm_logo.png",
+    alt: "IBM",
+  },
+  {
+    href: "https://www.roche.com",
+    src: "/assets/partners/project_partners/Rochee.png",
+    alt: "Roche",
+  },
+  {
+    href: "https://www.muenchen.de",
+    src: "/assets/partners/project_partners/muenchen.png",
+    alt: "LandeshauptstadtMünchen",
+  },
+  {
+    href: "https://quantco.com/",
+    src: "/assets/partners_sponsors/quantco_logo.png",
+    alt: "QuantCo",
+  },
+  {
+    href: "https://www.avimedical.com/",
+    src: "/assets/partners_sponsors/avi_medical_logo.png",
+    alt: "Avi Medical",
+  },
+].concat(partners) 
