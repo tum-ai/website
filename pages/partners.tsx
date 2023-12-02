@@ -151,7 +151,7 @@ export default function Partners() {
         >
           What we offer
         </h2>
-        <Benefits benefits={benefits} color="purple" />
+        <Benefits benefits={benefits} showShadow columns={4} color="purple" />
       </Section>
     </>
   );

@@ -28,13 +28,15 @@ const headingStyles = cva("mb-4 text-xl font-semibold uppercase", {
 
 interface Props extends VariantProps<typeof iconStyles> {
   benefits: Benefit[];
+  columns?: number;
+  showShadow?: boolean;
 }
 
-const Benefits = ({ benefits, color }: Props) => {
+const Benefits = ({ benefits, color, columns = 2, showShadow = false }: Props) => {
   return (
-    <div className="grid gap-16 md:grid-cols-2">
+    <div className={`grid gap-16 md:grid-cols-${columns}`}>
       {benefits.map((benefit) => (
-        <article key={benefit.title} className="flex gap-8">
+        <article key={benefit.title} className={`flex gap-8 ${showShadow ? 'shadow-lg rounded-xl p-4' : ''}`}>
           <FontAwesomeIcon
             icon={benefit.icon}
             size="2xl"

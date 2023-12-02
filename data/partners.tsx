@@ -190,7 +190,8 @@ export const strategic_partnerts = [
   {
     href: "https://www.nvidia.com",
     src: "/assets/partners/strategic_partners/Nvidia_(logo).svg.png",
-    alt: "nvidia"
+    alt: "nvidia",
+    width: 130, 
   }, 
   {
     href: "https://baiosphere.org", 
@@ -229,16 +230,18 @@ export const enablers_supporters = [
     href: "https://campusfounders.de/de/",
     src: "/assets/partners/enablers_and_supporters/campus_founders.png",
     alt: "campusfounders",
+    width: 120,
   },
   {
-    href: "",
-    src: "",
-    alt: "merantix",
+    href: "https://www.merantix.com/",
+    src: "/assets/partners/enablers_and_supporters/merantix_black.svg",
+    alt: "Merantix",
   },
   {
     href: "https://www.cdtm.de/",
     src: "/assets/partners_sponsors/cdtm_logo.png",
     alt: "CDTM",
+    width: 120,
   },
   {
     href: "https://www.stmd.bayern.de",
@@ -256,8 +259,8 @@ export const enablers_supporters = [
     alt: "HubertBurda",
   },
   {
-    href: "",
-    src: "",
+    href: "https://kipark.de",
+    src: "/assets/partners/enablers_and_supporters/KIPark.png",
     alt: "KIPark",
   },
   {
@@ -265,6 +268,11 @@ export const enablers_supporters = [
     src: "/assets/partners_sponsors/start_munich.png",
     alt: "Start Munich",
   },
+  {
+    href: "https://www.aimunich.com",
+    src: "/assets/partners/enablers_and_supporters/ai+munich.jpeg",
+    alt: "ai+munich"
+  }
 ]
 
 export const project_partners = [
@@ -277,11 +285,13 @@ export const project_partners = [
     href: "https://www.gresearch.com",
     src: "/assets/partners/project_partners/gresearch-logo.png",
     alt: "GResearch",
+    width: 100,
   },
   {
     href: "https://www.bmw.com",
     src: "/assets/partners/project_partners/bmw-7.svg",
     alt: "BMW",
+    width: 100,
   },
   {
     href: "https://cohere.com",
