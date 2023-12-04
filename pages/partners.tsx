@@ -25,7 +25,7 @@ export default function Partners() {
   const benefits = [
     {
       title: "AI Talent Pool",
-      text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
+      text: "Get access to our network of highly motivated students with a specialization in artificial intelligence technologies. Many of our members are interested in internships and working student positions.",
       icon: faHeart,
     },
     {
