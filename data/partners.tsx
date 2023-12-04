@@ -191,13 +191,13 @@ export const strategic_partnerts = [
     href: "https://www.nvidia.com",
     src: "/assets/partners/strategic_partners/Nvidia_(logo).svg.png",
     alt: "nvidia",
-    width: 130, 
-  }, 
+    width: 130,
+  },
   {
-    href: "https://baiosphere.org", 
+    href: "https://baiosphere.org",
     src: "/assets/partners/strategic_partners/baiosphere_logo-1-1.png",
-    alt: "baiosphere"
-  }, 
+    alt: "baiosphere",
+  },
   {
     href: "https://www.appliedai.de/de/",
     src: "/assets/partners_sponsors/appliedai_logo.png",
@@ -206,9 +206,9 @@ export const strategic_partnerts = [
   {
     href: "https://www.tum-venture-labs.de",
     src: "/assets/partners/strategic_partners/TUMVentureLabs.jpg",
-    alt: "TumVentureLabs"
+    alt: "TumVentureLabs",
   },
-]
+];
 
 export const enablers_supporters = [
   {
@@ -271,9 +271,9 @@ export const enablers_supporters = [
   {
     href: "https://www.aimunich.com",
     src: "/assets/partners/enablers_and_supporters/ai+munich.jpeg",
-    alt: "ai+munich"
-  }
-]
+    alt: "ai+munich",
+  },
+];
 
 export const project_partners = [
   {
@@ -349,4 +349,4 @@ export const project_partners = [
     src: "/assets/partners_sponsors/avi_medical_logo.png",
     alt: "Avi Medical",
   },
-].concat(partners) 
+].concat(partners);

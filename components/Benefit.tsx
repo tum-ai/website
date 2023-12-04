@@ -1,6 +1,6 @@
 import { type IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { VariantProps,cva } from "class-variance-authority";
+import { VariantProps, cva } from "class-variance-authority";
 
 interface Benefit {
   icon: IconProp;
@@ -50,7 +50,9 @@ const articleStyles = cva("flex flex-col gap-4", {
   },
 });
 
-interface Props extends VariantProps<typeof iconStyles>, VariantProps<typeof gridStyles> {
+interface Props
+  extends VariantProps<typeof iconStyles>,
+    VariantProps<typeof gridStyles> {
   benefits: Benefit[];
   showShadow?: boolean;
 }
@@ -60,9 +62,16 @@ const Benefits = ({ benefits, color, columns, showShadow = false }: Props) => {
   return (
     <div className={gridStyles({ columns })}>
       {benefits.map((benefit) => (
-        <article key={benefit.title} className={articleStyles({ shadow: showShadow })}>
-          <div className="flex flex-row gap-6 items-center">
-            <FontAwesomeIcon icon={benefit.icon} size="2xl" className={iconStyles({ color })} />
+        <article
+          key={benefit.title}
+          className={articleStyles({ shadow: showShadow })}
+        >
+          <div className="flex flex-row items-center gap-6">
+            <FontAwesomeIcon
+              icon={benefit.icon}
+              size="2xl"
+              className={iconStyles({ color })}
+            />
             <h3 className={headingStyles({ color })}>{benefit.title}</h3>
           </div>
           <p>{benefit.text}</p>

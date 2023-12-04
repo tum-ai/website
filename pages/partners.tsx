@@ -15,8 +15,13 @@ import {
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import Benefits from "@components/Benefit";
-import Logos from "@components/Logos"
-import { enablers_supporters, partners_collabrated_with, project_partners, strategic_partnerts } from "data/partners";
+import Logos from "@components/Logos";
+import {
+  enablers_supporters,
+  partners_collabrated_with,
+  project_partners,
+  strategic_partnerts,
+} from "data/partners";
 
 export default function Partners() {
   const benefits = [
@@ -61,12 +66,22 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>Strategic Partners</h2>
-        <Logos logos={strategic_partnerts}/>
-        <h2 className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}>Enablers and Supporters</h2>
-        <Logos logos={enablers_supporters}/>
-        <h2 className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}>Project Partners</h2>
-        <Logos logos={project_partners}/>
+        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
+          Strategic Partners
+        </h2>
+        <Logos logos={strategic_partnerts} />
+        <h2
+          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+        >
+          Enablers and Supporters
+        </h2>
+        <Logos logos={enablers_supporters} />
+        <h2
+          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+        >
+          Project Partners
+        </h2>
+        <Logos logos={project_partners} />
       </Section>
 
       <Section background="inverted">
@@ -151,7 +166,12 @@ export default function Partners() {
         >
           What we offer
         </h2>
-        <Benefits benefits={benefits} showShadow={true} columns={4} color="purple" />
+        <Benefits
+          benefits={benefits}
+          showShadow={true}
+          columns={4}
+          color="purple"
+        />
       </Section>
     </>
   );
