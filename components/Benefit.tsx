@@ -1,6 +1,6 @@
 import { type IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { VariantProps, cva } from "class-variance-authority";
+import { VariantProps,cva } from "class-variance-authority";
 
 interface Benefit {
   icon: IconProp;
@@ -8,6 +8,7 @@ interface Benefit {
   title: string;
 }
 
+// Define styles with cva, including dynamic variants for color and columns.
 const iconStyles = cva("h-8 w-8 rounded p-2 text-white duration-500", {
   variants: {
     color: {
@@ -17,7 +18,7 @@ const iconStyles = cva("h-8 w-8 rounded p-2 text-white duration-500", {
   },
 });
 
-const headingStyles = cva("mb-4 text-xl font-semibold uppercase", {
+const headingStyles = cva("text-xl font-semibold uppercase", {
   variants: {
     color: {
       purple: "text-purple-500",
@@ -26,26 +27,45 @@ const headingStyles = cva("mb-4 text-xl font-semibold uppercase", {
   },
 });
 
-interface Props extends VariantProps<typeof iconStyles> {
+const gridStyles = cva("grid gap-10", {
+  variants: {
+    columns: {
+      1: "md:grid-cols-1",
+      2: "md:grid-cols-2",
+      3: "md:grid-cols-3",
+      4: "md:grid-cols-2 xl:grid-cols-4",
+    },
+  },
+  defaultVariants: {
+    columns: 2,
+  },
+});
+
+const articleStyles = cva("flex flex-col gap-4", {
+  variants: {
+    shadow: {
+      true: "shadow-lg rounded-xl p-6",
+      false: "p-4",
+    },
+  },
+});
+
+interface Props extends VariantProps<typeof iconStyles>, VariantProps<typeof gridStyles> {
   benefits: Benefit[];
-  columns?: number;
   showShadow?: boolean;
 }
 
-const Benefits = ({ benefits, color, columns = 2, showShadow = false }: Props) => {
+// The Benefits component, applying dynamic styles based on props.
+const Benefits = ({ benefits, color, columns, showShadow = false }: Props) => {
   return (
-    <div className={`grid gap-16 md:grid-cols-${columns}`}>
+    <div className={gridStyles({ columns })}>
       {benefits.map((benefit) => (
-        <article key={benefit.title} className={`flex gap-8 ${showShadow ? 'shadow-lg rounded-xl p-4' : ''}`}>
-          <FontAwesomeIcon
-            icon={benefit.icon}
-            size="2xl"
-            className={iconStyles({ color })}
-          />
-          <div>
+        <article key={benefit.title} className={articleStyles({ shadow: showShadow })}>
+          <div className="flex flex-row gap-6 items-center">
+            <FontAwesomeIcon icon={benefit.icon} size="2xl" className={iconStyles({ color })} />
             <h3 className={headingStyles({ color })}>{benefit.title}</h3>
-            <p>{benefit.text}</p>
           </div>
+          <p>{benefit.text}</p>
         </article>
       ))}
     </div>
