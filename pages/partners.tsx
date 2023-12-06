@@ -3,7 +3,6 @@ import Head from "next/head";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
 import Image from "next/image";
-import PnSPartners from "../public/assets/partners/PnS_Partners_2023_2.png";
 import MartinTalk from "../public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
@@ -15,17 +14,23 @@ import {
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import Benefits from "@components/Benefit";
+import Logos from "@components/Logos";
+import {
+  enablers_supporters,
+  project_partners,
+  strategic_partnerts,
+} from "data/partners";
 
 export default function Partners() {
   const benefits = [
     {
       title: "AI Talent Pool",
-      text: "Get access to our network of highly motivated students with a specialization in aritifical intelligence technologies. Many of our members are interested in internships and working student positions.",
+      text: "Get access to our network of highly motivated students with a specialization in artificial intelligence technologies. Many of our members are interested in internships and working student positions.",
       icon: faHeart,
     },
     {
       title: "Marketing & Awareness",
-      text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (3.5k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
+      text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (8k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
       icon: faBullhorn,
     },
     {
@@ -48,7 +53,7 @@ export default function Partners() {
         </title>
         <meta
           name="description"
-          content="Is your company currently facing challenges with data-driven technologies or you are looking for the greatest talent in artifical intelligence? If one of the answers is yes, become a partners.
+          content="Is your company currently facing challenges with data-driven technologies or you are looking for the greatest talent in artificial intelligence? If one of the answers is yes, become a partners.
 "
         />
       </Head>
@@ -60,14 +65,21 @@ export default function Partners() {
 
       <Section background="white">
         <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-          Partners <span className="text-purple-500">we have collaborated</span>{" "}
-          with
+          Strategic Partners
         </h2>
-        <Image
-          src={PnSPartners}
-          className="w-full rounded"
-          alt="PnS partners"
-        />
+        <Logos logos={strategic_partnerts} />
+        <h2
+          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+        >
+          Enablers and Supporters
+        </h2>
+        <Logos logos={enablers_supporters} />
+        <h2
+          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+        >
+          Project Partners
+        </h2>
+        <Logos logos={project_partners} />
       </Section>
 
       <Section background="inverted">
@@ -152,7 +164,12 @@ export default function Partners() {
         >
           What we offer
         </h2>
-        <Benefits benefits={benefits} color="purple" />
+        <Benefits
+          benefits={benefits}
+          showShadow={true}
+          columns={4}
+          color="purple"
+        />
       </Section>
     </>
   );

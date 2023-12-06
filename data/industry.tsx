@@ -41,7 +41,7 @@ export const partners = [
   },
   {
     href: "https://www.rohde-schwarz.com/de",
-    src: "/assets/industry/partners/RandS.png",
+    src: "/assets/industry/partners/RandS.svg.png",
     alt: "Rhode-Schwarz",
   },
 ];
