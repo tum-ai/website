@@ -40,6 +40,14 @@ function Hero() {
               technology
             </p>
           </div>
+          <div className="flex flex-col gap-6 items-center">
+              <Link
+                className="min-w-[200px] max-w-lg rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+                href="https://forms.tum-ai.com/final-pitch-preregistration"
+              >
+                Preregister for Final Pitch Event
+              </Link>
+            </div>
         </div>
       </div>
 
@@ -67,32 +75,35 @@ export default function AIELab() {
           content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."
         />
         <meta property="og:title" content="TUM.ai's AI Entrepreneurship Lab: A Founding Journey in Artificial Intelligence" />
-        <meta property="og:description" content="A 3-months founding journey for curious and driven individuals. We provide relevant know-how, a team, and support to lay the foundation for AI startups."/>
-        <meta property="og:image" content="https://timonschramm.com/sm-preview.jpg"/>
-        <meta property="og:image:width" content="1200" /> 
+        <meta property="og:description" content="A 3-months founding journey for curious and driven individuals. We provide relevant know-how, a team, and support to lay the foundation for AI startups." />
+        <meta property="og:image" content="https://timonschramm.com/sm-preview.jpg" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="AI E-Lab Sphere" />
       </Head>
       <Hero />
-      <Section className="bg-purple-950 text-white">
+      <Section className="bg-purple-950 text-white items-center justify-center">
         <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
-          AI E-Lab Info Session
+          AI E-Lab Final Pitch Event
         </h2>
 
-        <div className="flex flex-col items-center justify-center gap-8">
-          <p>
-            Join us online at 5:30pm on Friday, August 25th for an interactive
-            session where we&apos;ll unpack everything you need to know about AI
-            E-Lab.{" "}
-          </p>
-          <div className="flex flex-col justify-center gap-6 ">
-            <Link
-              className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
-              href="https://www.eventbrite.de/e/ai-e-lab-info-session-tickets-696671752967?aff=oddtdtcreator"
-            >
-              Register Here
-            </Link>
+        <div className="flex items-center justify-center ">
+          <div className="flex flex-col max-w-xl gap-8">
+            <p className="text-center">
+              Come and see new and exciting ideas in the world of AI at our AI E-Lab Final Pitch Event Friday, January 19th. An evening where our top startups showcase their exciting developments.
+              It&apos;s a great chance to see fresh ideas in action and meet some of the key players in the industry.
+              {" "}
+            </p>
+            <div className="flex flex-col justify-center gap-6 ">
+              <Link
+                className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+                href="https://forms.tum-ai.com/final-pitch-preregistration"
+              >
+                Preregister Now
+              </Link>
+            </div>
           </div>
+
         </div>
       </Section>
       <Section className="bg-purple-950 text-white">
