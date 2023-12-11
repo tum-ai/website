@@ -66,9 +66,15 @@ export default function AIELab() {
           name="description"
           content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."
         />
+        <meta property="og:title" content="TUM.ai's AI Entrepreneurship Lab: A Founding Journey in Artificial Intelligence" />
+        <meta property="og:description" content="A 3-months founding journey for curious and driven individuals. We provide relevant know-how, a team, and support to lay the foundation for AI startups."/>
+        <meta property="og:image" content="https://timonschramm.com/sm-preview.jpg"/>
+        <meta property="og:image:width" content="1200" /> 
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="AI E-Lab Sphere" />
       </Head>
       <Hero />
-      {/* <Section className="bg-purple-950 text-white">
+      <Section className="bg-purple-950 text-white">
         <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           AI E-Lab Info Session
         </h2>
@@ -88,7 +94,7 @@ export default function AIELab() {
             </Link>
           </div>
         </div>
-      </Section> */}
+      </Section>
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
           <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
