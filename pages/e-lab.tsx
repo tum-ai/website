@@ -99,7 +99,7 @@ export default function AIELab() {
         <div className="flex items-center justify-center ">
           <div className="flex max-w-xl flex-col gap-8">
             <p className="text-center">
-              Come and see new and exciting ideas in the world of AI at our AI
+              Come around to see new and exciting ideas in the world of AI at our AI
               E-Lab Final Pitch Event Friday, January 19th. An evening where our
               top startups showcase their exciting developments. It&apos;s a
               great chance to see fresh ideas in action and meet some of the key
@@ -367,9 +367,9 @@ export default function AIELab() {
         />
       </Section>
 
-      <Section className="bg-purple-950 text-white">
+      <Section className="bg-purple-950 text-white text-center">
         <Link
-          className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
+          className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500 text-center"
           href="mailto:venture@tum-ai.com"
         >
           Become a partner

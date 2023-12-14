@@ -20,11 +20,13 @@ const Testimonials = ({ imgSrc, name, text, logoSrc, logoAlt }) => {
         </p>
         <div className="mt-auto h-32">
           <div className="min-w-160 flex h-full items-center justify-center p-8">
+          {logoSrc && 
             <img
               src={logoSrc}
               alt={logoAlt}
               style={{ width: "100%", height: "80px", objectFit: "contain" }}
             />
+}
           </div>
         </div>
       </div>
