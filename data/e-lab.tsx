@@ -111,7 +111,8 @@ export const faq = [
   },
   {
     question: "When will the application phase begin?",
-    answer: "The application phase will open probably around August 2024 again.",
+    answer:
+      "The application phase will open probably around August 2024 again.",
   },
   // {
   //   question: "When is the application deadline?",
