@@ -14,6 +14,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@hookform/resolvers": "^3.3.2",
     "@next/font": "13.0.7",
     "@notionhq/client": "^2.2.5",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -25,6 +26,8 @@
     "@tanstack/react-query": "^4.29.14",
     "@types/three": "^0.152.1",
     "@vercel/analytics": "^1.0.1",
+    "@vercel/kv": "^1.0.1",
+    "axios": "^1.6.2",
     "class-variance-authority": "^0.6.0",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
@@ -32,8 +35,10 @@
     "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.49.2",
     "three": "^0.153.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "20.3.1",

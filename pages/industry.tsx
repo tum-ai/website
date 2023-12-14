@@ -10,6 +10,12 @@ import PictureHero from "../components/BannerHero";
 import Head from "next/head";
 import { bitter } from "@styles/fonts";
 import { cx } from "class-variance-authority";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { kv } from "@vercel/kv";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Industry() {
   return (
@@ -125,13 +131,32 @@ export default function Industry() {
 }
 
 function StudentsSection() {
+  const [joinedWaitlist, setJoinedWaitlist] = useState(false);
+  const schema = z.object({
+    email: z.string().email(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(schema) });
+
+  const onSubmit = handleSubmit((values) =>
+    axios
+      .post("/api/industry/waitlist", {
+        data: { email: values.email },
+      })
+      .then(() => setJoinedWaitlist(true))
+  );
+
   return (
     <Section className="flex animate-fadeIn justify-center">
       <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg sm:shadow-blue-500/20">
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
             <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-              Applications for Industry Phase 5.0 will open in summer
+              Applications for Industry Phase 6.0 will open in spring
             </h2>
             <p>
               Push ML boundaries and progress your career with our AI projects!{" "}
@@ -141,7 +166,7 @@ function StudentsSection() {
             <p>
               Work in a{" "}
               <span className="text-purple-600">
-                team of 4x students for 12 weeks, earn 2700€
+                team of 4x students for 12 weeks, earn up to 4000€
               </span>{" "}
               and gain valuable contacts. With a project lead guiding you,
               demonstrate your agile project management skills in a professional
@@ -152,7 +177,7 @@ function StudentsSection() {
               <span className="textpurple-600">
                 for-profit companies, startups, and non-profits,
               </span>{" "}
-              in our upcoming Industry Phase 5.0 starting September 2023.
+              in our upcoming Industry Phase 6.0 starting March 2023.
             </p>
           </div>
           <div className="relative flex flex-col items-center space-y-8 text-center">
@@ -160,29 +185,40 @@ function StudentsSection() {
               <Image
                 src="/assets/industry/zoom_industry.png"
                 className="rounded-lg grayscale"
-                layout="responsive"
-                width={100}
-                height={50}
+                style={{ width: "100%" }}
+                width={500}
+                height={250}
                 alt={"Zoom Industry"}
               />
             </div>
-            <div className="my-3 space-y-8 rounded-lg  p-8">
-              <p>
-                Visit our official Projects Notion Page to learn more about the
-                individual projects and partner companies of industry phase 5.0
-              </p>
-              <div className="flex flex-col justify-center text-white sm:flex-row sm:space-x-4">
-                <Button asChild>
-                  <Link href="https://industry.tum-ai.com/apply">
-                    Sign up now
-                  </Link>
-                </Button>
-                <Button asChild intent="tertiary">
-                  <Link href="https://www.notion.so/tum-ai/TUM-ai-Industry-Phase-5-0-AI-Projects-7b6e211a9a52421283e4e9833b0f7ea1">
-                    Project page
-                  </Link>
-                </Button>
-              </div>
+            <div className="my-3 space-y-8 rounded-lg">
+              {!joinedWaitlist && (
+                <>
+                  <p>
+                    Sign up for our waitlist to be the first to know when
+                    applications open!
+                  </p>
+                  <form className="flex flex-col gap-2" onSubmit={onSubmit}>
+                    <div>
+                      <input
+                        {...register("email")}
+                        type="email"
+                        placeholder="email"
+                        className="w-full rounded-full border border-gray-500 px-6 py-3"
+                      />
+                      {errors.email && (
+                        <p className="text-red-500">Invalid email</p>
+                      )}
+                    </div>
+                    <Button type="submit">Join waitlist</Button>
+                  </form>
+                </>
+              )}
+              {!!joinedWaitlist && (
+                <p className="">
+                  Successfully joined our waitlist. You'll hear from us!
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -196,7 +232,7 @@ function IndustrySection() {
     <Section className="flex animate-fadeIn justify-center lg:flex-col">
       <div className="rounded-3xl shadow-purple-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
         <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-          Industry Phase 5.0 starting in Fall 2023
+          Industry Phase 6.0 starting in spring 2023
         </h2>
         <div className="grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
           <div>
