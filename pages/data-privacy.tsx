@@ -2,7 +2,7 @@ import Hero from "@components/Hero";
 import Section from "@components/ui/Section";
 import Head from "next/head";
 
-export default function Inprint() {
+export default function DataPrivacy() {
   return (
     <>
       <Head>
