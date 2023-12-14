@@ -216,7 +216,7 @@ function StudentsSection() {
               )}
               {!!joinedWaitlist && (
                 <p className="">
-                  Successfully joined our waitlist. You'll hear from us!
+                  Successfully joined our waitlist. You&apos;ll hear from us!
                 </p>
               )}
             </div>
