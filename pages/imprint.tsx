@@ -2,11 +2,11 @@ import Hero from "@components/Hero";
 import Section from "@components/ui/Section";
 import Head from "next/head";
 
-export default function Inprint() {
+export default function Imprint() {
   return (
     <>
       <Head>
-        <title>TUM.ai - Inprint</title>
+        <title>TUM.ai - Imprint</title>
       </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Impressum" />
       <Section>
