@@ -58,9 +58,9 @@ export default function Footer() {
             </Link>
             <Link
               className="py-2 underline duration-500 hover:text-purple-300"
-              href="/inprint"
+              href="/imprint"
             >
-              Inprint
+              Imprint
             </Link>
             <Link
               className="py-2 underline duration-500 hover:text-purple-300"

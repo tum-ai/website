@@ -111,12 +111,13 @@ export const faq = [
   },
   {
     question: "When will the application phase begin?",
-    answer: "The application phase will begin on 01.08.2023.",
+    answer:
+      "The application phase will open probably around August 2024 again.",
   },
-  {
-    question: "When is the application deadline?",
-    answer: "The application phase closes on 07.09.2023 at 23:59.",
-  },
+  // {
+  //   question: "When is the application deadline?",
+  //   answer: "The application phase closes on 07.09.2023 at 23:59.",
+  // },
   {
     question: "Can I apply with a team?",
     answer:
