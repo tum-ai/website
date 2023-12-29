@@ -1,4 +1,4 @@
-okay import Benefits from "@components/Benefit";
+import Benefits from "@components/Benefit";
 import FAQ from "@components/FAQ";
 import Logos from "@components/Logos";
 import Stat from "@components/Stat";
