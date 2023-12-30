@@ -45,7 +45,7 @@ function Hero() {
               className="min-w-[200px] max-w-lg rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
               href="https://www.eventbrite.de/e/ai-e-lab-final-pitch-competition-tickets-784536669297?aff=oddtdtcreator"
             >
-              Preregister for Final Pitch Event
+              Get your tickets for Final Pitch Event
             </Link>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function AIELab() {
                 className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
                 href="https://www.eventbrite.de/e/ai-e-lab-final-pitch-competition-tickets-784536669297?aff=oddtdtcreator"
               >
-                Preregister Now
+                Sign up now
               </Link>
             </div>
           </div>
