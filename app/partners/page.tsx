@@ -3,7 +3,7 @@ import Head from "next/head";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
 import Image from "next/image";
-import MartinTalk from "../public/assets/partners/martin_talk.jpg";
+import MartinTalk from "@public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
 import Link from "next/link";

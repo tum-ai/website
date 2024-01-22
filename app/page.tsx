@@ -1,3 +1,5 @@
+"use client";
+
 import Logos from "@components/Logos";
 import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";

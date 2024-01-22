@@ -30,7 +30,7 @@
     "axios": "^1.6.2",
     "class-variance-authority": "^0.6.0",
     "eslint": "8.30.0",
-    "eslint-config-next": "13.0.7",
+    "eslint-config-next": "latest",
     "framer-motion": "^10.12.16",
     "next": "13.0.7",
     "react": "18.2.0",
