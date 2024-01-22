@@ -1,147 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { bitter } from "@styles/fonts";
 import Head from "next/head";
-import Button from "@ui/Button";
 import Section from "@ui/Section";
 import { cx } from "class-variance-authority";
 import { departments } from "data/departments";
 import { AnimatePresence, motion } from "framer-motion";
-import { useMembers } from "hooks/useMembers";
 import Image from "next/image";
 import { useState } from "react";
 import Hero from "../components/Hero";
-
-const MemberCard = ({ member, open, setOpen, index }) => {
-  return (
-    <article>
-      <div
-        className="relative h-80 cursor-pointer overflow-hidden rounded shadow-md duration-500 hover:shadow-xl"
-        onClick={() => {
-          if (open === index) {
-            setOpen(undefined);
-          } else {
-            setOpen(index);
-          }
-        }}
-      >
-        <Image
-          className="object-cover grayscale"
-          src={member.image}
-          alt={`image of ${member.name}`}
-          unoptimized
-          fill
-          priority
-        />
-        {open === index && (
-          <AnimatePresence>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute h-full w-full rounded p-8 text-center text-white backdrop-blur-md backdrop-brightness-50"
-            >
-              <b>Degree</b>
-              <p>{member.degree}</p>
-              <br />
-
-              <p>{member.description}</p>
-            </motion.div>
-          </AnimatePresence>
-        )}
-      </div>
-
-      <div className="p-4 text-center">
-        <h3 className="text-xl font-bold">{member.name}</h3>
-        <div>
-          <p>{member.roles.join(", ")}</p>
-          {member.departments.map((department: string) => (
-            <p key={department}>{department}</p>
-          ))}
-        </div>
-      </div>
-    </article>
-  );
-};
-
-const MembersCardList = ({ members, status }) => {
-  const amountTruncatedMembers = 12;
-  const [open, setOpen] = useState<number>();
-  const [showAll, setShowAll] = useState(false);
-
-  if (status === "loading") {
-    return (
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {Array.from<number>({ length: amountTruncatedMembers }).map((index) => (
-          <div
-            key={index}
-            className="relative h-80 animate-pulse cursor-pointer overflow-hidden rounded bg-gray-300 shadow-md"
-          ></div>
-        ))}
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {members?.slice(0, amountTruncatedMembers)?.map((member, i) => (
-          <MemberCard
-            key={member.name}
-            open={open}
-            setOpen={setOpen}
-            member={member}
-            index={i}
-          />
-        ))}
-        {showAll &&
-          members
-            ?.slice(amountTruncatedMembers)
-            ?.map((member, i) => (
-              <MemberCard
-                key={member.name}
-                open={open}
-                setOpen={setOpen}
-                member={member}
-                index={i + amountTruncatedMembers}
-              />
-            ))}
-      </div>
-
-      {!showAll && (
-        <div className="flex justify-center">
-          <Button className="text-white" onClick={() => setShowAll(true)}>
-            Show all members
-          </Button>
-        </div>
-      )}
-    </>
-  );
-};
-
-const MemberListSection = () => {
-  const { data: members, status } = useMembers();
-  // TODO: Add filtering and sorting
-  // TODO: Add dropdown component for department selection
-
-  return (
-    <Section>
-      <div className="mb-8">
-        <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
-          Our Active Team Members
-        </h2>
-        <p>
-          Meet our management team of{" "}
-          <span className="font-semibold text-purple-500">
-            {members?.length ?? "..."}+
-          </span>{" "}
-          AI Enthusiasts.
-        </p>
-      </div>
-
-      <MembersCardList members={members} status={status} />
-    </Section>
-  );
-};
 
 const DepartmentCard = ({ department, open, setOpen, index }) => {
   return (
@@ -217,8 +83,6 @@ export default function Members() {
         title="Innovative & Passionate"
         subtitle="Who is behind the success of our initiative?"
       />
-
-      <MemberListSection />
 
       <Section>
         <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
