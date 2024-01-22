@@ -1,13 +1,14 @@
 import Hero from "@components/Hero";
 import Section from "@components/ui/Section";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TUM.ai - Data privacy",
+};
 
 export default function DataPrivacy() {
   return (
     <>
-      <Head>
-        <title>TUM.ai - Data privacy</title>
-      </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Datenschutz" />
       <Section>
         <div className="space-y-12">

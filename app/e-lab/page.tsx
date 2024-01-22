@@ -12,35 +12,33 @@ import {
   faHandsHoldingCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faq, testimonials } from "data/e-lab";
-import Head from "next/head";
 import Link from "next/link";
 import { Hero } from "./hero";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TUM.ai - AI Entrepreneurship Lab",
+  description:
+    "Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup.",
+  openGraph: {
+    title:
+      "TUM.ai's AI Entrepreneurship Lab: A Founding Journey in Artificial Intelligence",
+    description:
+      "A 3-months founding journey for curious and driven individuals. We provide relevant know-how, a team, and support to lay the foundation for AI startups.",
+    images: [
+      {
+        url: "https://timonschramm.com/sm-preview.jpg", // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: "AI E-Lab Sphere",
+      },
+    ],
+  },
+};
 
 export default function Page() {
   return (
     <>
-      <Head>
-        <title>TUM.ai - AI Entrepreneurship Lab</title>
-        <meta
-          name="description"
-          content="Join the AI Entrepreneurship Lab if you are up for a 3-month founding program designed to ignite your innovative spirit and equip you with the relevant know-how to build your own AI startup."
-        />
-        <meta
-          property="og:title"
-          content="TUM.ai's AI Entrepreneurship Lab: A Founding Journey in Artificial Intelligence"
-        />
-        <meta
-          property="og:description"
-          content="A 3-months founding journey for curious and driven individuals. We provide relevant know-how, a team, and support to lay the foundation for AI startups."
-        />
-        <meta
-          property="og:image"
-          content="https://timonschramm.com/sm-preview.jpg"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="AI E-Lab Sphere" />
-      </Head>
       <Hero />
       <Section className="items-center justify-center bg-purple-950 text-white">
         <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">

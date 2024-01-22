@@ -1,4 +1,4 @@
-import { Bitter, Inter } from "@next/font/google";
+import { Bitter, Inter } from "next/font/google";
 
 const inter = Inter({
   weight: "variable",

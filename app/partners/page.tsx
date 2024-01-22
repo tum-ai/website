@@ -1,5 +1,4 @@
 import Button from "@ui/Button";
-import Head from "next/head";
 import Section from "@ui/Section";
 import Hero from "components/Hero";
 import Image from "next/image";
@@ -20,6 +19,13 @@ import {
   project_partners,
   strategic_partnerts,
 } from "data/partners";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TUM.ai - Partners",
+  description:
+    "Is your company currently facing challenges with data-driven technologies or you are looking for the greatest talent in artificial intelligence? If one of the answers is yes, become a partners.",
+};
 
 export default function Partners() {
   const benefits = [
@@ -47,16 +53,6 @@ export default function Partners() {
 
   return (
     <>
-      <Head>
-        <title>
-          <title>TUM.ai - Partners</title>
-        </title>
-        <meta
-          name="description"
-          content="Is your company currently facing challenges with data-driven technologies or you are looking for the greatest talent in artificial intelligence? If one of the answers is yes, become a partners.
-"
-        />
-      </Head>
       <Hero
         imageSrc={"/assets/partners.jpg"}
         title="Become a partner"

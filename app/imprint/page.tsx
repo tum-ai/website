@@ -1,13 +1,14 @@
 import Hero from "@components/Hero";
 import Section from "@components/ui/Section";
-import Head from "next/head";
+import type { Metadata } from "next";
 
-export default function Imprint() {
+export const metadata: Metadata = {
+  title: "TUM.ai - Imprint",
+};
+
+export default function Page() {
   return (
     <>
-      <Head>
-        <title>TUM.ai - Imprint</title>
-      </Head>
       <Hero imageSrc={"/assets/tu_cropped.jpg"} title="Impressum" />
       <Section>
         <div className="space-y-12">
