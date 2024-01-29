@@ -1,8 +1,8 @@
 import { kv } from "@vercel/kv";
 import { NextRequest, NextResponse } from "next/server";
 
-export default async function POST(request: NextRequest) {
-  const email = await request.json().then((res) => res.email);
+export async function POST(request: NextRequest) {
+  const email = await request.json().then((res) => res.data.email);
 
   await kv.sadd("ip6_waitlist", email);
 
