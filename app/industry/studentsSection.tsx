@@ -58,7 +58,7 @@ export const StudentsSection = () => {
               <span className="textpurple-600">
                 for-profit companies, startups, and non-profits,
               </span>{" "}
-              in our upcoming Industry Phase 6.0 starting March 2023.
+              in our upcoming Industry Phase 6.0 starting in April 2024.
             </p>
           </div>
           <div className="relative flex flex-col items-center space-y-8 text-center">
@@ -72,7 +72,8 @@ export const StudentsSection = () => {
                 alt={"Zoom Industry"}
               />
             </div>
-            <div className="my-3 space-y-8 rounded-lg">
+            <Button onClick={() => {window.location.href = "https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155"}}>Apply here!</Button>
+            {/*<div className="my-3 space-y-8 rounded-lg">
               {!joinedWaitlist && (
                 <>
                   <p>
@@ -100,7 +101,7 @@ export const StudentsSection = () => {
                   Successfully joined our waitlist. You&apos;ll hear from us!
                 </p>
               )}
-            </div>
+              </div>*/}
           </div>
         </div>
       </div>
