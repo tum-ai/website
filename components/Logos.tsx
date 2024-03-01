@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export interface Props {
+export interface LogosProps {
   logos: {
     src: string;
     alt: string;
@@ -10,7 +10,7 @@ export interface Props {
   }[];
 }
 
-export default function Logos({ logos }: Props) {
+export default function Logos({ logos }: LogosProps) {
   return (
     <>
       <div className="flex flex-wrap items-center justify-center space-y-4">
@@ -22,13 +22,13 @@ export default function Logos({ logos }: Props) {
             <Link href={logo.href} passHref>
               <div
                 className={`min-w-160 flex h-full items-center justify-center ${
-                  logo.width > 200 ? "" : "p-8"
+                  !!logo.width && logo.width > 200 ? "" : "p-8"
                 }`}
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt || ""}
-                  width={logo.width || 160}
+                  width={logo.width ?? 160}
                   height={50}
                   className="object-contain"
                 />

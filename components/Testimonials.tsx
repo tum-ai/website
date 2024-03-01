@@ -1,6 +1,20 @@
 import Image from "next/image";
 
-const Testimonials = ({ imgSrc, name, text, logoSrc, logoAlt }) => {
+interface TestimonialsProps {
+  imgSrc: string;
+  name: string;
+  text: string;
+  logoSrc: string;
+  logoAlt: string;
+}
+
+const Testimonials = ({
+  imgSrc,
+  name,
+  text,
+  logoSrc,
+  logoAlt,
+}: TestimonialsProps) => {
   return (
     <div className="max-w-s 10 w-full rounded-lg p-4 text-white sm:max-w-lg sm:p-10">
       <div className="just flex h-full flex-col items-center">
@@ -21,7 +35,7 @@ const Testimonials = ({ imgSrc, name, text, logoSrc, logoAlt }) => {
         <div className="mt-auto h-32">
           <div className="min-w-160 flex h-full items-center justify-center p-8">
             {logoSrc && (
-              <img
+              <Image
                 src={logoSrc}
                 alt={logoAlt}
                 style={{ width: "100%", height: "80px", objectFit: "contain" }}

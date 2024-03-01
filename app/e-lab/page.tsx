@@ -347,7 +347,18 @@ export default function Page() {
       </Section>
     </>
   );
-  function SnapSlider({ cards }) {
+
+  interface SnapSliderProps {
+    cards: {
+      imgSrc: string;
+      name: string;
+      text: string;
+      logoSrc: string;
+      logoAlt: string;
+    }[];
+  }
+
+  function SnapSlider({ cards }: SnapSliderProps) {
     return (
       <div className="scrollbar-hidden scrollbar-yellow flex snap-x space-x-8 overflow-x-auto pb-4">
         {cards.map((card) => (

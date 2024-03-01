@@ -1,12 +1,24 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { departments } from "data/departments";
+import { Department, departments } from "data/departments";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-const DepartmentCard = ({ department, open, setOpen, index }) => {
+interface DepartmentCardProps {
+  department: Department;
+  open: number | undefined;
+  setOpen: Dispatch<SetStateAction<number | undefined>>;
+  index: number;
+}
+
+const DepartmentCard = ({
+  department,
+  open,
+  setOpen,
+  index,
+}: DepartmentCardProps) => {
   return (
     <article>
       <div

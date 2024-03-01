@@ -4,9 +4,7 @@ import * as RadixTabs from "@radix-ui/react-tabs";
 import React from "react";
 
 export interface Props {
-  tabs: {
-    [name: string]: React.ReactNode;
-  };
+  tabs: Record<string, React.ReactNode>;
 }
 
 export default function Tabs({ tabs }: Props) {
