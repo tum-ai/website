@@ -1,4 +1,4 @@
-import { partners } from "./industry";
+import { partners_ip4 } from "./industry";
 
 export const partners_collabrated_with = [
   {
@@ -349,4 +349,4 @@ export const project_partners = [
     src: "/assets/partners_sponsors/avi_medical_logo.png",
     alt: "Avi Medical",
   },
-].concat(partners);
+].concat(partners_ip4);

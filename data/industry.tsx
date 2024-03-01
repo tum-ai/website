@@ -1,4 +1,4 @@
-export const partners = [
+export const partners_ip4 = [
   {
     href: "https://www.atoss.com/de",
     src: "/assets/industry/partners/ATOSS.png",
@@ -46,7 +46,69 @@ export const partners = [
   },
 ];
 
+export const partners_ip5 = [
+  {
+    href: "https://www.airbus.com/en",
+    src: "/assets/industry/partners/IP5/1200px-Airbus_logo_2017.png",
+    alt: "Airbus"
+  },
+  {
+    href: "https://www.burda.com/en/",
+    src: "/assets/industry/partners/IP5/Hubert_Burda_Media_Logo.png",
+    alt:"Burda",
+  },
+  {
+    href: "https://www.hypovereinsbank.de/hvb/privatkunden",
+    src: "/assets/industry/partners/IP5/Logo-Case-HypoVereinsbank-1240x870px.svg",
+    alt:"HVB",
+  },
+  {
+    href: "https://www.mri.tum.de",
+    src: "/assets/industry/partners/IP5/2560px-Klinikum_rechts_der_Isar_logo.svg.png",
+    alt:"MRI",
+  },
+  {
+    href: "https://www.recogni.com",
+    src: "/assets/industry/partners/IP5/Recogni_Logo.jpg.webp",
+    alt:"Recogni",
+  },
+  {
+    href: "https://company.rtl.com/en/homepage/",
+    src: "/assets/industry/partners/IP5/RTL.png",
+    alt:"RTL",
+  },
+  {
+    href: "https://www.go-turtle.com",
+    src: "/assets/industry/partners/IP5/TURTLE_Logo_Claim.067bf3dd46c5285ea24fb1b3e0904721.svg",
+    alt:"Turtle",
+  },
+];
+
 export const projects = [
+  {
+    title: "Recogni - ML on Custom Hardware",
+    image: "/assets/industry/project_cards/recogni_white_bg.png",
+    description: [
+      {
+        text: "Recogni is building a custom chip for perception in autonomous driving. In this project, the team will work on bringing a set of state of the art models to Recogni’s custom hardware.",
+      },
+    ],
+    organization: "Recogni",
+    organizationLink: "https://www.recogni.com",
+    time: "spring 2023",
+  },
+  {
+    title: "Airbus - Big Data Analysis Framework",
+    image: "/assets/industry/project_cards/airbus_white_bg.png",
+    description: [
+      {
+        text: "Building a dynamic mission simulator for the Airbus Aircraft-as-a-Sensor initiative. This simulator will help Airbus to explore and simulate a wide range of Aircraft-as-a-Sensor opportunities. ",
+      },
+    ],
+    organization: "Airbus",
+    organizationLink: "https://www.airbus.com/en",
+    time: "spring 2023",
+  },
   {
     title: "Roland Berger - Cloud-based Data Processing",
     image: "/assets/industry/project_cards/rolandberger_industry.png",
