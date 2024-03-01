@@ -3,7 +3,7 @@ import Button from "@components/ui/Button";
 import Dialog from "@components/ui/Dialog";
 import Tabs from "@components/ui/Tabs";
 import Section from "@ui/Section";
-import { partners, projects } from "data/industry";
+import { partners_ip5, projects } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
 import PictureHero from "@components/BannerHero";
@@ -35,9 +35,9 @@ export default function Industry() {
       <Section>
         <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
           Our partners from{" "}
-          <span className="text-purple-600">Industry Phase 4.0</span>
+          <span className="text-purple-600">Industry Phase 5.0</span>
         </h2>
-        <Logos logos={partners} />
+        <Logos logos={partners_ip5} />
       </Section>
       <Section>
         <Image
