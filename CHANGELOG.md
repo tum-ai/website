@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.6.0](https://github.com/tum-ai/website/compare/v1.5.3...v1.6.0) (2024-03-01)
+
+
+### Features
+
+* add waitlist and update industry content ([#97](https://github.com/tum-ai/website/issues/97)) ([02e1fec](https://github.com/tum-ai/website/commit/02e1fece80a5a4a52f2a87fc849365328d7febf8))
+* switch to app dir ([61ab9f0](https://github.com/tum-ai/website/commit/61ab9f0829dd25f3c007f54221db5b5ad51911ef))
+
+
+### Bug Fixes
+
+* created a social media share preview ([a43591e](https://github.com/tum-ai/website/commit/a43591e64bc0212ff620e3bd15900d9c187c9012))
+* Industry ip6 changes ([#101](https://github.com/tum-ai/website/issues/101)) ([c13456d](https://github.com/tum-ai/website/commit/c13456d4830eea218348be372e4155b0ebb7a9f9))
+* new social media preview elab and banner for final pitch event ([#96](https://github.com/tum-ai/website/issues/96)) ([3741d74](https://github.com/tum-ai/website/commit/3741d74694260b2a4960a23feaad5a5325d373dd))
+* rename inprint to imprint ([#98](https://github.com/tum-ai/website/issues/98)) ([0f7c063](https://github.com/tum-ai/website/commit/0f7c06383270873ece567e67d71adffb7aba70d0))
+* update outdated eventbrite link to luma ([eacd62b](https://github.com/tum-ai/website/commit/eacd62b0e7159ad23df3119caded3810a4312eac))
+* update outdated Eventbrite link to luma ([#93](https://github.com/tum-ai/website/issues/93)) ([1f7fdb1](https://github.com/tum-ai/website/commit/1f7fdb12092fb420837a55bcc7d26ccd7da96de6))
+* updated ctas for AI E-Lab final pitch ([61a959f](https://github.com/tum-ai/website/commit/61a959f009b5613548c551e923c73581dbd99a4b))
+* updated ctas for AI E-Lab final pitch ([#100](https://github.com/tum-ai/website/issues/100)) ([1eccbe1](https://github.com/tum-ai/website/commit/1eccbe1d299c57981379f42cc633854a38f0fbb1))
+* updated E-Lab Final Pitch Event Link ([510eaa5](https://github.com/tum-ai/website/commit/510eaa522200df392507d9c0aae5cf39b0480897))
+* updated E-Lab Final Pitch Event Link ([#99](https://github.com/tum-ai/website/issues/99)) ([8c20fbf](https://github.com/tum-ai/website/commit/8c20fbf76fac837c64824cd142aebedcef688039))
+
 ## [1.5.3](https://github.com/tum-ai/website/compare/v1.5.2...v1.5.3) (2023-11-27)
 
 
