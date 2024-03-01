@@ -87,7 +87,7 @@ export const partners_ip5 = [
 export const projects = [
   {
     title: "Recogni - ML on Custom Hardware",
-    image: "/assets/industry/project_cards/recogni_white_bg",
+    image: "/assets/industry/project_cards/recogni_white_bg.png",
     description: [
       {
         text: "Recogni is building a custom chip for perception in autonomous driving. In this project, the team will work on bringing a set of state of the art models to Recogni’s custom hardware.",
