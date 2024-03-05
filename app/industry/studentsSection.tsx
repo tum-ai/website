@@ -13,7 +13,7 @@ export const StudentsSection = () => {
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
             <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-              Applications for Industry Phase 6.0 will open in spring
+              Applications for Industry Phase 6.0 are currently open. Apply now!
             </h2>
             <p>
               Push ML boundaries and progress your career with our AI projects!{" "}
