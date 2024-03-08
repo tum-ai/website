@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Hero({ imageSrc, titleImageSrc, subtitle }) {
+interface HeroProps {
+  imageSrc: string;
+  titleImageSrc: string;
+  subtitle: string;
+}
+
+export default function Hero({ imageSrc, titleImageSrc, subtitle }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       <Image

@@ -17,9 +17,14 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-const Navigation = ({ open, setOpen }) => {
+interface NavigationProps {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const Navigation = ({ open, setOpen }: NavigationProps) => {
   const links = [
     { href: "/e-lab", text: "AI E-Lab" },
     { href: "https://makeathon.tum-ai.com/", text: "Makeathon" },
@@ -134,7 +139,12 @@ export const Header = () => {
   );
 };
 
-const Logo = ({ scrolled, navOpen }) => {
+interface LogoProps {
+  scrolled: boolean;
+  navOpen: boolean;
+}
+
+const Logo = ({ scrolled, navOpen }: LogoProps) => {
   return (
     <Link href={"/"}>
       <svg

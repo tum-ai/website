@@ -1,43 +1,19 @@
 "use client";
 
 import Section from "@components/ui/Section";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { bitter } from "@styles/fonts";
-import axios from "axios";
 import { cx } from "class-variance-authority";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 import Image from "next/image";
-import * as z from "zod";
 import Button from "@components/ui/Button";
 
 export const StudentsSection = () => {
-  const [joinedWaitlist, setJoinedWaitlist] = useState(false);
-  const schema = z.object({
-    email: z.string().email(),
-  });
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: zodResolver(schema) });
-
-  const onSubmit = handleSubmit((values) =>
-    axios
-      .post("/api/industry/waitlist", {
-        data: { email: values.email },
-      })
-      .then(() => setJoinedWaitlist(true))
-  );
-
   return (
     <Section className="flex animate-fadeIn justify-center">
       <div className="rounded-3xl sm:bg-gray-50 sm:p-14 sm:shadow-lg sm:shadow-blue-500/20">
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-16">
           <div className="space-y-4">
             <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-              Applications for Industry Phase 6.0 will open in spring
+              Applications for Industry Phase 6.0 are currently open. Apply now!
             </h2>
             <p>
               Push ML boundaries and progress your career with our AI projects!{" "}
@@ -72,36 +48,14 @@ export const StudentsSection = () => {
                 alt={"Zoom Industry"}
               />
             </div>
-            <Button onClick={() => {window.location.href = "https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155"}}>Apply here!</Button>
-            {/*<div className="my-3 space-y-8 rounded-lg">
-              {!joinedWaitlist && (
-                <>
-                  <p>
-                    Sign up for our waitlist to be the first to know when
-                    applications open!
-                  </p>
-                  <form className="flex flex-col gap-2" onSubmit={onSubmit}>
-                    <div>
-                      <input
-                        {...register("email")}
-                        type="email"
-                        placeholder="email"
-                        className="w-full rounded-full border border-gray-500 px-6 py-3"
-                      />
-                      {errors.email && (
-                        <p className="text-red-500">Invalid email</p>
-                      )}
-                    </div>
-                    <Button type="submit">Join waitlist</Button>
-                  </form>
-                </>
-              )}
-              {!!joinedWaitlist && (
-                <p className="">
-                  Successfully joined our waitlist. You&apos;ll hear from us!
-                </p>
-              )}
-              </div>*/}
+            <Button
+              onClick={() => {
+                window.location.href =
+                  "https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155";
+              }}
+            >
+              Apply here!
+            </Button>
           </div>
         </div>
       </div>

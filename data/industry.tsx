@@ -1,4 +1,10 @@
-export const partners_ip4 = [
+interface Partner {
+  href: string;
+  src: string;
+  alt: string;
+}
+
+export const partners_ip4: Partner[] = [
   {
     href: "https://www.atoss.com/de",
     src: "/assets/industry/partners/ATOSS.png",
@@ -46,45 +52,59 @@ export const partners_ip4 = [
   },
 ];
 
-export const partners_ip5 = [
+export const partners_ip5: Partner[] = [
   {
     href: "https://www.airbus.com/en",
     src: "/assets/industry/partners/IP5/1200px-Airbus_logo_2017.png",
-    alt: "Airbus"
+    alt: "Airbus",
   },
   {
     href: "https://www.burda.com/en/",
     src: "/assets/industry/partners/IP5/Hubert_Burda_Media_Logo.png",
-    alt:"Burda",
+    alt: "Burda",
   },
   {
     href: "https://www.hypovereinsbank.de/hvb/privatkunden",
     src: "/assets/industry/partners/IP5/Logo-Case-HypoVereinsbank-1240x870px.svg",
-    alt:"HVB",
+    alt: "HVB",
   },
   {
     href: "https://www.mri.tum.de",
     src: "/assets/industry/partners/IP5/2560px-Klinikum_rechts_der_Isar_logo.svg.png",
-    alt:"MRI",
+    alt: "MRI",
   },
   {
     href: "https://www.recogni.com",
     src: "/assets/industry/partners/IP5/Recogni_Logo.jpg.webp",
-    alt:"Recogni",
+    alt: "Recogni",
   },
   {
     href: "https://company.rtl.com/en/homepage/",
     src: "/assets/industry/partners/IP5/RTL.png",
-    alt:"RTL",
+    alt: "RTL",
   },
   {
     href: "https://www.go-turtle.com",
     src: "/assets/industry/partners/IP5/TURTLE_Logo_Claim.067bf3dd46c5285ea24fb1b3e0904721.svg",
-    alt:"Turtle",
+    alt: "Turtle",
   },
 ];
 
-export const projects = [
+interface Link {
+  url: string;
+  displayText: string;
+}
+
+interface Project {
+  title: string;
+  image: string;
+  description: [{ text: string; link?: Link[]; moreText?: string }];
+  organization: string;
+  organizationLink: string;
+  time: string;
+}
+
+export const projects: Project[] = [
   {
     title: "Recogni - ML on Custom Hardware",
     image: "/assets/industry/project_cards/recogni_white_bg.png",

@@ -14,18 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
       - name: Install dependencies
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+        uses: oven-sh/setup-bun@v1
+
+      - run: bun install
 
       - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+        run: bun run lint

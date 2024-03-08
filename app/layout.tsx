@@ -1,6 +1,8 @@
-import Layout from "@components/Layout";
+import { inter } from "@styles/fonts";
 import { Providers } from "./providers";
 import "../styles/globals.css";
+import { Header } from "@components/Header";
+import Footer from "@components/Footer";
 
 export default function RootLayout({
   children,
@@ -11,7 +13,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <Layout>{children}</Layout>
+          <div className={inter.className}>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

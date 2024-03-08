@@ -81,9 +81,10 @@ export default function Industry() {
                       {project.description.map((section, index) => (
                         <span key={index}>
                           {section.text && `${section.text} `}
-                          {section.link &&
-                            section.link
-                              .map((link, i) => (
+
+                          {!!section.link &&
+                            section.link.map((link, i) => (
+                              <>
                                 <a
                                   key={i}
                                   href={link.url}
@@ -93,12 +94,9 @@ export default function Industry() {
                                 >
                                   {link.displayText}
                                 </a>
-                              ))
-                              .reduce(
-                                (prev, curr, i) =>
-                                  i === 0 ? [curr] : [prev, ", ", curr],
-                                []
-                              )}
+                                {i < section.link!.length - 1 && ", "}
+                              </>
+                            ))}
                           {section.moreText && ` ${section.moreText}`}
                         </span>
                       ))}

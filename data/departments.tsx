@@ -11,12 +11,12 @@ import {
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 
-type Department = {
+export interface Department {
   name: string;
   description: string;
   image: string;
   icon: IconDefinition;
-};
+}
 
 export const departments: Department[] = [
   {

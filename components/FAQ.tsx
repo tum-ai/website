@@ -6,8 +6,12 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import * as Accordion from "@radix-ui/react-accordion";
 import { cx } from "class-variance-authority";
 
-const FAQ = ({ questions }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+interface FAQProps {
+  questions: { question: string; answer: string }[];
+}
+
+const FAQ = ({ questions }: FAQProps) => {
+  const [openIndex, setOpenIndex] = useState<string | undefined>();
 
   return (
     <Accordion.Root
