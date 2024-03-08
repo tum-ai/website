@@ -94,9 +94,13 @@ function Content1() {
     {
       img: "/assets/home_img2.png",
       title: "Makeathon Competitions",
-      text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, online/in-person hybrid",
-      subtext: "applications closed, finished",
+      text: "AI product development Hackathon, 48 hours to solve challenges by our sponsors, open for tech and business students, in-person!",
+      subtext: "application is now open!",
       buttons: [
+        {
+          href: "https://tally.so/r/3y9LPB",
+          text: "Apply now",
+        },
         {
           href: "https://makeathon.tum-ai.com/",
           text: "Learn more",
