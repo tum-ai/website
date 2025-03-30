@@ -45,7 +45,7 @@ export default function Card({
                   className="rounded-full"
                 />
               </div>
-              <div className="flex-grow">
+              <div className="grow">
                 <p className="text-μ font-bold tracking-tight text-gray-900 dark:text-black">{description}</p>
               </div>
               <div className="h-2"></div>

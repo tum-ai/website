@@ -59,7 +59,7 @@ const EventComponent = ({ event, step }: EventProps) => {
 
         <span
           className={cx(
-            "absolute right-0 flex h-full w-2 bg-gradient-to-b",
+            "absolute right-0 flex h-full w-2 bg-linear-to-b",
             stepGradient[step - 1]
           )}
         />
@@ -118,7 +118,7 @@ const EventComponent = ({ event, step }: EventProps) => {
 
       <span
         className={cx(
-          "absolute right-0 flex h-full w-2 bg-gradient-to-b",
+          "absolute right-0 flex h-full w-2 bg-linear-to-b",
           stepGradient[step - 1]
         )}
       />

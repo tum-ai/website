@@ -93,7 +93,7 @@ export default function Page({params: {id}}: { params: { id: string } }) {
                             <Link href={"/e-lab/team"}>
                                 <button
                                     type="button"
-                                    className="flex flex-row items-center text-center w-fit pr-2 h-7 bg-orange-500 border border-transparent rounded-md text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-orange-500"
+                                    className="flex flex-row items-center text-center w-fit pr-2 h-7 bg-orange-500 border border-transparent rounded-md text-base font-medium text-white hover:bg-orange-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-orange-500"
                                 >
                                     <FontAwesomeIcon icon={faArrowLeft}
                                                      size="lg"
@@ -114,7 +114,7 @@ export default function Page({params: {id}}: { params: { id: string } }) {
                                 </h2>
 
                                 <div className="flex flex-col sm:flex-row sm:items-center">
-                                    <p className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-transparent">
+                                    <p className="text-xl sm:text-2xl font-semibold bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-transparent">
                                         {person?.role}
                                     </p>
 

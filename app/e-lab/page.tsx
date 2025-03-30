@@ -106,7 +106,7 @@ export default function Page() {
       <Hero />
       {/* {
       <Section className="items-center justify-center bg-purple-950 text-white">
-        <h2 className="mb-8 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-8 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           AI E-Lab Final Pitch Event
         </h2>
 
@@ -121,7 +121,7 @@ export default function Page() {
             </p>
             <div className="flex flex-col justify-center gap-6 ">
               <Link
-                className="min-w-[300px] rounded-full border-none bg-gradient-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+                className="min-w-[300px] rounded-full border-none bg-linear-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
                 href="https://www.eventbrite.de/e/ai-e-lab-final-pitch-competition-tickets-784536669297?aff=oddtdtcreator"
                 target="_blank"
               >
@@ -134,7 +134,7 @@ export default function Page() {
      } */}
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
-          <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
+          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
             What is the AI E-Lab?
           </h2>
           <p className="text-2xl">
@@ -165,7 +165,7 @@ export default function Page() {
       </Section>
 
         <Section className="bg-purple-950 text-white">
-          <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
             How founders experience the E-Lab
           </h2>
           <p className="flex flex-col justify-start gap-2 text-3xl font-semibold text-yellow-500 sm:text-4xl">
@@ -189,7 +189,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Last AI E-Lab in numbers
         </h2>
 
@@ -200,7 +200,7 @@ export default function Page() {
         </div>
 
         <div className="mt-24">
-          <h3 className="mb-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-2xl font-medium uppercase tracking-widest text-transparent sm:text-4xl">
+          <h3 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-2xl font-medium uppercase tracking-widest text-transparent sm:text-4xl">
             Top 3 Startups have
           </h3>
           <div className="flex flex-wrap justify-center gap-8 md:gap-24">
@@ -213,7 +213,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Benefits
         </h2>
 
@@ -273,7 +273,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 ml-16 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl md:ml-0">
+        <h2 className="mb-12 ml-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl md:ml-0">
           Timeline
         </h2>
         <Timeline
@@ -307,7 +307,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
           Meet our Partners and Sponsors
         </h2>
 
@@ -441,7 +441,7 @@ export default function Page() {
       return (
           <div className="min-w-sm relative h-full w-full overflow-hidden rounded-lg grayscale saturate-200">
             <Image src={imgSrc} alt={name} fill objectFit="cover"/>
-            <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur">
+            <div className="h-3/8 absolute bottom-0 w-full bg-black bg-opacity-80 p-2 text-white backdrop-blur-sm">
               <h3 className="font-bold">{name}</h3>
               <p>{text}</p>
             </div>

@@ -1,5 +1,62 @@
-@import "./utils";
+@import './utils' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-yellow-500: #f5af28;
+
+  --color-red-500: #e83777;
+
+  --color-blue-50: #e2e7f4;
+  --color-blue-100: #c8d3ea;
+  --color-blue-200: #91a6d4;
+  --color-blue-300: #5677be;
+  --color-blue-400: #375390;
+  --color-blue-500: #223358;
+  --color-blue-600: #1b2946;
+  --color-blue-700: #151e35;
+  --color-blue-800: #0e1525;
+  --color-blue-900: #070b12;
+  --color-blue-950: #030407;
+
+  --color-purple-50: #f6edfc;
+  --color-purple-100: #eddbfa;
+  --color-purple-200: #dab8f5;
+  --color-purple-300: #c894f0;
+  --color-purple-400: #b875eb;
+  --color-purple-500: #a450e6;
+  --color-purple-600: #891fdb;
+  --color-purple-700: #6517a1;
+  --color-purple-800: #430f6b;
+  --color-purple-900: #220836;
+  --color-purple-950: #11041b;
+
+  --animate-fade-in: fadeIn 700ms ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}

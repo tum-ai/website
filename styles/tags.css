@@ -1,9 +1,0 @@
-.tag {
-    display: inline-block;
-    background-color: #6a0dad; /* Purple background */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px; /* Rounded corners */
-    margin-right: 5px; /* Space between tags */
-    font-size: 0.875rem; /* Tailwind's text-sm size */
-  }

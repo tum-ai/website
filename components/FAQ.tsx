@@ -29,7 +29,7 @@ const FAQ = ({ questions }: FAQProps) => {
           <Accordion.Header>
             <Accordion.Trigger
               className="AccordionTrigger focus:shadow-outline-purple flex w-full justify-between gap-4
-            rounded-lg bg-purple-900 px-4 py-3 text-left text-lg font-medium text-white focus:outline-none"
+            rounded-lg bg-purple-900 px-4 py-3 text-left text-lg font-medium text-white focus:outline-hidden"
             >
               <span>{question.question}</span>
               <FontAwesomeIcon

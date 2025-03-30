@@ -8,7 +8,7 @@ import {
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
-import Button from "@ui/Button";
+import Button from "@components/ui/Button";
 import { cx } from "class-variance-authority";
 import {
   AnimatePresence,

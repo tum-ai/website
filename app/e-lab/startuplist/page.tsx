@@ -19,7 +19,7 @@ export default function Page() {
       {/* Header Section */}
       <Section className="bg-purple-950 text-white">
         <div className="md:w-3/5 lg:mb-8">
-          <h2 className="bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
+          <h2 className="bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
             E-Lab Startup Directory
           </h2>
           <p className="mt-2 text-lg">

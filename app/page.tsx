@@ -294,12 +294,12 @@ function Content2() {
       </h2>
 
       <div className="grid gap-16 lg:grid-cols-2">
-        <div className="relative h-[450px] w-full rounded">
+        <div className="relative h-[450px] w-full rounded-sm">
           <Image
             src={"/assets/aibootcamp.jpg"}
             alt=""
             fill
-            className="rounded object-cover"
+            className="rounded-sm object-cover"
           />
         </div>
 
@@ -346,7 +346,7 @@ function Content2() {
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col items-center space-y-2 rounded p-8 text-center">
+      <div className="mt-12 flex flex-col items-center space-y-2 rounded-sm p-8 text-center">
         <h3 className="text-3xl font-semibold">
           Interested in joining TUM.ai?
         </h3>
@@ -415,7 +415,7 @@ function Content3() {
             src={MartinTalk}
             alt="Martin talk"
             fill
-            className="rounded object-cover"
+            className="rounded-sm object-cover"
           />
         </div>
       </div>

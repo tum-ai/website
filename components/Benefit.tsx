@@ -9,7 +9,7 @@ interface Benefit {
 }
 
 // Define styles with cva, including dynamic variants for color and columns.
-const iconStyles = cva("h-8 w-8 rounded p-2 text-white duration-500", {
+const iconStyles = cva("h-8 w-8 rounded-sm p-2 text-white duration-500", {
   variants: {
     color: {
       purple: "bg-purple-500",

@@ -19,42 +19,42 @@ const steps: Step[] = [
     {
       step: "00",
       name: "Batch Introduction",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "Kick off your journey with the Batch Introduction! During the onboarding weekend, you'll get introduced to TUM.ai, meet current and new members, and take part in social events - setting the foundation for your journey. The experience continues with a getaway trip designed to deepen connections with both previous and new members in an unforgettable setting."
     },
     {
       step: "01A",
       name: "Research Track",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "Join a dedicated team working on an Impact Project aligned with your skills and interests, applying AI to address real-world challenges in a collaborative environment. These projects are designed to contribute to the broader research and technology community through tangible outcomes such as academic publications or open-source contributions. Along the way, you'll have the opportunity to engage deeply with our vibrant community, develop new skills, and take part in learning opportunities, trips, and special events—all while experiencing the hands-on, team-oriented culture that defines TUM.ai.",
     },
     {
       step: "01B",
       name: "Initiative Track",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "Join one of our core departments and become a driving force behind everything that makes TUM.ai stand out. In this track, you'll dive into exciting projects, collaborate with motivated peers, and help shape the future of our community. Whether it's launching new ideas, strengthening our network, or making the day-to-day magic happen - you'll be at the heart of it all, growing your skills while making TUM.ai better for everyone. Alongside your work, you'll have the chance to engage deeply with our vibrant network, develop new skills, and take part in learning opportunities, trips, and special events.",
     },
     {
       step: "02",
       name: "Growth Opportunities",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "After your first semester, your journey at TUM.ai doesn't end with your initial project. You'll have the opportunity to further shape the initiative by founding a strategic task force, joining a department or task force that's new to you or continuing in your current department, potentially taking on a Team Lead role.",
     },
     {
       step: "03",
       name: "Research Exchange (REX) Program",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "After completing two semesters, you become eligible for the REX Program-your gateway to conducting research at world-renowned institutions like MIT, Harvard, or Berkeley. Through our strong alumni network, we'll help you find the right research topic, navigate the application process, and support you every step of the way. It's a unique chance to take your AI journey global and contribute to cutting-edge research on an international stage.",
     },
     {
       step: "04",
       name: "Alumni Program",
-      gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+      gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
       description:
         "Having been with TUM.ai for two or more semesters, you can join the Alumni Program, opening up opportunities for continued networking and collaboration.",
     },
@@ -104,55 +104,55 @@ const departments: Department[] = [
     name: "Makeathon",
     icon: Rocket,
     description: "Organizing Munich's largest AI Makeathon - a 48-hour virtual challenge where teams develop real-world business cases with AI. Features workshops, talks, and expert mentorship.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Venture",
     icon: Building2,
     description: "Bridging the gap between ideas and successful AI startups. We foster innovation and entrepreneurial spirit within TUM.ai.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Industry",
     icon: GraduationCap,
     description: "Connecting TUM.ai members with industry partners for real-world AI projects during lecture-free periods.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Education",
     icon: GraduationCap,
     description: "Creating and delivering AI educational content and events for all skill levels - from beginner to expert.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Software Dev",
     icon: Code,
     description: "Building and maintaining TUM.ai's digital infrastructure, from in-house tools to cloud services.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Legal & Finance",
     icon: Scale,
     description: "Ensuring TUM.ai's compliance and financial sustainability while maintaining our non-profit status.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Community",
     icon: Users,
     description: "Building and nurturing our community through events, buddy programs, and recruitment.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Marketing",
     icon: Megaphone,
     description: "Shaping TUM.ai's public image and promoting our vision through strategic communication.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
   {
     name: "Partners & Sponsors",
     icon: Handshake,
     description: "Building strategic partnerships and securing sponsorships to enable ambitious events and projects.",
-    gradient: "bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200",
+    gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
   },
 ];
 
@@ -165,7 +165,7 @@ const Arrow = ({ color = "slate-400" }: { color?: string }) => (
 const DepartmentCard = ({ department }: { department: Department }) => {
   const Icon = department.icon;
   return (
-    <div className="relative h-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
+    <div className="relative h-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-xs p-8">
       <div className="relative flex items-center gap-4 mb-5">
         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10">
           <Icon className="text-white w-5 h-5" />
@@ -215,7 +215,7 @@ export default function Members() {
       {/* Main Content */}
       <div className="relative">
         {/* Journey Section - Light background with subtle pattern */}
-        <div className="relative bg-gradient-to-b from-white to-slate-50">
+        <div className="relative bg-linear-to-b from-white to-slate-50">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 gap-8 opacity-5">
               {Array.from({ length: 64 }).map((_, i) => (
@@ -236,7 +236,7 @@ export default function Members() {
             <div className="flex flex-col gap-8">
               {/* First Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                     {steps[0]!.step}
                   </div>
@@ -250,7 +250,7 @@ export default function Members() {
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 justify-center">
                 {steps.slice(1, 3).map((step) => (
                   <div key={step.name} className="relative w-full lg:flex-1">
-                    <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                    <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
                       <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                         {step.step}
                       </div>
@@ -273,7 +273,7 @@ export default function Members() {
 
               {/* Growth Opportunities Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                     {steps[3]!.step}
                   </div>
@@ -286,7 +286,7 @@ export default function Members() {
               
               {/* REX Program Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                     {steps[4]!.step}
                   </div>
@@ -299,7 +299,7 @@ export default function Members() {
               
               {/* Alumni Program Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                     {steps[5]!.step}
                   </div>
@@ -312,10 +312,10 @@ export default function Members() {
         </div>
 
         {/* Departments Section - Dark gradient background */}
-        <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="relative bg-linear-to-br from-slate-900 via-slate-800 to-slate-900">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,transparent)] opacity-5" />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
+            <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-transparent to-purple-500/10" />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center mb-20">
@@ -337,10 +337,10 @@ export default function Members() {
         </div>
 
         {/* Previous Work Section - Light background with modern pattern */}
-        <div className="relative bg-gradient-to-b from-slate-50 to-white">
+        <div className="relative bg-linear-to-b from-slate-50 to-white">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,white)] opacity-10" />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-purple-100/30" />
+            <div className="absolute inset-0 bg-linear-to-br from-blue-100/30 via-transparent to-purple-100/30" />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center mb-20">

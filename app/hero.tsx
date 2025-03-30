@@ -7,12 +7,9 @@ import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 import Link from "next/link";
-import tailwindConfig from "tailwind.config.js";
-import resolveConfig from "tailwindcss/resolveConfig";
 import * as THREE from "three";
 
 export const Hero = () => {
-  const fullConfig = resolveConfig(tailwindConfig);
 
   return (
     <section className="relative h-screen">
@@ -27,7 +24,7 @@ export const Hero = () => {
               distort={0.3}
               wireframe={true}
               wireframeLinewidth={5}
-              color={(fullConfig.theme?.colors?.purple?.["600"] as string) ?? "#000000"}
+              color={"#000000"}
               transparent
               opacity={0.4}
               blending={THREE.AdditiveBlending}

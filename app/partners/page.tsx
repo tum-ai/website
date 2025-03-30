@@ -105,7 +105,7 @@ export default function Partners() {
 
           <div className="relative grid gap-16 md:grid-cols-2">
             <div className="relative">
-              <div className="relative space-y-8 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="relative space-y-8 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xs">
                 <div className="space-y-6">
                   <h3 className={cx("text-2xl font-semibold text-white", bitter.className)}>
                     Ways to Collaborate
@@ -182,14 +182,14 @@ export default function Partners() {
             </div>
 
             <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+              <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xs">
                 <Image 
                   src={MartinTalk} 
                   alt="Martin talk" 
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <p className="text-lg text-white">
                     Join our network of industry leaders and innovators

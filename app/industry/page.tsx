@@ -77,7 +77,7 @@ export default function Industry() {
                     <h1 className="mb-2 text-lg font-semibold">
                       {project.title}
                     </h1>
-                    <p className="mb-2 flex-grow text-sm">
+                    <p className="mb-2 grow text-sm">
                       {project.description.map((section, index) => (
                         <span key={index}>
                           {section.text && `${section.text} `}
