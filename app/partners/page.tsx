@@ -6,12 +6,7 @@ import MartinTalk from "@public/assets/partners/martin_talk.jpg";
 import { cx } from "class-variance-authority";
 import { bitter } from "@styles/fonts";
 import Link from "next/link";
-import {
-  faBullhorn,
-  faHandshakeSimple,
-  faHeart,
-  faPeopleGroup,
-} from "@fortawesome/free-solid-svg-icons";
+import { Heart, Megaphone, Handshake, Users } from "lucide-react";
 import Benefits from "@components/Benefit";
 import Logos from "@components/Logos";
 import {
@@ -32,22 +27,22 @@ export default function Partners() {
     {
       title: "AI Talent Pool",
       text: "Get access to our network of highly motivated students with a specialization in artificial intelligence technologies. Many of our members are interested in internships and working student positions.",
-      icon: faHeart,
+      icon: Heart,
     },
     {
       title: "Marketing & Awareness",
       text: "As a partner, you will be featured on our website. Plus, we will advertise your company as a supporter of TUM.ai in our marketing campaigns. (8k+ followers on LinkedIn) Boost the perception of your brand among students across Munich and beyond.",
-      icon: faBullhorn,
+      icon: Megaphone,
     },
     {
       title: "Project Collaborations",
       text: "Being a partner opens the door for many sorts of collaboration, like becoming a challenge setter for our Makeathons, joining for an industry project or hosting networking workshops with our members. We are only limited by your creativity!",
-      icon: faHandshakeSimple,
+      icon: Handshake,
     },
     {
       title: "Network & Ecosystem",
       text: "We invite you to benefit from our entrepreneurial ecosystem, our own AI startup founders, as well as insights from our own R&D projects. We invite you to leverage our connections to other top university AI clubs, as well as the association to the TUM brand to drive AI in your company.",
-      icon: faPeopleGroup,
+      icon: Users,
     },
   ];
 
@@ -60,18 +55,18 @@ export default function Partners() {
       />
 
       <Section background="white">
-        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
+        <h2 className={cx("mb-8 text-3xl font-semibold", bitter.className)}>
           Strategic Partners
         </h2>
         <Logos logos={strategic_partnerts} />
         <h2
-          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+          className={cx("mb-8 mt-32 text-3xl font-semibold", bitter.className)}
         >
           Enablers and Supporters
         </h2>
         <Logos logos={enablers_supporters} />
         <h2
-          className={cx("mb-8 mt-32 text-4xl font-semibold", bitter.className)}
+          className={cx("mb-8 mt-32 text-3xl font-semibold", bitter.className)}
         >
           Project Partners
         </h2>
@@ -92,7 +87,7 @@ export default function Partners() {
           <div className="relative mb-16 flex flex-col items-center text-center">
             <h2
               className={cx(
-                "mb-6 text-5xl font-semibold text-white",
+                "mb-6 text-3xl font-semibold text-white",
                 bitter.className
               )}
             >
@@ -105,7 +100,12 @@ export default function Partners() {
 
           <div className="relative grid gap-16 md:grid-cols-2">
             <div className="relative">
-              <div className="relative space-y-8 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xs">
+              <div className="relative space-y-8 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                {/* Glass-like top highlight */}
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+                {/* Glass-like left highlight */}
+                <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-purple-300/50 to-transparent"></div>
+                
                 <div className="space-y-6">
                   <h3 className={cx("text-2xl font-semibold text-white", bitter.className)}>
                     Ways to Collaborate
@@ -114,7 +114,7 @@ export default function Partners() {
                     We&apos;re always open to new ideas and creative ways to collaborate.
                   </p>
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-lg border border-white/10 p-4">
+                    <div className="rounded-lg border border-white/10 p-4 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                       <h4 className="mb-2 font-medium text-white">Events & Community</h4>
                       <ul className="space-y-2 text-sm text-white/80">
                         <li className="flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function Partners() {
                         </li>
                       </ul>
                     </div>
-                    <div className="rounded-lg border border-white/10 p-4">
+                    <div className="rounded-lg border border-white/10 p-4 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                       <h4 className="mb-2 font-medium text-white">Industry & Projects</h4>
                       <ul className="space-y-2 text-sm text-white/80">
                         <li className="flex items-center gap-2">
@@ -175,21 +175,21 @@ export default function Partners() {
                   </ul>
                 </div>
 
-                <Button intent="primary" className="w-full">
+                <Button intent="glass" className="w-full border border-white/10">
                   <Link href="mailto:partners@tum-ai.com">Become a partner</Link>
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xs">
+              <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm group">
                 <Image 
                   src={MartinTalk} 
                   alt="Martin talk" 
                   fill
-                  className="object-cover"
+                  className="object-cover transition-all duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <p className="text-lg text-white">
                     Join our network of industry leaders and innovators
@@ -204,7 +204,7 @@ export default function Partners() {
       <Section background="white">
         <h2
           className={cx(
-            "text-uppercase mb-8 w-full text-4xl font-semibold",
+            "text-uppercase mb-8 w-full text-3xl font-semibold",
             bitter.className
           )}
         >

@@ -18,9 +18,21 @@ const styles = cva(
         destructive:
           "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-xs hover:shadow-md active:scale-[0.98]",
         glass:
-          "bg-white/20 text-white backdrop-blur-sm border border-white/20 hover:bg-white/30 focus:ring-white active:scale-[0.98]",
+          "bg-white/20 text-white backdrop-blur-sm border border-white/20 hover:bg-white/30 focus:ring-white active:scale-[0.98] shadow-sm hover:shadow-md",
+        glassDark:
+          "bg-black/10 text-white backdrop-blur-sm border border-white/20 hover:bg-black/20 focus:ring-white active:scale-[0.98] shadow-sm hover:shadow-md",
+        glassLight:
+          "bg-white/60 text-gray-800 backdrop-blur-sm border border-gray-200/50 hover:bg-white/80 focus:ring-gray-300 active:scale-[0.98] shadow-sm hover:shadow-md",
+        glassPurple:
+          "bg-purple-600/10 text-purple-600 backdrop-blur-sm border border-purple-200/30 hover:bg-purple-600/20 focus:ring-purple-500 active:scale-[0.98] shadow-sm hover:shadow-md",
+        glassBlue:
+          "bg-blue-600/10 text-blue-600 backdrop-blur-sm border border-blue-200/30 hover:bg-blue-600/20 focus:ring-blue-500 active:scale-[0.98] shadow-sm hover:shadow-md",
+        glassIndigo:
+          "bg-indigo-600/10 text-indigo-600 backdrop-blur-sm border border-indigo-200/30 hover:bg-indigo-600/20 focus:ring-indigo-500 active:scale-[0.98] shadow-sm hover:shadow-md",
         pill:
           "rounded-full text-xs font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",
+        pillGlass:
+          "rounded-full text-xs font-medium text-purple-600 bg-purple-600/10 backdrop-blur-sm border border-purple-200/30 hover:bg-purple-600/20 focus:ring-purple-500 shadow-sm",
       },
       size: {
         xs: "h-7 px-2 text-xs",

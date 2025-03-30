@@ -205,7 +205,7 @@ export const Hero = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            <Button asChild intent="tertiary" className="w-full sm:w-auto px-6 py-3 rounded-md bg-white/10 backdrop-blur-sm hover:bg-white/20">
+            <Button asChild intent="glass" className="w-full sm:w-auto px-6 py-3 rounded-md border border-white/20 backdrop-blur-sm shadow-sm hover:shadow-md">
               <Link href="https://join.tum-ai.com/">Become a Member</Link>
             </Button>
           </motion.div>
@@ -221,7 +221,7 @@ export const Hero = () => {
         <motion.button
           onClick={() => window.scrollBy({top: window.innerHeight, behavior: 'smooth'})}
           title="Scroll down"
-          className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all hover:bg-white/10"
+          className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 backdrop-blur-sm bg-white/10 transition-all hover:bg-white/20"
           whileHover={{ y: 3 }}
           whileTap={{ scale: 0.9 }}
           animate={{ y: [0, 10, 0] }}

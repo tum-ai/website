@@ -165,9 +165,14 @@ const Arrow = ({ color = "slate-400" }: { color?: string }) => (
 const DepartmentCard = ({ department }: { department: Department }) => {
   const Icon = department.icon;
   return (
-    <div className="relative h-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-xs p-8">
+    <div className="relative h-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 transition-all duration-300 hover:bg-white/10 group">
+      {/* Glass-like top highlight */}
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+      {/* Glass-like left highlight */}
+      <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-purple-300/50 to-transparent"></div>
+      
       <div className="relative flex items-center gap-4 mb-5">
-        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10">
+        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 group-hover:bg-white/15 transition-colors">
           <Icon className="text-white w-5 h-5" />
         </div>
         <h3 className="text-lg font-semibold text-white tracking-tight">{department.name}</h3>
@@ -184,10 +189,15 @@ const WorkCard = ({ work }: { work: PreviousWork }) => (
     rel="noopener noreferrer"
     className="block h-full"
   >
-    <div className="relative h-full rounded-xl border border-slate-200 bg-white p-8">
+    <div className="relative h-full rounded-xl border border-slate-200 bg-white/90 backdrop-blur-sm p-8 transition-all duration-300 hover:shadow-lg hover:border-purple-100 group">
+      {/* Glass-like top highlight */}
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+      {/* Glass-like left highlight */}
+      <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+      
       <div className="relative flex items-center justify-between mb-4">
         <span className="text-xs font-medium text-slate-500 tracking-wide">{work.date}</span>
-        <span className="text-xs font-medium px-2 py-1 rounded-full bg-slate-100 text-slate-600">
+        <span className="text-xs font-medium px-2 py-1 rounded-full bg-slate-100 text-slate-600 group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">
           {work.category}
         </span>
       </div>
@@ -195,7 +205,7 @@ const WorkCard = ({ work }: { work: PreviousWork }) => (
         {work.title}
       </h3>
       <p className="text-sm text-slate-600 leading-relaxed line-clamp-4">{work.description}</p>
-      <div className="mt-4 flex items-center gap-1 text-xs text-blue-600">
+      <div className="mt-4 flex items-center gap-1 text-xs text-blue-600 group-hover:text-purple-600 transition-colors">
         Read more
         <ArrowRight className="w-3 h-3" />
       </div>
@@ -225,7 +235,7 @@ export default function Members() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center mb-24">
-              <h2 className={cx("text-4xl font-bold text-slate-900 mb-6 tracking-tight", bitter.className)}>
+              <h2 className={cx("text-3xl font-semibold text-slate-900 mb-6 tracking-tight", bitter.className)}>
                 The TUM.ai Member Journey
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-lg">
@@ -236,12 +246,17 @@ export default function Members() {
             <div className="flex flex-col gap-8">
               {/* First Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-100">
+                  {/* Glass-like top highlight */}
+                  <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+                  {/* Glass-like left highlight */}
+                  <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+                  
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
-                    {steps[0]!.step}
+                    {steps[0].step}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[0]!.name}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[0]!.description}</p>
+                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[0].name}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[0].description}</p>
                 </div>
               </div>
               
@@ -250,7 +265,12 @@ export default function Members() {
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 justify-center">
                 {steps.slice(1, 3).map((step) => (
                   <div key={step.name} className="relative w-full lg:flex-1">
-                    <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                    <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-100">
+                      {/* Glass-like top highlight */}
+                      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+                      {/* Glass-like left highlight */}
+                      <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+                      
                       <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
                         {step.step}
                       </div>
@@ -273,12 +293,17 @@ export default function Members() {
 
               {/* Growth Opportunities Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-100">
+                  {/* Glass-like top highlight */}
+                  <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+                  {/* Glass-like left highlight */}
+                  <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+                  
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
-                    {steps[3]!.step}
+                    {steps[3].step}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[3]!.name}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[3]!.description}</p>
+                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[3].name}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[3].description}</p>
                 </div>
               </div>
               
@@ -286,12 +311,17 @@ export default function Members() {
               
               {/* REX Program Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-100">
+                  {/* Glass-like top highlight */}
+                  <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+                  {/* Glass-like left highlight */}
+                  <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+                  
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
-                    {steps[4]!.step}
+                    {steps[4].step}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[4]!.name}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[4]!.description}</p>
+                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[4].name}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[4].description}</p>
                 </div>
               </div>
               
@@ -299,12 +329,17 @@ export default function Members() {
               
               {/* Alumni Program Card */}
               <div className="relative w-full">
-                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center">
+                <div className="relative min-h-[240px] w-full rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center text-slate-900 px-12 py-10 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-100">
+                  {/* Glass-like top highlight */}
+                  <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+                  {/* Glass-like left highlight */}
+                  <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+                  
                   <div className="absolute top-8 left-8 text-xs font-medium text-slate-500 tracking-wide">
-                    {steps[5]!.step}
+                    {steps[5].step}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[5]!.name}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[5]!.description}</p>
+                  <h3 className="text-2xl font-semibold mb-6 tracking-tight text-slate-900">{steps[5].name}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed max-w-[85%]">{steps[5].description}</p>
                 </div>
               </div>
             </div>
@@ -320,7 +355,7 @@ export default function Members() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-2 mb-4">
-                <h2 className={cx("text-4xl font-bold text-white tracking-tight", bitter.className)}>
+                <h2 className={cx("text-3xl font-semibold text-white tracking-tight", bitter.className)}>
                   Our Core Departments
                 </h2>
               </div>
@@ -344,7 +379,7 @@ export default function Members() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center mb-20">
-              <h2 className={cx("text-4xl font-bold text-slate-900 mb-6 tracking-tight", bitter.className)}>
+              <h2 className={cx("text-3xl font-semibold text-slate-900 mb-6 tracking-tight", bitter.className)}>
                 Our Impact Projects
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-lg">

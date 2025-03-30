@@ -150,14 +150,6 @@ export default function Industry() {
               <h2 className="text-white text-2xl md:text-3xl font-medium mb-8 max-w-2xl">
                 Your stepping stone to a career in AI
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <Button intent="primary" size="lg">
-                  <Link href="#students">For Students</Link>
-                </Button>
-                <Button intent="glass" size="lg">
-                  <Link href="#industry">For Companies</Link>
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -308,7 +300,7 @@ function ProjectCard({ project }: { project: Project }) {
       
       <div className="p-6 pt-0 mt-auto flex items-center justify-between">
         <Button 
-          intent="pill" 
+          intent="glassPurple" 
           size="xs" 
           asChild
         >

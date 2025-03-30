@@ -5,12 +5,7 @@ import Stat from "@components/Stat";
 import Testimonials from "@components/Testimonials";
 import Timeline from "@components/Timeline";
 import Section from "@components/ui/Section";
-import {
-  faBook,
-  faCircleNodes,
-  faHandshakeSimple,
-  faHandsHoldingCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { Network, Handshake, BookOpen, CircleDollarSign } from "lucide-react";
 import { faq, testimonials } from "data/e-lab";
 import Link from "next/link";
 import { Hero } from "./hero";
@@ -179,7 +174,7 @@ export default function Page() {
             Entrepreneurship Lab we aim at making the founding of AI{" "}
             <span className="text-red-500">startups </span>
             accessible to everyone, including you. Bring your motivation and
-            dedication, and we’ll provide the rest, striving to make founding as
+            dedication, and we&apos;ll provide the rest, striving to make founding as
             easy as possible for you.
           </p>
 
@@ -248,24 +243,24 @@ export default function Page() {
         <Benefits
           benefits={[
             {
-              icon: faCircleNodes,
+              icon: Network,
               title: "Access to our network",
-              text: "In order to shape something meaningful and have impact, knowledge alone does not suffice. You need a network of diverse people you can learn from and share your passion with. We therefore organise several events where you can meet and mingle with TUM.ai members, business and domain experts, startups, founders, investors and many more. Of course, you're also welcome to reach out at any time in between our scheduled events.",
+              text: "In order to shape something meaningful and have impact, knowledge alone does not suffice. You need a network of diverse people you can learn from and share your passion with. We therefore organise several events where you can meet and mingle with TUM.ai members, business and domain experts, startups, founders, investors and many more. Of course, you're also welcome to reach out at any time in between our scheduled events.",
             },
             {
-              icon: faHandshakeSimple,
+              icon: Handshake,
               title: "Count on our support",
-              text: "We help you develop your final MVP and guide you through the program with individual coaching and tailored mentoring with founders and domain experts. You and your team have the opportunity to experience vivid discussions in our co-working spaces. We also provide you with software and hardware resources, and you can count on tech support.",
+              text: "We help you develop your final MVP and guide you through the program with individual coaching and tailored mentoring with founders and domain experts. You and your team have the opportunity to experience vivid discussions in our co-working spaces. We also provide you with software and hardware resources, and you can count on tech support.",
             },
             {
-              icon: faBook,
+              icon: BookOpen,
               title: "Learn and grow",
-              text: "Everyone has superpowers and we support you in using them to excel. With hands-on workshops we provide you with the knowledge to found your AI startup and encourage you to test it in a real-world setting. You’ll hear stories of other founders and have the possibility to learn from their experiences. Our program is customer-centric and feedback-oriented, emphasising the importance of listening and interacting with others for personal growth and success.",
+              text: "Everyone has superpowers and we support you in using them to excel. With hands-on workshops we provide you with the knowledge to found your AI startup and encourage you to test it in a real-world setting. You'll hear stories of other founders and have the possibility to learn from their experiences. Our program is customer-centric and feedback-oriented, emphasising the importance of listening and interacting with others for personal growth and success.",
             },
             {
-              icon: faHandsHoldingCircle,
+              icon: CircleDollarSign,
               title: "We are equity free",
-              text: "Making AI and the founding process accessible to everyone is one of our missions at TUM.ai. We, therefore, do not charge any costs for the AI E-Lab and do not take any equity stake in your venture. Further, we don’t expect pre-seed readiness or any initial investment. The only investment you have to arrange is your time, eagerness and dedication.",
+              text: "Making AI and the founding process accessible to everyone is one of our missions at TUM.ai. We, therefore, do not charge any costs for the AI E-Lab and do not take any equity stake in your venture. Further, we don't expect pre-seed readiness or any initial investment. The only investment you have to arrange is your time, eagerness and dedication.",
             },
           ]}
           color="yellow"

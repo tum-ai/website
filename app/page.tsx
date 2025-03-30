@@ -145,7 +145,7 @@ export default function Index() {
         </div>
         
         <div className="mx-auto max-w-6xl px-4 relative">
-          <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
+          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
             Our <span className="text-purple-600">
               Programs
             </span>
@@ -204,7 +204,7 @@ export default function Index() {
         <div className="mx-auto max-w-6xl px-4 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/2">
-              <h2 className={cx("text-3xl font-medium mb-8", bitter.className)}>
+              <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
                 Germany&apos;s leading<br />
                 <span className="text-purple-600">
                   AI student initiative
@@ -230,10 +230,10 @@ export default function Index() {
               </div>
               
               <div className="mt-10">
-                <Button asChild className="rounded-md relative overflow-hidden group">
+                <Button intent="glass" className="rounded-md relative overflow-hidden group bg-purple-600/10 text-purple-600 hover:bg-purple-600/20 border border-purple-100">
                   <Link href="/members">
                     <span className="relative z-10">Meet our Members</span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Link>
                 </Button>
               </div>
@@ -290,7 +290,7 @@ export default function Index() {
             </div>
             
             <div className="lg:w-1/2">
-              <h2 className={cx("text-3xl font-medium mb-8", bitter.className)}>
+              <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
                 For <span className="text-purple-300">
                   Companies
                 </span>
@@ -310,13 +310,13 @@ export default function Index() {
                 </p>
                 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <Button>
+                  <Button intent="primary" asChild>
                     <Link href="mailto:partners@tum-ai.com">
                       <span className="relative z-10">Become a Partner</span>
                     </Link>
                   </Button>
                   
-                  <Button asChild className="bg-white/10 hover:bg-white/20 rounded-md backdrop-blur-sm border border-white/20">
+                  <Button intent="glass" asChild className="bg-white/10 hover:bg-white/20 rounded-md backdrop-blur-sm border border-white/20">
                     <Link href="/partners">View our Partners</Link>
                   </Button>
                 </div>
@@ -333,7 +333,7 @@ export default function Index() {
         <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
         
         <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
+          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
             Our <span className="text-purple-600">
               Partners
             </span>
@@ -367,7 +367,7 @@ export default function Index() {
         </div>
         
         <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
+          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
             Partner <span className="text-purple-600">
               Initiatives
             </span>
@@ -390,31 +390,66 @@ export default function Index() {
       </Section>
       
       {/* Slack Section */}
-      <Section className="py-24 relative">
-        {/* Glass card effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-blue-50/50"></div>
+      <Section className="py-24 relative overflow-hidden">
+        {/* Modern gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50/40"></div>
+        
+        {/* Mesh grid background */}
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
         
         <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-            <h2 className={cx("text-3xl font-medium mb-6", bitter.className)}>
-              Join our <span className="text-purple-600">Community</span>
-            </h2>
-            
-            <p className="mb-8 text-gray-700">
-              Be among the first to be informed about upcoming events, job opportunities, and workshops.
-            </p>
-            
-            <Link 
-              href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
-              className="flex items-center gap-3 rounded-md bg-purple-600 px-6 py-3 text-white hover:bg-purple-700 transition-colors"
-            >
-              <FontAwesomeIcon icon={faSlack} size="lg" />
-              Join TUM.ai Public Slack
-            </Link>
-            
-            <Link className="mt-4 text-sm text-purple-500 hover:underline" href="/data-privacy">
-              Terms & Conditions
-            </Link>
+          <div className="flex flex-col items-center">
+            {/* Main card */}
+            <div className="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/60 shadow-xl backdrop-blur-sm bg-gradient-to-br from-white/80 to-white/40">
+              {/* Inner glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5"></div>
+              
+              {/* Top highlight */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+              
+              {/* Left highlight */}
+              <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+              
+              <div className="relative px-8 py-14 md:px-14">
+                <div className="text-center">
+                  <h2 className={cx("text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-700", bitter.className)}>
+                    Join our Community
+                  </h2>
+                  
+                  <p className="mb-10 text-slate-600 text-lg max-w-xl mx-auto leading-relaxed">
+                    Be among the first to be informed about upcoming events, job opportunities, and workshops in our vibrant AI community.
+                  </p>
+                  
+                  <div className="relative">
+                    <Link 
+                      href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
+                      className="group flex items-center gap-3 px-8 py-4 rounded-xl font-medium text-white relative overflow-hidden"
+                    >
+                      <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 transition-all duration-300 group-hover:scale-105"></span>
+                      <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_center,white_0%,transparent_50%)] transition-opacity duration-300"></span>
+                      <span className="absolute inset-0 border border-white/20 rounded-xl"></span>
+                      <span className="relative flex items-center gap-3">
+                        <FontAwesomeIcon icon={faSlack} size="lg" className="text-white/90" />
+                        <span>Join TUM.ai Public Slack</span>
+                        <svg className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </span>
+                    </Link>
+                    
+                    {/* Button shadow/glow */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 blur-xl opacity-70 -z-10 rounded-xl"></div>
+                  </div>
+                  
+                  <div className="mt-8 flex items-center justify-center gap-1 text-sm text-slate-500">
+                    <span className="opacity-70">By joining, you agree to our</span>
+                    <Link className="text-purple-600 hover:text-purple-700 transition-colors hover:underline font-medium" href="/data-privacy">
+                      Terms & Privacy Policy
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
