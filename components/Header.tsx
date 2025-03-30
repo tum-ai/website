@@ -1,20 +1,20 @@
 "use client";
 
+import { Menu, X } from "lucide-react";
 import {
   faInstagram,
   faLinkedin,
   faSlack,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
 import Button from "@components/ui/Button";
 import { cx } from "class-variance-authority";
 import {
-  AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
+  AnimatePresence,
 } from "framer-motion";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -46,86 +46,142 @@ const Navigation = ({ open, setOpen }: NavigationProps) => {
             {text}
           </Link>
         ))}
-        <div className="flex items-center gap-x-6">
-          <div className="flex space-x-4">
-            <Link href="https://www.instagram.com/tum.ai_official/" className="text-white/90 transition-colors hover:text-white">
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
-            </Link>
-            <Link href="https://de.linkedin.com/company/tum-ai" className="text-white/90 transition-colors hover:text-white">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
-            </Link>
-            <Link href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw" className="text-white/90 transition-colors hover:text-white">
-              <FontAwesomeIcon icon={faSlack} size="lg" />
-            </Link>
-          </div>
-          <Link href="https://join.tum-ai.com/">
-            <Button className="bg-purple-600 text-white hover:bg-purple-700">Join us</Button>
+        <Link href="https://join.tum-ai.com/">
+          <Button className="bg-purple-600 text-white hover:bg-purple-700">Join us</Button>
+        </Link>
+        
+        <div className="ml-4 flex items-center space-x-3">
+          <Link 
+            href="https://www.instagram.com/tum.ai_official/" 
+            className="flex h-8 w-8 items-center justify-center rounded-md text-white/70 transition-colors hover:text-white"
+            aria-label="Instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="sm" />
+          </Link>
+          <Link 
+            href="https://de.linkedin.com/company/tum-ai" 
+            className="flex h-8 w-8 items-center justify-center rounded-md text-white/70 transition-colors hover:text-white"
+            aria-label="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="sm" />
+          </Link>
+          <Link 
+            href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw" 
+            className="flex h-8 w-8 items-center justify-center rounded-md text-white/70 transition-colors hover:text-white"
+            aria-label="Slack"
+          >
+            <FontAwesomeIcon icon={faSlack} size="sm" />
           </Link>
         </div>
       </nav>
 
       {/* Mobile Navigation */}
-      <Dialog.Root open={open} onOpenChange={(open) => setOpen(open)}>
+      <Dialog.Root open={open} onOpenChange={setOpen}>
         <AnimatePresence>
-          <motion.div>
-            <Dialog.Portal>
+          {open && (
+            <Dialog.Portal forceMount>
               <Dialog.Overlay asChild>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="fixed inset-0 bg-black/40 backdrop-blur-xl lg:hidden"
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="fixed inset-0 z-40 bg-black/40 backdrop-blur-xl lg:hidden"
                 />
               </Dialog.Overlay>
 
-              <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-purple-950/95 p-6 backdrop-blur-xl lg:hidden">
-                <div className="flex items-center justify-between">
-                  <Logo scrolled={false} navOpen={false} />
-                  <Dialog.Close>
-                    <FontAwesomeIcon icon={faXmark} className="text-white/90 transition-colors hover:text-white" size="lg" />
-                  </Dialog.Close>
-                </div>
-                <nav className="mt-8 space-y-6">
-                  <ul className="space-y-4">
-                    {links.map(({ href, text }) => (
-                      <Link
-                        key={text}
-                        className="block w-full rounded-lg px-4 py-3 text-lg font-medium text-white transition-colors hover:bg-purple-800/50"
-                        href={href}
-                        onClick={() => setOpen(false)}
-                      >
-                        {text}
-                      </Link>
-                    ))}
-                  </ul>
-
-                  <div className="flex items-center justify-between pt-4">
-                    <div className="flex space-x-6">
-                      <Link href="https://www.instagram.com/tum.ai_official/" className="text-white/90 transition-colors hover:text-white">
-                        <FontAwesomeIcon icon={faInstagram} size="lg" />
-                      </Link>
-                      <Link href="https://de.linkedin.com/company/tum-ai" className="text-white/90 transition-colors hover:text-white">
-                        <FontAwesomeIcon icon={faLinkedin} size="lg" />
-                      </Link>
-                      <Link href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw" className="text-white/90 transition-colors hover:text-white">
-                        <FontAwesomeIcon icon={faSlack} size="lg" />
-                      </Link>
+              <Dialog.Content asChild>
+                <motion.div 
+                  initial={{ x: "100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "100%" }}
+                  transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-hidden bg-purple-950/95 p-6 shadow-xl backdrop-blur-xl lg:hidden"
+                >
+                  <Dialog.Title className="sr-only">
+                    Navigation Menu
+                  </Dialog.Title>
+                  <div className="flex h-full flex-col">
+                    <div className="flex items-center justify-end">
+                      <Dialog.Close>
+                        <button 
+                          type="button"
+                          className="flex h-9 w-9 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-purple-800/50 hover:text-white"
+                          aria-label="Close menu"
+                          onClick={() => setOpen(false)}
+                        >
+                          <X size={20} />
+                          <span className="sr-only">Close</span>
+                        </button>
+                      </Dialog.Close>
                     </div>
-
-                    <Link href="https://join.tum-ai.com/">
-                      <Button className="bg-purple-600 text-white hover:bg-purple-700">Join us</Button>
-                    </Link>
+                    
+                    <nav className="mt-6 flex-1">
+                      <ul className="space-y-1.5">
+                        {links.map(({ href, text }) => (
+                          <li key={text}>
+                            <Link
+                              className="flex w-full items-center rounded-md px-4 py-2.5 text-base font-medium text-white transition-colors hover:bg-purple-800/50"
+                              href={href}
+                              onClick={() => setOpen(false)}
+                            >
+                              {text}
+                            </Link>
+                          </li>
+                        ))}
+                        <li className="mt-4 pt-4 border-t border-white/10">
+                          <Link 
+                            href="https://join.tum-ai.com/"
+                            className="flex w-full items-center rounded-md bg-purple-600 px-4 py-2.5 text-base font-medium text-white transition-colors hover:bg-purple-700"
+                            onClick={() => setOpen(false)}
+                          >
+                            Join us
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                    
+                    <div className="mt-auto pt-6 border-t border-white/10">
+                      <div className="flex items-center justify-between">
+                        <div className="flex space-x-5">
+                          <Link 
+                            href="https://www.instagram.com/tum.ai_official/" 
+                            className="flex h-9 w-9 items-center justify-center rounded-md text-white/80 transition-colors hover:bg-purple-800/50 hover:text-white"
+                          >
+                            <FontAwesomeIcon icon={faInstagram} size="sm" />
+                            <span className="sr-only">Instagram</span>
+                          </Link>
+                          <Link 
+                            href="https://de.linkedin.com/company/tum-ai" 
+                            className="flex h-9 w-9 items-center justify-center rounded-md text-white/80 transition-colors hover:bg-purple-800/50 hover:text-white"
+                          >
+                            <FontAwesomeIcon icon={faLinkedin} size="sm" />
+                            <span className="sr-only">LinkedIn</span>
+                          </Link>
+                          <Link 
+                            href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw" 
+                            className="flex h-9 w-9 items-center justify-center rounded-md text-white/80 transition-colors hover:bg-purple-800/50 hover:text-white"
+                          >
+                            <FontAwesomeIcon icon={faSlack} size="sm" />
+                            <span className="sr-only">Slack</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </nav>
+                </motion.div>
               </Dialog.Content>
             </Dialog.Portal>
-          </motion.div>
+          )}
         </AnimatePresence>
 
         {/* Mobile Menu Button */}
         <div className="flex lg:hidden">
-          <Dialog.Trigger>
-            <FontAwesomeIcon icon={faBars} className="text-white/90 transition-colors hover:text-white" size="lg" />
+          <Dialog.Trigger asChild>
+            <button className="flex h-9 w-9 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-purple-800/50 hover:text-white">
+              <Menu size={20} />
+              <span className="sr-only">Open menu</span>
+            </button>
           </Dialog.Trigger>
         </div>
       </Dialog.Root>

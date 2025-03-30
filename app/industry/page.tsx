@@ -77,16 +77,15 @@ export default function Industry() {
                     <h1 className="mb-2 text-lg font-semibold">
                       {project.title}
                     </h1>
-                    <p className="mb-2 grow text-sm">
+                    <div className="mb-2 grow text-sm">
                       {project.description.map((section, index) => (
                         <span key={index}>
                           {section.text && `${section.text} `}
 
                           {!!section.link &&
                             section.link.map((link, i) => (
-                              <>
+                              <div key={link.url}>
                                 <a
-                                  key={i}
                                   href={link.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -95,12 +94,12 @@ export default function Industry() {
                                   {link.displayText}
                                 </a>
                                 {i < section.link!.length - 1 && ", "}
-                              </>
+                              </div>
                             ))}
                           {section.moreText && ` ${section.moreText}`}
                         </span>
                       ))}
-                    </p>
+                    </div>
                   </div>
                   <div className="mt-auto flex flex-col items-center justify-center space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0 md:space-x-2">
                     <Link href={project.organizationLink}>
