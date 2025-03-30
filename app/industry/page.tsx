@@ -1,6 +1,5 @@
 import Button from "@components/ui/Button";
 import Tabs from "@components/ui/Tabs";
-import Section from "@components/ui/Section";
 import { partners_ip5, projects } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,7 +68,6 @@ function StudentsSection() {
             
             <Button 
               intent="primary"
-              size="lg"
               className="mt-6"
             >
               <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155">
@@ -185,69 +183,74 @@ export default function Industry() {
       </div>
       
       {/* Partners Section */}
-      <Section className="py-24 relative">
+      <section className="relative p-8 sm:py-16 lg:py-24 py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <h2 className={cx("mb-12 text-3xl font-semibold text-center", bitter.className)}>
-            Our partners from <span className="text-purple-600">Industry Phase 5.0</span>
-          </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {partners_ip5.map((partner, index) => (
-              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
-                <Image
-                  src={partner.src}
-                  alt={partner.alt}
-                  width={120}
-                  height={60}
-                  className="object-contain h-12"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-      
-      {/* Timeline Section */}
-      <Section className="py-16 bg-gradient-to-r from-slate-50 to-white relative">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100">
-            <Image
-              src="/assets/industry/header/test_header.svg"
-              width={1775}
-              height={795}
-              alt="Industry Timeline"
-              className="w-full"
-            />
-          </div>
-        </div>
-      </Section>
-      
-      {/* Projects Section */}
-      <div id="projects">
-        <Section className="py-24 relative bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto px-4 relative z-10">
-            <div className="flex flex-col items-center mb-16">
-              <h2 className={cx("text-3xl font-semibold mb-4 text-center", bitter.className)}>
-                Examples of previous AI Projects
-              </h2>
-              <p className="max-w-2xl text-center text-gray-600 mb-2">
-                Explore how our participants have created
-                <span className="text-purple-600"> measurable impact</span> in the past.
-              </p>
-              <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-2"></div>
-            </div>
+            <h2 className={cx("mb-12 text-3xl font-semibold text-center", bitter.className)}>
+              Our partners from <span className="text-purple-600">Industry Phase 5.0</span>
+            </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <ProjectCard key={index} project={project} />
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+              {partners_ip5.map((partner, index) => (
+                <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={120}
+                    height={60}
+                    className="object-contain h-12"
+                  />
+                </div>
               ))}
             </div>
           </div>
-        </Section>
+        </div>
+      </section>
+      
+      {/* Timeline Section */}
+      <section className="relative p-8 sm:py-16 lg:py-16 bg-gradient-to-r from-slate-50 to-white">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        <div className="container mx-auto">
+          <div className="max-w-6xl mx-auto px-4 relative z-10">
+            <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100">
+              <Image
+                src="/assets/industry/header/test_header.svg"
+                width={1775}
+                height={795}
+                alt="Industry Timeline"
+                className="w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Projects Section */}
+      <div id="projects">
+        <section className="relative p-8 sm:py-16 lg:py-24 py-24 bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto">
+            <div className="max-w-6xl mx-auto px-4 relative z-10">
+              <div className="flex flex-col items-center mb-16">
+                <h2 className={cx("text-3xl font-semibold mb-4 text-center", bitter.className)}>
+                  Examples of previous AI Projects
+                </h2>
+                <p className="max-w-2xl text-center text-gray-600 mb-2">
+                  Explore how our participants have created
+                  <span className="text-purple-600"> measurable impact</span> in the past.
+                </p>
+                <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-2"></div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
@@ -330,10 +333,10 @@ function IndustrySection() {
               and offer affordable, high-quality solutions without any long-term
               liabilities!
             </p>
-            <Button intent="primary" size="lg" asChild>
-              <a href="mailto:partners@tum-ai.com">
+            <Button intent="primary" asChild>
+              <Link href="mailto:partners@tum-ai.com">
                 Connect with us
-              </a>
+              </Link>
             </Button>
           </div>
           <div className="flex justify-center">

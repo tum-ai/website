@@ -15,7 +15,7 @@ import {
   useMotionValueEvent,
   useScroll,
   AnimatePresence,
-} from "framer-motion";
+} from "motion/react";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
 
@@ -47,7 +47,7 @@ const Navigation = ({ open, setOpen }: NavigationProps) => {
           </Link>
         ))}
         <Link href="https://join.tum-ai.com/">
-          <Button className="bg-purple-600 text-white hover:bg-purple-700">Join us</Button>
+          <Button intent="primary">Join us</Button>
         </Link>
         
         <div className="ml-4 flex items-center space-x-3">

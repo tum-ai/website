@@ -1,5 +1,4 @@
 import Button from "@components/ui/Button";
-import Section from "@components/ui/Section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSlack } from "@fortawesome/free-brands-svg-icons";
 import { bitter } from "../styles/fonts";
@@ -126,15 +125,15 @@ export default function Index() {
       {/* Decorative background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,white)] opacity-5" />
-        <div className="absolute top-48 right-10 w-72 h-72 rounded-full bg-purple-400 opacity-10 blur-[100px]" />
-        <div className="absolute top-96 left-10 w-96 h-96 rounded-full bg-blue-300 opacity-10 blur-[120px]" />
-        <div className="absolute bottom-48 right-48 w-64 h-64 rounded-full bg-indigo-400 opacity-10 blur-[80px]" />
+        <div className="absolute top-48 right-10 w-[15vw] max-w-72 h-[15vw] max-h-72 rounded-full bg-purple-400 opacity-10 blur-[clamp(40px,5vw,100px)]" />
+        <div className="absolute top-96 left-10 w-[20vw] max-w-96 h-[20vw] max-h-96 rounded-full bg-blue-300 opacity-10 blur-[clamp(50px,6vw,120px)]" />
+        <div className="absolute bottom-48 right-48 w-[15vw] max-w-64 h-[15vw] max-h-64 rounded-full bg-indigo-400 opacity-10 blur-[clamp(30px,4vw,80px)]" />
       </div>
       
       <Hero />
       
       {/* Programs Section */}
-      <Section className="py-24 relative">
+      <section className="relative p-8 sm:py-16 lg:py-24 py-24 overflow-hidden">
         {/* Decorative dots */}
         <div className="absolute inset-0 grid grid-cols-20 md:grid-cols-40 grid-rows-40 gap-8 opacity-5 pointer-events-none">
           {Array.from({ length: 100 }).map((_, i) => (
@@ -144,124 +143,127 @@ export default function Index() {
           ))}
         </div>
         
-        <div className="mx-auto max-w-6xl px-4 relative">
-          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
-            Our <span className="text-purple-600">
-              Programs
-            </span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {/* E-Lab Card */}
-            <ProgramCard
-              title="AI Entrepreneurship Lab"
-              icon="/assets/home_img4.jpg"
-              description="14-week equity-free AI startup incubator with full support from Munich's innovation ecosystem"
-              link="/e-lab"
-              cta="Learn more"
-              status="Applications open in August"
-            />
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative">
+            <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
+              Our <span className="text-purple-600">
+                Programs
+              </span>
+            </h2>
             
-            {/* AI Academy Card */}
-            <ProgramCard
-              title="AI Academy"
-              icon="/assets/home_img1.jpg"
-              description="Advanced AI workshops with hands-on coding tutorials from exciting tech companies"
-              link="https://education.tum-ai.com/"
-              cta="Explore education"
-              status="Open for everyone"
-            />
-            
-            {/* Makeathon Card */}
-            <ProgramCard
-              title="Makeathon Competitions"
-              icon="/assets/home_img2.png"
-              description="48-hour AI product development hackathon solving real industry challenges"
-              link="https://makeathon.tum-ai.com/"
-              cta="View hackathons"
-              status="Stay tuned for next event"
-            />
-            
-            {/* Industry Projects Card */}
-            <ProgramCard
-              title="Industry Projects"
-              icon="/assets/home_img3.png"
-              description="Paid student teams implementing data-driven solutions for partner companies"
-              link="/industry"
-              cta="Explore projects"
-              status="Applications closed"
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              {/* E-Lab Card */}
+              <ProgramCard
+                title="AI Entrepreneurship Lab"
+                icon="/assets/home_img4.jpg"
+                description="14-week equity-free AI startup incubator with full support from Munich's innovation ecosystem"
+                link="/e-lab"
+                cta="Learn more"
+                status="Applications open in August"
+              />
+              
+              {/* AI Academy Card */}
+              <ProgramCard
+                title="AI Academy"
+                icon="/assets/home_img1.jpg"
+                description="Advanced AI workshops with hands-on coding tutorials from exciting tech companies"
+                link="https://education.tum-ai.com/"
+                cta="Explore education"
+                status="Open for everyone"
+              />
+              
+              {/* Makeathon Card */}
+              <ProgramCard
+                title="Makeathon Competitions"
+                icon="/assets/home_img2.png"
+                description="48-hour AI product development hackathon solving real industry challenges"
+                link="https://makeathon.tum-ai.com/"
+                cta="View hackathons"
+                status="Stay tuned for next event"
+              />
+              
+              {/* Industry Projects Card */}
+              <ProgramCard
+                title="Industry Projects"
+                icon="/assets/home_img3.png"
+                description="Paid student teams implementing data-driven solutions for partner companies"
+                link="/industry"
+                cta="Explore projects"
+                status="Applications closed"
+              />
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
       
       {/* About Section */}
-      <Section className="bg-gradient-to-b from-white to-gray-50 py-24 relative">
+      <section className="relative p-8 sm:py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
         {/* Glass-like shapes */}
-        <div className="absolute top-1/4 right-0 w-64 h-64 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-0 w-[20vw] max-w-64 h-[20vw] max-h-64 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-0 w-[25vw] max-w-96 h-[25vw] max-h-96 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
         
-        <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16">
-            <div className="lg:w-1/2">
-              <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
-                Germany&apos;s leading<br />
-                <span className="text-purple-600">
-                  AI student initiative
-                </span>
-              </h2>
-              
-              <div className="space-y-6 text-gray-700">
-                <p className="font-medium text-black">
-                  With over 170 active members, TUM.ai connects students and stakeholders to drive positive societal impact through AI.
-                </p>
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative z-10">
+            <div className="flex flex-col lg:flex-row gap-16">
+              <div className="lg:w-1/2">
+                <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
+                  Germany&apos;s leading<br />
+                  <span className="text-purple-600">
+                    AI student initiative
+                  </span>
+                </h2>
                 
-                <p>
-                  Founded in 2020, TUM.ai thrives to deploy AI solutions into new fields and industries, creating a diverse and inclusive community of AI enthusiasts.
-                </p>
+                <div className="space-y-6 text-gray-700">
+                  <p className="font-medium text-black">
+                    With over 170 active members, TUM.ai connects students and stakeholders to drive positive societal impact through AI.
+                  </p>
+                  
+                  <p>
+                    Founded in 2020, TUM.ai thrives to deploy AI solutions into new fields and industries, creating a diverse and inclusive community of AI enthusiasts.
+                  </p>
+                  
+                  <p>
+                    Together with our highly-talented members, we run data science projects with industry partners, organize workshops, and develop AI-powered solutions that address real-world challenges.
+                  </p>
+                  
+                  <p>
+                    We aim to lower the entry barriers to AI creation and usage for people from every domain by establishing a platform for practical experience through diverse applied AI projects.
+                  </p>
+                </div>
                 
-                <p>
-                  Together with our highly-talented members, we run data science projects with industry partners, organize workshops, and develop AI-powered solutions that address real-world challenges.
-                </p>
-                
-                <p>
-                  We aim to lower the entry barriers to AI creation and usage for people from every domain by establishing a platform for practical experience through diverse applied AI projects.
-                </p>
+                <div className="mt-10">
+                  <Button intent="primary" asChild>
+                    <Link href="/members">
+                      <span className="relative z-10">Meet our Members</span>
+                    </Link>
+                  </Button>
+                </div>
               </div>
               
-              <div className="mt-10">
-                <Button intent="glass" className="rounded-md relative overflow-hidden group bg-purple-600/10 text-purple-600 hover:bg-purple-600/20 border border-purple-100">
-                  <Link href="/members">
-                    <span className="relative z-10">Meet our Members</span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
-            
-            <div className="lg:w-1/2">
-              <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-blue-100/20 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
-                <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/20 shadow-lg">
-                  <Image
-                    src="/assets/aibootcamp.jpg"
-                    alt="TUM.ai members collaborating"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/30"></div>
+              <div className="lg:w-1/2">
+                <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-blue-100/20 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
+                  <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/20 shadow-lg">
+                    <Image
+                      src="/assets/aibootcamp.jpg"
+                      alt="TUM.ai members collaborating"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/30"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
       
       {/* For Companies Section */}
-      <Section className="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white relative">
+      <section className="relative p-8 sm:py-16 lg:py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white overflow-hidden">
         {/* Glowing orbs */}
-        <div className="absolute top-20 right-20 w-80 h-80 rounded-full bg-purple-400/10 blur-[100px]"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-blue-400/10 blur-[100px]"></div>
+        <div className="absolute top-20 right-20 w-[20vw] max-w-80 h-[20vw] max-h-80 rounded-full bg-purple-400/10 blur-[clamp(40px,5vw,100px)]"></div>
+        <div className="absolute bottom-20 left-20 w-[20vw] max-w-80 h-[20vw] max-h-80 rounded-full bg-blue-400/10 blur-[clamp(40px,5vw,100px)]"></div>
         
         {/* Dot grid pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -272,91 +274,95 @@ export default function Index() {
           </div>
         </div>
         
-        <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
-              <div className="relative h-[400px] w-full overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
-                <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/10 shadow-lg">
-                  <Image
-                    src="/assets/partners/martin_talk.jpg"
-                    alt="Industry collaboration"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-700/30 to-blue-700/40"></div>
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative z-10">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="lg:w-1/2">
+                <div className="relative h-[400px] w-full overflow-hidden rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
+                  <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <Image
+                      src="/assets/partners/martin_talk.jpg"
+                      alt="Industry collaboration"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-700/30 to-blue-700/40"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="lg:w-1/2">
-              <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
-                For <span className="text-purple-300">
-                  Companies
-                </span>
-              </h2>
               
-              <div className="space-y-6">
-                <p className="text-xl font-medium text-white">
-                  Get access to our exclusive pre-selected talent pool of qualified Software/Data Engineers and AI Strategists.
-                </p>
+              <div className="lg:w-1/2">
+                <h2 className={cx("text-3xl font-semibold mb-8", bitter.className)}>
+                  For <span className="text-purple-300">
+                    Companies
+                  </span>
+                </h2>
                 
-                <p className="text-white/80">
-                  Join TUM.ai as a sponsor or cooperation partner. Engage with our community through workshops, speaker events, or as a challenge setter for our Makeathon competitions.
-                </p>
-                
-                <p className="text-white/80">
-                  Looking for affordable, high-quality AI talent? Consider our industry project format where student teams solve real-world problems for your company.
-                </p>
-                
-                <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <Button intent="primary" asChild>
-                    <Link href="mailto:partners@tum-ai.com">
-                      <span className="relative z-10">Become a Partner</span>
-                    </Link>
-                  </Button>
+                <div className="space-y-6">
+                  <p className="text-xl font-medium text-white">
+                    Get access to our exclusive pre-selected talent pool of qualified Software/Data Engineers and AI Strategists.
+                  </p>
                   
-                  <Button intent="glass" asChild className="bg-white/10 hover:bg-white/20 rounded-md backdrop-blur-sm border border-white/20">
-                    <Link href="/partners">View our Partners</Link>
-                  </Button>
+                  <p className="text-white/80">
+                    Join TUM.ai as a sponsor or cooperation partner. Engage with our community through workshops, speaker events, or as a challenge setter for our Makeathon competitions.
+                  </p>
+                  
+                  <p className="text-white/80">
+                    Looking for affordable, high-quality AI talent? Consider our industry project format where student teams solve real-world problems for your company.
+                  </p>
+                  
+                  <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                    <Button intent="primary" asChild>
+                      <Link href="mailto:partners@tum-ai.com">
+                        <span className="relative z-10">Become a Partner</span>
+                      </Link>
+                    </Button>
+                    
+                    <Button intent="glass" asChild className="bg-white/10 hover:bg-white/20 rounded-md backdrop-blur-sm border border-white/20">
+                      <Link href="/partners">View our Partners</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
       
       {/* Partners Section */}
-      <Section className="py-24 relative">
+      <section className="relative p-8 sm:py-16 lg:py-24 py-24 overflow-hidden">
         {/* Glass-like glow */}
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-[25vw] max-w-96 h-[25vw] max-h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[15vw] max-w-64 h-[15vw] max-h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
         
-        <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
-            Our <span className="text-purple-600">
-              Partners
-            </span>
-          </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {partners_collabrated_with.map((partner, index) => (
-              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
-                <Image
-                  src={partner.src}
-                  alt={partner.alt}
-                  width={120}
-                  height={60}
-                  className="object-contain h-12"
-                />
-              </div>
-            ))}
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative z-10">
+            <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
+              Our <span className="text-purple-600">
+                Partners
+              </span>
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+              {partners_collabrated_with.map((partner, index) => (
+                <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={120}
+                    height={60}
+                    className="object-contain h-12"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
       
       {/* Initiative Partners Section */}
-      <Section className="py-24 relative bg-gradient-to-b from-white to-gray-50">
+      <section className="relative p-8 sm:py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
         {/* Dot pattern background */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0 grid grid-cols-20 md:grid-cols-40 grid-rows-40 gap-8">
@@ -366,93 +372,97 @@ export default function Index() {
           </div>
         </div>
         
-        <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
-            Partner <span className="text-purple-600">
-              Initiatives
-            </span>
-          </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {initiatives_collabrated_with.map((initiative, index) => (
-              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
-                <Image
-                  src={initiative.src}
-                  alt={initiative.alt}
-                  width={120}
-                  height={60}
-                  className="object-contain h-12"
-                />
-              </div>
-            ))}
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative z-10">
+            <h2 className={cx("text-3xl font-semibold mb-16 text-center", bitter.className)}>
+              Partner <span className="text-purple-600">
+                Initiatives
+              </span>
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+              {initiatives_collabrated_with.map((initiative, index) => (
+                <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
+                  <Image
+                    src={initiative.src}
+                    alt={initiative.alt}
+                    width={120}
+                    height={60}
+                    className="object-contain h-12"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
       
       {/* Slack Section */}
-      <Section className="py-24 relative overflow-hidden">
+      <section className="relative p-8 sm:py-16 lg:py-24 overflow-hidden">
         {/* Modern gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50/40"></div>
         
         {/* Mesh grid background */}
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
         
-        <div className="mx-auto max-w-6xl px-4 relative z-10">
-          <div className="flex flex-col items-center">
-            {/* Main card */}
-            <div className="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/60 shadow-xl backdrop-blur-sm bg-gradient-to-br from-white/80 to-white/40">
-              {/* Inner glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5"></div>
-              
-              {/* Top highlight */}
-              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
-              
-              {/* Left highlight */}
-              <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
-              
-              <div className="relative px-8 py-14 md:px-14">
-                <div className="text-center">
-                  <h2 className={cx("text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-700", bitter.className)}>
-                    Join our Community
-                  </h2>
-                  
-                  <p className="mb-10 text-slate-600 text-lg max-w-xl mx-auto leading-relaxed">
-                    Be among the first to be informed about upcoming events, job opportunities, and workshops in our vibrant AI community.
-                  </p>
-                  
-                  <div className="relative">
-                    <Link 
-                      href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
-                      className="group flex items-center gap-3 px-8 py-4 rounded-xl font-medium text-white relative overflow-hidden"
-                    >
-                      <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 transition-all duration-300 group-hover:scale-105"></span>
-                      <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_center,white_0%,transparent_50%)] transition-opacity duration-300"></span>
-                      <span className="absolute inset-0 border border-white/20 rounded-xl"></span>
-                      <span className="relative flex items-center gap-3">
-                        <FontAwesomeIcon icon={faSlack} size="lg" className="text-white/90" />
-                        <span>Join TUM.ai Public Slack</span>
-                        <svg className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                      </span>
-                    </Link>
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4 relative z-10">
+            <div className="flex flex-col items-center">
+              {/* Main card */}
+              <div className="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/60 shadow-xl backdrop-blur-sm bg-gradient-to-br from-white/80 to-white/40">
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5"></div>
+                
+                {/* Top highlight */}
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+                
+                {/* Left highlight */}
+                <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+                
+                <div className="relative px-8 py-14 md:px-14">
+                  <div className="text-center">
+                    <h2 className={cx("text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-700", bitter.className)}>
+                      Join our Community
+                    </h2>
                     
-                    {/* Button shadow/glow */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 blur-xl opacity-70 -z-10 rounded-xl"></div>
-                  </div>
-                  
-                  <div className="mt-8 flex items-center justify-center gap-1 text-sm text-slate-500">
-                    <span className="opacity-70">By joining, you agree to our</span>
-                    <Link className="text-purple-600 hover:text-purple-700 transition-colors hover:underline font-medium" href="/data-privacy">
-                      Terms & Privacy Policy
-                    </Link>
+                    <p className="mb-10 text-slate-600 text-lg max-w-xl mx-auto leading-relaxed">
+                      Be among the first to be informed about upcoming events, job opportunities, and workshops in our vibrant AI community.
+                    </p>
+                    
+                    <div className="relative">
+                      <Link 
+                        href="https://join.slack.com/t/tumaipublic/shared_invite/zt-10kg0t1f9-JLRXDxY_d_vprKWgab0cVw"
+                        className="group flex items-center gap-3 px-8 py-4 rounded-xl font-medium text-white relative overflow-hidden"
+                      >
+                        <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 transition-all duration-300 group-hover:scale-105"></span>
+                        <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_center,white_0%,transparent_50%)] transition-opacity duration-300"></span>
+                        <span className="absolute inset-0 border border-white/20 rounded-xl"></span>
+                        <span className="relative flex items-center gap-3">
+                          <FontAwesomeIcon icon={faSlack} size="lg" className="text-white/90" />
+                          <span>Join TUM.ai Public Slack</span>
+                          <svg className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </span>
+                      </Link>
+                      
+                      {/* Button shadow/glow */}
+                      <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 blur-xl opacity-70 -z-10 rounded-xl"></div>
+                    </div>
+                    
+                    <div className="mt-8 flex items-center justify-center gap-1 text-sm text-slate-500">
+                      <span className="opacity-70">By joining, you agree to our</span>
+                      <Link className="text-purple-600 hover:text-purple-700 transition-colors hover:underline font-medium" href="/data-privacy">
+                        Terms & Privacy Policy
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

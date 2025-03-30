@@ -2,7 +2,7 @@ import { bitter } from "@styles/fonts";
 import { cx } from "class-variance-authority";
 import type { Metadata } from "next";
 import { ArrowDown, ArrowRight, Rocket, Building2, GraduationCap, Code, Scale, Users, Megaphone, Handshake } from "lucide-react";
-import Hero from "@components/Hero";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "TUM.ai - Members",
@@ -216,11 +216,44 @@ const WorkCard = ({ work }: { work: PreviousWork }) => (
 export default function Members() {
   return (
     <>
-      <Hero
-        imageSrc={"/assets/tu_cropped.jpg"}
-        title="Innovative & Passionate"
-        subtitle="Who is behind the success of our initiative?"
-      />
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        {/* Background Image with Enhanced Effects */}
+        <Image
+          src="/assets/tu_cropped.jpg"
+          alt="Hero background image"
+          fill
+          className="absolute -z-10 scale-110 object-cover transition-transform duration-700 hover:scale-105"
+          priority
+        />
+        
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/80 via-black/60 to-black/80" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10" />
+        
+        {/* Content Container */}
+        <div className="container relative mx-auto flex min-h-[80vh] max-w-4xl flex-col justify-center p-8 text-white md:p-16">
+          {/* Decorative Elements */}
+          <div className="absolute left-0 top-1/2 h-32 w-1 -translate-y-1/2 bg-linear-to-b from-blue-500 to-purple-500 opacity-50" />
+          
+          {/* Main Content */}
+          <div className="space-y-6">
+            <h1 
+              className={cx(
+                "text-6xl font-medium tracking-tight md:text-7xl",
+                "bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent",
+                "animate-fade-in-up",
+                bitter.className
+              )}
+            >
+              Innovative & Passionate
+            </h1>
+            <p className="text-xl text-gray-300 animate-fade-in-up [animation-delay:200ms]">
+              Who is behind the success of our initiative?
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Main Content */}
       <div className="relative">

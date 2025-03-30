@@ -3,7 +3,7 @@
 import Button from "@components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Tech grid element with subtle particles
 const TechGrid = () => {
