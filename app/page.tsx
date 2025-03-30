@@ -3,7 +3,7 @@ import Button from "@components/ui/Button";
 import Section from "@components/ui/Section";
 import { faSlack } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { bitter } from "@styles/fonts";
+import { bitter } from "../styles/fonts";
 import { cx } from "class-variance-authority";
 import VerticalCards, {
   type Props as VerticalCardsProps,

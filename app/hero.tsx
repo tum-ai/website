@@ -3,41 +3,15 @@
 import Button from "@components/ui/Button";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MeshDistortMaterial, Sphere } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 import Link from "next/link";
-import * as THREE from "three";
 
 export const Hero = () => {
 
   return (
     <section className="relative h-screen">
       <div className="absolute top-0 -z-10 h-full w-full bg-blue-800">
-        <Canvas camera={{ position: [2, 0, 0] }}>
-          <ambientLight intensity={0.05} />
-          <directionalLight intensity={1} position={[1.4, 2, 0]} />
-
-          <mesh>
-            <icosahedronGeometry args={[1, 10]} />
-            <MeshDistortMaterial
-              distort={0.3}
-              wireframe={true}
-              wireframeLinewidth={5}
-              color={"#000000"}
-              transparent
-              opacity={0.4}
-              blending={THREE.AdditiveBlending}
-            />
-          </mesh>
-
-          <Sphere args={[0.9]}>
-            <MeshDistortMaterial
-              distort={0.3}
-              blending={THREE.MultiplyBlending}
-            />
-          </Sphere>
-        </Canvas>
+        
       </div>
 
       <div className="flex h-full w-full items-center text-white">
