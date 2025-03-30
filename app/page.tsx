@@ -123,13 +123,32 @@ export default function Index() {
         />
       </section>
       
+      {/* Decorative background elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,white)] opacity-5" />
+        <div className="absolute top-48 right-10 w-72 h-72 rounded-full bg-purple-400 opacity-10 blur-[100px]" />
+        <div className="absolute top-96 left-10 w-96 h-96 rounded-full bg-blue-300 opacity-10 blur-[120px]" />
+        <div className="absolute bottom-48 right-48 w-64 h-64 rounded-full bg-indigo-400 opacity-10 blur-[80px]" />
+      </div>
+      
       <Hero />
       
       {/* Programs Section */}
-      <Section className="py-24">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="py-24 relative">
+        {/* Decorative dots */}
+        <div className="absolute inset-0 grid grid-cols-20 md:grid-cols-40 grid-rows-40 gap-8 opacity-5 pointer-events-none">
+          {Array.from({ length: 100 }).map((_, i) => (
+            <div key={i} className="h-1 w-1 rounded-full bg-purple-500" style={{ 
+              transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%)` 
+            }} />
+          ))}
+        </div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative">
           <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
-            Our <span className="text-purple-600">Programs</span>
+            Our <span className="text-purple-600">
+              Programs
+            </span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -177,13 +196,19 @@ export default function Index() {
       </Section>
       
       {/* About Section */}
-      <Section className="bg-gray-50 py-24">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="bg-gradient-to-b from-white to-gray-50 py-24 relative">
+        {/* Glass-like shapes */}
+        <div className="absolute top-1/4 right-0 w-64 h-64 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/2">
               <h2 className={cx("text-3xl font-medium mb-8", bitter.className)}>
                 Germany&apos;s leading<br />
-                <span className="text-purple-600">AI student initiative</span>
+                <span className="text-purple-600">
+                  AI student initiative
+                </span>
               </h2>
               
               <div className="space-y-6 text-gray-700">
@@ -205,21 +230,27 @@ export default function Index() {
               </div>
               
               <div className="mt-10">
-                <Button asChild className="rounded-md">
-                  <Link href="/members">Meet our Members</Link>
+                <Button asChild className="rounded-md relative overflow-hidden group">
+                  <Link href="/members">
+                    <span className="relative z-10">Meet our Members</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Link>
                 </Button>
               </div>
             </div>
             
             <div className="lg:w-1/2">
-              <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/assets/aibootcamp.jpg"
-                  alt="TUM.ai members collaborating"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-purple-900/20"></div>
+              <div className="relative h-[500px] w-full overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-blue-100/20 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
+                <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/20 shadow-lg">
+                  <Image
+                    src="/assets/aibootcamp.jpg"
+                    alt="TUM.ai members collaborating"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/30"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -227,24 +258,42 @@ export default function Index() {
       </Section>
       
       {/* For Companies Section */}
-      <Section className="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white relative">
+        {/* Glowing orbs */}
+        <div className="absolute top-20 right-20 w-80 h-80 rounded-full bg-purple-400/10 blur-[100px]"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-blue-400/10 blur-[100px]"></div>
+        
+        {/* Dot grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 grid grid-cols-20 md:grid-cols-40 grid-rows-40 gap-8">
+            {Array.from({ length: 80 }).map((_, i) => (
+              <div key={i} className="h-1 w-1 rounded-full bg-white" />
+            ))}
+          </div>
+        </div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/assets/partners/martin_talk.jpg"
-                  alt="Industry collaboration"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-purple-600/10"></div>
+              <div className="relative h-[400px] w-full overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px] -m-1 rounded-2xl"></div>
+                <div className="absolute inset-1 rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                  <Image
+                    src="/assets/partners/martin_talk.jpg"
+                    alt="Industry collaboration"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-700/30 to-blue-700/40"></div>
+                </div>
               </div>
             </div>
             
             <div className="lg:w-1/2">
               <h2 className={cx("text-3xl font-medium mb-8", bitter.className)}>
-                For <span className="text-purple-300">Companies</span>
+                For <span className="text-purple-300">
+                  Companies
+                </span>
               </h2>
               
               <div className="space-y-6">
@@ -262,10 +311,12 @@ export default function Index() {
                 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Button>
-                    <Link href="mailto:partners@tum-ai.com">Become a Partner</Link>
+                    <Link href="mailto:partners@tum-ai.com">
+                      <span className="relative z-10">Become a Partner</span>
+                    </Link>
                   </Button>
                   
-                  <Button asChild className="bg-white/10 hover:bg-white/20 rounded-md">
+                  <Button asChild className="bg-white/10 hover:bg-white/20 rounded-md backdrop-blur-sm border border-white/20">
                     <Link href="/partners">View our Partners</Link>
                   </Button>
                 </div>
@@ -276,15 +327,21 @@ export default function Index() {
       </Section>
       
       {/* Partners Section */}
-      <Section className="py-24">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="py-24 relative">
+        {/* Glass-like glow */}
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative z-10">
           <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
-            Our <span className="text-purple-600">Partners</span>
+            Our <span className="text-purple-600">
+              Partners
+            </span>
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {partners_collabrated_with.map((partner, index) => (
-              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300">
+              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
                 <Image
                   src={partner.src}
                   alt={partner.alt}
@@ -299,15 +356,26 @@ export default function Index() {
       </Section>
       
       {/* Initiative Partners Section */}
-      <Section className="py-24">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="py-24 relative bg-gradient-to-b from-white to-gray-50">
+        {/* Dot pattern background */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute inset-0 grid grid-cols-20 md:grid-cols-40 grid-rows-40 gap-8">
+            {Array.from({ length: 60 }).map((_, i) => (
+              <div key={i} className="h-1 w-1 rounded-full bg-purple-500" />
+            ))}
+          </div>
+        </div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative z-10">
           <h2 className={cx("text-3xl font-medium mb-16 text-center", bitter.className)}>
-            Partner <span className="text-purple-600">Initiatives</span>
+            Partner <span className="text-purple-600">
+              Initiatives
+            </span>
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {initiatives_collabrated_with.map((initiative, index) => (
-              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300">
+              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
                 <Image
                   src={initiative.src}
                   alt={initiative.alt}
@@ -322,8 +390,11 @@ export default function Index() {
       </Section>
       
       {/* Slack Section */}
-      <Section className="py-24">
-        <div className="mx-auto max-w-6xl px-4">
+      <Section className="py-24 relative">
+        {/* Glass card effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-blue-50/50"></div>
+        
+        <div className="mx-auto max-w-6xl px-4 relative z-10">
           <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
             <h2 className={cx("text-3xl font-medium mb-6", bitter.className)}>
               Join our <span className="text-purple-600">Community</span>
@@ -354,7 +425,12 @@ export default function Index() {
 // Program Card Component
 function ProgramCard({ title, icon, description, link, cta, status }: { title: string, icon: string, description: string, link: string, cta: string, status: string }) {
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] hover:border-purple-100">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px] hover:border-purple-100 relative">
+      {/* Glass-like top highlight */}
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+      {/* Glass-like left highlight */}
+      <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+      
       <div className="relative h-48 overflow-hidden">
         <Image
           src={icon}
@@ -362,7 +438,7 @@ function ProgramCard({ title, icon, description, link, cta, status }: { title: s
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
       <div className="flex flex-1 flex-col p-5">
@@ -372,17 +448,17 @@ function ProgramCard({ title, icon, description, link, cta, status }: { title: s
         <div className="mt-auto space-y-3">
           {status && (
             <div className="flex items-center">
-              <span className="mr-2 h-2 w-2 flex-shrink-0 rounded-full bg-purple-500"></span>
+              <span className="mr-2 h-2 w-2 flex-shrink-0 rounded-full bg-purple-500 animate-pulse"></span>
               <p className="text-xs font-medium text-purple-600">{status}</p>
             </div>
           )}
           
           <Link 
             href={link}
-            className="inline-flex items-center text-sm font-medium text-purple-600 transition-colors hover:text-purple-800"
+            className="inline-flex items-center text-sm font-medium text-purple-600 transition-colors hover:text-purple-800 group-hover:translate-x-0.5 -transform duration-300"
           >
             {cta}
-            <svg className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
