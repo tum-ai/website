@@ -17,6 +17,10 @@ const styles = cva(
           "text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-500 active:scale-[0.98]",
         destructive:
           "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-xs hover:shadow-md active:scale-[0.98]",
+        glass:
+          "bg-white/20 text-white backdrop-blur-sm border border-white/20 hover:bg-white/30 focus:ring-white active:scale-[0.98]",
+        pill:
+          "rounded-full text-xs font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",
       },
       size: {
         xs: "h-7 px-2 text-xs",
@@ -29,11 +33,20 @@ const styles = cva(
         true: "w-full",
         false: "",
       },
+      rounded: {
+        none: "rounded-none",
+        sm: "rounded-sm",
+        md: "rounded-md",
+        lg: "rounded-lg",
+        xl: "rounded-xl",
+        full: "rounded-full"
+      },
     },
     defaultVariants: {
       intent: "primary",
       size: "md",
       fullWidth: false,
+      rounded: "md"
     },
   }
 );
@@ -52,6 +65,7 @@ export default function Button({
   intent,
   size,
   fullWidth,
+  rounded,
   children,
   className,
   asChild,
@@ -61,7 +75,7 @@ export default function Button({
 
   return (
     <Comp
-      className={styles({ intent, size, fullWidth, className })}
+      className={styles({ intent, size, fullWidth, rounded, className })}
       {...props}
     >
       {children}

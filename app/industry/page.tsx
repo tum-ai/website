@@ -1,207 +1,418 @@
-import Logos from "@components/Logos";
 import Button from "@components/ui/Button";
-import Dialog from "@components/ui/Dialog";
 import Tabs from "@components/ui/Tabs";
 import Section from "@components/ui/Section";
 import { partners_ip5, projects } from "data/industry";
 import Image from "next/image";
 import Link from "next/link";
-import PictureHero from "@components/BannerHero";
 import { bitter } from "../../styles/fonts";
 import { cx } from "class-variance-authority";
-import { StudentsSection } from "./studentsSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TUM.ai - Industry",
+  title: "TUM.ai - Industry Projects",
   description:
     "Work on real-world AI and Data solutions! 2250€ total compensation, 10 week working student arrangements, September 15th - end of November",
 };
 
+// Define project type based on the existing data structure
+interface ProjectLink {
+  url: string;
+  displayText: string;
+}
+
+interface ProjectSection {
+  text?: string;
+  link?: ProjectLink[];
+  moreText?: string;
+}
+
+interface Project {
+  title: string;
+  image: string;
+  description: ProjectSection[];
+  organization: string;
+  organizationLink: string;
+  time: string;
+}
+
+// Define the StudentsSection component inline
+function StudentsSection() {
+  return (
+    <div className="animate-fadeIn p-6 md:p-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className={cx("text-3xl font-semibold mb-4", bitter.className)}>
+              Applications for <span className="text-purple-600">Industry Phase 6.0</span> are currently open
+            </h2>
+            
+            <div className="space-y-4 text-gray-700">
+              <p className="relative">
+                <span className="relative z-10">Push ML boundaries and progress your career with our AI projects!</span>
+                <span className="absolute -left-2 -right-2 top-0 bottom-0 bg-gradient-to-r from-purple-100/20 to-transparent rounded-md -z-0"></span>
+                <span className="text-purple-600 font-medium"> Leverage your skills </span>
+                and take on real AI projects to test your abilities.
+              </p>
+              
+              <p>
+                Work in a
+                <span className="text-purple-600 font-medium"> team of 4x students for 12 weeks, earn up to 4000€ </span>
+                and gain valuable contacts. With a project lead guiding you, demonstrate your agile project management skills in a professional setting.
+              </p>
+              
+              <p>
+                Collaborate with pre-selected partners, including 
+                <span className="text-purple-600 font-medium"> for-profit companies, startups, and non-profits, </span>
+                in our upcoming Industry Phase 6.0 starting in April 2024.
+              </p>
+            </div>
+            
+            <Button 
+              intent="primary"
+              size="lg"
+              className="mt-6"
+            >
+              <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155">
+                Apply Now
+              </Link>
+            </Button>
+          </div>
+          
+          <div>
+            <div className="relative rounded-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px] -m-1 rounded-xl"></div>
+              <div className="relative rounded-lg overflow-hidden border border-white/20 shadow-lg">
+                <Image
+                  src="/assets/industry/zoom_industry.png"
+                  alt="Industry Phase Team Meeting"
+                  width={600}
+                  height={350}
+                  className="w-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-700/20 to-blue-700/20"></div>
+              </div>
+              
+              <div className="absolute -bottom-2 -right-2 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
+              <div className="absolute -top-2 -left-2 w-24 h-24 bg-gradient-to-tr from-blue-400/20 to-purple-400/20 rounded-full blur-2xl"></div>
+            </div>
+            
+            <div className="flex justify-center mt-8">
+              <div className="inline-flex items-center gap-2 text-xs text-gray-500 bg-gray-100 px-3 py-1.5 rounded-full">
+                <span className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></span>
+                Applications open until March 30th
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Industry() {
   return (
     <>
-      <PictureHero
-        imageSrc="/assets/industry/header/infineon_industry.jpeg"
-        titleImageSrc="/assets/industry/header/industry_header_no_date.svg"
-        subtitle="Your stepping stone to a career in AI"
-      />
-      <Tabs
-        tabs={{
-          Students: <StudentsSection />,
-          Industry: <IndustrySection />,
-        }}
-      />
-      <Section>
-        <h2 className={cx("mb-12 text-4xl font-semibold", bitter.className)}>
-          Our partners from{" "}
-          <span className="text-purple-600">Industry Phase 5.0</span>
-        </h2>
-        <Logos logos={partners_ip5} />
-      </Section>
-      <Section>
-        <Image
-          src="/assets/industry/header/test_header.svg"
-          width={1775}
-          height={795}
-          alt="Industry Timeline"
-          className="w-full"
-        />
-      </Section>
-      <Section>
-        <div className="justify-center sm:px-4">
-          <h2 className={cx("mb-4 text-4xl font-semibold", bitter.className)}>
-            Examples of previous AI Projects
+      {/* Fixed background elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,white)] opacity-5" />
+        <div className="absolute top-48 right-10 w-96 h-96 rounded-full bg-purple-400 opacity-10 blur-[120px]" />
+        <div className="absolute top-[40vh] left-10 w-80 h-80 rounded-full bg-blue-300 opacity-10 blur-[100px]" />
+        <div className="absolute bottom-48 right-48 w-64 h-64 rounded-full bg-indigo-400 opacity-10 blur-[80px]" />
+      </div>
+    
+      {/* Hero Section */}
+      <div className="relative h-[75vh] overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/industry/header/infineon_industry.jpeg"
+            alt="Industry Projects Hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-blue-900/70"></div>
+        </div>
+        
+        {/* Content Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="max-w-5xl w-full px-6 relative z-10">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-8 w-full max-w-2xl">
+                <Image
+                  src="/assets/industry/header/industry_header_no_date.svg"
+                  width={600}
+                  height={150}
+                  alt="Industry Projects"
+                  className="w-full object-contain invert grayscale brightness-125 contrast-125 filter"
+                />
+              </div>
+              <h2 className="text-white text-2xl md:text-3xl font-medium mb-8 max-w-2xl">
+                Your stepping stone to a career in AI
+              </h2>
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                <Button intent="primary" size="lg">
+                  <Link href="#students">For Students</Link>
+                </Button>
+                <Button intent="glass" size="lg">
+                  <Link href="#industry">For Companies</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+      
+      {/* Tabs Section - with glassmorphism effect */}
+      <div id="students" className="relative py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 grid grid-cols-16 grid-rows-16 gap-8 opacity-5 pointer-events-none">
+            {Array.from({ length: 32 }).map((_, i) => (
+              <div key={i} className="h-1 w-1 rounded-full bg-purple-500" />
+            ))}
+          </div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
+          <div className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-xl shadow-md overflow-hidden">
+            <Tabs
+              tabs={{
+                Students: StudentsSection(),
+                Industry: IndustrySection(),
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      
+      {/* Partners Section */}
+      <Section className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
+          <h2 className={cx("mb-12 text-3xl font-semibold text-center", bitter.className)}>
+            Our partners from <span className="text-purple-600">Industry Phase 5.0</span>
           </h2>
-          <p className="mb-8">
-            Explore how our participants have created{" "}
-            <span className="text-purple-600">measurable impact</span> in the
-            past.
-          </p>
-          <div className="3xl:grid-cols-4 grid grid-cols-1 gap-14 lg:grid-cols-2 2xl:grid-cols-3">
-            {projects.map((project, index) => (
-              <div
-                className="rounded-lg bg-white shadow-lg shadow-purple-800/10"
-                key={index}
-              >
-                <div className="flex h-full flex-col">
-                  <div className="relative h-60 w-full grayscale saturate-200">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="rounded-t-lg object-cover"
-                    />
-                  </div>
-                  <div className="rounded-b-lg bg-white p-6 text-purple-950">
-                    <h1 className="mb-2 text-lg font-semibold">
-                      {project.title}
-                    </h1>
-                    <div className="mb-2 grow text-sm">
-                      {project.description.map((section, index) => (
-                        <span key={index}>
-                          {section.text && `${section.text} `}
-
-                          {!!section.link &&
-                            section.link.map((link, i) => (
-                              <div key={link.url}>
-                                <a
-                                  href={link.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-purple-700 underline"
-                                >
-                                  {link.displayText}
-                                </a>
-                                {i < section.link!.length - 1 && ", "}
-                              </div>
-                            ))}
-                          {section.moreText && ` ${section.moreText}`}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="mt-auto flex flex-col items-center justify-center space-y-3 px-6 pb-6 sm:flex-row sm:justify-start sm:space-y-0 md:space-x-2">
-                    <Link href={project.organizationLink}>
-                      <div className="min-w-30 flex max-w-max cursor-pointer items-center justify-center rounded-full bg-blue-700 px-4 py-1 text-purple-50 transition-colors duration-300 hover:bg-blue-400 hover:shadow-md">
-                        {project.organization}
-                      </div>
-                    </Link>
-                    <div className="flex min-w-min max-w-max items-center justify-center px-4 py-1 text-gray-400">
-                      {project.time}
-                    </div>
-                  </div>
-                </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            {partners_ip5.map((partner, index) => (
+              <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src={partner.src}
+                  alt={partner.alt}
+                  width={120}
+                  height={60}
+                  className="object-contain h-12"
+                />
               </div>
             ))}
           </div>
         </div>
       </Section>
+      
+      {/* Timeline Section */}
+      <Section className="py-16 bg-gradient-to-r from-slate-50 to-white relative">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
+          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100">
+            <Image
+              src="/assets/industry/header/test_header.svg"
+              width={1775}
+              height={795}
+              alt="Industry Timeline"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </Section>
+      
+      {/* Projects Section */}
+      <div id="projects">
+        <Section className="py-24 relative bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-6xl mx-auto px-4 relative z-10">
+            <div className="flex flex-col items-center mb-16">
+              <h2 className={cx("text-3xl font-semibold mb-4 text-center", bitter.className)}>
+                Examples of previous AI Projects
+              </h2>
+              <p className="max-w-2xl text-center text-gray-600 mb-2">
+                Explore how our participants have created
+                <span className="text-purple-600"> measurable impact</span> in the past.
+              </p>
+              <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-2"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </div>
+        </Section>
+      </div>
     </>
+  );
+}
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div className="group flex flex-col h-full bg-white/90 backdrop-blur-sm border border-gray-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] hover:border-purple-100 relative">
+      {/* Glass-like top highlight */}
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
+      {/* Glass-like left highlight */}
+      <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
+      
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      
+      <div className="flex-1 p-6">
+        <h3 className="font-medium text-gray-900 text-lg mb-3">{project.title}</h3>
+        <div className="text-sm text-gray-600 space-y-2">
+          {project.description.map((section, index) => (
+            <div key={index}>
+              {section.text && <span>{section.text} </span>}
+              
+              {!!section.link &&
+                section.link.map((link, i) => (
+                  <span key={link.url}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-600 hover:text-purple-800 transition-colors"
+                    >
+                      {link.displayText}
+                    </a>
+                    {i < section.link!.length - 1 && ", "}
+                  </span>
+                ))}
+              {section.moreText && <span>{section.moreText}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div className="p-6 pt-0 mt-auto flex items-center justify-between">
+        <Button 
+          intent="pill" 
+          size="xs" 
+          asChild
+        >
+          <Link href={project.organizationLink}>
+            {project.organization}
+          </Link>
+        </Button>
+        <span className="text-xs text-gray-400">{project.time}</span>
+      </div>
+    </div>
   );
 }
 
 function IndustrySection() {
   return (
-    <Section className="flex animate-fadeIn justify-center lg:flex-col">
-      <div className="rounded-3xl shadow-purple-800/10 sm:bg-gray-50 sm:p-14 sm:shadow-lg">
-        <h2 className={cx("mb-8 text-4xl font-semibold", bitter.className)}>
-          Industry Phase 6.0 starting in spring 2023
-        </h2>
-        <div className="grid grid-cols-1 items-center gap-4 xl:grid-cols-2 xl:gap-16">
+    <div id="industry" className="animate-fadeIn p-6 md:p-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="mb-8">
+            <h2 className={cx("text-3xl font-semibold mb-6", bitter.className)}>
+              Industry Phase 6.0
+              <span className="text-purple-600"> starting in spring 2023</span>
+            </h2>
+            <p className="text-gray-700 mb-8">
               We manage Munich&apos;s top pool of
               <span className="font-bold text-purple-600"> AI talent </span>
               and offer affordable, high-quality solutions without any long-term
               liabilities!
             </p>
-            <Dialog
-              trigger={<Button>connect!</Button>}
-              title="Let's connect!"
-              body={
-                <>
-                  <p className="text-sm text-gray-700">
-                    If you are interested in partnering with TUM.ai as a
-                    sponsor, Makeathon challenge-setter, Industry project
-                    partner, Workshop host, etc. please reach out to our
-                    &quot;Partners & Sponsors&quot; department.
-                  </p>
-                  <p className="text-xl font-medium text-purple-500">
-                    <a href="mailto:partners@tum-ai.com">partners@tum-ai.com</a>
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    TUM.ai Student Initiative
-                    <br />
-                    Arcisstraße 21.
-                    <br />
-                    80333 Munich
-                  </p>
-                </>
-              }
-              hasCloseButton
-            />
+            <Button intent="primary" size="lg" asChild>
+              <a href="mailto:partners@tum-ai.com">
+                Connect with us
+              </a>
+            </Button>
           </div>
-          <div className="flex flex-col items-center space-y-6 py-4 xl:items-start">
-            <Image
-              src={"/assets/industry/freearifiat.png"}
-              className="rounded-xl shadow-lg shadow-purple-800/20"
-              alt="Ferrari for Fiat"
-              width={500}
-              height={100}
-            />
+          <div className="flex justify-center">
+            <div className="relative max-w-sm w-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-blue-100/20 rounded-2xl blur-sm -m-1"></div>
+              <div className="relative rounded-xl overflow-hidden border border-white/20 shadow-lg">
+                <Image
+                  src="/assets/industry/freearifiat.png"
+                  alt="Ferrari for Fiat"
+                  width={500}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-16 ">
-          <h3 className={cx("mb-8 text-3xl font-semibold")}>
+        <div className="mt-24">
+          <h3 className={cx("text-2xl font-semibold mb-8", bitter.className)}>
             What is an <span className="text-purple-600">AI Project</span>?
           </h3>
-          <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-16">
-            <div>
-              <h4 className="text-xl font-semibold text-purple-600">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="relative group overflow-hidden backdrop-blur-sm bg-white/40 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 border border-white/60">
+              {/* Subtle glass highlight effect */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
+              <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-purple-300/50 to-transparent"></div>
+              
+              <h4 className="text-lg font-semibold text-purple-600 mb-4 flex items-center">
+                <span className="inline-block w-1 h-4 bg-purple-500 mr-2 rounded-full"></span>
                 Project Statement
               </h4>
-              <p>
+              <p className="text-gray-700 mb-4">
                 Present your AI-related problem – we&apos;ll help define the
                 ideal project:
               </p>
-              <ol className="list-inside list-disc space-y-2 py-4 ">
-                <li className="pl-2">Building proof of concept</li>
-                <li className="pl-2">Conducting research topics</li>
-                <li className="pl-2">Developing prototypes</li>
-                <li className="pl-2">Improving products/processes</li>
-              </ol>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center">
+                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  Building proof of concept
+                </li>
+                <li className="flex items-center">
+                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  Conducting research topics
+                </li>
+                <li className="flex items-center">
+                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  Developing prototypes
+                </li>
+                <li className="flex items-center">
+                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  Improving products/processes
+                </li>
+              </ul>
             </div>
-            <div>
-              <h4 className="text-xl font-semibold text-purple-600">
+            
+            <div className="relative group overflow-hidden backdrop-blur-sm bg-white/40 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 border border-white/60">
+              {/* Subtle glass highlight effect */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
+              <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-blue-300/50 to-transparent"></div>
+              
+              <h4 className="text-lg font-semibold text-blue-600 mb-4 flex items-center">
+                <span className="inline-block w-1 h-4 bg-blue-500 mr-2 rounded-full"></span>
                 Outstanding Solutions
               </h4>
-              <p className="max-w-lg py-2">
-                We’ll advertise your project to a wide pool of talented students
+              <p className="text-gray-700 mb-4">
+                We&apos;ll advertise your project to a wide pool of talented students
                 and present you with the most outstanding candidates.
               </p>
-              <p className="max-w-lg py-2">
+              <p className="text-gray-700">
                 A team of multi-disciplinary students will work exclusively for
                 your company as working students.
               </p>
@@ -209,6 +420,6 @@ function IndustrySection() {
           </div>
         </div>
       </div>
-    </Section>
+    </div>
   );
 }
