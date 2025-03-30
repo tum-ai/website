@@ -14,7 +14,13 @@ export function generateStaticParams() {
     })).concat(alumni.map((person) => ({id: person.id})));
 }
 
-export function generateMetadata({params: {id}}: { params: { id: string } }) {
+export async function generateMetadata(props: { params: Promise<{ id: string }> }) {
+    const params = await props.params;
+
+    const {
+        id
+    } = params;
+
     let person = team.find((person: Person) => id === person.id);
     if(!person) {
         person = alumni.find((person: Person) => id === person.id);
@@ -27,7 +33,13 @@ export function generateMetadata({params: {id}}: { params: { id: string } }) {
     };
 }
 
-export default function Page({params: {id}}: { params: { id: string } }) {
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+    const params = await props.params;
+
+    const {
+        id
+    } = params;
+
     let person = team.find((person: Person) => id === person.id);
     if (!person) {
         person = alumni.find((person: Person) => id === person.id);
