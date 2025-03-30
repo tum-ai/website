@@ -1,4 +1,4 @@
-import Section from "@ui/Section";
+import Section from "@components/ui/Section";
 import { team } from "../data/e-lab";
 import Person from "@components/Person";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@components/ui/carousel";

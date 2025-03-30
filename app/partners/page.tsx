@@ -1,5 +1,5 @@
-import Button from "@ui/Button";
-import Section from "@ui/Section";
+import Button from "@components/ui/Button";
+import Section from "@components/ui/Section";
 import Hero from "components/Hero";
 import Image from "next/image";
 import MartinTalk from "@public/assets/partners/martin_talk.jpg";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Section from "@ui/Section";
+import Section from "@components/ui/Section";
 import Link from "next/link";
 import StartupList from "@components/ELabStartupList";
 import { startups } from "data/e-lab-startups";
