@@ -54,7 +54,7 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/ikigai.png",
     logoAlt: "ikigai",
     link: "https://www.linkedin.com/company/get-ikigai/",
-    company: "https://www.get-ikigai.com/"
+    company: "https://www.get-ikigai.com/",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/florian_scherl.jpg",
@@ -63,7 +63,7 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/fast_ai_movies.png",
     logoAlt: "FAST AI Movies",
     link: "https://www.linkedin.com/in/florian-scherl/",
-    company: "https://fast-ai-movies.de/"
+    company: "https://fast-ai-movies.de/",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/tom_doerr.jpeg",
@@ -72,7 +72,7 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/testimonials/conic_w.png",
     logoAlt: "conic",
     link: "https://www.linkedin.com/in/tom-d%C3%B6rr-912607126/",
-    company: "https://github.com/tom-doerr"
+    company: "https://github.com/tom-doerr",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/marc_alexander_kuehn.jpg",
@@ -81,7 +81,7 @@ export const testimonials = [
     logoSrc: "/assets/e-lab/partners/uvc_w.svg",
     logoAlt: "UVC Partners",
     link: "https://www.linkedin.com/in/marc-alexander-kuehn/",
-    company: "https://www.uvcpartners.com/"
+    company: "https://www.uvcpartners.com/",
   },
   {
     imgSrc: "/assets/e-lab/testimonials/maximilian_jesch.png",
@@ -90,7 +90,7 @@ export const testimonials = [
     logoSrc: "",
     logoAlt: "",
     link: "https://www.linkedin.com/in/maximilian-jesch/",
-    company: ""
+    company: "",
   },
 
   // {
@@ -104,24 +104,23 @@ export const testimonials = [
 ];
 
 export interface Person {
-    id: string;
-    firstName: string;
-    lastName: string;
-    role: string;
-    description?: string;
-    imgSrc: string;
-    imgAlt: string;
-    socialMedia: SocialMedia;
+  id: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+  description?: string;
+  imgSrc: string;
+  imgAlt: string;
+  socialMedia: SocialMedia;
 }
 
 export interface SocialMedia {
-    linkedin: string;
-    x?: string;
-    instagram?: string;
-    youtube?: string;
-    website?: string;
-    email?: string;
-
+  linkedin: string;
+  x?: string;
+  instagram?: string;
+  youtube?: string;
+  website?: string;
+  email?: string;
 }
 
 export const team: Person[] = [
@@ -130,14 +129,15 @@ export const team: Person[] = [
     firstName: "Laurenz",
     lastName: "Sommerlad",
     role: "Head of Venture",
-    description: "Hey, I am Laurenz and lead the amazing team behind the AI E-LAB. My journey began at a young age, building my first software projects at 12 and founding a student-led startup at 15. These early experiences paved the way for my burning passion in AI, Robotics and Entrepreneurship.\n\n" +
-        "Here is a quick overview of my academic achievements and work:\n\n" +
-        "- Ranked in the Top 2% at TUM Department of Computer Science and achieved an Abitur GPA of 1.0\n" +
-        "- Conducting research at LMU Hospital to predict rare child diseases using federated learning-based Graph ML techniques on patient phenotypes, genes, and proteins\n" +
-        "- Developing perception and path planning software for an Autonomous Mars Rover participating in International Rover Competitions with WARR Space Robotics, while also leading Partner & Sponsors | PR & Marketing subteams \n" +
-        "- Over 2+ years of work experience as a Software Engineer in Full-Stack web-based applications (working student)\n\n" +
-        "Outside of my professional endeavors, I enjoy doing a lot of different sports like weight training, martial arts (Wing Chun), marathons, technical and cave diving, wakeboarding, snowboarding, and preparing for my first Ironman. I am also in love with traveling, exploring foreign cultures and learning languages including French, Spanish, Japanese & Arabic which continues to enrich my life.\n\n" +
-        "Driven by a desire to make the world a better place, I am committed to solving the most challenging problems with technology. Feel free to reach out — I am always up for a coffee and a good conversation! ☕",
+    description:
+      "Hey, I am Laurenz and lead the amazing team behind the AI E-LAB. My journey began at a young age, building my first software projects at 12 and founding a student-led startup at 15. These early experiences paved the way for my burning passion in AI, Robotics and Entrepreneurship.\n\n" +
+      "Here is a quick overview of my academic achievements and work:\n\n" +
+      "- Ranked in the Top 2% at TUM Department of Computer Science and achieved an Abitur GPA of 1.0\n" +
+      "- Conducting research at LMU Hospital to predict rare child diseases using federated learning-based Graph ML techniques on patient phenotypes, genes, and proteins\n" +
+      "- Developing perception and path planning software for an Autonomous Mars Rover participating in International Rover Competitions with WARR Space Robotics, while also leading Partner & Sponsors | PR & Marketing subteams \n" +
+      "- Over 2+ years of work experience as a Software Engineer in Full-Stack web-based applications (working student)\n\n" +
+      "Outside of my professional endeavors, I enjoy doing a lot of different sports like weight training, martial arts (Wing Chun), marathons, technical and cave diving, wakeboarding, snowboarding, and preparing for my first Ironman. I am also in love with traveling, exploring foreign cultures and learning languages including French, Spanish, Japanese & Arabic which continues to enrich my life.\n\n" +
+      "Driven by a desire to make the world a better place, I am committed to solving the most challenging problems with technology. Feel free to reach out — I am always up for a coffee and a good conversation! ☕",
     imgSrc: "/assets/e-lab/team/laurenz_sommerlad.jpg",
     imgAlt: "Laurenz Sommerlad",
     socialMedia: {
@@ -146,18 +146,19 @@ export const team: Person[] = [
       instagram: "https://www.instagram.com/laurenzsommerlad/",
       youtube: "https://www.youtube.com/@LaurenzSommerlad",
       website: "https://laurenzsommerlad.com",
-      email: "laurenz.sommerlad@tum-ai.com"
-    }
+      email: "laurenz.sommerlad@tum-ai.com",
+    },
   },
   {
     id: "jan-christopher-michalczik",
     firstName: "Jan-Christopher",
     lastName: "Michalczik",
     role: "Strategy & Events",
-    description: "Hey, nice to meet you! During the course of my studies, I have had the chance to gather some business acumen across different B-Schools. Starting with traditional subjects like finance and accounting, I have continually expanded my horizon to areas more strongly focused on innovation and technology management. Herein, my focus currently lies on but is not limited to AI. My journey has taken me across different countries and industries like the financial sector, shipping, and fruits wholesale.\n\n" +
-    "More importantly, I have had the chance to get immersed in two European innovation hubs: Paris and Munich. The German capital of beer and Weißwurst specifically caught my attention due to its proximity between tech and business which is hard to find elsewhere at the same scale. In the two years since I stepped my foot into the city, it has done everything else but disappointed. So, I am looking very forward to learning how you are contributing to this awesome vibe!\n\n" +
-    "Whatever your challenge is, I am here to help you solve it. I cannot wait to brainstorm with you or connect you to one of the numerous experts that TUM.ai will get you access to. From organizing last year's E-Lab, I can tell you that our participants, organizers, and partners made it a blast. So, get your act together, handle your responsibilities, and make sure you set aside some time for this program. It is worth it!\n\n"+
-    "If you need more info than is presented on our website, sign up for our newsletter, go to one of our info events, or just reach out directly.",
+    description:
+      "Hey, nice to meet you! During the course of my studies, I have had the chance to gather some business acumen across different B-Schools. Starting with traditional subjects like finance and accounting, I have continually expanded my horizon to areas more strongly focused on innovation and technology management. Herein, my focus currently lies on but is not limited to AI. My journey has taken me across different countries and industries like the financial sector, shipping, and fruits wholesale.\n\n" +
+      "More importantly, I have had the chance to get immersed in two European innovation hubs: Paris and Munich. The German capital of beer and Weißwurst specifically caught my attention due to its proximity between tech and business which is hard to find elsewhere at the same scale. In the two years since I stepped my foot into the city, it has done everything else but disappointed. So, I am looking very forward to learning how you are contributing to this awesome vibe!\n\n" +
+      "Whatever your challenge is, I am here to help you solve it. I cannot wait to brainstorm with you or connect you to one of the numerous experts that TUM.ai will get you access to. From organizing last year's E-Lab, I can tell you that our participants, organizers, and partners made it a blast. So, get your act together, handle your responsibilities, and make sure you set aside some time for this program. It is worth it!\n\n" +
+      "If you need more info than is presented on our website, sign up for our newsletter, go to one of our info events, or just reach out directly.",
     imgSrc: "/assets/e-lab/team/jan_michalczik.png",
     imgAlt: "Jan-Christopher Michalczik",
     socialMedia: {
@@ -166,15 +167,16 @@ export const team: Person[] = [
       instagram: "",
       youtube: "",
       website: "",
-      email: "jan-christopher.michalczik@tum-ai.com"
-    }
+      email: "jan-christopher.michalczik@tum-ai.com",
+    },
   },
   {
     id: "benedikt-wieser",
     firstName: "Benedikt",
     lastName: "Wieser",
     role: "Strategy & Events",
-    description: "Having a background in Business Administration from the University of St. Gallen and studies at Berkeley, I’ve worked on multiple startup projects, in venture capital, at a scale-up, and participated in the AI E-Lab 2.0 startup incubator.\n\nAdditional to my professional experience, I learnt to lead teams in high-stress situations as an officer cadet in the Austrian Armed Forces, instilling in me strong personal drive and get-things-done thinking.\n\nBesides being passionate about entrepreneurship I love outdoor adventures like whitewater rafting and hiking, and always strive to explore and feel the intensity of life. I am absolutely looking forward to accompanying you on your individual, entrepreneurial journey. Let’s build something amazing together!",
+    description:
+      "Having a background in Business Administration from the University of St. Gallen and studies at Berkeley, I’ve worked on multiple startup projects, in venture capital, at a scale-up, and participated in the AI E-Lab 2.0 startup incubator.\n\nAdditional to my professional experience, I learnt to lead teams in high-stress situations as an officer cadet in the Austrian Armed Forces, instilling in me strong personal drive and get-things-done thinking.\n\nBesides being passionate about entrepreneurship I love outdoor adventures like whitewater rafting and hiking, and always strive to explore and feel the intensity of life. I am absolutely looking forward to accompanying you on your individual, entrepreneurial journey. Let’s build something amazing together!",
     imgSrc: "/assets/e-lab/team/benedikt_wieser.jpg",
     imgAlt: "Benedikt Wieser",
     socialMedia: {
@@ -183,8 +185,8 @@ export const team: Person[] = [
       instagram: "",
       youtube: "",
       website: "",
-      email: ""
-    }
+      email: "",
+    },
   },
   {
     id: "emine-hakani",
@@ -195,13 +197,13 @@ export const team: Person[] = [
     imgSrc: "/assets/e-lab/team/emine_hakani.png",
     imgAlt: "Emine Hakani",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/emine-hakani-muc/",
+      linkedin: "https://www.linkedin.com/in/emine-hakani-muc/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
-      email: "venture@tum-ai.com"
-    }
+      email: "venture@tum-ai.com",
+    },
   },
   {
     id: "philip-juenemann",
@@ -212,32 +214,33 @@ export const team: Person[] = [
     imgSrc: "/assets/e-lab/team/philip_juenemann.jpg",
     imgAlt: "Philip Jünemann",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/philip-louis-j%C3%BCnemann/",
+      linkedin: "https://www.linkedin.com/in/philip-louis-j%C3%BCnemann/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
-      email: "philip.juenemann@tum-ai.com"
-    }
-},
+      email: "philip.juenemann@tum-ai.com",
+    },
+  },
   {
     id: "david-reyes",
     firstName: "David",
     lastName: "Reyes",
     role: "Talent & Community",
-    description: "Hey, nice to meet you! I am David, and I am passionate about empowering people to pursue their passions in life (which, of course, includes you). With a solid foundation in engineering and economics, I have gained extensive business and tech knowledge during my studies, with my journey spanning Latin America, the US, and now Europe. This diverse experience has led me through various tech startups, where I have held roles in product management and engineering teams. My past experiences encompass finance, product management, and data science, with AI currently being one of my key areas of interest.\n\n" +
-    "Innovation drives me, and I have found a fitting place within the Munich entrepreneurial ecosystem. I am dedicated to ensuring you become part of an amazing batch of smart, diverse, and driven individuals who are passionate about developing solutions and maintaining a thriving sense of community. I look forward to working together to take your startup idea to the moon.",
+    description:
+      "Hey, nice to meet you! I am David, and I am passionate about empowering people to pursue their passions in life (which, of course, includes you). With a solid foundation in engineering and economics, I have gained extensive business and tech knowledge during my studies, with my journey spanning Latin America, the US, and now Europe. This diverse experience has led me through various tech startups, where I have held roles in product management and engineering teams. My past experiences encompass finance, product management, and data science, with AI currently being one of my key areas of interest.\n\n" +
+      "Innovation drives me, and I have found a fitting place within the Munich entrepreneurial ecosystem. I am dedicated to ensuring you become part of an amazing batch of smart, diverse, and driven individuals who are passionate about developing solutions and maintaining a thriving sense of community. I look forward to working together to take your startup idea to the moon.",
     imgSrc: "/assets/e-lab/team/david_reyes.png",
     imgAlt: "David Reyes",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/davidreyesj/",
+      linkedin: "https://www.linkedin.com/in/davidreyesj/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
-      email: "david.reyes@tum-ai.com"
-    }
-},
+      email: "david.reyes@tum-ai.com",
+    },
+  },
   {
     id: "zaid-efraij",
     firstName: "Zaid",
@@ -247,30 +250,31 @@ export const team: Person[] = [
     imgSrc: "/assets/e-lab/team/zaid_efraij.jpg",
     imgAlt: "Zaid Efraij",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/zaid-efraij-b6630722a/",
+      linkedin: "https://www.linkedin.com/in/zaid-efraij-b6630722a/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
-      email: "zaid.efraij@tum-ai.com"
-    }
+      email: "zaid.efraij@tum-ai.com",
+    },
   },
   {
     id: "nagaharshith-makam-sreenivasulu",
     firstName: "Nagaharshith",
     lastName: "Makam Sreenivasulu",
     role: "Marketing",
-    description: "Hey, I am Nagah. In addition to pursuing a bachelor's degree in Management and Technology at TUM, I also assist with marketing at TUM.ai and TEG e.V. (The Entrepreneurial Group, student startup club in Munich). With a background in business, I am interested in using AI agents to improve traditional business settings. Professionally, I work as a Business Development working student at roadsurfer GmbH.\n\nI am excited to meet you and help you with your AI startup journey!",
+    description:
+      "Hey, I am Nagah. In addition to pursuing a bachelor's degree in Management and Technology at TUM, I also assist with marketing at TUM.ai and TEG e.V. (The Entrepreneurial Group, student startup club in Munich). With a background in business, I am interested in using AI agents to improve traditional business settings. Professionally, I work as a Business Development working student at roadsurfer GmbH.\n\nI am excited to meet you and help you with your AI startup journey!",
     imgSrc: "/assets/e-lab/team/nagah_sreenivasulu.jpg",
     imgAlt: "Nagah Sreenivasulu",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/nagaharshith",
+      linkedin: "https://www.linkedin.com/in/nagaharshith",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
-      email: "nagaharshith-makam.sreenivasulu@tum-ai.com"
-    }
+      email: "nagaharshith-makam.sreenivasulu@tum-ai.com",
+    },
   },
 ];
 
@@ -280,17 +284,18 @@ export const alumni: Person[] = [
     firstName: "Abdulqadir",
     lastName: "Faruk",
     role: "Advisor",
-    description: "Abdul serves as an Advisor at TUM.ai, where he brings his experience and expertise in leadership, entrepreneurship, and venture development. He previously led the AI E-Lab as the Head of Venture alongside Daniil Morozov, where they envisioned and re-established the AI E-Lab as a straight-shooting startup sandbox and a genuine community designed to engineer serendipity among founders. Throughout the program, Abdul has been and will continue to be a humble sparring partner for our founders.",
+    description:
+      "Abdul serves as an Advisor at TUM.ai, where he brings his experience and expertise in leadership, entrepreneurship, and venture development. He previously led the AI E-Lab as the Head of Venture alongside Daniil Morozov, where they envisioned and re-established the AI E-Lab as a straight-shooting startup sandbox and a genuine community designed to engineer serendipity among founders. Throughout the program, Abdul has been and will continue to be a humble sparring partner for our founders.",
     imgSrc: "/assets/e-lab/team/abdul_faruk.jpg",
     imgAlt: "Abdulqadir Faruk",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/abdulqadirfaruk/",
+      linkedin: "https://www.linkedin.com/in/abdulqadirfaruk/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "abdul.faruk@tum-ai.com",
-    }
+    },
   },
   {
     id: "daniil-morozov",
@@ -301,13 +306,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/daniil_morozov.png",
     imgAlt: "Daniil Morozov",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/daniil-morozov-912490252/",
+      linkedin: "https://www.linkedin.com/in/daniil-morozov-912490252/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "nektarios-totikos",
@@ -318,13 +323,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/nektarios_totikos.jpeg",
     imgAlt: "Nektarios Totikos",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/nektarios-totikos/",
+      linkedin: "https://www.linkedin.com/in/nektarios-totikos/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "ian-tolan",
@@ -335,13 +340,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/ian_tolan.png",
     imgAlt: "Ian Tolan",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/ian-tolan-a85b0a107/",
+      linkedin: "https://www.linkedin.com/in/ian-tolan-a85b0a107/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "david-podolskyi",
@@ -352,13 +357,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/david_podolskyi.png",
     imgAlt: "David Podolskyi",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/davidpodolsky/",
+      linkedin: "https://www.linkedin.com/in/davidpodolsky/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "luca-dombetzki",
@@ -369,13 +374,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/luca_dombetzki.png",
     imgAlt: "Luca Dombetzki",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/luca-dombetzki/",
+      linkedin: "https://www.linkedin.com/in/luca-dombetzki/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "yarhy-flores",
@@ -386,13 +391,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/yarhy_flores.png",
     imgAlt: "Yarhy Flores",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/yarhy-flores/",
+      linkedin: "https://www.linkedin.com/in/yarhy-flores/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "sebastian-wilhelm",
@@ -403,13 +408,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/sebastian_wilhelm.png",
     imgAlt: "Sebastian Wilhelm",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/sebastian-wilhelm/",
+      linkedin: "https://www.linkedin.com/in/sebastian-wilhelm/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
   {
     id: "can-kayalan",
@@ -420,13 +425,13 @@ export const alumni: Person[] = [
     imgSrc: "/assets/e-lab/team/can_kayalan.png",
     imgAlt: "Can Kayalan",
     socialMedia: {
-     linkedin: "https://www.linkedin.com/in/can-kayalan/",
+      linkedin: "https://www.linkedin.com/in/can-kayalan/",
       x: "",
       instagram: "",
       youtube: "",
       website: "",
       email: "",
-    }
+    },
   },
 ];
 

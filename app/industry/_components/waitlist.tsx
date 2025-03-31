@@ -22,7 +22,7 @@ export const Waitlist = () => {
       .post("/api/industry/waitlist", {
         data: { email: values.email as string },
       })
-      .then(() => setJoinedWaitlist(true))
+      .then(() => setJoinedWaitlist(true)),
   );
   return (
     <div className="my-3 space-y-8 rounded-lg">

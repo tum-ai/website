@@ -40,7 +40,7 @@ function Card(card: CardProps) {
 
       {!!card.buttons && (
         <div className="relative bottom-0 mt-auto p-4">
-          <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+          <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             {card.buttons.map(({ href, text, ...buttonData }) => (
               <Button
                 key={href}

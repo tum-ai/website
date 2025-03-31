@@ -29,8 +29,7 @@ const styles = cva(
           "bg-blue-600/10 text-blue-600 backdrop-blur-sm border border-blue-200/30 hover:bg-blue-600/20 focus:ring-blue-500 active:scale-[0.98] shadow-sm hover:shadow-md",
         glassIndigo:
           "bg-indigo-600/10 text-indigo-600 backdrop-blur-sm border border-indigo-200/30 hover:bg-indigo-600/20 focus:ring-indigo-500 active:scale-[0.98] shadow-sm hover:shadow-md",
-        pill:
-          "rounded-full text-xs font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",
+        pill: "rounded-full text-xs font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",
         pillGlass:
           "rounded-full text-xs font-medium text-purple-600 bg-purple-600/10 backdrop-blur-sm border border-purple-200/30 hover:bg-purple-600/20 focus:ring-purple-500 shadow-sm",
       },
@@ -51,16 +50,16 @@ const styles = cva(
         md: "rounded-md",
         lg: "rounded-lg",
         xl: "rounded-xl",
-        full: "rounded-full"
+        full: "rounded-full",
       },
     },
     defaultVariants: {
       intent: "primary",
       size: "md",
       fullWidth: false,
-      rounded: "md"
+      rounded: "md",
     },
-  }
+  },
 );
 
 export interface Props

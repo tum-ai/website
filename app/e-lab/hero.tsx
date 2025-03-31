@@ -29,7 +29,7 @@ export const Hero = () => {
           </div>
           <div className="flex flex-col items-center gap-6">
             <Link
-              className="min-w-[200px] max-w-lg rounded-full border-none bg-linear-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
+              className="max-w-lg min-w-[200px] rounded-full border-none bg-linear-to-b from-yellow-500 to-red-500 p-4 text-center sm:min-w-[400px]"
               href="https://forms.tum-ai.com/ai-e-lab-3.0-application"
               target="_blank"
             >

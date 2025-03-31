@@ -38,65 +38,78 @@ interface Project {
 function StudentsSection() {
   return (
     <div className="animate-fadeIn p-6 md:p-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
-            <h2 className={cx("text-3xl font-semibold mb-4", bitter.className)}>
-              Applications for <span className="text-purple-600">Industry Phase 6.0</span> are currently open
+            <h2 className={cx("mb-4 text-3xl font-semibold", bitter.className)}>
+              Applications for{" "}
+              <span className="text-purple-600">Industry Phase 6.0</span> are
+              currently open
             </h2>
-            
+
             <div className="space-y-4 text-gray-700">
               <p className="relative">
-                <span className="relative z-10">Push ML boundaries and progress your career with our AI projects!</span>
-                <span className="absolute -left-2 -right-2 top-0 bottom-0 bg-gradient-to-r from-purple-100/20 to-transparent rounded-md -z-0"></span>
-                <span className="text-purple-600 font-medium"> Leverage your skills </span>
+                <span className="relative z-10">
+                  Push ML boundaries and progress your career with our AI
+                  projects!
+                </span>
+                <span className="absolute top-0 -right-2 bottom-0 -left-2 -z-0 rounded-md bg-gradient-to-r from-purple-100/20 to-transparent"></span>
+                <span className="font-medium text-purple-600">
+                  {" "}
+                  Leverage your skills{" "}
+                </span>
                 and take on real AI projects to test your abilities.
               </p>
-              
+
               <p>
                 Work in a
-                <span className="text-purple-600 font-medium"> team of 4x students for 12 weeks, earn up to 4000€ </span>
-                and gain valuable contacts. With a project lead guiding you, demonstrate your agile project management skills in a professional setting.
+                <span className="font-medium text-purple-600">
+                  {" "}
+                  team of 4x students for 12 weeks, earn up to 4000€{" "}
+                </span>
+                and gain valuable contacts. With a project lead guiding you,
+                demonstrate your agile project management skills in a
+                professional setting.
               </p>
-              
+
               <p>
-                Collaborate with pre-selected partners, including 
-                <span className="text-purple-600 font-medium"> for-profit companies, startups, and non-profits, </span>
+                Collaborate with pre-selected partners, including
+                <span className="font-medium text-purple-600">
+                  {" "}
+                  for-profit companies, startups, and non-profits,{" "}
+                </span>
                 in our upcoming Industry Phase 6.0 starting in April 2024.
               </p>
             </div>
-            
-            <Button 
-              intent="primary"
-              className="mt-6"
-            >
+
+            <Button intent="primary" className="mt-6">
               <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155">
                 Apply Now
               </Link>
             </Button>
           </div>
-          
+
           <div>
-            <div className="relative rounded-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px] -m-1 rounded-xl"></div>
-              <div className="relative rounded-lg overflow-hidden border border-white/20 shadow-lg">
+            <div className="relative overflow-hidden rounded-xl">
+              <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-br from-purple-300/10 to-blue-300/10 backdrop-blur-[2px]"></div>
+              <div className="relative overflow-hidden rounded-lg border border-white/20 shadow-lg">
                 <Image
                   src="/assets/industry/zoom_industry.png"
                   alt="Industry Phase Team Meeting"
                   width={600}
                   height={350}
-                  className="w-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full object-cover grayscale filter transition-all duration-700 hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-700/20 to-blue-700/20"></div>
               </div>
-              
-              <div className="absolute -bottom-2 -right-2 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
-              <div className="absolute -top-2 -left-2 w-24 h-24 bg-gradient-to-tr from-blue-400/20 to-purple-400/20 rounded-full blur-2xl"></div>
+
+              <div className="absolute -right-2 -bottom-2 h-32 w-32 rounded-full bg-gradient-to-br from-purple-400/20 to-blue-400/20 blur-2xl"></div>
+              <div className="absolute -top-2 -left-2 h-24 w-24 rounded-full bg-gradient-to-tr from-blue-400/20 to-purple-400/20 blur-2xl"></div>
             </div>
-            
-            <div className="flex justify-center mt-8">
-              <div className="inline-flex items-center gap-2 text-xs text-gray-500 bg-gray-100 px-3 py-1.5 rounded-full">
-                <span className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></span>
+
+            <div className="mt-8 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 text-xs text-gray-500">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
                 Applications open until March 30th
               </div>
             </div>
@@ -111,13 +124,13 @@ export default function Industry() {
   return (
     <>
       {/* Fixed background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
-        <div className="absolute top-0 left-0 w-full h-full bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,white)] opacity-5" />
-        <div className="absolute top-48 right-10 w-96 h-96 rounded-full bg-purple-400 opacity-10 blur-[120px]" />
-        <div className="absolute top-[40vh] left-10 w-80 h-80 rounded-full bg-blue-300 opacity-10 blur-[100px]" />
-        <div className="absolute bottom-48 right-48 w-64 h-64 rounded-full bg-indigo-400 opacity-10 blur-[80px]" />
+      <div className="pointer-events-none fixed inset-0 z-[-1] overflow-hidden">
+        <div className="bg-grid-slate-100 absolute top-0 left-0 h-full w-full opacity-5 [mask-image:linear-gradient(0deg,transparent,white)]" />
+        <div className="absolute top-48 right-10 h-96 w-96 rounded-full bg-purple-400 opacity-10 blur-[120px]" />
+        <div className="absolute top-[40vh] left-10 h-80 w-80 rounded-full bg-blue-300 opacity-10 blur-[100px]" />
+        <div className="absolute right-48 bottom-48 h-64 w-64 rounded-full bg-indigo-400 opacity-10 blur-[80px]" />
       </div>
-    
+
       {/* Hero Section */}
       <div className="relative h-[75vh] overflow-hidden">
         {/* Background Image with Overlay */}
@@ -131,10 +144,10 @@ export default function Industry() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-blue-900/70"></div>
         </div>
-        
+
         {/* Content Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="max-w-5xl w-full px-6 relative z-10">
+          <div className="relative z-10 w-full max-w-5xl px-6">
             <div className="flex flex-col items-center text-center">
               <div className="mb-8 w-full max-w-2xl">
                 <Image
@@ -142,36 +155,49 @@ export default function Industry() {
                   width={600}
                   height={150}
                   alt="Industry Projects"
-                  className="w-full object-contain invert grayscale brightness-125 contrast-125 filter"
+                  className="w-full object-contain brightness-125 contrast-125 grayscale invert filter"
                 />
               </div>
-              <h2 className="text-white text-2xl md:text-3xl font-medium mb-8 max-w-2xl">
+              <h2 className="mb-8 max-w-2xl text-2xl font-medium text-white md:text-3xl">
                 Your stepping stone to a career in AI
               </h2>
             </div>
           </div>
         </div>
-        
+
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform animate-bounce flex-col items-center">
+          <svg
+            className="h-6 w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </div>
       </div>
-      
+
       {/* Tabs Section - with glassmorphism effect */}
-      <div id="students" className="relative py-16 bg-gradient-to-b from-white to-gray-50">
+      <div
+        id="students"
+        className="relative bg-gradient-to-b from-white to-gray-50 py-16"
+      >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 grid grid-cols-16 grid-rows-16 gap-8 opacity-5 pointer-events-none">
+          <div className="pointer-events-none absolute inset-0 grid grid-cols-16 grid-rows-16 gap-8 opacity-5">
             {Array.from({ length: 32 }).map((_, i) => (
               <div key={i} className="h-1 w-1 rounded-full bg-purple-500" />
             ))}
           </div>
         </div>
-        
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-xl shadow-md overflow-hidden">
+
+        <div className="relative z-10 mx-auto max-w-6xl px-4">
+          <div className="overflow-hidden rounded-xl border border-gray-100 bg-white/80 shadow-md backdrop-blur-sm">
             <Tabs
               tabs={{
                 Students: StudentsSection(),
@@ -181,25 +207,34 @@ export default function Industry() {
           </div>
         </div>
       </div>
-      
+
       {/* Partners Section */}
-      <section className="relative p-8 sm:py-16 lg:py-24 py-24">
+      <section className="relative p-8 py-24 sm:py-16 lg:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
         <div className="container mx-auto">
-          <div className="max-w-6xl mx-auto px-4 relative z-10">
-            <h2 className={cx("mb-12 text-3xl font-semibold text-center", bitter.className)}>
-              Our partners from <span className="text-purple-600">Industry Phase 5.0</span>
+          <div className="relative z-10 mx-auto max-w-6xl px-4">
+            <h2
+              className={cx(
+                "mb-12 text-center text-3xl font-semibold",
+                bitter.className,
+              )}
+            >
+              Our partners from{" "}
+              <span className="text-purple-600">Industry Phase 5.0</span>
             </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+
+            <div className="grid grid-cols-2 items-center justify-items-center gap-8 md:grid-cols-4 lg:grid-cols-6">
               {partners_ip5.map((partner, index) => (
-                <div key={index} className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105">
+                <div
+                  key={index}
+                  className="flex transform items-center justify-center p-4 grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
+                >
                   <Image
                     src={partner.src}
                     alt={partner.alt}
                     width={120}
                     height={60}
-                    className="object-contain h-12"
+                    className="h-12 object-contain"
                   />
                 </div>
               ))}
@@ -207,14 +242,14 @@ export default function Industry() {
           </div>
         </div>
       </section>
-      
+
       {/* Timeline Section */}
-      <section className="relative p-8 sm:py-16 lg:py-16 bg-gradient-to-r from-slate-50 to-white">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/10 to-blue-300/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-300/10 to-purple-300/5 rounded-full blur-3xl"></div>
+      <section className="relative bg-gradient-to-r from-slate-50 to-white p-8 sm:py-16 lg:py-16">
+        <div className="absolute top-1/4 right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-purple-300/10 to-blue-300/5 blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 h-64 w-64 rounded-full bg-gradient-to-tr from-blue-300/10 to-purple-300/5 blur-3xl"></div>
         <div className="container mx-auto">
-          <div className="max-w-6xl mx-auto px-4 relative z-10">
-            <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100">
+          <div className="relative z-10 mx-auto max-w-6xl px-4">
+            <div className="overflow-hidden rounded-xl border border-gray-100 shadow-lg">
               <Image
                 src="/assets/industry/header/test_header.svg"
                 width={1775}
@@ -226,24 +261,30 @@ export default function Industry() {
           </div>
         </div>
       </section>
-      
+
       {/* Projects Section */}
       <div id="projects">
-        <section className="relative p-8 sm:py-16 lg:py-24 py-24 bg-gradient-to-b from-white to-gray-50">
+        <section className="relative bg-gradient-to-b from-white to-gray-50 p-8 py-24 sm:py-16 lg:py-24">
           <div className="container mx-auto">
-            <div className="max-w-6xl mx-auto px-4 relative z-10">
-              <div className="flex flex-col items-center mb-16">
-                <h2 className={cx("text-3xl font-semibold mb-4 text-center", bitter.className)}>
+            <div className="relative z-10 mx-auto max-w-6xl px-4">
+              <div className="mb-16 flex flex-col items-center">
+                <h2
+                  className={cx(
+                    "mb-4 text-center text-3xl font-semibold",
+                    bitter.className,
+                  )}
+                >
                   Examples of previous AI Projects
                 </h2>
-                <p className="max-w-2xl text-center text-gray-600 mb-2">
+                <p className="mb-2 max-w-2xl text-center text-gray-600">
                   Explore how our participants have created
-                  <span className="text-purple-600"> measurable impact</span> in the past.
+                  <span className="text-purple-600"> measurable impact</span> in
+                  the past.
                 </p>
-                <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-2"></div>
+                <div className="mt-2 h-1 w-16 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => (
                   <ProjectCard key={index} project={project} />
                 ))}
@@ -258,12 +299,12 @@ export default function Industry() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group flex flex-col h-full bg-white/90 backdrop-blur-sm border border-gray-100 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] hover:border-purple-100 relative">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-100 bg-white/90 shadow-sm backdrop-blur-sm transition-all duration-300 hover:translate-y-[-2px] hover:border-purple-100 hover:shadow-lg">
       {/* Glass-like top highlight */}
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-white/80 via-purple-100/50 to-white/80"></div>
       {/* Glass-like left highlight */}
       <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-white/80 via-purple-100/50 to-white/80"></div>
-      
+
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -271,16 +312,18 @@ function ProjectCard({ project }: { project: Project }) {
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
       </div>
-      
+
       <div className="flex-1 p-6">
-        <h3 className="font-medium text-gray-900 text-lg mb-3">{project.title}</h3>
-        <div className="text-sm text-gray-600 space-y-2">
+        <h3 className="mb-3 text-lg font-medium text-gray-900">
+          {project.title}
+        </h3>
+        <div className="space-y-2 text-sm text-gray-600">
           {project.description.map((section, index) => (
             <div key={index}>
               {section.text && <span>{section.text} </span>}
-              
+
               {!!section.link &&
                 section.link.map((link, i) => (
                   <span key={link.url}>
@@ -288,7 +331,7 @@ function ProjectCard({ project }: { project: Project }) {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-purple-600 hover:text-purple-800 transition-colors"
+                      className="text-purple-600 transition-colors hover:text-purple-800"
                     >
                       {link.displayText}
                     </a>
@@ -300,16 +343,10 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-      
-      <div className="p-6 pt-0 mt-auto flex items-center justify-between">
-        <Button 
-          intent="glassPurple" 
-          size="xs" 
-          asChild
-        >
-          <Link href={project.organizationLink}>
-            {project.organization}
-          </Link>
+
+      <div className="mt-auto flex items-center justify-between p-6 pt-0">
+        <Button intent="glassPurple" size="xs" asChild>
+          <Link href={project.organizationLink}>{project.organization}</Link>
         </Button>
         <span className="text-xs text-gray-400">{project.time}</span>
       </div>
@@ -320,35 +357,33 @@ function ProjectCard({ project }: { project: Project }) {
 function IndustrySection() {
   return (
     <div id="industry" className="animate-fadeIn p-6 md:p-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className={cx("text-3xl font-semibold mb-6", bitter.className)}>
+            <h2 className={cx("mb-6 text-3xl font-semibold", bitter.className)}>
               Industry Phase 6.0
               <span className="text-purple-600"> starting in spring 2023</span>
             </h2>
-            <p className="text-gray-700 mb-8">
+            <p className="mb-8 text-gray-700">
               We manage Munich&apos;s top pool of
               <span className="font-bold text-purple-600"> AI talent </span>
               and offer affordable, high-quality solutions without any long-term
               liabilities!
             </p>
             <Button intent="primary" asChild>
-              <Link href="mailto:partners@tum-ai.com">
-                Connect with us
-              </Link>
+              <Link href="mailto:partners@tum-ai.com">Connect with us</Link>
             </Button>
           </div>
           <div className="flex justify-center">
-            <div className="relative max-w-sm w-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-blue-100/20 rounded-2xl blur-sm -m-1"></div>
-              <div className="relative rounded-xl overflow-hidden border border-white/20 shadow-lg">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute inset-0 -m-1 rounded-2xl bg-gradient-to-br from-purple-100/20 to-blue-100/20 blur-sm"></div>
+              <div className="relative overflow-hidden rounded-xl border border-white/20 shadow-lg">
                 <Image
                   src="/assets/industry/freearifiat.png"
                   alt="Ferrari for Fiat"
                   width={500}
                   height={300}
-                  className="w-full h-auto"
+                  className="h-auto w-full"
                 />
               </div>
             </div>
@@ -356,56 +391,56 @@ function IndustrySection() {
         </div>
 
         <div className="mt-24">
-          <h3 className={cx("text-2xl font-semibold mb-8", bitter.className)}>
+          <h3 className={cx("mb-8 text-2xl font-semibold", bitter.className)}>
             What is an <span className="text-purple-600">AI Project</span>?
           </h3>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="relative group overflow-hidden backdrop-blur-sm bg-white/40 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 border border-white/60">
+
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+            <div className="group relative overflow-hidden rounded-xl border border-white/60 bg-white/40 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md">
               {/* Subtle glass highlight effect */}
               <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300/50 to-transparent"></div>
               <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-purple-300/50 to-transparent"></div>
-              
-              <h4 className="text-lg font-semibold text-purple-600 mb-4 flex items-center">
-                <span className="inline-block w-1 h-4 bg-purple-500 mr-2 rounded-full"></span>
+
+              <h4 className="mb-4 flex items-center text-lg font-semibold text-purple-600">
+                <span className="mr-2 inline-block h-4 w-1 rounded-full bg-purple-500"></span>
                 Project Statement
               </h4>
-              <p className="text-gray-700 mb-4">
+              <p className="mb-4 text-gray-700">
                 Present your AI-related problem – we&apos;ll help define the
                 ideal project:
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
-                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  <div className="mr-2 h-1 w-1 rounded-full bg-purple-500"></div>
                   Building proof of concept
                 </li>
                 <li className="flex items-center">
-                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  <div className="mr-2 h-1 w-1 rounded-full bg-purple-500"></div>
                   Conducting research topics
                 </li>
                 <li className="flex items-center">
-                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  <div className="mr-2 h-1 w-1 rounded-full bg-purple-500"></div>
                   Developing prototypes
                 </li>
                 <li className="flex items-center">
-                  <div className="w-1 h-1 rounded-full bg-purple-500 mr-2"></div>
+                  <div className="mr-2 h-1 w-1 rounded-full bg-purple-500"></div>
                   Improving products/processes
                 </li>
               </ul>
             </div>
-            
-            <div className="relative group overflow-hidden backdrop-blur-sm bg-white/40 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 border border-white/60">
+
+            <div className="group relative overflow-hidden rounded-xl border border-white/60 bg-white/40 p-7 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md">
               {/* Subtle glass highlight effect */}
               <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
               <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-blue-300/50 to-transparent"></div>
-              
-              <h4 className="text-lg font-semibold text-blue-600 mb-4 flex items-center">
-                <span className="inline-block w-1 h-4 bg-blue-500 mr-2 rounded-full"></span>
+
+              <h4 className="mb-4 flex items-center text-lg font-semibold text-blue-600">
+                <span className="mr-2 inline-block h-4 w-1 rounded-full bg-blue-500"></span>
                 Outstanding Solutions
               </h4>
-              <p className="text-gray-700 mb-4">
-                We&apos;ll advertise your project to a wide pool of talented students
-                and present you with the most outstanding candidates.
+              <p className="mb-4 text-gray-700">
+                We&apos;ll advertise your project to a wide pool of talented
+                students and present you with the most outstanding candidates.
               </p>
               <p className="text-gray-700">
                 A team of multi-disciplinary students will work exclusively for

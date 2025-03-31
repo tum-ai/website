@@ -16,9 +16,9 @@ export default function Logos({ logos }: LogosProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid grid-cols-2 items-center gap-x-10 gap-y-12 sm:grid-cols-3 sm:gap-x-12 sm:gap-y-14 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-16">
           {logos.map((logo) => (
-            <Link 
-              href={logo.href} 
-              passHref 
+            <Link
+              href={logo.href}
+              passHref
               target="_blank"
               key={logo.src}
               className="col-span-1 flex justify-center py-2 grayscale transition-all duration-300 ease-out hover:grayscale-0"

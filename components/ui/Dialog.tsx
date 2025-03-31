@@ -17,7 +17,7 @@ export default function Dialog(props: Props) {
       <RadixDialog.Trigger asChild>{props.trigger}</RadixDialog.Trigger>
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 flex items-center bg-blue-800/80 backdrop-blur-lg" />
-        <RadixDialog.Content className="container fixed left-[50%] top-[50%] mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] space-y-4 rounded-2xl bg-white p-8">
+        <RadixDialog.Content className="fixed top-[50%] left-[50%] container mx-auto max-w-lg translate-x-[-50%] translate-y-[-50%] space-y-4 rounded-2xl bg-white p-8">
           <RadixDialog.Title className="text-2xl font-bold text-purple-500">
             {props.title}
           </RadixDialog.Title>

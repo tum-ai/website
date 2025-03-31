@@ -18,14 +18,14 @@ const Testimonials = ({
   logoSrc,
   logoAlt,
   link,
-  company
+  company,
 }: TestimonialsProps) => {
   return (
     <div className="max-w-s 10 w-full rounded-lg p-4 text-white sm:max-w-lg sm:p-10">
       <div className="just flex h-full flex-col items-center">
         <Link href={link} passHref target="_blank">
           <Image
-            className="h-100 mb-3 w-36 rounded-full shadow-lg"
+            className="mb-3 h-100 w-36 rounded-full shadow-lg"
             src={imgSrc}
             alt={name + " profile picture"}
             width={96}
@@ -40,7 +40,7 @@ const Testimonials = ({
           &quot;{text}&quot;
         </p>
         <div className="mt-auto h-32">
-          <div className="min-w-160 flex h-full items-center justify-center p-8">
+          <div className="flex h-full min-w-160 items-center justify-center p-8">
             {logoSrc && (
               <Link href={company} passHref target="_blank">
                 <Image
@@ -48,7 +48,11 @@ const Testimonials = ({
                   alt={logoAlt}
                   width={96}
                   height={80}
-                  style={{ width: "100%", height: "80px", objectFit: "contain" }}
+                  style={{
+                    width: "100%",
+                    height: "80px",
+                    objectFit: "contain",
+                  }}
                 />
               </Link>
             )}

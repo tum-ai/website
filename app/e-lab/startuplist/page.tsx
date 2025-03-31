@@ -19,17 +19,15 @@ export default function Page() {
       {/* Header Section */}
       <Section className="bg-purple-950 text-white">
         <div className="md:w-3/5 lg:mb-8">
-          <h2 className="bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
+          <h2 className="bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase">
             E-Lab Startup Directory
           </h2>
-          <p className="mt-2 text-lg">
-            Registry of all E-Lab based Startups.
-          </p>
+          <p className="mt-2 text-lg">Registry of all E-Lab based Startups.</p>
         </div>
       </Section>
 
       {/* Main Content Section */}
-      <Section className="bg-purple-950 text-white pt-0">
+      <Section className="bg-purple-950 pt-0 text-white">
         <p className="mb-8 text-center text-4xl">
           Since <span className="text-yellow-500">2022</span>, we have founded{" "}
           <span className="text-yellow-500">16 startups</span> within the{" "}
@@ -45,7 +43,7 @@ export default function Page() {
             with these pioneering companies.
           </p>
         </div>
-        <ul style={{ marginTop: '20px' }}></ul>
+        <ul style={{ marginTop: "20px" }}></ul>
         <StartupList startups={startups} />
       </Section>
 

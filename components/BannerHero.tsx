@@ -16,7 +16,7 @@ export default function Hero({ imageSrc, titleImageSrc, subtitle }: HeroProps) {
         alt="Hero background image"
         className="absolute -z-10 scale-110 object-cover blur-xs brightness-50 saturate-50"
       />
-      <div className="container relative mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center p-8 py-48 text-center text-white">
+      <div className="relative container mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center p-8 py-48 text-center text-white">
         <div className="mb-10">
           <Image
             src={titleImageSrc}

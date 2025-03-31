@@ -9,7 +9,7 @@ interface Benefit {
 
 // Define styles with cva, including dynamic variants for color and columns.
 const iconContainerStyles = cva(
-  "flex items-center justify-center rounded-xl p-3 backdrop-blur-sm transition-all duration-300", 
+  "flex items-center justify-center rounded-xl p-3 backdrop-blur-sm transition-all duration-300",
   {
     variants: {
       color: {
@@ -17,7 +17,7 @@ const iconContainerStyles = cva(
         yellow: "bg-yellow-500/10 text-yellow-500 ring-1 ring-yellow-500/20",
       },
     },
-  }
+  },
 );
 
 const headingStyles = cva("text-base font-medium text-foreground", {
@@ -43,17 +43,14 @@ const gridStyles = cva("grid gap-8", {
   },
 });
 
-const articleStyles = cva(
-  "flex flex-col gap-4 transition-all duration-200", 
-  {
-    variants: {
-      shadow: {
-        true: "rounded-xl p-6 bg-white/5 backdrop-blur-md border border-white/10 dark:bg-black/20",
-        false: "p-5",
-      },
+const articleStyles = cva("flex flex-col gap-4 transition-all duration-200", {
+  variants: {
+    shadow: {
+      true: "rounded-xl p-6 bg-white/5 backdrop-blur-md border border-white/10 dark:bg-black/20",
+      false: "p-5",
     },
-  }
-);
+  },
+});
 
 interface Props
   extends VariantProps<typeof iconContainerStyles>,
@@ -76,7 +73,9 @@ const Benefits = ({ benefits, color, columns, showShadow = false }: Props) => {
             </div>
             <div className="space-y-2">
               <h3 className={headingStyles({ color })}>{benefit.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{benefit.text}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {benefit.text}
+              </p>
             </div>
           </div>
         </article>

@@ -43,14 +43,14 @@ const EventComponent = ({ event, step }: EventProps) => {
       <div className="relative h-full pl-8 md:pl-0">
         <span
           className={cx(
-            "absolute right-0 z-10 -mr-8 -mt-8 rounded-full border-8",
-            stepBorder[step - 1]
+            "absolute right-0 z-10 -mt-8 -mr-8 rounded-full border-8",
+            stepBorder[step - 1],
           )}
         >
           <span
             className={cx(
               "m-2 flex h-9 w-9 items-center justify-center rounded-full text-2xl font-bold",
-              stepBackground[step - 1]
+              stepBackground[step - 1],
             )}
           >
             {step}
@@ -60,7 +60,7 @@ const EventComponent = ({ event, step }: EventProps) => {
         <span
           className={cx(
             "absolute right-0 flex h-full w-2 bg-linear-to-b",
-            stepGradient[step - 1]
+            stepGradient[step - 1],
           )}
         />
       </div>
@@ -85,7 +85,7 @@ const EventComponent = ({ event, step }: EventProps) => {
   const TextLeft = ({ className = "" }) => (
     <div className={cx("relative w-1/2", className)}>
       <div className="relative flex h-full pl-8 md:pl-0">
-        <div className="flex flex-col items-center gap-4 pb-32 pr-20 text-center">
+        <div className="flex flex-col items-center gap-4 pr-20 pb-32 text-center">
           <h3 className={cx("text-4xl uppercase", stepText[step - 1])}>
             {event.title}
           </h3>
@@ -102,14 +102,14 @@ const EventComponent = ({ event, step }: EventProps) => {
 
       <span
         className={cx(
-          "absolute right-0 z-10 -mr-8 -mt-8 rounded-full border-8",
-          stepBorder[step - 1]
+          "absolute right-0 z-10 -mt-8 -mr-8 rounded-full border-8",
+          stepBorder[step - 1],
         )}
       >
         <span
           className={cx(
             "m-2 flex h-9 w-9 items-center justify-center rounded-full text-2xl font-bold",
-            stepBackground[step - 1]
+            stepBackground[step - 1],
           )}
         >
           {step}
@@ -119,7 +119,7 @@ const EventComponent = ({ event, step }: EventProps) => {
       <span
         className={cx(
           "absolute right-0 flex h-full w-2 bg-linear-to-b",
-          stepGradient[step - 1]
+          stepGradient[step - 1],
         )}
       />
     </div>

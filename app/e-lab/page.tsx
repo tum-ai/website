@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Hero } from "./hero";
 import type { Metadata } from "next";
 import VentureTeam from "@components/VentureTeam";
-import {Organization, WithContext} from "schema-dts";
+import { Organization, WithContext } from "schema-dts";
 
 export const metadata: Metadata = {
   title: "TUM.ai - AI Entrepreneurship Lab",
@@ -34,70 +34,70 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    const jsonLd: WithContext<Organization> = {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Venture Department',
-        alternateName: [
-            'AI Entrepreneurship Lab',
-            'AI E-Lab',
-            'AI E-Lab by TUM.ai',
-            'AI Entrepreneurship Lab by TUM.ai',
-        ],
-        description: 'The Venture Department is the entrepreneurial arm of TUM.ai and organizes the AI Entrepreneurship Lab, a 14-week equity-free AI startup incubator.',
-        url: 'https://www.tum-ai.com/e-lab',
-        email: 'venture@tum-ai.com',
+  const jsonLd: WithContext<Organization> = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Venture Department",
+    alternateName: [
+      "AI Entrepreneurship Lab",
+      "AI E-Lab",
+      "AI E-Lab by TUM.ai",
+      "AI Entrepreneurship Lab by TUM.ai",
+    ],
+    description:
+      "The Venture Department is the entrepreneurial arm of TUM.ai and organizes the AI Entrepreneurship Lab, a 14-week equity-free AI startup incubator.",
+    url: "https://www.tum-ai.com/e-lab",
+    email: "venture@tum-ai.com",
+    sameAs: [
+      "https://www.startbase.de/organization/ai-e-lab/",
+      "https://www.startup-insider.com/investor/ai-e-lab-by-tum-ai",
+      "https://www.munich-startup.de/startups/tum-ai-entrepreneurship-lab/",
+    ],
+    parentOrganization: {
+      "@type": "Organization",
+      name: "TUM.ai",
+      legalName: "TUM.ai e.V.",
+      alternateName: "TUM.ai Student Initiative",
+      url: "https://www.tum-ai.com",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a2/TUM.ai_Logo_Blue_%26_Violet.svg",
+      email: "contact@tum-ai.com",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "venture@tum-ai.com",
+      contactType: "Venture Department",
+    },
+    employee: {
+      "@type": "EmployeeRole",
+      roleName: "Head of Venture Department",
+      employee: {
+        "@type": "Person",
+        name: "Laurenz Sommerlad",
+        identifier: "laurenz-sommerlad",
+        email: "laurenz.sommerlad@tum-ai.com",
+        url: "https://www.tum-ai.com/e-lab/laurenz-sommerlad",
         sameAs: [
-            'https://www.startbase.de/organization/ai-e-lab/',
-            'https://www.startup-insider.com/investor/ai-e-lab-by-tum-ai',
-            'https://www.munich-startup.de/startups/tum-ai-entrepreneurship-lab/',
+          "https://laurenzsommerlad.com",
+          "https://www.linkedin.com/in/laurenzsommerlad/",
         ],
-        parentOrganization: {
-            '@type': 'Organization',
-            name: 'TUM.ai',
-            legalName: 'TUM.ai e.V.',
-            alternateName: 'TUM.ai Student Initiative',
-            url: 'https://www.tum-ai.com',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/TUM.ai_Logo_Blue_%26_Violet.svg',
-            email: 'contact@tum-ai.com',
-        },
         contactPoint: {
-            '@type': 'ContactPoint',
-            email: 'venture@tum-ai.com',
-            contactType: 'Venture Department',
+          "@type": "ContactPoint",
+          email: "laurenz.sommerlad@tum-ai.com",
+          contactType: "Head of Venture Department",
         },
-        employee: {
-            '@type': 'EmployeeRole',
-            roleName: 'Head of Venture Department',
-            employee: {
-                '@type': 'Person',
-                name: 'Laurenz Sommerlad',
-                identifier: 'laurenz-sommerlad',
-                email: 'laurenz.sommerlad@tum-ai.com',
-                url: 'https://www.tum-ai.com/e-lab/laurenz-sommerlad',
-                sameAs: [
-                    'https://laurenzsommerlad.com',
-                    'https://www.linkedin.com/in/laurenzsommerlad/',
-                ],
-                contactPoint: {
-                    '@type': 'ContactPoint',
-                    email: 'laurenz.sommerlad@tum-ai.com',
-                    contactType: 'Head of Venture Department',
-                }
-            },
-        },
-    }
-
+      },
+    },
+  };
 
   return (
-      <>
-          <section>
-              {/* Add JSON-LD to your page */}
-              <script
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
-              />
-          </section>
+    <>
+      <section>
+        {/* Add JSON-LD to your page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </section>
       <Hero />
       {/* {
       <Section className="items-center justify-center bg-purple-950 text-white">
@@ -129,7 +129,7 @@ export default function Page() {
      } */}
       <Section className="bg-purple-950 text-white">
         <div className="mb-8 sm:mb-16 md:w-3/5 lg:mb-32">
-          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold uppercase text-transparent">
+          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase">
             What is the AI E-Lab?
           </h2>
           <p className="text-2xl">
@@ -159,24 +159,24 @@ export default function Page() {
         </div>
       </Section>
 
-        <Section className="bg-purple-950 text-white">
-          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
-            How founders experience the E-Lab
-          </h2>
-          <p className="flex flex-col justify-start gap-2 text-3xl font-semibold text-yellow-500 sm:text-4xl">
-            <span>you.</span>
-            <span>yes you.</span>
-            <span>you can build something great!</span>
-          </p>
+      <Section className="bg-purple-950 text-white">
+        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-3xl font-semibold tracking-widest text-transparent uppercase sm:text-5xl">
+          How founders experience the E-Lab
+        </h2>
+        <p className="flex flex-col justify-start gap-2 text-3xl font-semibold text-yellow-500 sm:text-4xl">
+          <span>you.</span>
+          <span>yes you.</span>
+          <span>you can build something great!</span>
+        </p>
 
-          <p>
-            Are you ready for your next step? Great. With our AI
-            Entrepreneurship Lab we aim at making the founding of AI{" "}
-            <span className="text-red-500">startups </span>
-            accessible to everyone, including you. Bring your motivation and
-            dedication, and we&apos;ll provide the rest, striving to make founding as
-            easy as possible for you.
-          </p>
+        <p>
+          Are you ready for your next step? Great. With our AI Entrepreneurship
+          Lab we aim at making the founding of AI{" "}
+          <span className="text-red-500">startups </span>
+          accessible to everyone, including you. Bring your motivation and
+          dedication, and we&apos;ll provide the rest, striving to make founding
+          as easy as possible for you.
+        </p>
 
         <div className="mt-16">
           <SnapSlider cards={testimonials} />
@@ -184,7 +184,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold tracking-widest text-transparent uppercase sm:text-5xl">
           Last AI E-Lab in numbers
         </h2>
 
@@ -195,7 +195,7 @@ export default function Page() {
         </div>
 
         <div className="mt-24">
-          <h3 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-2xl font-medium uppercase tracking-widest text-transparent sm:text-4xl">
+          <h3 className="mb-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-2xl font-medium tracking-widest text-transparent uppercase sm:text-4xl">
             Top 3 Startups have
           </h3>
           <div className="flex flex-wrap justify-center gap-8 md:gap-24">
@@ -208,7 +208,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold tracking-widest text-transparent uppercase sm:text-5xl">
           Benefits
         </h2>
 
@@ -268,7 +268,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 ml-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl md:ml-0">
+        <h2 className="mb-12 ml-16 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold tracking-widest text-transparent uppercase sm:text-5xl md:ml-0">
           Timeline
         </h2>
         <Timeline
@@ -302,7 +302,7 @@ export default function Page() {
       </Section>
 
       <Section className="bg-purple-950 text-white">
-        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold uppercase tracking-widest text-transparent sm:text-5xl">
+        <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-center text-3xl font-semibold tracking-widest text-transparent uppercase sm:text-5xl">
           Meet our Partners and Sponsors
         </h2>
 
@@ -369,15 +369,14 @@ export default function Page() {
 
       <Section className="bg-purple-950 text-center text-white">
         <Link
-          className="rounded-full border-2 border-yellow-500 p-4 text-center text-center font-bold text-yellow-500"
+          className="rounded-full border-2 border-yellow-500 p-4 text-center font-bold text-yellow-500"
           href="mailto:venture@tum-ai.com"
         >
           Become a partner
         </Link>
       </Section>
 
-      <VentureTeam/>
-
+      <VentureTeam />
 
       <Section className="bg-purple-950 text-white">
         <h3 className="text-primary mb-2 block text-center text-lg font-semibold">
@@ -387,7 +386,7 @@ export default function Page() {
           Do you have any questions?
         </h4>
         <FAQ questions={faq} />
-        <div className="flex flex-col items-center justify-center gap-6 ">
+        <div className="flex flex-col items-center justify-center gap-6">
           <h3 className="mt-20 text-center text-2xl font-semibold">
             You still have other questions?
           </h3>
