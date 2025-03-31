@@ -25,7 +25,7 @@ const Testimonials = ({
       <div className="just flex h-full flex-col items-center">
         <Link href={link} passHref target="_blank">
           <Image
-            className="mb-3 h-100 w-36 rounded-full shadow-lg"
+            className="mb-3 w-36 rounded-full shadow-lg"
             src={imgSrc}
             alt={name + " profile picture"}
             width={96}

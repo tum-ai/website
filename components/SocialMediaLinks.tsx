@@ -7,14 +7,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { SocialMedia } from "@data/e-lab";
+import { SocialMedia } from "data/e-lab";
 
 function SocialMediaLinks(props: {
   socialMedia: SocialMedia;
   iconClassNames: string;
 }) {
   return (
-    <>
+    <div className="flex items-center space-x-4">
       {props.socialMedia?.linkedin && (
         <Link
           key="linkedin"
@@ -24,8 +24,7 @@ function SocialMediaLinks(props: {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="LinkedIn Profile"
           />
         </Link>
@@ -34,8 +33,7 @@ function SocialMediaLinks(props: {
         <Link key="x" href={props.socialMedia.x} target="_blank" rel="me">
           <FontAwesomeIcon
             icon={faXTwitter}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="X (former Twitter) Account"
           />
         </Link>
@@ -49,8 +47,7 @@ function SocialMediaLinks(props: {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="Instagram Page"
           />
         </Link>
@@ -64,8 +61,7 @@ function SocialMediaLinks(props: {
         >
           <FontAwesomeIcon
             icon={faYoutube}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="YouTube Channel"
           />
         </Link>
@@ -79,8 +75,7 @@ function SocialMediaLinks(props: {
         >
           <FontAwesomeIcon
             icon={faLink}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="Website"
           />
         </Link>
@@ -89,13 +84,12 @@ function SocialMediaLinks(props: {
         <Link key="email" href={`mailto:${props.socialMedia.email}`} rel="me">
           <FontAwesomeIcon
             icon={faEnvelope}
-            size="lg"
-            className={props.iconClassNames}
+            className={`${props.iconClassNames} h-4 w-4`}
             title="Send E-Mail"
           />
         </Link>
       )}
-    </>
+    </div>
   );
 }
 
