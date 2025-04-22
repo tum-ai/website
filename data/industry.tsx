@@ -131,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     title: "Roland Berger - Cloud-based Data Processing",
-    image: "/assets/industry/project_cards/rb_logo.png",
+    image: "/assets/industry/project_cards/rolandberger_industry.png",
     description: [
       {
         text: "Implementation of cloud-based web services, containing NLP Machine Learning models -",
