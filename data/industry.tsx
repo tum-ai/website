@@ -196,7 +196,7 @@ export const projects: Project[] = [
   },
   {
     title: "TURTLE - Maritime Matchmaking",
-    image: "/assets/industry/project_cards/seafarer.png",
+    image: "/assets/industry/project_cards/turtle_sea_transport.jpg",
     description: [
       {
         text: "TURTLE empowers seafarers and enables a digital, efficient, and compliant market free from corruption and other illegal and immoral activities. We joined a team of industry professionals building a global online job marketplace that connects ship owners and seafarers directly, work in a fast-growing startup and with strong social impact!",
