@@ -131,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     title: "Roland Berger - Cloud-based Data Processing",
-    image: "/assets/industry/project_cards/rolandberger_industry.png",
+    image: "/assets/industry/project_cards/rb_logo.png",
     description: [
       {
         text: "Implementation of cloud-based web services, containing NLP Machine Learning models -",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
       "https://www.linkedin.com/company/turtle-gmbh/?originalSubdomain=de",
     time: "spring 2022",
   },
-  {
+  /*{
     title: "Leevi Health - Baby Health Monitoring",
     image: "/assets/industry/project_cards/leevi_baby.png",
     description: [
@@ -218,8 +218,8 @@ export const projects: Project[] = [
     organization: "Leevi",
     organizationLink: "https://leevi-health.com/",
     time: "spring 2022",
-  },
-  {
+  },*/
+  /*{
     title: "Cognote.ai - Medical Speech Recognition",
     image: "/assets/industry/project_cards/prev_cognote.png",
     description: [
@@ -230,7 +230,7 @@ export const projects: Project[] = [
     organization: "Cognote",
     organizationLink: "https://www.cognote.ai/",
     time: "spring 2022",
-  },
+  },*/
   {
     title: "Presize.ai - Clothing size recommender systems",
     image: "/assets/industry/project_cards/presize_resize.jpg",
