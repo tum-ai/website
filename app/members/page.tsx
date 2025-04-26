@@ -61,7 +61,7 @@ const steps: Step[] = [
     name: "Research Exchange (REX) Program",
     gradient: "bg-linear-to-br from-slate-50 via-slate-100 to-slate-200",
     description:
-      "After completing one semester, you become eligible for the REX Program-your gateway to conducting research at world-renowned institutions like MIT, Harvard, or Camebridge. Through our strong alumni network, we'll help you find the right research topic, navigate the application process, and support you every step of the way. It's a unique chance to take your AI journey global and contribute to cutting-edge research on an international stage.",
+      "After completing one semester, you become eligible for the REX Program-your gateway to conducting research at world-renowned institutions like MIT, Harvard, or Cambridge. Through our strong alumni network, we'll help you find the right research topic, navigate the application process, and support you every step of the way. It's a unique chance to take your AI journey global and contribute to cutting-edge research on an international stage.",
   },
   {
     step: "04",
