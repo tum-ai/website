@@ -131,6 +131,11 @@ export const partners_collabrated_with = [
     src: "/assets/partners_sponsors/avi_medical_logo.png",
     alt: "Avi Medical",
   },
+  {
+    src: "/assets/e-lab/partners/uvc_b.png",
+    alt: "UVC Partners",
+    href: "https://www.uvcpartners.com/",
+  },
 ];
 
 export const initiatives_collabrated_with = [
