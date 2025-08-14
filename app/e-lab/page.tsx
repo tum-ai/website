@@ -551,7 +551,7 @@ export default function Page() {
                 <div className="relative px-12 py-18 md:px-18 md:py-20">
                   <div className="text-center">
                     <h2 className={`mb-5 text-3xl md:text-4xl font-bold text-black ${archivoBold.className}`}>
-                      Applications for AI E-Lab 4.0 are open!
+                      Applications for AI E-Lab 4.0 are opening soon!
                     </h2>
 
                     <p className={`mx-auto mb-10 max-w-2xl text-base leading-relaxed text-slate-700`}>
@@ -567,7 +567,7 @@ export default function Page() {
 
 
                         <a
-                          href="https://forms.tum-ai.com/ai-e-lab-3.0-application"
+                          href="https://tally.so/r/nPqL6P"
                           target="_blank"
                           rel="noopener noreferrer"
                           className={`group relative inline-flex items-center justify-center overflow-hidden rounded-2xl px-6 py-3 text-base font-semibold text-white shadow-xl transition-[background-position,transform] duration-500 ease-out hover:scale-[1.02]
@@ -579,7 +579,7 @@ export default function Page() {
                           <div className="absolute inset-0 rounded-2xl ring-1 ring-white/30"></div>
                           <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.35),_transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                           <span className="relative z-10 flex items-center gap-2">
-                            <span>Apply until 01.09.2025</span>
+                            <span>Pre-Register</span>
                             <svg
                               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                               fill="none"
