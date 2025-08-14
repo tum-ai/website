@@ -42,9 +42,8 @@ function StudentsSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 className={cx("mb-4 text-3xl font-semibold", bitter.className)}>
-              Applications for{" "}
-              <span className="text-purple-600">Industry Phase 6.0</span> are
-              currently open
+              {" "}
+              <span className="text-purple-600">Industry Phase 6.0</span>
             </h2>
 
             <div className="space-y-4 text-gray-700">
@@ -71,18 +70,9 @@ function StudentsSection() {
                 demonstrate your agile project management skills in a
                 professional setting.
               </p>
-
-              <p>
-                Collaborate with pre-selected partners, including
-                <span className="font-medium text-purple-600">
-                  {" "}
-                  for-profit companies, startups, and non-profits,{" "}
-                </span>
-                in our upcoming Industry Phase 6.0 starting in April 2024.
-              </p>
             </div>
 
-            <Button intent="primary" className="mt-6">
+            <Button intent="primary" className="mt-6" disabled={true}>
               <Link href="https://tum-ai.notion.site/TUM-ai-Industry-Phase-6-0-AI-Projects-d285a612b00b414ebe81458ef118e155">
                 Apply Now
               </Link>
@@ -109,8 +99,8 @@ function StudentsSection() {
 
             <div className="mt-8 flex justify-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 text-xs text-gray-500">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
-                Applications open until March 30th
+                <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
+                Application phase has ended
               </div>
             </div>
           </div>
@@ -362,7 +352,7 @@ function IndustrySection() {
           <div>
             <h2 className={cx("mb-6 text-3xl font-semibold", bitter.className)}>
               Industry Phase 6.0
-              <span className="text-purple-600"> starting in spring 2023</span>
+              <span className="text-purple-600"> in spring 2023</span>
             </h2>
             <p className="mb-8 text-gray-700">
               We manage Munich&apos;s top pool of
@@ -370,7 +360,7 @@ function IndustrySection() {
               and offer affordable, high-quality solutions without any long-term
               liabilities!
             </p>
-            <Button intent="primary" asChild>
+            <Button intent="primary" disabled={true}>
               <Link href="mailto:partners@tum-ai.com">Connect with us</Link>
             </Button>
           </div>

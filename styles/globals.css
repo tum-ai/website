@@ -35,13 +35,62 @@
   --color-purple-950: #11041b;
 
   --animate-fade-in: fadeIn 700ms ease-out;
+  --animate-scroll-left: scrollLeft 40s linear infinite;
 
   @keyframes fadeIn {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dashoffset: -20;
+    }
+  }
+
+  @keyframes floatingPulse {
+    0% {
+      opacity: 0.1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+      opacity: 0.3;
+      transform: translate(10px, -15px) scale(1.1);
+    }
+
+    50% {
+      opacity: 0.2;
+      transform: translate(-5px, -25px) scale(0.9);
+    }
+
+    75% {
+      opacity: 0.25;
+      transform: translate(-15px, -10px) scale(1.05);
+    }
+
+    100% {
+      opacity: 0.1;
+      transform: translate(0, 0) scale(1);
     }
   }
 }
@@ -55,6 +104,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -63,6 +113,7 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
 /*
   ---break---
 */
@@ -103,6 +154,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
 /*
   ---break---
 */
@@ -140,6 +192,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
+
 /*
   ---break---
 */
@@ -176,6 +229,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
 /*
   ---break---
 */
@@ -183,6 +237,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
