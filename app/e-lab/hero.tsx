@@ -128,7 +128,7 @@ export const Hero = () => {
           </div>
 
           {/* Sponsor section - positioned at bottom */}
-          <div className="mb-12 pt-5">
+          {/* <div className="mb-12 pt-5">
             <p className="text-sm text-gray-400 mb-4">Sponsored by</p>
             <div className="flex items-center justify-center space-x-6 opacity-70">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/10 hover:bg-white/20 transition-all duration-300">
@@ -189,7 +189,7 @@ export const Hero = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

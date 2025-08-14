@@ -260,7 +260,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab gave us the foundation to build Spherecast from idea to YC. The community and mentorship were game-changing."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
@@ -287,7 +287,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is probably the best program for creating top-end entrepreneurs out there. It's simply incredible."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"I connected with people who understood the intensity of a startup journey and could challenge my assumptions."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
@@ -314,7 +314,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"Structured, fast, and insanely effective. Every founder should experience this."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich’s startup ecosystem - a truly effective starting point."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
@@ -341,7 +341,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We're proud to be part of this community."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We’re proud to be part of this community."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
@@ -368,7 +368,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible.”</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
@@ -395,7 +395,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab gave us the foundation to build Spherecast from idea to YC. The community and mentorship were game-changing."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
@@ -421,7 +421,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is probably the best program for creating top-end entrepreneurs out there. It's simply incredible."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>“I connected with people who understood the intensity of a startup journey and could challenge my assumptions.”</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
@@ -447,7 +447,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich’s startup ecosystem - a truly effective starting point."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
@@ -473,7 +473,7 @@ export default function Page() {
                   <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We're proud to be part of this community."</p>
+              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We’re proud to be part of this community."</p>
               <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
