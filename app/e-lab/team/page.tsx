@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { archivoSemiExpandedBold } from "../../../styles/fonts";
 import Section from "@components/ui/Section";
 import Link from "next/link";
 import { alumni, faq, team } from "../../../data/e-lab";
@@ -19,7 +20,7 @@ export default function Page() {
       </h1>
       <Section className="bg-purple-950 text-white">
         <div className="mt-8 mb-8 sm:mt-0 md:w-3/5 lg:mb-16">
-          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase">
+          <h2 className={`mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase ${archivoSemiExpandedBold.className}`}>
             Meet the Team behind the AI E-LAB
           </h2>
           <p className="text-2xl">
@@ -39,7 +40,7 @@ export default function Page() {
       </Section>
       <Section className="bg-purple-950 text-white">
         <div className="mt-8 mb-8 sm:mt-0 md:w-3/5 lg:mb-16">
-          <h2 className="mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase">
+          <h2 className={`mb-12 bg-linear-to-r from-yellow-500 to-red-500 bg-clip-text text-5xl font-semibold text-transparent uppercase ${archivoSemiExpandedBold.className}`}>
             Advisors & Honorable Alumni
           </h2>
         </div>
@@ -59,7 +60,7 @@ export default function Page() {
         <h3 className="text-primary mb-2 block text-center text-lg font-semibold">
           FAQ
         </h3>
-        <h4 className="text-dark mb-12 text-center text-3xl font-bold sm:text-4xl">
+        <h4 className={`text-dark mb-12 text-center text-3xl font-bold sm:text-4xl ${archivoSemiExpandedBold.className}`}>
           Do you have any questions?
         </h4>
         <FAQ questions={faq} />

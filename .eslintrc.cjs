@@ -10,6 +10,7 @@ const config = {
     "plugin:@typescript-eslint/stylistic-type-checked",
   ],
   ignorePatterns: [".github"],
+  "rules": { "react/no-unescaped-entities": 0 }
 };
 
 module.exports = config;
