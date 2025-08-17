@@ -32,14 +32,6 @@ export const Hero = () => {
           }}
         ></div>
 
-        {/* Grid pattern overlay with radial fade */}
-        <div
-          className="absolute inset-0 bg-[linear-gradient(rgba(168,85,247,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.08)_1px,transparent_1px)] bg-[size:50px_50px]"
-          style={{
-            mask: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-            WebkitMask: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
-          }}
-        ></div>
       </div>
 
       {/* Main content */}
