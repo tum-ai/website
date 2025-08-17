@@ -85,6 +85,40 @@ export default function Page() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  // Smooth carousel animation using JavaScript
+  useEffect(() => {
+    const testimonialCarousel = document.getElementById('testimonial-carousel');
+
+    let testimonialAnimationId: number;
+    let testimonialPosition = 0;
+    const speed = 0.5; // pixels per frame (adjust for speed)
+
+    const animateTestimonials = () => {
+      if (!testimonialCarousel) return;
+      
+      testimonialPosition += speed;
+      testimonialCarousel.style.transform = `translateX(-${testimonialPosition}px)`;
+      
+      // Reset when we've scrolled through half the content (since content is duplicated)
+      const containerWidth = testimonialCarousel.scrollWidth / 2;
+      if (testimonialPosition >= containerWidth) {
+        testimonialPosition = 0;
+      }
+      
+      testimonialAnimationId = requestAnimationFrame(animateTestimonials);
+    };
+
+    if (testimonialCarousel) {
+      testimonialAnimationId = requestAnimationFrame(animateTestimonials);
+    }
+
+    return () => {
+      if (testimonialAnimationId) {
+        cancelAnimationFrame(testimonialAnimationId);
+      }
+    };
+  }, []);
+
   // Removed legacy Notable Startups dataset and state; logos now link directly in the rotating strip
 
   // Interactive Timeline Component
@@ -242,7 +276,7 @@ export default function Page() {
           <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 bg-gradient-to-l from-white via-gray-50/70 to-transparent z-10 pointer-events-none"></div>
 
           {/* Desktop version - infinite scroll animation */}
-          <div className="hidden sm:flex space-x-6 px-4 animate-scroll-left">
+          <div className="hidden sm:flex space-x-6 px-4" id="testimonial-carousel">
             {/* Original Cards Set */}
             <div className="flex space-x-6">
               {/* Card 1 - Leon Hergert */}
