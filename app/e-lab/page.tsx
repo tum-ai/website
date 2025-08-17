@@ -85,6 +85,40 @@ export default function Page() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  // Smooth carousel animation using JavaScript
+  useEffect(() => {
+    const testimonialCarousel = document.getElementById('testimonial-carousel');
+
+    let testimonialAnimationId: number;
+    let testimonialPosition = 0;
+    const speed = 0.5; // pixels per frame (adjust for speed)
+
+    const animateTestimonials = () => {
+      if (!testimonialCarousel) return;
+      
+      testimonialPosition += speed;
+      testimonialCarousel.style.transform = `translateX(-${testimonialPosition}px)`;
+      
+      // Reset when we've scrolled through half the content (since content is duplicated)
+      const containerWidth = testimonialCarousel.scrollWidth / 2;
+      if (testimonialPosition >= containerWidth) {
+        testimonialPosition = 0;
+      }
+      
+      testimonialAnimationId = requestAnimationFrame(animateTestimonials);
+    };
+
+    if (testimonialCarousel) {
+      testimonialAnimationId = requestAnimationFrame(animateTestimonials);
+    }
+
+    return () => {
+      if (testimonialAnimationId) {
+        cancelAnimationFrame(testimonialAnimationId);
+      }
+    };
+  }, []);
+
   // Removed legacy Notable Startups dataset and state; logos now link directly in the rotating strip
 
   // Interactive Timeline Component
@@ -164,8 +198,8 @@ export default function Page() {
                       <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                         <div
                           className={`w-8 h-8 rounded-full border-4 transition-all duration-300 ${isActive
-                              ? 'bg-purple-600 border-purple-300 shadow-lg shadow-purple-300/50 scale-110'
-                              : 'bg-white border-gray-400 scale-100'
+                            ? 'bg-purple-600 border-purple-300 shadow-lg shadow-purple-300/50 scale-110'
+                            : 'bg-white border-gray-400 scale-100'
                             }`}
                         >
                           {isActive && (
@@ -181,8 +215,8 @@ export default function Page() {
                       <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                         <div
                           className={`w-8 h-8 rounded-full border-4 transition-all duration-300 ${isActive
-                              ? 'bg-purple-600 border-purple-300 shadow-lg shadow-purple-300/50 scale-110'
-                              : 'bg-white border-gray-400 scale-100'
+                            ? 'bg-purple-600 border-purple-300 shadow-lg shadow-purple-300/50 scale-110'
+                            : 'bg-white border-gray-400 scale-100'
                             }`}
                         >
                           {isActive && (
@@ -237,275 +271,420 @@ export default function Page() {
 
         {/* Animated Cards Container */}
         <div className="relative w-full overflow-hidden py-4">
-          {/* Left fade gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 bg-gradient-to-r from-gray-50 via-gray-50/70 to-transparent z-10 pointer-events-none"></div>
-          {/* Right fade gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 bg-gradient-to-l from-white via-gray-50/70 to-transparent z-10 pointer-events-none"></div>
-          <div className="flex animate-scroll-left space-x-6 px-4">
-            {/* Card 1 - Leon Hergert */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/leon_hergert.png"
-                    alt="Leon Hergert"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Desktop fade gradients - hidden on mobile */}
+          <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 bg-gradient-to-r from-gray-50 via-gray-50/70 to-transparent z-10 pointer-events-none"></div>
+          <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 bg-gradient-to-l from-white via-gray-50/70 to-transparent z-10 pointer-events-none"></div>
+
+          {/* Desktop version - infinite scroll animation */}
+          <div className="hidden sm:flex space-x-6 px-4" id="testimonial-carousel">
+            {/* Original Cards Set */}
+            <div className="flex space-x-6">
+              {/* Card 1 - Leon Hergert */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leon_hergert.png"
+                      alt="Leon Hergert"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leon Hergert</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Co-Founder @ Spherecast</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leon Hergert</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Co-Founder @ Spherecast</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Y Combinator S24</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
+
+              {/* Card 2 - Benedikt Wieser */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/benedikt_wieser.png"
+                      alt="Benedikt Wieser"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Benedikt Wieser</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Winner AI E-Lab 2.0</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
+                  </div>
                 </div>
-                <span className={`text-xs text-gray-500`}>Y Combinator S24</span>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"I connected with people who understood the intensity of a startup journey and could challenge my assumptions."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>CDTM Alumni</span>
+                </div>
+              </div>
+
+              {/* Card 3 - Leonardo Benini */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leonardo_benini.png"
+                      alt="Leonardo Benini"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leonardo Benini</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder @ Stealth Startup</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich's startup ecosystem - a truly effective starting point."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>EWOR Fellow</span>
+                </div>
+              </div>
+
+              {/* Card 4 - Oliver Schoppe */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/oliver_schoppe.png"
+                      alt="Oliver Schoppe"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Oliver Schoppe</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Principal @ UVC Partners</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We're proud to be part of this community."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>UVC Partners</span>
+                </div>
+              </div>
+
+              {/* Card 5 - Viktor Shen */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/viktor_shen.jpeg"
+                      alt="Viktor Shen"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Viktor Shen</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder of Tenmin</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Tenmin AI</span>
+                </div>
               </div>
             </div>
 
-            {/* Card 2 - Benedikt Wieser */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/benedikt_wieser.png"
-                    alt="Benedikt Wieser"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+            {/* Duplicate set for seamless loop */}
+            <div className="flex space-x-6">
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leon_hergert.png"
+                      alt="Leon Hergert"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leon Hergert</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Co-Founder @ Spherecast</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Benedikt Wieser</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Winner AI E-Lab 2.0</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Y Combinator S24</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"I connected with people who understood the intensity of a startup journey and could challenge my assumptions."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
+
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/benedikt_wieser.png"
+                      alt="Benedikt Wieser"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Benedikt Wieser</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Winner AI E-Lab 2.0</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
+                  </div>
                 </div>
-                <span className={`text-xs text-gray-500`}>CDTM Alumni</span>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"I connected with people who understood the intensity of a startup journey and could challenge my assumptions."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>CDTM Alumni</span>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leonardo_benini.png"
+                      alt="Leonardo Benini"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leonardo Benini</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder @ Stealth Startup</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich's startup ecosystem - a truly effective starting point."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>EWOR Fellow</span>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/oliver_schoppe.png"
+                      alt="Oliver Schoppe"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Oliver Schoppe</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Principal @ UVC Partners</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We're proud to be part of this community."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>UVC Partners</span>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/viktor_shen.jpeg"
+                      alt="Viktor Shen"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Viktor Shen</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder of Tenmin</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
+                </div>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Tenmin AI</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* Card 3 - Leonardo Benini */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/leonardo_benini.png"
-                    alt="Leonardo Benini"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Mobile version - horizontal scroll */}
+          <div className="sm:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+            <div className="flex space-x-4 px-4 pb-2">
+              {/* Card 1 - Leon Hergert */}
+              <div className="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72 snap-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leon_hergert.png"
+                      alt="Leon Hergert"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leon Hergert</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Co-Founder @ Spherecast</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leonardo Benini</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Founder @ Stealth Startup</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Y Combinator S24</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich’s startup ecosystem - a truly effective starting point."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>EWOR Fellow</span>
-              </div>
-            </div>
 
-            {/* Card 4 - Oliver Schoppe */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/oliver_schoppe.png"
-                    alt="Oliver Schoppe"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+              {/* Card 2 - Benedikt Wieser */}
+              <div className="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72 snap-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/benedikt_wieser.png"
+                      alt="Benedikt Wieser"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Benedikt Wieser</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Winner AI E-Lab 2.0</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Oliver Schoppe</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Principal @ UVC Partners</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"I connected with people who understood the intensity of a startup journey and could challenge my assumptions."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>CDTM Alumni</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We’re proud to be part of this community."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>UVC Partners</span>
-              </div>
-            </div>
 
-            {/* Card 5 - Viktor Shen */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/viktor_shen.jpeg"
-                    alt="Viktor Shen"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+              {/* Card 3 - Leonardo Benini */}
+              <div className="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72 snap-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/leonardo_benini.png"
+                      alt="Leonardo Benini"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leonardo Benini</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder @ Stealth Startup</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Viktor Shen</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Founder of Tenmin</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich's startup ecosystem - a truly effective starting point."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>EWOR Fellow</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible.”</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>Tenmin AI</span>
-              </div>
-            </div>
 
-            {/* Duplicate cards for seamless loop */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/leon_hergert.png"
-                    alt="Leon Hergert"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+              {/* Card 4 - Oliver Schoppe */}
+              <div className="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72 snap-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/oliver_schoppe.png"
+                      alt="Oliver Schoppe"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Oliver Schoppe</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Principal @ UVC Partners</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leon Hergert</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Co-Founder @ Spherecast</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 1.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We're proud to be part of this community."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>UVC Partners</span>
                 </div>
               </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"It was great to explore our startup idea next to our studies - it helped us meeting mentors which are on our side until this day."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/YC.png" alt="Y Combinator" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>Y Combinator S24</span>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/benedikt_wieser.png"
-                    alt="Benedikt Wieser"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+              {/* Card 5 - Viktor Shen */}
+              <div className="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72 snap-center">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/assets/e-lab/testimonials/viktor_shen.jpeg"
+                      alt="Viktor Shen"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Viktor Shen</h3>
+                    <p className={`text-sm text-gray-600 truncate`}>Founder of Tenmin</p>
+                    <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Benedikt Wieser</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Winner AI E-Lab 2.0</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 2.0</p>
+                <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
+                  </div>
+                  <span className={`text-xs text-gray-500`}>Tenmin AI</span>
                 </div>
-              </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>“I connected with people who understood the intensity of a startup journey and could challenge my assumptions.”</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/CDTM.png" alt="CDTM" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>CDTM Alumni</span>
-              </div>
-            </div>
-
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/leonardo_benini.png"
-                    alt="Leonardo Benini"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Leonardo Benini</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Founder @ Stealth Startup</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
-                </div>
-              </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The AI E-Lab is an amazing way to get immersed in Munich’s startup ecosystem - a truly effective starting point."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/ewor.png" alt="EWOR" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>EWOR Fellow</span>
-              </div>
-            </div>
-
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/oliver_schoppe.png"
-                    alt="Oliver Schoppe"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Oliver Schoppe</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Principal @ UVC Partners</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>Mentor & Investor</p>
-                </div>
-              </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"The quality of founders coming out of AI E-Lab is exceptional. We’re proud to be part of this community."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/uvc_b.png" alt="UVC Partners" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>UVC Partners</span>
-              </div>
-            </div>
-
-            {/* Card 5 - Viktor Shen */}
-            <div className="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-72">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden">
-                  <Image
-                    src="/assets/e-lab/testimonials/viktor_shen.jpeg"
-                    alt="Viktor Shen"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`font-semibold text-lg text-gray-900 truncate`}>Viktor Shen</h3>
-                  <p className={`text-sm text-gray-600 truncate`}>Founder of Tenmin</p>
-                  <p className={`text-xs text-purple-600 font-medium`}>AI E-Lab 3.0</p>
-                </div>
-              </div>
-              <p className={`text-gray-700 text-sm leading-relaxed flex-1 overflow-hidden`}>"We went from zero to being a funded startup - the AI E-Lab accelerated our journey far beyond what we thought was possible."</p>
-              <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <Image src="/assets/e-lab/partners/tenmin.svg" alt="Tenmin AI" width={32} height={24} className="object-contain" />
-                </div>
-                <span className={`text-xs text-gray-500`}>Tenmin AI</span>
               </div>
             </div>
           </div>
@@ -513,10 +692,6 @@ export default function Page() {
       </Section>
 
       <InteractiveTimeline />
-
-      {/* Removed Notable Startups interactive panel */}
-
-      {/* Removed: Community is created by working together section */}
 
       <Section className="relative overflow-hidden py-12 sm:py-12 lg:py-16 w-full bg-gradient-to-br from-purple-50 via-white to-blue-50">
 
@@ -612,9 +787,10 @@ export default function Page() {
             Notable AI E-Lab Startups from previous iterations
           </p>
 
-          {/* Rotating startup logos */}
+          {/* Desktop: Rotating startup logos, Mobile: Scrollable */}
           <div className="relative w-full overflow-hidden">
-            <div className="flex animate-scroll-left space-x-8 md:space-x-12 items-center whitespace-nowrap">
+            {/* Desktop version - infinite scroll animation */}
+            <div className="hidden sm:flex animate-scroll-left space-x-8 md:space-x-12 items-center whitespace-nowrap">
               {/* First set of logos */}
               <div className="flex space-x-8 md:space-x-12 items-center shrink-0">
                 <a href="https://tenmin.ai/" target="_blank" rel="noopener noreferrer" className="h-10 md:h-12 w-20 md:w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
@@ -665,10 +841,36 @@ export default function Page() {
                 </a>
               </div>
             </div>
+
+            {/* Mobile version - horizontal scroll */}
+            <div className="sm:hidden overflow-x-auto scrollbar-hide">
+              <div className="flex space-x-6 items-center min-w-max px-4">
+                <a href="https://tenmin.ai/" target="_blank" rel="noopener noreferrer" className="h-10 w-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <Image src="/assets/e-lab/startups/Tenmin.svg" alt="Tenmin" width={120} height={48} className="h-8 w-auto object-contain" />
+                </a>
+                <a href="https://explaino.ai/" target="_blank" rel="noopener noreferrer" className="h-10 w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <Image src="/assets/e-lab/startups/LogoExplaino.svg" alt="Explaino" width={160} height={48} className="h-6 w-auto object-contain" />
+                </a>
+                <a href="https://www.spherecast.ai/" target="_blank" rel="noopener noreferrer" className="h-10 w-22 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <Image src="/assets/e-lab/startups/Spherecast.webp" alt="Spherecast" width={140} height={48} className="h-8 w-auto object-contain" />
+                </a>
+                <a href="https://www.get-ikigai.com/" target="_blank" rel="noopener noreferrer" className="h-10 w-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <Image src="/assets/e-lab/startups/get-ilkigai.svg" alt="Get Ikigai" width={135} height={25} className="h-6 w-auto object-contain" />
+                </a>
+                <a href="https://www.tau-robotics.com/" target="_blank" rel="noopener noreferrer" className="h-10 w-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <div className="flex items-center">
+                    <Image src="/assets/e-lab/startups/TauRobotics.svg" alt="Tau Robotics" width={40} height={40} className="h-8 w-auto object-contain mr-2" />
+                    <span className={`text-sm font-bold text-black ${archivoSemiExpandedBold.className}`}>Tau Robotics</span>
+                  </div>
+                </a>
+                <a href="https://www.helmit.org/" target="_blank" rel="noopener noreferrer" className="h-10 w-22 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0">
+                  <Image src="/assets/e-lab/startups/helmit.svg" alt="Helmit" width={40} height={40} className="h-8 w-auto object-contain" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
-
       <Section className="flex flex-col items-center justify-center py-12 sm:py-12 lg:py-16 bg-white w-full">
         <h2 className={`text-3xl md:text-4xl tracking-tight font-normal mb-8 text-black text-center uppercase ${archivoSemiExpandedBold.className}`}>Frequently Asked Questions</h2>
         <div className="w-full max-w-4xl mx-auto space-y-4">
