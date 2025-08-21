@@ -92,7 +92,7 @@ export const Hero = () => {
             {/* Tagline */}
             <div className="max-w-2xl mx-auto space-y-2">
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                Build the next generation of <span className="text-purple-400 font-semibold">AI startups</span> in 12 weeks
+                Build the next generation of <span className="text-purple-400 font-semibold">AI startups</span> in 14 weeks
               </p>
               <p className="text-base text-gray-400">
                 Equity-free • Munich-based • Founder-focused
