@@ -726,7 +726,7 @@ export default function Page() {
                 <div className="relative px-12 py-18 md:px-18 md:py-20">
                   <div className="text-center">
                     <h2 className={`mb-5 text-3xl md:text-4xl font-bold text-black ${archivoBold.className}`}>
-                      Applications for AI E-Lab 4.0 are opening soon!
+                      Applications for AI E-Lab are now open
                     </h2>
 
                     <p className={`mx-auto mb-10 max-w-2xl text-base leading-relaxed text-slate-700`}>
@@ -742,7 +742,7 @@ export default function Page() {
 
 
                         <a
-                          href="https://tally.so/r/nPqL6P"
+                          href="https://tally.so/r/3jVjWa"
                           target="_blank"
                           rel="noopener noreferrer"
                           className={`group relative inline-flex items-center justify-center overflow-hidden rounded-2xl px-6 py-3 text-base font-semibold text-white shadow-xl transition-[background-position,transform] duration-500 ease-out hover:scale-[1.02]
@@ -754,7 +754,7 @@ export default function Page() {
                           <div className="absolute inset-0 rounded-2xl ring-1 ring-white/30"></div>
                           <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.35),_transparent_60%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                           <span className="relative z-10 flex items-center gap-2">
-                            <span>Pre-Register</span>
+                            <span>Apply Now</span>
                             <svg
                               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                               fill="none"
